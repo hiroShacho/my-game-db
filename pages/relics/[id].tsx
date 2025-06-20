@@ -52,7 +52,7 @@ export default function RelicDetailPage({ relic }: Props) {
         {Array.isArray(relic.constellations) && relic.constellations.length > 0 && (
           <div className="mb-6">
             <h2 className="text-lg font-semibold mb-2">凸効果</h2>
-            {relic.constellations.map((effect, index) => (
+            {relic.constellations.map((effect: { level: string; description: string }, index: number) => (
               <div key={index} className="border p-3 mb-2 rounded bg-gray-50">
                 <p className="font-semibold mb-1">{effect.level}</p>
                 <p>{effect.description}</p>
