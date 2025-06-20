@@ -6,7 +6,7 @@ import SidebarLayout from '@/components/layout/SidebarLayout'; // 修正
 
 
 type Props = {
-  relic: Relic;
+  relic: any;
 };
 
 export default function RelicDetailPage({ relic }: Props) {
