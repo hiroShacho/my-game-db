@@ -71,7 +71,7 @@ const TagSearchPage = () => {
 
   const renderResults = () => {
     if (selectedTypes.length === 0) return null;
-    const resultItems: JSX.Element[] = [];
+    const resultItems = [];
 
     if (selectedTypes.includes('武器')) {
       weaponData.filter((w) => isMatch(w.tags)).forEach((w) => {
