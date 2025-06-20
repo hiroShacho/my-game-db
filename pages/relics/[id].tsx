@@ -39,7 +39,7 @@ export default function RelicDetailPage({ relic }: Props) {
           <div className="mb-6">
             <h2 className="text-lg font-semibold mb-2">タグ</h2>
             <div className="flex flex-wrap gap-2">
-              {relic.baseTags.map((tag, index) => (
+              {relic.baseTags.map((tag: string, index: number) => (
                 <span key={index} className="text-sm bg-gray-200 text-gray-700 px-2 py-1 rounded">
                   {tag}
                 </span>
