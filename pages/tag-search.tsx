@@ -1,0 +1,345 @@
+import { useState, useMemo } from 'react';
+import Link from 'next/link';
+import weaponData from '@/data/weapons.json';
+import skillData from '@/data/skills.json';
+import matrixData from '@/data/matrices.json';
+import traitData from '@/data/traits.json';
+import relicData from '@/data/relics.json';
+import SidebarLayout from '@/components/layout/SidebarLayout';
+
+type TagType = '武器' | '凸効果' | 'スキル' | 'ボリション' | 'アバター特性' | 'アルケー';
+
+const TagSearchPage = () => {
+  const [selectedTypes, setSelectedTypes] = useState<TagType[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [tagSearchMode, setTagSearchMode] = useState<'AND' | 'OR'>('AND');
+
+  const toggleType = (type: TagType) => {
+    const updated = selectedTypes.includes(type)
+      ? selectedTypes.filter((t) => t !== type)
+      : [...selectedTypes, type];
+    setSelectedTypes(updated);
+
+    if (!updated.includes(type)) {
+      const tagsToRemove = getAllTagsForType(type);
+      setSelectedTags((prev) => prev.filter(tag => !tagsToRemove.includes(tag)));
+    }
+  };
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags((prev) =>
+      prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev, tag]
+    );
+  };
+
+  const getAllTagsForType = (type: TagType): string[] => {
+    const tags: Set<string> = new Set();
+    if (type === '武器') {
+      weaponData.forEach((w) => w.tags?.forEach((tag) => tags.add(tag)));
+    } else if (type === '凸効果') {
+      weaponData.forEach((w) => w.constellations?.forEach((b) => b.tags?.forEach((tag) => tags.add(tag))));
+    } else if (type === 'スキル') {
+      skillData.forEach((s) => s.tags?.forEach((tag) => tags.add(tag)));
+    } else if (type === 'ボリション') {
+      matrixData.forEach((m) => m.effects?.forEach((eff) => eff.tags?.forEach((tag) => tags.add(tag))));
+    } else if (type === 'アバター特性') {
+      traitData.forEach((t) => t.tags?.forEach((tag) => tags.add(tag)));
+    } else if (type === 'アルケー') {
+      relicData.forEach((r) => {
+        r.constellations?.forEach((c) => c.tags?.forEach((tag) => tags.add(tag)));
+        r.baseTags?.forEach((tag) => tags.add(tag)); // 全体説明用
+      });
+    }
+    return Array.from(tags);
+  };
+
+  const allTags = useMemo(() => {
+    const tagSet = new Set<string>();
+    selectedTypes.forEach((type) => {
+      getAllTagsForType(type).forEach((tag) => tagSet.add(tag));
+    });
+    return Array.from(tagSet).sort();
+  }, [selectedTypes]);
+
+  const isMatch = (tags: string[] | undefined): boolean => {
+    if (!tags) return false;
+    if (selectedTags.length === 0) return true;
+    return tagSearchMode === 'AND'
+      ? selectedTags.every((t) => tags.includes(t))
+      : selectedTags.some((t) => tags.includes(t));
+  };
+
+  const renderResults = () => {
+    if (selectedTypes.length === 0) return null;
+    const resultItems: JSX.Element[] = [];
+
+    if (selectedTypes.includes('武器')) {
+      weaponData.filter((w) => isMatch(w.tags)).forEach((w) => {
+        resultItems.push(
+          <div key={`weapon-${w.id}`} style={cardStyle}>
+            <div style={rowStyle}>
+              <Link href={`/weapons/${w.id}`}>
+                <img src={`/images/${w.id}_img.PNG`} alt={w.name} style={imgStyle} />
+              </Link>
+              <div>
+                <Link href={`/weapons/${w.id}`}>
+                  <div><strong>[武器]</strong> {w.name}</div>
+                </Link>
+                <div>アバター: {w.avatar}</div>
+              </div>
+            </div>
+          </div>
+        );
+      });
+    }
+
+    if (selectedTypes.includes('凸効果')) {
+      weaponData.forEach((w) => {
+        w.constellations?.forEach((c, idx) => {
+          if (isMatch(c.tags)) {
+            resultItems.push(
+              <div key={`constellation-${w.id}-${idx}`} style={cardStyle}>
+                <div style={rowStyle}>
+                  <Link href={`/weapons/${w.id}`}>
+                    <img src={`/images/${w.id}_img.PNG`} alt={w.name} style={imgStyle} />
+                  </Link>
+                  <div>
+                    <Link href={`/weapons/${w.id}`}>
+                      <div><strong>[凸効果]</strong> {w.name}：{idx + 1}凸</div>
+                    </Link>
+                    <div>アバター: {w.avatar}</div>
+                  </div>
+                </div>
+                <div style={{ marginTop: '8px' }}>{c.description}</div>
+              </div>
+            );
+          }
+        });
+      });
+    }
+
+    if (selectedTypes.includes('スキル')) {
+      skillData.forEach((s) => {
+        if (isMatch(s.tags)) {
+          const weapon = weaponData.find((w) => w.skillIds?.includes(s.id));
+          if (!weapon) return;
+          resultItems.push(
+            <div key={`skill-${s.id}`} style={cardStyle}>
+              <div style={rowStyle}>
+                <Link href={`/weapons/${weapon.id}`}>
+                  <img src={`/images/${weapon.id}_img.PNG`} alt={s.name} style={imgStyle} />
+                </Link>
+                <div>
+                  <Link href={`/weapons/${weapon.id}`}>
+                    <div><strong>[スキル]</strong> {s.name}</div>
+                  </Link>
+                  <div>武器: {weapon.name}（アバター: {weapon.avatar}）</div>
+                </div>
+              </div>
+              <div style={{ marginTop: '8px' }}>{s.description}</div>
+            </div>
+          );
+        }
+      });
+    }
+
+    if (selectedTypes.includes('ボリション')) {
+      matrixData.forEach((m) => {
+        m.effects?.forEach((e, idx) => {
+          if (isMatch(e.tags)) {
+            resultItems.push(
+              <div key={`matrix-${m.id}-${idx}`} style={cardStyle}>
+                <div style={rowStyle}>
+                  <Link href={`/matrices/${m.id}`}>
+                    <img src={`/images/${m.id}_img.PNG`} alt={m.name} style={imgStyle} />
+                  </Link>
+                  <div>
+                    <Link href={`/matrices/${m.id}`}>
+                      <div><strong>[ボリション]</strong> {m.name}（{idx === 0 ? '2セット効果' : '4セット効果'}）</div>
+                    </Link>
+                    <div>アバター: {m.avatar}</div>
+                  </div>
+                </div>
+                <div style={{ marginTop: '8px' }}>{e.effect}</div>
+              </div>
+            );
+          }
+        });
+      });
+    }
+
+    if (selectedTypes.includes('アバター特性')) {
+      traitData.filter((t) => isMatch(t.tags)).forEach((t) => {
+        resultItems.push(
+          <div key={`trait-${t.id}`} style={cardStyle}>
+            <div style={rowStyle}>
+              <Link href={`/trait/${t.id}`}>
+                <img src={`/images/${t.id}_img.PNG`} alt={t.name} style={avatarTraitimgStyle} />
+              </Link>
+              <div>
+                <Link href={`/trait/${t.id}`}>
+                  <div><strong>[アバター特性]</strong> {t.name}</div>
+                </Link>
+              </div>
+            </div>
+            <div style={{ marginTop: '8px' }}>{t.description}</div>
+          </div>
+        );
+      });
+    }
+
+    if (selectedTypes.includes('アルケー')) {
+      relicData.forEach((r) => {
+        r.constellations?.forEach((c) => {
+          if (isMatch(c.tags)) {
+            resultItems.push(
+              <div key={`relic-constellation-${r.id}-${c.level}`} style={cardStyle}>
+                <div style={rowStyle}>
+                  <Link href={`/relics/${r.id}`}>
+                    <img src={`/images/${r.id}_img.PNG`} alt={r.name} style={relicimgStyle} />
+                  </Link>
+                  <div>
+                    <Link href={`/relics/${r.id}`}>
+                      <div><strong>[アルケー]</strong> {r.name}（{c.level}効果）</div>
+                    </Link>
+                  </div>
+                </div>
+                <div style={{ marginTop: '8px' }}>{c.description}</div>
+              </div>
+            );
+          }
+        });
+        if (isMatch(r.baseTags)) {
+          resultItems.push(
+            <div key={`relic-desc-${r.id}`} style={cardStyle}>
+              <div style={rowStyle}>
+                <Link href={`/relics/${r.id}`}>
+                  <img src={`/images/${r.id}_img.PNG`} alt={r.name} style={relicimgStyle} />
+                </Link>
+                <div>
+                  <Link href={`/relics/${r.id}`}>
+                    <div><strong>[アルケー]</strong> {r.name}（全体説明）</div>
+                  </Link>
+                </div>
+              </div>
+              <div style={{ marginTop: '8px' }}>{r.description}</div>
+            </div>
+          );
+        }
+      });
+    }
+
+    return <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>{resultItems}</div>;
+  };
+
+  const cardStyle: React.CSSProperties = {
+    border: '1px solid #ccc',
+    borderRadius: '8px',
+    padding: '12px',
+    background: '#fff',
+    boxShadow: '2px 2px 6px rgba(0,0,0,0.1)',
+  };
+
+  const imgStyle: React.CSSProperties = {
+    width: '64px',
+    height: '64px',
+    objectFit: 'cover',
+    marginRight: '16px',
+  };
+
+  const avatarTraitimgStyle: React.CSSProperties = {
+    width: '128px',
+    height: '64px',
+    objectFit: 'cover',
+    marginRight: '16px',
+  };
+
+  const relicimgStyle: React.CSSProperties = {
+    width: '128px',
+    height: '80px',
+    objectFit: 'cover',
+    marginRight: '16px',
+  };
+
+  const rowStyle: React.CSSProperties = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '12px',
+  };
+
+  return (
+    <SidebarLayout>
+      <div style={{ padding: '20px' }}>
+        <h2>大項目（種類）</h2>
+        <div>
+          {['武器', '凸効果', 'スキル', 'ボリション', 'アバター特性', 'アルケー'].map((type) => (
+            <button
+              key={type}
+              onClick={() => toggleType(type as TagType)}
+              style={{
+                margin: '4px',
+                padding: '6px 10px',
+                background: selectedTypes.includes(type as TagType) ? '#f39c12' : '#ccc',
+                color: '#000',
+                border: 'none',
+                borderRadius: '4px',
+              }}
+            >
+              {type}
+            </button>
+          ))}
+        </div>
+
+        <h2>小項目（タグ）</h2>
+        <div>
+          <button
+            onClick={() => setTagSearchMode('AND')}
+            style={{
+              margin: '4px',
+              background: tagSearchMode === 'AND' ? '#2ecc71' : '#ccc',
+              padding: '4px 10px',
+              borderRadius: '4px',
+            }}
+          >
+            AND検索
+          </button>
+          <button
+            onClick={() => setTagSearchMode('OR')}
+            style={{
+              margin: '4px',
+              background: tagSearchMode === 'OR' ? '#2ecc71' : '#ccc',
+              padding: '4px 10px',
+              borderRadius: '4px',
+            }}
+          >
+            OR検索
+          </button>
+        </div>
+        <div>
+          {allTags.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => toggleTag(tag)}
+              style={{
+                margin: '4px',
+                padding: '4px 8px',
+                background: selectedTags.includes(tag) ? '#0070f3' : '#eaeaea',
+                color: selectedTags.includes(tag) ? '#fff' : '#000',
+                border: 'none',
+                borderRadius: '4px',
+              }}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+
+        <hr />
+        <h2>検索結果</h2>
+        {renderResults()}
+      </div>
+    </SidebarLayout>
+  );
+};
+
+export default TagSearchPage;
