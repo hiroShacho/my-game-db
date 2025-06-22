@@ -84,7 +84,7 @@ const TagSearchPage: React.FC = () => {
 
   const renderResults = () => {
     if (selectedTypes.length === 0) return null;
-    const resultItems = [];
+    const resultItems: JSX.Element[] = []; // ←型を明示
 
     // 武器
     if (selectedTypes.includes('武器')) {

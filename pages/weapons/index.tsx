@@ -24,7 +24,7 @@ export default function WeaponsPage() {
     sortedWeapons.sort((a, b) => {
       const rA = a.tags.find((t: string) => ["R", "SR", "SSR"].includes(t)) || "SSR";
       const rB = b.tags.find((t: string) => ["R", "SR", "SSR"].includes(t)) || "SSR";
-      return rarityOrder[rA] - rarityOrder[rB];
+      return rarityOrder[rA as keyof typeof rarityOrder] - rarityOrder[rB as keyof typeof rarityOrder];
     });
   } else if (sortKey === "resonance") {
     const resonanceOrder = { "強攻": 0, "剛毅": 1, "恩恵": 2 };
@@ -33,7 +33,9 @@ export default function WeaponsPage() {
       const bTag = b.tags.find((t: string) => Object.keys(resonanceOrder).includes(t));
       if (!aTag) return 1;
       if (!bTag) return -1;
-      return resonanceOrder[aTag] - resonanceOrder[bTag];
+      // ここで型安全に変換し、万が一に備え??99でデフォルト
+      return (resonanceOrder[aTag as keyof typeof resonanceOrder] ?? 99)
+         - (resonanceOrder[bTag as keyof typeof resonanceOrder] ?? 99);
     });
   } else if (sortKey === "trait") {
     sortedWeapons.sort((a, b) => {

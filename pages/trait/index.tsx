@@ -1,7 +1,7 @@
 import traits from '@/data/traits.json'
 import Image from 'next/image'
 import Link from 'next/link'
-import SidebarLayout from '@/components/Layout/SidebarLayout'
+import SidebarLayout from '@/components/layout/SidebarLayout'
 
 export default function TraitList() {
   const sortedTraits = [...traits].sort((a, b) => parseInt(b.id.replace('t_', '')) - parseInt(a.id.replace('t_', '')))

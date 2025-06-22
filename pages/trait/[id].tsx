@@ -3,7 +3,7 @@ import traits from '@/data/traits.json'
 import weapons from '@/data/weapons.json'
 import Image from 'next/image'
 import Link from 'next/link'
-import SidebarLayout from '@/components/Layout/SidebarLayout'
+import SidebarLayout from '@/components/layout/SidebarLayout'
 
 export default function TraitDetail() {
   const router = useRouter()

@@ -23,7 +23,7 @@ export default function MatricesPage() {
               className="w-32 flex-shrink-0 text-center hover:opacity-80 transition"
             >
               <img
-                src={`/images/${matrix.id}_img.png`}
+                src={`/images/${matrix.id}_img.PNG`}
                 alt={matrix.name}
                 className="w-full h-auto mb-2"
               />
