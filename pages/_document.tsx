@@ -6,6 +6,16 @@ export default function Document() {
       <Head>
         {/* ここにmetaタグを追加 */}
         <meta name="google-site-verification" content="dDw-5-QPWvJIxqIHSdRmkpauCzPxngxUV_jsHg1kEJ0" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="幻塔 攻略データベース | Tower of Fantasy" />
+        <meta property="og:description" content="幻塔の攻略サイト兼データベース㌥" />
+        <meta property="og:image" content="https://tofguideanddb.vercel.app/ogp.png" />
+        <meta property="og:url" content="https://tofguideanddb.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="幻塔 攻略データベース | Tower of Fantasy" />
+        <meta name="twitter:description" content="幻塔の攻略サイト兼データベース㌥" />
+        <meta name="twitter:image" content="https://tofguideanddb.vercel.app/ogp.png" />
       </Head>
       <body>
         <Main />
