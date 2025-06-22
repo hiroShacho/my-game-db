@@ -4,8 +4,8 @@ export default function Document() {
   return (
     <Html lang="ja">
       <Head>
-        {<meta name="google-site-verification" content="dDw-5-QPWvJIxqIHSdRmkpauCzPxngxUV_jsHg1kEJ0" />}
-        <meta name="google-site-verification" content="ここにSearch Consoleで発行された文字列" />
+        {/* ここにmetaタグを追加 */}
+        <meta name="google-site-verification" content="dDw-5-QPWvJIxqIHSdRmkpauCzPxngxUV_jsHg1kEJ0" />
       </Head>
       <body>
         <Main />
