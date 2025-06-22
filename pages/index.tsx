@@ -20,7 +20,7 @@ export default function Home() {
       <section>
         <h2 className="text-lg font-semibold mb-2">NEWS</h2>
         <ul className="space-y-1 text-sm text-gray-700">
-          <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
+          <li>・2025/06/23 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
         </ul>
       </section>
        
