@@ -75,14 +75,14 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
       <div>
         {/* Overlay for mobile sidebar */}
         <div
-          className={`fixed inset-0 z-50 bg-black bg-opacity-30 transition-opacity duration-200 ${
+          className={`fixed inset-0 z-[9998] bg-black bg-opacity-30 transition-opacity duration-200 ${
             sidebarOpen ? "block" : "hidden"
           } lg:hidden`}
           onClick={() => setSidebarOpen(false)}
         />
         <aside
           className={`
-            fixed top-0 left-0 z-50 h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out
+            fixed top-0 left-0 z-[9999] h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out
             ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
             lg:hidden
           `}

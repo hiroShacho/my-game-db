@@ -27,16 +27,17 @@ export default function Header({
 
   return (
     <header className="bg-gray-800 text-white fixed top-0 left-0 w-full z-50 shadow">
-      <div className="flex flex-row items-center justify-between px-4 py-3">
+      <div className="flex flex-row items-center justify-between px-4 py-3 relative">
         <div className="text-lg sm:text-xl font-bold whitespace-nowrap">
           <Link href="/">幻塔攻略データベース｜Tower of Fantasy</Link>
         </div>
-        {/* サイドバー用ハンバーガー */}
+        {/* ハンバーガーボタンを絶対配置で右上に */}
         {showSidebarButton && (
           <button
-            className="block lg:hidden ml-2"
+            className="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 z-[9999] p-2 rounded bg-gray-700/80"
             onClick={onSidebarToggle}
             aria-label="サイドバーを開く"
+            style={{ touchAction: "manipulation" }}
           >
             <Menu className="w-7 h-7" />
           </button>

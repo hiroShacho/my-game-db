@@ -20,6 +20,7 @@ export default function Home() {
       <section>
         <h2 className="text-lg sm:text-xl font-semibold mb-2">NEWS</h2>
         <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+          <li>・2025/06/25 PC・スマホの表示を調整。</li>
           <li>・2025/06/25 アストールの武器およびいくつかのデータを追加しました。</li>
           <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
         </ul>
