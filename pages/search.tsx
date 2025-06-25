@@ -76,7 +76,7 @@ export default function SiteSearch() {
 
   return (
     <SidebarLayout>
-      <h1 className="text-xl font-bold mb-4">「{q}」の検索結果</h1>
+      <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">「{q}」の検索結果</h1>
 
       {results.length > 0 ? (
         <ul className="space-y-4">
@@ -101,20 +101,22 @@ export default function SiteSearch() {
             }
 
             return (
-              <li key={index} className="border p-4 rounded shadow-sm">
-                <div className="text-xs text-gray-500 mb-1">{item.type}</div>
+              <li key={index} className="border p-4 sm:p-6 rounded shadow-sm">
+                <div className="text-xs sm:text-sm text-gray-500 mb-1">{item.type}</div>
                 <Link href={href}>
-                  <div className="font-semibold text-blue-700 hover:underline cursor-pointer">
+                  <div className="font-semibold text-blue-700 hover:underline cursor-pointer text-base sm:text-lg">
                     {item.name}
                   </div>
                 </Link>
-                <div className="text-gray-700 whitespace-pre-wrap mt-1">{item.description}</div>
+                <div className="text-gray-700 whitespace-pre-wrap mt-1 text-sm sm:text-base">{item.description}</div>
               </li>
             );
           })}
         </ul>
       ) : (
-        <p className="text-sm text-gray-500">該当するデータが見つかりませんでした。</p>
+        <p className="text-sm sm:text-base text-gray-500">
+          該当するデータが見つかりませんでした。
+        </p>
       )}
     </SidebarLayout>
   );

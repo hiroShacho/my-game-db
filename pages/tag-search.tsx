@@ -10,6 +10,35 @@ import { Tag } from '@/types';
 
 type TagType = '武器' | '凸効果' | 'スキル' | 'ボリション' | 'アバター特性' | 'アルケー';
 
+// 追加: シンプルなメディアクエリを使ったスタイル
+const responsiveCardStyle: React.CSSProperties = {
+  border: '1px solid #ccc',
+  borderRadius: 8,
+  padding: 12,
+  background: '#fff',
+  boxShadow: '2px 2px 6px rgba(0,0,0,0.1)',
+  marginBottom: 12,
+  maxWidth: '100%',
+};
+
+const responsiveRowStyle: React.CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 12,
+  flexWrap: 'wrap', // 画像とテキストが詰まりすぎないように
+};
+
+const responsiveImgStyle: React.CSSProperties = {
+  width: 64,
+  height: 64,
+  objectFit: 'cover',
+  marginRight: 16,
+  maxWidth: '30vw', // モバイルで大きすぎないように
+  minWidth: 40,
+};
+
+const responsivePadding = { padding: "4vw", maxWidth: 600, margin: "0 auto" };
+
 const TagSearchPage: React.FC = () => {
   const [selectedTypes, setSelectedTypes] = useState<TagType[]>([]);
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
@@ -305,7 +334,7 @@ const TagSearchPage: React.FC = () => {
 
   return (
     <SidebarLayout>
-      <div style={{ padding: 20 }}>
+      <div style={responsivePadding}>
         <h2>大項目（種類）</h2>
         <div>
           {(['武器', '凸効果', 'スキル', 'ボリション', 'アバター特性', 'アルケー'] as TagType[]).map((type) => (
@@ -363,7 +392,9 @@ const TagSearchPage: React.FC = () => {
 
         <hr />
         <h2>検索結果</h2>
-        {renderResults()}
+        <div style={{ overflowX: "auto" }}>
+          {renderResults()} {/* 各カードにresponsiveCardStyleやresponsiveRowStyleを適用 */}
+        </div>
       </div>
     </SidebarLayout>
   );

@@ -15,28 +15,26 @@ export default function MatricesPage() {
         {sortedMatrices.map((matrix) => (
           <div
             key={matrix.id}
-            className="flex items-start border border-gray-300 p-4 rounded-lg"
+            className="flex flex-col sm:flex-row items-start border border-gray-300 p-3 sm:p-4 rounded-lg"
           >
             {/* 画像と名前へのリンク */}
             <Link
               href={`/matrices/${matrix.id}`}
-              className="w-32 flex-shrink-0 text-center hover:opacity-80 transition"
+              className="w-full sm:w-32 flex-shrink-0 text-center hover:opacity-80 transition mb-2 sm:mb-0"
             >
               <img
                 src={`/images/${matrix.id}_img.PNG`}
                 alt={matrix.name}
-                className="w-full h-auto mb-2"
+                className="w-24 sm:w-full h-auto mx-auto mb-2"
               />
-              <div className="font-semibold">{matrix.name}</div>
+              <div className="font-semibold text-sm sm:text-base">{matrix.name}</div>
             </Link>
 
             {/* 効果 + タグ表示 */}
-            <div className="ml-4 flex flex-col justify-between h-full flex-grow">
+            <div className="sm:ml-4 flex flex-col justify-between h-full flex-grow w-full">
               {(matrix.effects || []).map((eff, idx) => (
                 <div key={idx} className="mb-3">
-                  <div className="text-sm font-semibold text-gray-700">
-                    {eff.set}
-                  </div>
+                  <div className="text-sm font-semibold text-gray-700">{eff.set}</div>
                   <div className="text-sm text-gray-800 mb-1">{eff.effect}</div>
                   <div>
                     {(eff.tags || []).map((tag) => (

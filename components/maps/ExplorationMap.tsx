@@ -117,30 +117,24 @@ export default function ExplorationMap({
 
   return (
     <div className="max-w-4xl mx-auto w-full">
-      <div style={{ padding: '12px', background: '#f0f0f0', borderBottom: '1px solid #ccc' }}>
-        <div style={{ display: 'flex', gap: '16px', marginBottom: '8px' }}>
+      {/* ヘッダ部分 */}
+      <div className="p-3 bg-gray-100 border-b border-gray-300">
+        <div className="flex flex-wrap gap-4 mb-2">
           <Link href="/map/kailo_OreZero_EXpoint" legacyBehavior>
-            <a style={{ fontWeight: mapId === 'kailo_OreZero' ? 'bold' : 'normal' }}>キルオ：ゼロ鉱山区</a>
+            <a className={`font-bold ${mapId === 'kailo_OreZero' ? 'text-blue-700 underline' : ''}`}>
+              キルオ：ゼロ鉱山区
+            </a>
           </Link>
         </div>
-        <div style={{ fontSize: '0.9em', color: '#333', marginBottom: '8px' }}>
-          マーカーをクリックすると「取得済み／未取得」を切り替えることができます。<br />
-          表示するアイコンの種類はチェックボックスで切り替え可能です。<br />
+        <div className="text-xs sm:text-sm text-gray-700 mb-2">
+          マーカークリックで「取得済み／未取得」切替。<br />
+          アイコン種別表示の切替も可能です。<br />
           他エリアのマップは今後実装予定
         </div>
-        <div
-          style={{
-            background: 'rgba(255,255,255,0.8)',
-            padding: '4px 8px',
-            display: 'flex',
-            gap: '16px',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-          }}
-        >
+        <div className="bg-white bg-opacity-80 px-2 py-1 flex flex-wrap gap-4 items-center">
           {Object.entries(progress).map(([icon, { total, collected }]) => (
-            <div key={icon} style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <label style={{ display: 'flex', alignItems: 'center', gap: '4px', cursor: 'pointer' }}>
+            <div key={icon} className="flex items-center gap-1">
+              <label className="flex items-center gap-1 cursor-pointer">
                 <input
                   type="checkbox"
                   checked={visibleIcons[icon] !== false}
@@ -152,84 +146,89 @@ export default function ExplorationMap({
                   }
                 />
                 <img src={`/icons/${icon}.png`} alt={icon} width={20} height={20} />
-                <span>{iconLabelMap[icon] || icon}: {collected} / {total}</span>
+                <span className="text-xs sm:text-sm">{iconLabelMap[icon] || icon}: {collected} / {total}</span>
               </label>
             </div>
           ))}
         </div>
       </div>
 
-      <div style={{ width: '100%', height: '480px' }}>
-        <MapContainer
-          crs={L.CRS.Simple}
-          bounds={bounds}
-          style={{ width: '100%', height: '100%' }}
-          zoomSnap={0.1}
-          zoomDelta={0.1}
-          scrollWheelZoom={true}
-          doubleClickZoom={true}
-          dragging={true}
-          zoomControl={false}
+      {/* 地図部分（高さをレスポンシブにする・z-indexを0で最背面に） */}
+      <div className="w-full relative" style={{ aspectRatio: `${imageWidth} / ${imageHeight}` }}>
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            width: "100%",
+            height: "100%",
+            minHeight: "320px",
+            maxHeight: "70vh",
+          }}
         >
-          <ZoomControl position="bottomright" />
-          <ImageOverlay url={imageUrl} bounds={bounds} />
-          <FitBoundsOnce bounds={bounds} />
-          {points.map((point) => {
-            if (!visibleIcons[point.icon]) return null;
+          <MapContainer
+            crs={L.CRS.Simple}
+            bounds={bounds}
+            style={{ width: "100%", height: "100%" }}
+            zoomSnap={0.1}
+            zoomDelta={0.1}
+            scrollWheelZoom={true}
+            doubleClickZoom={true}
+            dragging={true}
+            zoomControl={false}
+            className="z-0"
+          >
+            <ZoomControl position="bottomright" />
+            <ImageOverlay url={imageUrl} bounds={bounds} />
+            <FitBoundsOnce bounds={bounds} />
+            {points.map((point) => {
+              if (!visibleIcons[point.icon]) return null;
 
-            const iconUrl = `/icons/${point.icon}.png`;
-            const icon = new L.DivIcon({
-              className: `custom-marker ${collected[point.id] ? 'collected-marker' : ''}`,
-              html: `<div class="marker-circle"><img src="${iconUrl}" alt="${point.icon}" /></div>`,
-              iconSize: [32, 32],
-              iconAnchor: [16, 32],
-            });
+              const iconUrl = `/icons/${point.icon}.png`;
+              const icon = new L.DivIcon({
+                className: `custom-marker ${collected[point.id] ? 'collected-marker' : ''}`,
+                html: `<div class="marker-circle"><img src="${iconUrl}" alt="${point.icon}" /></div>`,
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+              });
 
-
-            return (
-              <Marker
-                key={point.id}
-                position={[point.y, point.x]}
-                icon={icon}
-                opacity={collected[point.id] ? 0.5 : 1.0}
-              >
-                <Popup offset={[0, -20]}>
-                  <strong>{point.name}</strong>
-                  <p>{point.description}</p>
-                  <button
-                    onClick={() => toggleCollected(point.id)}
-                    style={{
-                      marginTop: '4px',
-                      padding: '4px 8px',
-                      backgroundColor: '#e0f7fa',
-                      border: '1px solid #00acc1',
-                      borderRadius: '4px',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {collected[point.id] ? '未取得にする' : '取得済みにする'}
-                  </button>
-                </Popup>
-              </Marker>
-            );
-          })}
-        </MapContainer>
+              return (
+                <Marker
+                  key={point.id}
+                  position={[point.y, point.x]}
+                  icon={icon}
+                  opacity={collected[point.id] ? 0.5 : 1.0}
+                >
+                  <Popup offset={[0, -20]}>
+                    <strong>{point.name}</strong>
+                    <p className="whitespace-pre-line">{point.description}</p>
+                    <button
+                      onClick={() => toggleCollected(point.id)}
+                      className="mt-1 px-2 py-1 bg-cyan-50 border border-cyan-600 rounded text-xs hover:bg-cyan-100"
+                    >
+                      {collected[point.id] ? '未取得にする' : '取得済みにする'}
+                    </button>
+                  </Popup>
+                </Marker>
+              );
+            })}
+          </MapContainer>
+        </div>
       </div>
 
+      {/* 動画部分 */}
       {mapVideoMap[mapId] && (
-        <div style={{ padding: '24px', background: '#eef2f7', marginTop: '16px', borderRadius: '8px' }}>
-          <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#333', marginBottom: '12px' }}>
+        <div className="p-4 bg-blue-50 mt-4 rounded-lg">
+          <h3 className="text-base sm:text-lg font-bold text-gray-700 mb-3">
             🔍 探索解説動画
           </h3>
-          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', maxWidth: '100%', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.1)' }}>
+          <div className="relative w-full" style={{ paddingBottom: "56.25%", height: 0 }}>
             <iframe
               src={mapVideoMap[mapId]}
               title="解説動画"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            ></iframe>
+              className="absolute inset-0 w-full h-full rounded-lg shadow"
+            />
           </div>
         </div>
       )}

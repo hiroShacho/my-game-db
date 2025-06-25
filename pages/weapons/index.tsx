@@ -90,10 +90,10 @@ export default function WeaponsPage() {
           return (
             <div
               key={weapon.id}
-              className="flex items-center justify-between border p-4 rounded shadow hover:bg-gray-50 w-full"
+              className="flex flex-col sm:flex-row items-center justify-between border p-2 sm:p-4 rounded shadow hover:bg-gray-50 w-full"
             >
               {/* レア度 */}
-              <div className="w-16 flex justify-center">
+              <div className="w-16 flex justify-center mb-2 sm:mb-0">
                 {rarityTag && (
                   <Image
                     src={`/images/${rarityTag}.png`}
@@ -107,46 +107,46 @@ export default function WeaponsPage() {
               {/* 武器画像 + 名前（リンク） */}
               <Link
                 href={`/weapons/${weapon.id}`}
-                className="flex flex-col items-center w-32"
+                className="flex flex-col items-center w-24 sm:w-32"
               >
                 <Image
                   src={`/images/${weapon.id}_img.PNG`}
                   alt={weapon.name}
-                  width={80}
-                  height={80}
+                  width={64}
+                  height={64}
                   className="rounded"
                 />
-                <span className="text-sm text-blue-700 mt-1 hover:underline text-center">
+                <span className="text-xs sm:text-sm text-blue-700 mt-1 hover:underline text-center">
                   {weapon.name}
                 </span>
               </Link>
 
               {/* 共鳴 */}
-              <div className="flex flex-col items-center w-24">
+              <div className="flex flex-col items-center w-20 sm:w-24">
                 {resonanceTag && (
                   <>
                     <Image
                       src={`/images/${resonanceTag}.png`}
                       alt={resonanceTag}
-                      width={64}
-                      height={64}
+                      width={40}
+                      height={40}
                     />
-                    <span className="text-sm mt-1">{resonanceTag}</span>
+                    <span className="text-xs sm:text-sm mt-1">{resonanceTag}</span>
                   </>
                 )}
               </div>
 
               {/* 特質 */}
-              <div className="flex space-x-4">
+              <div className="flex space-x-2 sm:space-x-4">
                 {traitTags.map((tag) => (
                   <div key={tag} className="flex flex-col items-center">
                     <Image
                       src={`/images/${tag}.png`}
                       alt={tag}
-                      width={64}
-                      height={64}
+                      width={40}
+                      height={40}
                     />
-                    <span className="text-sm mt-1">{tag}</span>
+                    <span className="text-xs sm:text-sm mt-1">{tag}</span>
                   </div>
                 ))}
               </div>

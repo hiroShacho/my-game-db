@@ -17,7 +17,7 @@ export default function MatrixDetailPage() {
 
   return (
     <SidebarLayout>
-      <div className="space-y-4">
+      <div className="space-y-4 px-2 sm:px-8">
         {/* ボリション画像 */}
         <img
           src={`/images/${matrix.id}_img.PNG`}
@@ -26,23 +26,23 @@ export default function MatrixDetailPage() {
         />
 
         {/* ボリション名 */}
-        <h1 className="text-2xl font-bold text-center">
+        <h1 className="text-xl sm:text-2xl font-bold text-center">
           {matrix.avatar}のボリション　{matrix.name}
         </h1>
 
         {/* 効果表示 */}
         <div className="space-y-2">
           {(matrix.effects || []).map((eff, idx) => (
-            <div key={idx} className="bg-gray-100 p-3 rounded">
-              <div className="font-semibold text-sm text-gray-700">{eff.set}</div>
-              <div className="text-sm text-gray-800">{eff.effect}</div>
-              {/* タグの表示 */}
+            <div key={idx} className="bg-gray-100 p-3 sm:p-4 rounded">
+              <div className="font-semibold text-sm sm:text-base text-gray-700">{eff.set}</div>
+              <div className="text-sm sm:text-base text-gray-800">{eff.effect}</div>
+              {/* タグ */}
               {eff.tags && eff.tags.length > 0 && (
                 <div className="mt-1 flex flex-wrap gap-2">
                   {eff.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded"
+                      className="text-xs sm:text-sm bg-blue-100 text-blue-800 px-2 py-1 rounded"
                     >
                       {tag}
                     </span>

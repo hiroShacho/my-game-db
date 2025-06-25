@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="ja">
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* ここにmetaタグを追加 */}
         <meta name="google-site-verification" content="dDw-5-QPWvJIxqIHSdRmkpauCzPxngxUV_jsHg1kEJ0" />
         <link rel="icon" href="/favicon.ico" />
