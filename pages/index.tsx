@@ -9,7 +9,7 @@ export default function Home() {
     <div className="p-4 space-y-8">
       {/* サイト紹介 */}
       <section>
-        <h1 className="text-2xl font-bold mb-2">幻塔攻略データベース</h1>
+        <h1 className="text-2xl font-bold mb-2">幻塔攻略データベースへようこそ</h1>
         <p className="text-sm text-gray-600">
           本サイトは、幻塔の最新コンテンツ・各種武器等を確認できる非公式データベースです。
           各種コンテンツの情報は徐々に更新していきます。お待ちくだセい。現在はテストバージョン㌥。

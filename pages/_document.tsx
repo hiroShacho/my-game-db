@@ -16,6 +16,17 @@ export default function Document() {
         <meta name="twitter:title" content="幻塔 攻略データベース | Tower of Fantasy" />
         <meta name="twitter:description" content="幻塔の攻略サイト兼データベース㌥" />
         <meta name="twitter:image" content="https://tofguideanddb.vercel.app/ogp.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "WebSite",
+              "name": "幻塔攻略データベース｜Tower of Fantasy", // ←ここがサイト名
+              "url": "https://tofguideanddb.vercel.app/"
+            }),
+          }}
+        />
       </Head>
       <body>
         <Main />
