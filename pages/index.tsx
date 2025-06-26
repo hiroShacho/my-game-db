@@ -20,6 +20,7 @@ export default function Home() {
       <section>
         <h2 className="text-lg sm:text-xl font-semibold mb-2">NEWS</h2>
         <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+          <li>・2025/06/26 「ver5.1の注目コンテンツ」にイベント「キルオの守護者」のページを追加。</li>
           <li>・2025/06/25 PC・スマホの表示を調整。</li>
           <li>・2025/06/25 アストールの武器およびいくつかのデータを追加しました。</li>
           <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
@@ -31,13 +32,52 @@ export default function Home() {
         <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.1の注目コンテンツ</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <Link href="/weapons/w_62" className="block bg-white shadow p-4 sm:p-6 rounded hover:bg-blue-50">
-            <h3 className="font-semibold text-base sm:text-lg">アストール</h3>
-            <p className="text-sm sm:text-base text-gray-600">アストールの武器詳細をチェック</p>
+          {/* 新キャラカード */}
+          <Link href="/weapons/w_62" className="block">
+            <div
+              className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
+              style={{
+                backgroundImage: "url('/ver_event/New_Character.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "left",
+              }}
+            >
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition" />
+              <div className="relative z-10 p-4">
+                <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                  アストール
+                </h3>
+                <p className="text-sm sm:text-base text-white drop-shadow">
+                  アストールの武器詳細をチェック
+                </p>
+              </div>
+            </div>
           </Link>
 
-          {/* 以下は準備中ボックス */}
-          {[...Array(6)].map((_, i) => (
+          {/* 新イベントカード */}
+          <Link href="/event/ver5-1/guardian-of-kailo" className="block">
+            <div
+              className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
+              style={{
+                backgroundImage: "url('/ver_event/New_Event_1.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition" />
+              <div className="relative z-10 p-4">
+                <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                  新イベント「キルオの守護者」
+                </h3>
+                <p className="text-sm sm:text-base text-white drop-shadow">
+                  「キルオの守護者」の詳細はこちら
+                </p>
+              </div>
+            </div>
+          </Link>
+
+          {/* 以下 準備中ボックス */}
+          {[...Array(5)].map((_, i) => (
             <div key={i} className="block bg-gray-100 p-4 sm:p-6 rounded text-center text-sm sm:text-base text-gray-400">
               （準備中）
             </div>

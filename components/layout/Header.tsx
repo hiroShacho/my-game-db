@@ -34,7 +34,7 @@ export default function Header({
         {/* ハンバーガーボタンを絶対配置で右上に */}
         {showSidebarButton && (
           <button
-            className="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 z-[9999] p-2 rounded bg-gray-700/80"
+            className="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 z-[9999] p-2 rounded bg-gray-700"
             onClick={onSidebarToggle}
             aria-label="サイドバーを開く"
             style={{ touchAction: "manipulation" }}
