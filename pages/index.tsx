@@ -278,8 +278,8 @@ export default function Home() {
       <section>
         <h2 className="text-lg sm:text-xl font-semibold mb-2">NEWS</h2>
         <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+          <li>・2025/06/28 復刻中のキャラの武器等の情報を追加 & 一部アイコンを修正。</li>
           <li>・2025/06/27 トップページのコンテンツを一部追加・修正（ギフトコード一覧追加、ガチャカレンダー修正）。</li>
-          <li>・2025/06/26 「ver5.1の注目コンテンツ」にイベント「キルオの守護者」のページを追加。</li>
           <li>･･･</li>
           <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
         </ul>
