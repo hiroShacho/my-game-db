@@ -1,31 +1,252 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ReactElement } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 
-// カレンダーイベント設定
-const EVENT_COLORS = [
-  "#ff0000", "#81c9f9", "#b6ea81", "#ffb347", "#e699e2", "#ffe65c", "#ba55d3",
-  "#99e4d2", "#ffd1a4", "#f6b3f6", "#ff69b4", "#0000ff", "#00bfff"
-];
-type EventPeriod = {
-  name: string;
-  color: string;
-  fontColor?: string;
-  start: Date;
-  end: Date;
+// --- Gantt Chart Calendar Data ---
+type GanttEvent = {
+  label: string; // ラベル
+  color: string; // バー色
+  labelColor: string; // ラベル背景色
+  labelFontColor?: string; // ラベル文字色
+  start: number; // 開始日（1-indexed）
+  end: number;   // 終了日（1-indexed、含む）
 };
-const events: EventPeriod[] = [
-  { name: "新コスチューム・田園フェアリー", color: EVENT_COLORS[2], fontColor: "#200", start: new Date(2025, 5, 24), end: new Date(2025, 6, 29) },
-  { name: "復刻プレアバ・アンカー", color: EVENT_COLORS[10], fontColor: "#fff", start: new Date(2025, 5, 24), end: new Date(2025, 6, 8) },
-  { name: "復刻プレアバ・パロッティ", color: EVENT_COLORS[3], fontColor: "#200", start: new Date(2025, 6, 4), end: new Date(2025, 6, 18) },
-  { name: "復刻プレアバ・アスラーダ", color: EVENT_COLORS[0], fontColor: "#fff", start: new Date(2025, 6, 15), end: new Date(2025, 6, 29) },
-  { name: "復刻コスチューム・海辺の休日", color: EVENT_COLORS[11], fontColor: "#fff", start: new Date(2025, 6, 4), end: new Date(2025, 6, 18) },
-  { name: "復刻コスチューム・海風のささやき", color: EVENT_COLORS[12], fontColor: "#200", start: new Date(2025, 5, 24), end: new Date(2025, 6, 8) }
+
+const GANTT_EVENTS: GanttEvent[] = [
+  {
+    label: "新コスチューム\n田園フェアリー",
+    color: "#83e28f",
+    labelColor: "#83e28f",
+    labelFontColor: "#200",
+    start: 1,
+    end: 29,
+  },
+  {
+    label: "復刻プレアバ\nアンカー",
+    color: "#ff4141",
+    labelColor: "#e3a3f8",
+    labelFontColor: "#200",
+    start: 1,
+    end: 8,
+  },
+  {
+    label: "パロッティ",
+    color: "#e3a3f8",
+    labelColor: "#e3a3f8",
+    labelFontColor: "#200",
+    start: 4,
+    end: 18,
+  },
+  {
+    label: "アスラーダ",
+    color: "#8e80f8",
+    labelColor: "#e3a3f8",
+    labelFontColor: "#200",
+    start: 15,
+    end: 29,
+  },
+  {
+    label: "復刻コスチューム\n海辺の休日",
+    color: "#9cccf5",
+    labelColor: "#8ee2f8",
+    labelFontColor: "#200",
+    start: 4,
+    end: 18,
+  },
+  {
+    label: "海風のささやき",
+    color: "#396eb5",
+    labelColor: "#8ee2f8",
+    labelFontColor: "#200",
+    start: 15,
+    end: 29,
+  },
 ];
-const DAYS = ["日", "月", "火", "水", "木", "金", "土"];
-const DAY_COLORS = ["text-red-500", "", "", "", "", "", "text-blue-500"];
+
+const GANTT_MONTH = 7;
+const GANTT_YEAR = 2025;
+const GANTT_DAYS = 29; // 1日〜29日まで
+
+function getWeekdayStr(ymd: Date) {
+  return ["日","月","火","水","木","金","土"][ymd.getDay()];
+}
+
+export const GanttCalendar: React.FC = () => {
+  // 仮のイメージ画像パス（実際の画像に合わせて書き換えてください）
+  // 例: /gacha_img/character1.png など
+  const eventImages: (string | null)[] = [
+    "/ver_event/Outfit_Meadow Whimsy.PNG",       // 田園フェアリー
+    "/ver_event/Simulacrum_Anka.PNG",            // アンカー
+    "/ver_event/Simulacrum_Plotti.PNG",          // パロッティ
+    "/ver_event/Simulacrum_Asurada.PNG",         // アスラーダ
+    "/ver_event/Outfit_Seabreeze Whispers.PNG",  // 海風のささやき
+    "/ver_event/Outfit_Seaside Vacation.PNG",    // 海辺の休日
+  ];
+  const days = Array.from({ length: GANTT_DAYS }, (_, i) => i + 1);
+
+  return (
+    <div className="overflow-x-auto w-full">
+      <div className="min-w-[560px] max-w-full mx-auto bg-white rounded shadow border">
+        {/* 月タイトル */}
+        <div
+          className="w-full"
+          style={{
+            background: "linear-gradient(90deg,#17a3d6,#4ac1e2)",
+            borderTopLeftRadius: 8,
+            borderTopRightRadius: 8,
+          }}
+        >
+          <div className="text-white font-bold text-lg sm:text-xl text-center py-1">7月</div>
+        </div>
+        {/* 日付ヘッダー */}
+        <div
+          className="grid"
+          style={{
+            gridTemplateColumns: `140px repeat(${GANTT_DAYS},1fr)`,
+          }}
+        >
+          <div />
+          {days.map((day) => (
+            <div key={day} className="text-xs sm:text-sm text-gray-700 text-center border-b border-gray-200 py-1">
+              {day}
+            </div>
+          ))}
+        </div>
+        {/* 曜日ヘッダー */}
+        <div
+          className="grid"
+          style={{
+            gridTemplateColumns: `140px repeat(${GANTT_DAYS},1fr)`,
+          }}
+        >
+          <div />
+          {days.map((day) => {
+            const date = new Date(GANTT_YEAR, GANTT_MONTH - 1, day);
+            const wd = getWeekdayStr(date);
+            return (
+              <div
+                key={day}
+                className={
+                  "text-[10px] sm:text-xs text-center border-b border-gray-200 pb-1 " +
+                  (wd === "日"
+                    ? "text-red-500"
+                    : wd === "土"
+                    ? "text-blue-500"
+                    : "")
+                }
+              >
+                {wd}
+              </div>
+            );
+          })}
+        </div>
+        {/* イベント行 */}
+        {GANTT_EVENTS.map((ev, idx) => (
+          <div
+            key={idx}
+            className="grid relative"
+            style={{ gridTemplateColumns: `140px repeat(${GANTT_DAYS},1fr)`, minHeight: 38 }}
+          >
+            {/* ラベル部分 + イメージ */}
+            <div
+              className="flex flex-col justify-center items-center border-r border-gray-200 font-semibold text-[13px] sm:text-base py-2"
+              style={{
+                background: ev.labelColor,
+                color: ev.labelFontColor ?? "#333",
+                borderTopLeftRadius: idx === 0 ? 8 : 0,
+                borderBottomLeftRadius: idx === GANTT_EVENTS.length - 1 ? 8 : 0,
+                whiteSpace: "pre-line",
+                minWidth: 120,
+                textAlign: "center",
+                position: "relative",
+                paddingTop: eventImages[idx] ? 6 : undefined,
+                paddingBottom: eventImages[idx] ? 2 : undefined,
+              }}
+            >
+              {/* イメージ画像（ある場合のみ） */}
+              {eventImages[idx] && (
+                <img
+                  src={eventImages[idx]!}
+                  alt={ev.label.replace(/\n.*/, "")}
+                  style={{
+                    width: 40,
+                    height: 40,
+                    objectFit: "contain",
+                    borderRadius: 6,
+                    marginBottom: 2,
+                    boxShadow: "0 1px 3px #0002"
+                  }}
+                  decoding="async"
+                  loading="lazy"
+                />
+              )}
+              {ev.label}
+            </div>
+            {/* 各日付セル */}
+            {days.map((day) => (
+              <div
+                key={day}
+                className="border-b border-gray-200 border-r last:border-r-0"
+                style={{ minHeight: 38 }}
+              />
+            ))}
+            {/* イベントバー（grid-column指定でズレなし！） */}
+            <div
+              className="flex items-center absolute left-0 top-0 w-full h-full"
+              style={{
+                gridColumn: `${ev.start + 1} / ${ev.end + 2}`,
+                gridRow: "1",
+                zIndex: 2,
+                pointerEvents: "none",
+                position: "absolute",
+                marginTop: 10,
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  width: "100%",
+                  height: 18,
+                  background: ev.color,
+                  borderTopRightRadius: 0,
+                  borderBottomRightRadius: 0,
+                  borderTopLeftRadius: 6,
+                  borderBottomLeftRadius: 6,
+                  position: "relative",
+                }}
+              >
+                {/* 矢印本体 */}
+                <div
+                  style={{
+                    width: `calc(100% - 18px)`,
+                    height: "100%",
+                    background: ev.color,
+                    borderTopLeftRadius: 6,
+                    borderBottomLeftRadius: 6,
+                  }}
+                />
+                {/* 矢印先端 */}
+                <div
+                  style={{
+                    width: 0,
+                    height: 0,
+                    borderTop: "9px solid transparent",
+                    borderBottom: "9px solid transparent",
+                    borderLeft: `18px solid ${ev.color}`,
+                    marginLeft: -1,
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 // ギフトコード一覧
 const GIFT_CODES = [
@@ -353,12 +574,8 @@ export default function Home() {
             />
           </div>
           <div>
-            <h3 className="text-md sm:text-lg font-semibold mb-2">2025年6月 衣装・プレアバ ガチャカレンダー</h3>
-            <CalendarMonthGrid year={2025} month={5} events={events} />
-          </div>
-          <div>
-            <h3 className="text-md sm:text-lg font-semibold mb-2">2025年7月 衣装・プレアバ ガチャカレンダー</h3>
-            <CalendarMonthGrid year={2025} month={6} events={events} />
+            <h3 className="text-md sm:text-lg font-semibold mb-2">2025年7月 衣装・プレアバ ガチャスケジュール</h3>
+            <GanttCalendar />
           </div>
         </div>
       </section>

@@ -109,7 +109,8 @@ export default function GuardianOfKailoEventPage() {
             />
             <div>
               <p className="text-gray-700">
-                Ver4.8のニンジンバスケットとほぼ同じ内容。対応表を基に今欲しいマスを目指し突き進もう！
+                Ver4.8のニンジンバスケットとほぼ同じ内容。対応表を基に今欲しいマスを目指し突き進もう！<br />
+                戦闘では物理の最適編成を使えるので、初心者でも問題なくクリアできるぞ！<br />
               </p>
               <p className="text-gray-500 text-sm mt-2">
                 開催日：6月25日13:00～7月10日6:00(JST)
@@ -117,14 +118,27 @@ export default function GuardianOfKailoEventPage() {
             </div>
           </div>
           {/* 下に追加画像 */}
-          <div className="flex justify-center">
+          <div className="flex flex-col items-center space-y-2">
             <Image
               src="/ver_event/New_Event_1_2_1.png"
-              alt="イベント2追加画像"
+              alt="スターダスト宝箱"
               width={500}
               height={200}
               className="rounded w-full sm:w-[500px] h-auto object-cover"
             />
+            {/* 新たに画像追加＋キャプション */}
+            <div className="flex flex-col items-center">
+              <Image
+                src="/ver_event/New_Event_1_2_2.png"
+                alt="ステッカー宝箱"
+                width={300}
+                height={120}
+                className="rounded w-full sm:w-[300px] h-auto object-cover"
+              />
+              <span className="text-xs sm:text-sm text-gray-700 mt-1">
+                ステッカー宝箱（欠片20個で1箱）
+              </span>
+            </div>
           </div>
         </div>
       </section>
