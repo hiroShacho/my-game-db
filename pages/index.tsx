@@ -16,7 +16,7 @@ type GanttEvent = {
 
 const GANTT_EVENTS: GanttEvent[] = [
   {
-    label: "新コスチューム\n田園フェアリー",
+    label: "新コスチューム・田園フェアリー",
     color: "#83e28f",
     labelColor: "#83e28f",
     labelFontColor: "#200",
@@ -24,7 +24,7 @@ const GANTT_EVENTS: GanttEvent[] = [
     end: 29,
   },
   {
-    label: "復刻プレアバ\nアンカー",
+    label: "復刻プレアバ・アンカー",
     color: "#ff4141",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
@@ -32,7 +32,7 @@ const GANTT_EVENTS: GanttEvent[] = [
     end: 8,
   },
   {
-    label: "パロッティ",
+    label: "復刻プレアバ・パロッティ",
     color: "#e3a3f8",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
@@ -40,7 +40,7 @@ const GANTT_EVENTS: GanttEvent[] = [
     end: 18,
   },
   {
-    label: "アスラーダ",
+    label: "復刻プレアバ・アスラーダ",
     color: "#8e80f8",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
@@ -48,7 +48,7 @@ const GANTT_EVENTS: GanttEvent[] = [
     end: 29,
   },
   {
-    label: "復刻コスチューム\n海辺の休日",
+    label: "復刻コスチューム・海辺の休日",
     color: "#9cccf5",
     labelColor: "#8ee2f8",
     labelFontColor: "#200",
@@ -56,7 +56,7 @@ const GANTT_EVENTS: GanttEvent[] = [
     end: 18,
   },
   {
-    label: "海風のささやき",
+    label: "復刻コスチューム・海風のささやき",
     color: "#396eb5",
     labelColor: "#8ee2f8",
     labelFontColor: "#200",
@@ -74,8 +74,6 @@ function getWeekdayStr(ymd: Date) {
 }
 
 export const GanttCalendar: React.FC = () => {
-  // 仮のイメージ画像パス（実際の画像に合わせて書き換えてください）
-  // 例: /gacha_img/character1.png など
   const eventImages: (string | null)[] = [
     "/ver_event/Outfit_Meadow Whimsy.PNG",       // 田園フェアリー
     "/ver_event/Simulacrum_Anka.PNG",            // アンカー
@@ -85,6 +83,14 @@ export const GanttCalendar: React.FC = () => {
     "/ver_event/Outfit_Seaside Vacation.PNG",    // 海辺の休日
   ];
   const days = Array.from({ length: GANTT_DAYS }, (_, i) => i + 1);
+
+  // 今日の日付を取得
+  const todayObj = new Date();
+  const isThisMonth = todayObj.getFullYear() === GANTT_YEAR && (todayObj.getMonth() + 1) === GANTT_MONTH;
+  const today = isThisMonth ? todayObj.getDate() : null;
+
+  // 今日の日付のカラムインデックス
+  const todayCol = today ? days.indexOf(today) : -1;
 
   return (
     <div className="overflow-x-auto w-full">
@@ -109,7 +115,16 @@ export const GanttCalendar: React.FC = () => {
         >
           <div />
           {days.map((day) => (
-            <div key={day} className="text-xs sm:text-sm text-gray-700 text-center border-b border-gray-200 py-1">
+            <div
+              key={day}
+              className={
+                "text-xs sm:text-sm text-gray-700 text-center border-b border-gray-200 py-1" +
+                (today === day
+                  ? " bg-orange-400 font-bold ring-2 ring-yellow-300"
+                  : "")
+              }
+              style={{ transition: "background 0.2s" }}
+            >
               {day}
             </div>
           ))}
@@ -134,8 +149,12 @@ export const GanttCalendar: React.FC = () => {
                     ? "text-red-500"
                     : wd === "土"
                     ? "text-blue-500"
+                    : "") +
+                  (today === day
+                    ? " bg-orange-400 font-bold ring-1 ring-yellow-200"
                     : "")
                 }
+                style={{ transition: "background 0.2s" }}
               >
                 {wd}
               </div>
@@ -147,61 +166,92 @@ export const GanttCalendar: React.FC = () => {
           <div
             key={idx}
             className="grid relative"
-            style={{ gridTemplateColumns: `140px repeat(${GANTT_DAYS},1fr)`, minHeight: 38 }}
+            style={{
+              gridTemplateColumns: `140px repeat(${GANTT_DAYS},1fr)`,
+              minHeight: 74,
+            }}
           >
-            {/* ラベル部分 + イメージ */}
+            {/* 画像部分（ラベルセル） */}
             <div
-              className="flex flex-col justify-center items-center border-r border-gray-200 font-semibold text-[13px] sm:text-base py-2"
+              className="flex flex-col justify-center items-center border-r border-gray-200 bg-white"
               style={{
                 background: ev.labelColor,
-                color: ev.labelFontColor ?? "#333",
                 borderTopLeftRadius: idx === 0 ? 8 : 0,
                 borderBottomLeftRadius: idx === GANTT_EVENTS.length - 1 ? 8 : 0,
-                whiteSpace: "pre-line",
                 minWidth: 120,
                 textAlign: "center",
                 position: "relative",
-                paddingTop: eventImages[idx] ? 6 : undefined,
-                paddingBottom: eventImages[idx] ? 2 : undefined,
+                padding: 0,
+                minHeight: 74,
+                height: 74,
+                overflow: "hidden",
               }}
             >
-              {/* イメージ画像（ある場合のみ） */}
               {eventImages[idx] && (
                 <img
                   src={eventImages[idx]!}
                   alt={ev.label.replace(/\n.*/, "")}
                   style={{
-                    width: 40,
-                    height: 40,
+                    width: 64,
+                    height: 64,
                     objectFit: "contain",
-                    borderRadius: 6,
-                    marginBottom: 2,
+                    borderRadius: 8,
                     boxShadow: "0 1px 3px #0002"
                   }}
                   decoding="async"
                   loading="lazy"
                 />
               )}
-              {ev.label}
             </div>
             {/* 各日付セル */}
-            {days.map((day) => (
+            {days.map((day, colIdx) => (
               <div
                 key={day}
-                className="border-b border-gray-200 border-r last:border-r-0"
-                style={{ minHeight: 38 }}
+                className={
+                  "border-b border-gray-200 border-r last:border-r-0" +
+                  (colIdx === todayCol
+                    ? " bg-orange-200" // 今日の列を強調
+                    : "")
+                }
+                style={{ minHeight: 74, transition: "background 0.2s" }}
               />
             ))}
-            {/* イベントバー（grid-column指定でズレなし！） */}
+            {/* ガチャ名（イベントバーの上に表示） */}
             <div
-              className="flex items-center absolute left-0 top-0 w-full h-full"
+              className="absolute left-0 w-full flex items-center pointer-events-none"
               style={{
                 gridColumn: `${ev.start + 1} / ${ev.end + 2}`,
                 gridRow: "1",
+                top: 4,
+                zIndex: 3,
+                justifyContent: "flex-start",
+              }}
+            >
+              <span
+                style={{
+                  color: ev.labelFontColor ?? "#333",
+                  background: "rgba(255,255,255,0.9)",
+                  fontWeight: 600,
+                  fontSize: 14,
+                  borderRadius: 4,
+                  padding: "0 6px",
+                  marginLeft: 0,
+                  boxShadow: "0 1px 2px #0001"
+                }}
+              >
+                {ev.label}
+              </span>
+            </div>
+            {/* イベントバー */}
+            <div
+              className="flex items-center absolute left-0 w-full"
+              style={{
+                gridColumn: `${ev.start + 1} / ${ev.end + 2}`,
+                gridRow: "1",
+                top: 34,
                 zIndex: 2,
                 pointerEvents: "none",
                 position: "absolute",
-                marginTop: 10,
               }}
             >
               <div
@@ -262,156 +312,7 @@ const GIFT_CODES = [
   }
 ];
 
-// カレンダー生成ユーティリティ
-function getMonthCells(year: number, month: number) {
-  const firstDay = new Date(year, month, 1).getDay();
-  const lastDate = new Date(year, month + 1, 0).getDate();
-  const cells: (Date|null)[] = [];
-  for (let i = 0; i < firstDay; i++) cells.push(null);
-  for (let d = 1; d <= lastDate; d++) cells.push(new Date(year, month, d));
-  while (cells.length % 7 !== 0) cells.push(null);
-  return cells;
-}
-function getEventSegmentsForWeek(week: (Date | null)[], event: EventPeriod) {
-  let startCol = -1;
-  let endCol = -1;
-  for (let i = 0; i < week.length; i++) {
-    const date = week[i];
-    if (date && date >= event.start && date <= event.end) {
-      if (startCol === -1) startCol = i;
-      endCol = i;
-    }
-  }
-  if (startCol === -1 || endCol === -1) return null;
-  return {
-    startCol,
-    endCol,
-    showLeftRound: startCol === 0 || (week[startCol] && week[startCol]?.getTime() === event.start.getTime()),
-    showRightRound: endCol === 6 || (week[endCol] && week[endCol]?.getTime() === event.end.getTime()),
-  };
-}
-function getWeekEventLayers(weeks: (Date | null)[][], events: EventPeriod[]) {
-  return weeks.map(week => {
-    const layers = events.map((event, idx) => {
-      const seg = getEventSegmentsForWeek(week, event);
-      if (!seg) return null;
-      return { ...seg, event, z: idx };
-    }).filter(Boolean) as ({event: EventPeriod, startCol: number, endCol: number, showLeftRound: boolean, showRightRound: boolean, z: number}[]);
-    return layers;
-  });
-}
 
-// カレンダー
-const CalendarMonthGrid: React.FC<{ year: number; month: number; events: EventPeriod[] }> = ({
-  year, month, events
-}) => {
-  const cells = getMonthCells(year, month);
-  const weeks: (Date | null)[][] = [];
-  for (let i = 0; i < cells.length; i += 7) weeks.push(cells.slice(i, i + 7));
-  const weekEventLayers = getWeekEventLayers(weeks, events);
-
-  const weekRowHeights = weekEventLayers.map(layers => 44 + layers.length * 20);
-
-  return (
-    <div className="mx-auto max-w-md w-full px-2">
-      <div className="bg-white rounded shadow w-full">
-        {/* 曜日ヘッダー */}
-        <div className="grid grid-cols-7">
-          {DAYS.map((d, i) => (
-            <div
-              key={d}
-              className={`py-1 text-xs sm:text-base font-semibold text-center border-b border-gray-200 ${DAY_COLORS[i]}`}
-              style={{ fontSize: "clamp(11px, 3vw, 16px)" }}
-            >
-              {d}
-            </div>
-          ))}
-        </div>
-        {/* 各週 */}
-        {weeks.map((week, rowIdx) => (
-          <div
-            key={rowIdx}
-            className="relative grid grid-cols-7 border-b last:border-b-0 w-full"
-            style={{
-              minHeight: `${weekRowHeights[rowIdx]}px`,
-            }}
-          >
-            {/* 日付セル（上段） */}
-            {week.map((date, colIdx) => (
-              <div
-                key={colIdx}
-                className={`
-                  border-r border-gray-200 last:border-r-0 text-center flex flex-col items-center pt-1
-                  ${colIdx === 0 ? "text-red-500" : ""}
-                  ${colIdx === 6 ? "text-blue-500" : ""}
-                  ${!date ? "bg-gray-50" : ""}
-                `}
-                style={{
-                  fontSize: "clamp(11px, 3vw, 16px)",
-                  minHeight: 32,
-                  height: 44,
-                }}
-              >
-                {date ? date.getDate() : ""}
-              </div>
-            ))}
-            {/* イベントバー */}
-            {weekEventLayers[rowIdx].map((seg, idx) => {
-              const leftPct = (seg.startCol / 7) * 100;
-              const widthPct = ((seg.endCol - seg.startCol + 1) / 7) * 100;
-              const weekArr = week;
-              const isStartWeek = weekArr.some(
-                d => d?.getTime() === seg.event.start.getTime()
-              );
-              const isStartCol = weekArr[seg.startCol]?.getTime() === seg.event.start.getTime();
-              let showName = false;
-              if (isStartWeek && isStartCol) {
-                showName = true;
-              } else {
-                const cellDate = weekArr[seg.startCol];
-                if (
-                  cellDate &&
-                  cellDate.getDate() === 1 &&
-                  cellDate.getMonth() === month &&
-                  (seg.event.start.getFullYear() < cellDate.getFullYear() ||
-                    (seg.event.start.getFullYear() === cellDate.getFullYear() &&
-                      seg.event.start.getMonth() < month))
-                ) {
-                  showName = true;
-                }
-              }
-              return (
-                <div
-                  key={seg.event.name + rowIdx + idx}
-                  className="absolute flex items-center"
-                  style={{
-                    top: 44 + idx * 20,
-                    left: `${leftPct}%`,
-                    width: `${widthPct}%`,
-                    height: 18,
-                    background: seg.event.color,
-                    color: seg.event.fontColor ?? "#fff",
-                    fontWeight: "bold",
-                    fontSize: "clamp(10px, 2.5vw, 13px)",
-                    borderRadius: 4,
-                    boxShadow: "0 1px 2px #0001",
-                    padding: "0 4px",
-                    whiteSpace: "nowrap",
-                    overflow: "hidden",
-                    pointerEvents: "none",
-                  }}
-                  title={seg.event.name}
-                >
-                  {showName && seg.event.name}
-                </div>
-              );
-            })}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
 
 // ギフトコード欄（PCでは幅を広げ、descは折り返しせず横並びで見やすくする！）
 const GiftCodeList: React.FC = () => {
