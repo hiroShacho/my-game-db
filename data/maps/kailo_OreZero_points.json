@@ -140,17 +140,561 @@
   {
     "id": "chest_blue1",
     "name": "青宝箱1",
-    "description": "建物の屋根にある青箱（屋外）",
+    "description": "オーディン酒場の屋根にある箱（屋外）",
     "x": 633,
     "y": 655,
     "icon": "chest_blue"
   },
   {
+    "id": "chest_blue2",
+    "name": "青宝箱2",
+    "description": "生命植物研究所入り口の屋根にある箱（屋外）",
+    "x": 655,
+    "y": 615,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue3",
+    "name": "青宝箱3",
+    "description": "生命植物研究所の屋根にある箱（屋外）",
+    "x": 670,
+    "y": 580,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue4",
+    "name": "青宝箱4",
+    "description": "生命植物研究所出口の屋根にある箱（屋外）",
+    "x": 653,
+    "y": 550,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue5",
+    "name": "青宝箱5",
+    "description": "生命植物研究所の外周にある箱（屋外）",
+    "x": 630,
+    "y": 560,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue6",
+    "name": "青宝箱6",
+    "description": "スターダスト港の屋根にある箱（屋外）",
+    "x": 755,
+    "y": 610,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue7",
+    "name": "青宝箱7",
+    "description": "作業エリア上空にある箱（屋外）",
+    "x": 713,
+    "y": 635,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue8",
+    "name": "青宝箱8",
+    "description": "作業エリア上空にある箱（屋外）",
+    "x": 718,
+    "y": 635,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue9",
+    "name": "青宝箱9",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 710,
+    "y": 625,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue10",
+    "name": "青宝箱10",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 725,
+    "y": 600,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue11",
+    "name": "青宝箱11",
+    "description": "作業エリア上空にある箱（屋外）",
+    "x": 717,
+    "y": 595,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue12",
+    "name": "青宝箱12",
+    "description": "作業エリア上空にある箱（屋外）",
+    "x": 705,
+    "y": 580,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue13",
+    "name": "青宝箱13",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 665,
+    "y": 695,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue14",
+    "name": "青宝箱14",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 635,
+    "y": 730,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue15",
+    "name": "青宝箱15",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 625,
+    "y": 765,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue16",
+    "name": "青宝箱16",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 655,
+    "y": 763,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue17",
+    "name": "青宝箱17",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 590,
+    "y": 780,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue18",
+    "name": "青宝箱18",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 540,
+    "y": 703,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue19",
+    "name": "青宝箱19",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 500,
+    "y": 660,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue20",
+    "name": "青宝箱20",
+    "description": "作業エリアにある箱（屋外）",
+    "x": 500,
+    "y": 665,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue21",
+    "name": "青宝箱21",
+    "description": "アルファ区間外周の惑星にある箱",
+    "x": 440,
+    "y": 850,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue22",
+    "name": "青宝箱22",
+    "description": "アルファ区間外周の惑星にある箱",
+    "x": 410,
+    "y": 835,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue23",
+    "name": "青宝箱23",
+    "description": "アルファ区間外周の惑星にある箱",
+    "x": 413,
+    "y": 815,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue24",
+    "name": "青宝箱24",
+    "description": "空港エリアの惑星上にある箱（屋外）",
+    "x": 110,
+    "y": 420,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue25",
+    "name": "青宝箱25",
+    "description": "空港エリアの惑星上にある箱（屋外）",
+    "x": 170,
+    "y": 380,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue26",
+    "name": "青宝箱26",
+    "description": "空港エリアの惑星上にある箱（屋外）",
+    "x": 240,
+    "y": 385,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue27",
+    "name": "青宝箱27",
+    "description": "空港エリアの惑星上にある箱（屋外）",
+    "x": 120,
+    "y": 340,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue28",
+    "name": "青宝箱28",
+    "description": "空港エリアの外周にある箱（屋外）",
+    "x": 185,
+    "y": 310,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue29",
+    "name": "青宝箱29",
+    "description": "空港エリアの外周にある箱（屋外）",
+    "x": 180,
+    "y": 305,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue30",
+    "name": "青宝箱30",
+    "description": "空港エリアの外周にある箱（屋外）",
+    "x": 285,
+    "y": 325,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue31",
+    "name": "青宝箱31",
+    "description": "空港エリアの外周にある箱（屋外）",
+    "x": 290,
+    "y": 330,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue32",
+    "name": "青宝箱32",
+    "description": "中心区の箱",
+    "x": 505,
+    "y": 265,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue33",
+    "name": "青宝箱33",
+    "description": "中心区の箱",
+    "x": 550,
+    "y": 272,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue34",
+    "name": "青宝箱34",
+    "description": "中心区の箱",
+    "x": 553,
+    "y": 268,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue35",
+    "name": "青宝箱35",
+    "description": "中心区の箱",
+    "x": 555,
+    "y": 260,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue36",
+    "name": "青宝箱36",
+    "description": "中心区の箱",
+    "x": 545,
+    "y": 250,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue37",
+    "name": "青宝箱37",
+    "description": "ベータ区間の外周にある箱",
+    "x": 965,
+    "y": 85,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue38",
+    "name": "青宝箱38",
+    "description": "ベータ区間の外周にある箱",
+    "x": 958,
+    "y": 70,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue39",
+    "name": "青宝箱39",
+    "description": "ベータ区間の外周にある箱",
+    "x": 961,
+    "y": 45,
+    "icon": "chest_blue"
+  },
+  {
+    "id": "chest_blue40",
+    "name": "青宝箱40",
+    "description": "ベータ区間の外周にある箱",
+    "x": 928,
+    "y": 33,
+    "icon": "chest_blue"
+  },
+  {
     "id": "chest_purple1",
     "name": "紫宝箱1",
-    "description": "小惑星内の紫箱",
+    "description": "作業エリアの小惑星内の紫箱",
     "x": 510,
     "y": 605,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple2",
+    "name": "紫宝箱2",
+    "description": "アルファ区間外周の小惑星内の紫箱",
+    "x": 530,
+    "y": 780,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple3",
+    "name": "紫宝箱3",
+    "description": "アルファ区間外周の紫箱",
+    "x": 460,
+    "y": 770,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple4",
+    "name": "紫宝箱4",
+    "description": "アルファ区間外周の小惑星内の紫箱",
+    "x": 400,
+    "y": 765,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple5",
+    "name": "紫宝箱5",
+    "description": "アルファ区間の小惑星内の紫箱",
+    "x": 435,
+    "y": 680,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple6",
+    "name": "紫宝箱6",
+    "description": "アルファ区間の紫箱",
+    "x": 355,
+    "y": 665,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple7",
+    "name": "紫宝箱7",
+    "description": "アルファ区間の小惑星内の紫箱",
+    "x": 300,
+    "y": 660,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple8",
+    "name": "紫宝箱8",
+    "description": "アルファ区間外周の紫箱",
+    "x": 195,
+    "y": 655,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple9",
+    "name": "紫宝箱9",
+    "description": "アルファ区間の小惑星内の紫箱",
+    "x": 240,
+    "y": 555,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple10",
+    "name": "紫宝箱10",
+    "description": "アルファ区間の小惑星内の紫箱",
+    "x": 150,
+    "y": 530,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple11",
+    "name": "紫宝箱11",
+    "description": "空港エリア外周の小惑星内の紫箱",
+    "x": 245,
+    "y": 260,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple12",
+    "name": "紫宝箱12",
+    "description": "空港エリア外周の小惑星内の紫箱",
+    "x": 240,
+    "y": 260,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple13",
+    "name": "紫宝箱13",
+    "description": "ガンマ区間の紫箱",
+    "x": 305,
+    "y": 160,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple14",
+    "name": "紫宝箱14",
+    "description": "ガンマ区間外周の紫箱",
+    "x": 400,
+    "y": 150,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple15",
+    "name": "紫宝箱15",
+    "description": "ガンマ区間の紫箱",
+    "x": 450,
+    "y": 100,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple16",
+    "name": "紫宝箱16",
+    "description": "ガンマ区間の紫箱",
+    "x": 490,
+    "y": 60,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple17",
+    "name": "紫宝箱17",
+    "description": "廃棄バグゾーン観測所の紫箱",
+    "x": 620,
+    "y": 113,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple18",
+    "name": "紫宝箱18",
+    "description": "ベータ区間の紫箱",
+    "x": 825,
+    "y": 195,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple19",
+    "name": "紫宝箱19",
+    "description": "ベータ区間の小惑星内の紫箱",
+    "x": 805,
+    "y": 250,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple20",
+    "name": "紫宝箱20",
+    "description": "ベータ区間外周の紫箱",
+    "x": 920,
+    "y": 210,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple21",
+    "name": "紫宝箱21",
+    "description": "ベータ区間外周の紫箱",
+    "x": 1065,
+    "y": 230,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple22",
+    "name": "紫宝箱22",
+    "description": "ベータ区間の紫箱",
+    "x": 950,
+    "y": 320,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple23",
+    "name": "紫宝箱23",
+    "description": "ベータ区間の小惑星内の紫箱",
+    "x": 900,
+    "y": 410,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple24",
+    "name": "紫宝箱24",
+    "description": "ベータ区間の紫箱",
+    "x": 917,
+    "y": 508,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple25",
+    "name": "紫宝箱25",
+    "description": "ベータ区間の紫箱",
+    "x": 920,
+    "y": 510,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple26",
+    "name": "紫宝箱26",
+    "description": "ベータ区間外周の紫箱",
+    "x": 995,
+    "y": 665,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple27",
+    "name": "紫宝箱27",
+    "description": "ベータ区間の紫箱",
+    "x": 915,
+    "y": 670,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple28",
+    "name": "紫宝箱28",
+    "description": "ベータ区間の小惑星内の紫箱",
+    "x": 840,
+    "y": 675,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple29",
+    "name": "紫宝箱29",
+    "description": "ベータ区間の紫箱",
+    "x": 810,
+    "y": 710,
+    "icon": "chest_purple"
+  },
+  {
+    "id": "chest_purple30",
+    "name": "紫宝箱30",
+    "description": "ベータ区間外周の小惑星内の紫箱",
+    "x": 818,
+    "y": 780,
     "icon": "chest_purple"
   },
   {
@@ -159,6 +703,118 @@
     "description": "作業エリアのレースポイント",
     "x": 590,
     "y": 760,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold2",
+    "name": "金宝箱2",
+    "description": "アルファ区間の流星軌道",
+    "x": 335,
+    "y": 645,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold3",
+    "name": "金宝箱3",
+    "description": "アルファ区間上空のお宝",
+    "x": 230,
+    "y": 580,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold4",
+    "name": "金宝箱4",
+    "description": "アルファ区間の流星軌道",
+    "x": 180,
+    "y": 500,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold5",
+    "name": "金宝箱5",
+    "description": "空港エリアの惑星上にある箱（屋外）",
+    "x": 205,
+    "y": 370,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold6",
+    "name": "金宝箱6",
+    "description": "空港エリア外周にある箱（屋外）",
+    "x": 133,
+    "y": 280,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold7",
+    "name": "金宝箱7",
+    "description": "廃棄バグゾーン観測所のレースポイント",
+    "x": 610,
+    "y": 150,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold8",
+    "name": "金宝箱8",
+    "description": "中心区のお宝",
+    "x": 640,
+    "y": 290,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold9",
+    "name": "金宝箱9",
+    "description": "ベータ区間の流星軌道",
+    "x": 840,
+    "y": 165,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold10",
+    "name": "金宝箱10",
+    "description": "ベータ区間の流星軌道",
+    "x": 960,
+    "y": 320,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold11",
+    "name": "金宝箱11",
+    "description": "ベータ区間のレースポイント",
+    "x": 917,
+    "y": 510,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold12",
+    "name": "金宝箱12",
+    "description": "ベータ区間の流星軌道",
+    "x": 928,
+    "y": 515,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold13",
+    "name": "金宝箱13",
+    "description": "ベータ区間の流星軌道",
+    "x": 930,
+    "y": 610,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold14",
+    "name": "金宝箱14",
+    "description": "ベータ区間外周のお宝",
+    "x": 1050,
+    "y": 680,
+    "icon": "chest_gold"
+  },
+  {
+    "id": "chest_gold",
+    "name": "金宝箱",
+    "description": "ベータ区間の流星軌道",
+    "x": 845,
+    "y": 715,
     "icon": "chest_gold"
   },
   {
