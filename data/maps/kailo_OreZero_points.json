@@ -5,7 +5,7 @@
     "name": "転送ゲート　採掘場",
     "description": "キルオの採掘場の転送ゲート",
     "x": 635,
-    "y": 675,
+    "y": 680,
     "icon": "gate"
   },
   {
@@ -163,10 +163,218 @@
   },
   {
     "id": "Expoint1",
-    "name": "探索ポイント1",
+    "name": "探索ポイント・依頼",
     "description": "Mi-aを名乗る不審ｓｙ...医療スタッフ",
     "x": 630,
     "y": 680,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint2",
+    "name": "探索ポイント・箱",
+    "description": "室内の重力コントローラーで開ける箱",
+    "x": 645,
+    "y": 700,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint3",
+    "name": "探索ポイント・箱",
+    "description": "環状回廊のゼロエナジーキューブ",
+    "x": 645,
+    "y": 705,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint4",
+    "name": "探索ポイント・箱",
+    "description": "室内の重力コントローラーで開ける箱",
+    "x": 640,
+    "y": 710,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint5",
+    "name": "探索ポイント・依頼",
+    "description": "シャープの頼みを聞く",
+    "x": 645,
+    "y": 710,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint6",
+    "name": "探索ポイント・箱",
+    "description": "環状回廊のゼロエナジーキューブ",
+    "x": 640,
+    "y": 712,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint7",
+    "name": "探索ポイント・箱",
+    "description": "環状回廊のゼロエナジーキューブ",
+    "x": 635,
+    "y": 710,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint8",
+    "name": "探索ポイント・箱",
+    "description": "室内の重力コントローラーで開ける箱",
+    "x": 630,
+    "y": 710,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint9",
+    "name": "探索ポイント・依頼",
+    "description": "チョウチョウの頼みを聞く",
+    "x": 629,
+    "y": 708,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint10",
+    "name": "探索ポイント・箱",
+    "description": "環状回廊のゼロエナジーキューブ",
+    "x": 628,
+    "y": 705,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint11",
+    "name": "探索ポイント・箱",
+    "description": "室内の重力コントローラーで開ける箱",
+    "x": 629,
+    "y": 704,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint12",
+    "name": "探索ポイント・箱",
+    "description": "室内の重力コントローラーで開ける箱",
+    "x": 630,
+    "y": 704,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint13",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "探検家ガイドの話を聞く",
+    "x": 625,
+    "y": 690,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint14",
+    "name": "探索ポイント・箱",
+    "description": "転送ゲート周辺のゼロエナジーキューブ",
+    "x": 630,
+    "y": 690,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint15",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "探検家ガイドの話を聞く",
+    "x": 635,
+    "y": 690,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint16",
+    "name": "探索ポイント・ベイツ氏虫",
+    "description": "ベイツ氏虫を退治して開ける箱",
+    "x": 635,
+    "y": 685,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint17",
+    "name": "探索ポイント・依頼",
+    "description": "の頼みを聞く",
+    "x": 632,
+    "y": 680,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint18",
+    "name": "探索ポイント・箱",
+    "description": "エレベーターエリアのゼロエナジーキューブ",
+    "x": 630,
+    "y": 675,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint19",
+    "name": "探索ポイント・箱",
+    "description": "エレベーターエリアのゼロエナジーキューブ",
+    "x": 635,
+    "y": 678,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint20",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "探検家ガイドの話を聞く",
+    "x": 631,
+    "y": 672,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint21",
+    "name": "探索ポイント・ベイツ氏虫",
+    "description": "ベイツ氏虫を退治して開ける箱",
+    "x": 632,
+    "y": 670,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint22",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "探検家ガイドの話を聞く",
+    "x": 636,
+    "y": 679,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint23",
+    "name": "探索ポイント・箱",
+    "description": "エレベーターエリアのゼロエナジーキューブ",
+    "x": 633,
+    "y": 670,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint24",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "探検家ガイドの話を聞く",
+    "x": 632,
+    "y": 665,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint25",
+    "name": "探索ポイント・ベイツ氏虫",
+    "description": "ベイツ氏虫を退治して開ける箱",
+    "x": 633,
+    "y": 662,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint26",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "探検家ガイドの話を聞く",
+    "x": 632,
+    "y": 660,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint27",
+    "name": "探索ポイント・依頼",
+    "description": "の頼みを聞く",
+    "x": 648,
+    "y": 667,
     "icon": "Expoint"
   }
 ]
