@@ -78,7 +78,7 @@ export default function SiteSearch() {
   return (
    <>
     <Head>
-      <title>【幻塔】検索 | 幻塔攻略データベース</title>
+      <title>【幻塔攻略】検索 | 幻塔攻略データベース</title>
       <meta name="description" content="幻塔（Tower of Fantasy）の攻略データベース内（本サイト内）を検索できる検索ページです。" />
     </Head>
     <SidebarLayout>

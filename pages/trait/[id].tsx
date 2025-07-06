@@ -17,6 +17,11 @@ export default function TraitDetail() {
   const weapon = weapons.find(w => w.avatar === trait.avatar)
 
   return (
+   <>
+    <Head>
+      <title>【幻塔攻略】アバター特性詳細 | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）のアバター特性の詳細を紹介。" />
+    </Head>
     <SidebarLayout>
       <div className="px-2 sm:px-8 py-4 max-w-2xl mx-auto space-y-4">
         <h1 className="text-xl sm:text-2xl font-bold mb-2">{trait.name}</h1>
@@ -61,7 +66,7 @@ export default function TraitDetail() {
         {/* アバター武器リンク */}
         {weapon ? (
           <div className="mt-4">
-            <div className="text-xs sm:text-sm text-gray-500 mb-1">アバター武器リンク：</div>
+            <div className="text-xs sm:text-sm text-gray-500 mb-1">武器リンク：</div>
             <Link href={`/weapons/${weapon.slug}`} className="inline-block">
               <Image
                 src={`/images/${weapon.id}_img.PNG`}
@@ -70,7 +75,7 @@ export default function TraitDetail() {
                 height={80}
                 className="rounded"
               />
-              <div className="text-xs sm:text-sm text-center mt-1">{weapon.name}</div>
+              <div className="text-blue-600 hover:underline sm:text-sm text-center mt-1">アバター「{trait.avatar}」の武器を見る</div>
             </Link>
           </div>
         ) : (
@@ -78,5 +83,6 @@ export default function TraitDetail() {
         )}
       </div>
     </SidebarLayout>
+   </>
   )
 }

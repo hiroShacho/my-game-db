@@ -7,6 +7,7 @@ import traits from "../../data/traits.json";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import InternalLinksBlock from "@/components/InternalLinksBlock";
 import Link from "next/link";
+import Head from "next/head";
 
 const skillCategories = ["通常攻撃", "回避", "スキル", "連携スキル"];
 
@@ -67,6 +68,11 @@ export default function WeaponDetail() {
   };
 
   return (
+   <>
+    <Head>
+      <title>【幻塔攻略】武器詳細 | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）の武器詳細を紹介。" />
+    </Head>
     <SidebarLayout>
       <div className="max-w-3xl mx-auto space-y-6 px-2 sm:px-6 py-4">
         {!weapon ? (
@@ -299,5 +305,6 @@ export default function WeaponDetail() {
         )}
       </div>
     </SidebarLayout>
+   </>
   );
 }

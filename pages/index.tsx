@@ -91,8 +91,8 @@ export default function Home() {
   return (
    <>
     <Head>
-      <title>【幻塔】トップページ | 幻塔攻略データベース</title>
-      <meta name="description" content="幻塔（Tower of Fantasy）の攻略データベースのトップページです。" />
+      <title>【幻塔攻略】トップページ | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）の攻略・データベースのトップページです。" />
     </Head>
 
     <div className="p-4 sm:p-8 space-y-8">
@@ -100,7 +100,7 @@ export default function Home() {
       <section>
         <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">幻塔攻略データベース</h1>
         <p className="text-sm sm:text-base text-gray-600">
-          本サイトは、幻塔の最新コンテンツ・各種武器等を確認できる非公式データベースです。
+          本サイトは、幻塔の最新コンテンツ・各種武器等を確認できる非公式の攻略サイトです。
           各種コンテンツの情報は徐々に更新していきます。お待ちくだセい。現在はテストバージョン㌥。
         </p>
       </section>

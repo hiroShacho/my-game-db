@@ -12,7 +12,7 @@ export default function RelicsPage() {
   return (
    <>
     <Head>
-      <title>【幻塔】アルケー性能一覧 | 幻塔攻略データベース</title>
+      <title>【幻塔攻略】アルケー性能一覧 | 幻塔攻略データベース</title>
       <meta name="description" content="幻塔（Tower of Fantasy）のアルケーデータ・性能を紹介。" />
     </Head>
 

@@ -9,7 +9,7 @@ export default function KailoMapPage() {
   return (
    <>
     <Head>
-      <title>【幻塔】探索マップ・キルオゼロ鉱山区 | 幻塔攻略データベース</title>
+      <title>【幻塔攻略】探索マップ・キルオゼロ鉱山区 | 幻塔攻略データベース</title>
       <meta name="description" content="幻塔（Tower of Fantasy）の探索マップで探索を快適に！" />
     </Head>
       

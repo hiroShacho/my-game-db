@@ -10,6 +10,11 @@ type Props = {
 
 export default function RelicDetailPage({ relic }: Props) {
   return (
+   <>
+    <Head>
+      <title>【幻塔攻略】アルケー詳細 | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）のアルケーの詳細を紹介。" />
+    </Head>
     <SidebarLayout>
       <Head>
         <title>{relic.name} | アルケー詳細</title>
@@ -67,6 +72,7 @@ export default function RelicDetailPage({ relic }: Props) {
         </div>
       </div>
     </SidebarLayout>
+   </>
   );
 }
 

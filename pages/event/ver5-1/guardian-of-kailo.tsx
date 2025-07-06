@@ -8,7 +8,7 @@ export default function GuardianOfKailoEventPage() {
   return (
    <>
     <Head>
-      <title>【幻塔】イベント一覧 | 幻塔攻略データベース</title>
+      <title>【幻塔攻略】イベント一覧 | 幻塔攻略データベース</title>
       <meta name="description" content="幻塔（Tower of Fantasy）のイベントを紹介。" />
     </Head>
 

@@ -336,7 +336,7 @@ const TagSearchPage: React.FC = () => {
   return (
    <>
     <Head>
-      <title>【幻塔】タグ検索 | 幻塔攻略データベース</title>
+      <title>【幻塔攻略】タグ検索 | 幻塔攻略データベース</title>
       <meta name="description" content="幻塔（Tower of Fantasy）の攻略データベース内（本サイト内）をタグで検索できるタグ検索ページです。" />
     </Head>
     <SidebarLayout>

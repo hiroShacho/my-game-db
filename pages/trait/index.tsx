@@ -14,7 +14,7 @@ export default function TraitListPage() {
   return (
    <>
     <Head>
-      <title>【幻塔】アバター特性性能一覧 | 幻塔攻略データベース</title>
+      <title>【幻塔攻略】アバター特性性能一覧 | 幻塔攻略データベース</title>
       <meta name="description" content="幻塔（Tower of Fantasy）のアバター特性データ・性能を紹介。" />
     </Head>
 

@@ -16,6 +16,11 @@ export default function MatrixDetailPage() {
   const associatedWeapon = weapons.find((w) => w.avatar === matrix.avatar);
 
   return (
+   <>
+    <Head>
+      <title>【幻塔攻略】ボリション詳細 | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）のボリションの詳細を紹介。" />
+    </Head>
     <SidebarLayout>
       <div className="space-y-4 px-2 sm:px-8">
         {/* ボリション画像 */}
@@ -90,5 +95,6 @@ export default function MatrixDetailPage() {
         )}
       </div>
     </SidebarLayout>
+   </>
   );
 }

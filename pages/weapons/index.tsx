@@ -52,7 +52,7 @@ export default function WeaponsPage() {
   return (
    <>
     <Head>
-      <title>【幻塔】武器性能一覧 | 幻塔攻略データベース</title>
+      <title>【幻塔攻略】武器性能一覧 | 幻塔攻略データベース</title>
       <meta name="description" content="幻塔（Tower of Fantasy）の武器データ・性能を紹介。" />
     </Head>
 
