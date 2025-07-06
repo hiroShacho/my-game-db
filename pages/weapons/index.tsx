@@ -3,6 +3,7 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Image from "next/image";
 import weapons from "@/data/weapons.json";
+import Head from "next/head";
 
 export default function WeaponsPage() {
   const [sortKey, setSortKey] = useState<"rarity" | "resonance" | "trait" | "default">("default");
@@ -33,7 +34,6 @@ export default function WeaponsPage() {
       const bTag = b.tags.find((t: string) => Object.keys(resonanceOrder).includes(t));
       if (!aTag) return 1;
       if (!bTag) return -1;
-      // ここで型安全に変換し、万が一に備え??99でデフォルト
       return (resonanceOrder[aTag as keyof typeof resonanceOrder] ?? 99)
          - (resonanceOrder[bTag as keyof typeof resonanceOrder] ?? 99);
     });
@@ -50,6 +50,12 @@ export default function WeaponsPage() {
   }
 
   return (
+   <>
+    <Head>
+      <title>【幻塔】武器性能一覧 | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）の武器データ・性能を紹介。" />
+    </Head>
+
     <div className="mx-auto max-w-md px-4">
       <h1 className="text-xl font-bold mb-4">武器一覧</h1>
 
@@ -106,7 +112,7 @@ export default function WeaponsPage() {
 
               {/* 武器画像 + 名前（リンク） */}
               <Link
-                href={`/weapons/${weapon.id}`}
+                href={`/weapons/${weapon.slug}`}
                 className="flex flex-col items-center w-24 sm:w-32"
               >
                 <Image
@@ -155,6 +161,7 @@ export default function WeaponsPage() {
         })}
       </div>
     </div>
+   </>
   );
 }
 

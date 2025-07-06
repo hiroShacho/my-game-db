@@ -4,6 +4,8 @@ import Footer from "./Footer";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { AdSenseBanner } from "@/components/AdSenseBanner";
+import Breadcrumb from "@/components/Breadcrumb";
+import InternalLinksBlock from "@/components/InternalLinksBlock";
 
 // サイドバーメニュー構成を共通化
 const navLinks = [
@@ -121,6 +123,7 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
           <hr className="border-gray-200 my-2" />
           {/* モバイル時だけ下部に外部リンク・広告 */}
           <div className="px-4 pb-8 overflow-y-auto">
+            <InternalLinksBlock />
             <SidebarLinksAndAdBlock isMobile />
           </div>
         </aside>
@@ -153,10 +156,14 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
               </a>
             ))}
           </nav>
+          <div className="px-4 pb-4">
+            <InternalLinksBlock />
+          </div>
         </aside>
 
         {/* メインコンテンツ */}
         <main className="flex-1 px-2 sm:px-4 md:px-8 py-6 max-w-4xl mx-auto bg-white shadow rounded pt-16">
+          <Breadcrumb />
           {children}
         </main>
 

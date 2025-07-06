@@ -67,7 +67,7 @@ export default function MatrixDetailPage() {
         {/* アバター武器リンク（画像＋リンク） */}
         {associatedWeapon ? (
           <div className="text-center mt-4 space-y-2">
-            <Link href={`/weapons/${associatedWeapon.id}`}>
+            <Link href={`/weapons/${associatedWeapon.slug}`}>
               <img
                 src={`/images/${associatedWeapon.id}_img.PNG`}
                 alt={`${associatedWeapon.name}の画像`}
@@ -76,7 +76,7 @@ export default function MatrixDetailPage() {
             </Link>
             <div>
               <Link
-                href={`/weapons/${associatedWeapon.id}`}
+                href={`/weapons/${associatedWeapon.slug}`}
                 className="text-blue-600 hover:underline"
               >
                 アバター「{matrix.avatar}」の武器を見る

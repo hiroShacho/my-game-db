@@ -2,9 +2,16 @@ import React from "react";
 import Image from "next/image";
 import { ReactElement } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
+import Head from "next/head";
 
 export default function GuardianOfKailoEventPage() {
   return (
+   <>
+    <Head>
+      <title>【幻塔】イベント一覧 | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）のイベントを紹介。" />
+    </Head>
+
     <div className="p-4 sm:p-8 space-y-8">
       <section>
         <h1 className="text-2xl sm:text-3xl font-bold mb-6">
@@ -177,6 +184,7 @@ export default function GuardianOfKailoEventPage() {
         </div>
       </section>
     </div>
+   </>
   );
 }
 

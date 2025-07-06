@@ -7,6 +7,7 @@ import traitData from '@/data/traits.json';
 import relicData from '@/data/relics.json';
 import SidebarLayout from '@/components/layout/SidebarLayout';
 import { Tag } from '@/types';
+import Head from "next/head";
 
 type TagType = '武器' | '凸効果' | 'スキル' | 'ボリション' | 'アバター特性' | 'アルケー';
 
@@ -123,7 +124,7 @@ const TagSearchPage: React.FC = () => {
           resultItems.push(
             <div key={`weapon-${w.id}`} style={cardStyle}>
               <div style={rowStyle}>
-                <Link href={`/weapons/${w.id}`}>
+                <Link href={`/weapons/${w.slug}`}>
                   <img
                     src={`/images/${w.id}_img.PNG`}
                     alt={w.name}
@@ -131,7 +132,7 @@ const TagSearchPage: React.FC = () => {
                   />
                 </Link>
                 <div>
-                  <Link href={`/weapons/${w.id}`}>
+                  <Link href={`/weapons/${w.slug}`}>
                     <div><strong>[武器]</strong> {w.name}</div>
                   </Link>
                   <div>アバター: {w.avatar}</div>
@@ -150,7 +151,7 @@ const TagSearchPage: React.FC = () => {
             resultItems.push(
               <div key={`constellation-${w.id}-${idx}`} style={cardStyle}>
                 <div style={rowStyle}>
-                  <Link href={`/weapons/${w.id}`}>
+                  <Link href={`/weapons/${w.slug}`}>
                     <img
                       src={`/images/${w.id}_img.PNG`}
                       alt={w.name}
@@ -158,7 +159,7 @@ const TagSearchPage: React.FC = () => {
                     />
                   </Link>
                   <div>
-                    <Link href={`/weapons/${w.id}`}>
+                    <Link href={`/weapons/${w.slug}`}>
                       <div>
                         <strong>[凸効果]</strong> {w.name}：{idx + 1}凸
                       </div>
@@ -183,7 +184,7 @@ const TagSearchPage: React.FC = () => {
           resultItems.push(
             <div key={`skill-${s.id}`} style={cardStyle}>
               <div style={rowStyle}>
-                <Link href={`/weapons/${w.id}`}>
+                <Link href={`/weapons/${w.slug}`}>
                   <img
                     src={`/images/${w.id}_img.PNG`}
                     alt={w.name}
@@ -191,7 +192,7 @@ const TagSearchPage: React.FC = () => {
                   />
                 </Link>
                 <div>
-                  <Link href={`/weapons/${w.id}`}>
+                  <Link href={`/weapons/${w.slug}`}>
                     <div><strong>[スキル]</strong> {s.name}</div>
                   </Link>
                   <div>武器: {w.name}（アバター: {w.avatar}）</div>
@@ -333,6 +334,11 @@ const TagSearchPage: React.FC = () => {
   const rowStyle: React.CSSProperties = { display: 'flex', alignItems: 'center', gap: 12 };
 
   return (
+   <>
+    <Head>
+      <title>【幻塔】タグ検索 | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）の攻略データベース内（本サイト内）をタグで検索できるタグ検索ページです。" />
+    </Head>
     <SidebarLayout>
       <div style={responsivePadding}>
         <h2>大項目（種類）</h2>
@@ -397,6 +403,7 @@ const TagSearchPage: React.FC = () => {
         </div>
       </div>
     </SidebarLayout>
+   </>
   );
 };
 

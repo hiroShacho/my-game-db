@@ -7,9 +7,11 @@ import matrices from "@/data/matrices.json";
 import traits from "@/data/traits.json";
 import relics from "@/data/relics.json";
 import Link from "next/link";
+import Head from "next/head";
 
 interface SearchItem {
   id: string;
+  slug?: string; // 追加: 武器(slug)やスキル(slug)のため
   name: string;
   description: string;
   type: string;
@@ -29,8 +31,10 @@ export default function SiteSearch() {
         const name = item.name?.toLowerCase() || "";
         const description = item.description?.toLowerCase() || "";
         if (name.includes(keyword) || description.includes(keyword)) {
+          // slugを持つ場合は追加する
           return {
             id: item.id,
+            slug: item.slug, // 武器やスキルなどslugがある場合
             name: item.name,
             description: item.description || "",
             type,
@@ -50,8 +54,12 @@ export default function SiteSearch() {
       skills.forEach(skill => {
         const weapon = weapons.find(w => w.skillIds?.includes(skill.id));
         if (weapon) {
-          const res = match(skill, "スキル", weapon.id);
-          if (res) allResults.push(res);
+          const res = match(skill, "スキル", weapon.slug || weapon.id);
+          if (res) {
+            // skill自体にslugがある場合は使うが、なければid
+            res.slug = skill.slug || skill.id;
+            allResults.push(res);
+          }
         }
       });
 
@@ -75,6 +83,11 @@ export default function SiteSearch() {
   }, [q]);
 
   return (
+   <>
+    <Head>
+      <title>【幻塔】検索 | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）の攻略データベース内（本サイト内）を検索できる検索ページです。" />
+    </Head>
     <SidebarLayout>
       <h1 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">「{q}」の検索結果</h1>
 
@@ -84,10 +97,11 @@ export default function SiteSearch() {
             let href = "#";
             switch (item.type) {
               case "武器":
-                href = `/weapons/${item.id}`;
+                href = `/weapons/${item.slug || item.id}`;
                 break;
               case "スキル":
-                href = `/weapons/${item.refId}#${item.id}`;
+                // スキルも武器slugとスキルslugがあれば使う
+                href = `/weapons/${item.refId || item.id}#${item.slug || item.id}`;
                 break;
               case "ボリション":
                 href = `/matrices/${item.id}`;
@@ -119,5 +133,6 @@ export default function SiteSearch() {
         </p>
       )}
     </SidebarLayout>
+   </>
   );
 }

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import matrices from "@/data/matrices.json";
+import Head from "next/head";
 
 export default function MatricesPage() {
   const sortedMatrices = [...matrices].sort((a, b) => {
@@ -9,6 +10,12 @@ export default function MatricesPage() {
   });
 
   return (
+   <>
+    <Head>
+      <title>【幻塔】ボリション性能一覧 | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）のボリションデータ・性能を紹介。" />
+    </Head>
+
     <SidebarLayout>
       <h1 className="text-xl font-bold mb-4">ボリション一覧</h1>
       <div className="space-y-4">
@@ -53,5 +60,6 @@ export default function MatricesPage() {
         ))}
       </div>
     </SidebarLayout>
+   </>
   );
 }

@@ -5,19 +5,21 @@ import skills from "../../data/skills.json";
 import matrices from "../../data/matrices.json";
 import traits from "../../data/traits.json";
 import SidebarLayout from "@/components/layout/SidebarLayout";
+import InternalLinksBlock from "@/components/InternalLinksBlock";
 import Link from "next/link";
 
 const skillCategories = ["通常攻撃", "回避", "スキル", "連携スキル"];
 
 export default function WeaponDetail() {
   const router = useRouter();
-  const { id, q } = router.query;
+  const { slug, q } = router.query;
   const [selectedTab, setSelectedTab] = useState<string>("通常攻撃");
   const [highlightId, setHighlightId] = useState<string | null>(null);
   const [keyword, setKeyword] = useState<string | null>(null);
   const hasScrolled = useRef(false);
 
-  const weapon = weapons.find(w => w.id === String(id));
+  // slugで検索
+  const weapon = weapons.find(w => w.slug === String(slug));
   const skillList = weapon
     ? skills.filter(s => Array.isArray(weapon.skillIds) && weapon.skillIds.includes(s.id))
     : [];
@@ -47,7 +49,7 @@ export default function WeaponDetail() {
     if (typeof q === "string") {
       setKeyword(q.toLowerCase());
     }
-  }, [id, skillList, q, weapon]);
+  }, [slug, skillList, q, weapon]);
 
   const filteredSkills = skillList.filter(s => s.tags.includes(selectedTab));
 

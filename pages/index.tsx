@@ -5,6 +5,7 @@ import { ReactElement } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import { GanttCalendar, GanttEvent } from "@/components/GanttCalendar";
 import { GiftCodeList } from "@/components/GiftCodeList";
+import Head from "next/head";
 
 // --- Gantt Chart Calendar Data（カレンダーに表示する内容） ---
 const GANTT_EVENTS: GanttEvent[] = [
@@ -88,6 +89,12 @@ const GIFT_CODES = [
 
 export default function Home() {
   return (
+   <>
+    <Head>
+      <title>【幻塔】トップページ | 幻塔攻略データベース</title>
+      <meta name="description" content="幻塔（Tower of Fantasy）の攻略データベースのトップページです。" />
+    </Head>
+
     <div className="p-4 sm:p-8 space-y-8">
       {/* サイト紹介 */}
       <section>
@@ -115,7 +122,7 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* 新キャラカード */}
-          <Link href="/weapons/w_62" className="block">
+          <Link href="/weapons/TwinStars" className="block">
             <div
               className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
               style={{
@@ -189,6 +196,7 @@ export default function Home() {
         </div>
       </section>
     </div>
+   </>
   );
 }
 

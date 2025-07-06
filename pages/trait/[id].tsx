@@ -62,7 +62,7 @@ export default function TraitDetail() {
         {weapon ? (
           <div className="mt-4">
             <div className="text-xs sm:text-sm text-gray-500 mb-1">アバター武器リンク：</div>
-            <Link href={`/weapons/${weapon.id}`} className="inline-block">
+            <Link href={`/weapons/${weapon.slug}`} className="inline-block">
               <Image
                 src={`/images/${weapon.id}_img.PNG`}
                 alt={`${weapon.name}の画像`}
