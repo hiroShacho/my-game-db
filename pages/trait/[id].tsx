@@ -4,6 +4,7 @@ import weapons from '@/data/weapons.json'
 import Image from 'next/image'
 import Link from 'next/link'
 import SidebarLayout from '@/components/layout/SidebarLayout'
+import Head from "next/head";
 
 export default function TraitDetail() {
   const router = useRouter()

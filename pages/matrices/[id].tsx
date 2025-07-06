@@ -3,6 +3,7 @@ import matrices from "@/data/matrices.json";
 import weapons from "@/data/weapons.json";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function MatrixDetailPage() {
   const router = useRouter();
