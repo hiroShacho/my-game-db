@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tofguideanddb.vercel.app/
+
+# Sitemaps
+Sitemap: https://tofguideanddb.vercel.app/sitemap.xml

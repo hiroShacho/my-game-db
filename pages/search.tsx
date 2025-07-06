@@ -11,7 +11,6 @@ import Head from "next/head";
 
 interface SearchItem {
   id: string;
-  slug?: string; // 追加: 武器(slug)やスキル(slug)のため
   name: string;
   description: string;
   type: string;
@@ -31,10 +30,8 @@ export default function SiteSearch() {
         const name = item.name?.toLowerCase() || "";
         const description = item.description?.toLowerCase() || "";
         if (name.includes(keyword) || description.includes(keyword)) {
-          // slugを持つ場合は追加する
           return {
             id: item.id,
-            slug: item.slug, // 武器やスキルなどslugがある場合
             name: item.name,
             description: item.description || "",
             type,
@@ -54,12 +51,8 @@ export default function SiteSearch() {
       skills.forEach(skill => {
         const weapon = weapons.find(w => w.skillIds?.includes(skill.id));
         if (weapon) {
-          const res = match(skill, "スキル", weapon.slug || weapon.id);
-          if (res) {
-            // skill自体にslugがある場合は使うが、なければid
-            res.slug = skill.slug || skill.id;
-            allResults.push(res);
-          }
+          const res = match(skill, "スキル", weapon.id); // refId: 武器ID
+          if (res) allResults.push(res);
         }
       });
 
@@ -97,11 +90,14 @@ export default function SiteSearch() {
             let href = "#";
             switch (item.type) {
               case "武器":
-                href = `/weapons/${item.slug || item.id}`;
+                // weaponsのみid→slug参照
+                const weapon = weapons.find(w => w.id === item.id);
+                href = `/weapons/${weapon?.slug || item.id}`;
                 break;
               case "スキル":
-                // スキルも武器slugとスキルslugがあれば使う
-                href = `/weapons/${item.refId || item.id}#${item.slug || item.id}`;
+                // スキルリンクは武器のslugのみ対応
+                const weaponForSkill = weapons.find(w => w.id === item.refId);
+                href = `/weapons/${weaponForSkill?.slug || item.refId}#${item.id}`;
                 break;
               case "ボリション":
                 href = `/matrices/${item.id}`;
