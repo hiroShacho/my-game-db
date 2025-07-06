@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { AdSenseBanner } from "@/components/AdSenseBanner";
 
 // サイドバーメニュー構成を共通化
 const navLinks = [
@@ -40,8 +41,8 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
         </a>
       </div>
       <div className="text-sm text-gray-600 mt-4">広告スペース</div>
-      <div className={`mt-2 ${isMobile ? "h-32" : "h-64"} bg-gray-200 text-center flex items-center justify-center rounded`}>
-        Ad
+      <div className={`mt-2 ${isMobile ? "h-32" : "h-64"} text-center flex items-center justify-center rounded`}>
+        <AdSenseBanner />
       </div>
     </div>
   );
