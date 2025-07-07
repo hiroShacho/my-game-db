@@ -109,8 +109,8 @@ export default function Home() {
       <section>
         <h2 className="text-lg sm:text-xl font-semibold mb-2">NEWS</h2>
         <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+          <li>・2025/07/07 Ver5.2の先行テストサーバーのページを作成。一部キャラ情報を追加。</li>
           <li>・2025/07/07 サイドバーメニューに大陸版情報のページを追加。ガッツリネタバレなので閲覧は自己責任でお願いします。</li>
-          <li>・2025/07/04 ガチャカレンダーのレイアウトを修正 & 探索マップに補給庫の情報を追加(探索ポイントは追加途中)。</li>
           <li>･･･</li>
           <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
         </ul>
@@ -160,6 +160,28 @@ export default function Home() {
                 </h3>
                 <p className="text-sm sm:text-base text-white drop-shadow">
                   「キルオの守護者」の詳細はこちら
+                </p>
+              </div>
+            </div>
+          </Link>
+
+          {/* 新イベントカード：Ver5.2先行テストサーバー */}
+          <Link href="/event/ver5-1/ver5-2_testserver" className="block">
+            <div
+              className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
+              style={{
+                backgroundImage: "url('/ver_event/New_Event_2.png')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition" />
+              <div className="relative z-10 p-4">
+                <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                  Ver5.2先行テストサーバー
+                </h3>
+                <p className="text-sm sm:text-base text-white drop-shadow">
+                  Discordでテストサーバー募集開始！詳細・応募方法はこちら
                 </p>
               </div>
             </div>

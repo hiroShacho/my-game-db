@@ -17,6 +17,9 @@ export default function InternalLinksBlock() {
         <li>
           <Link href="/event/ver5-1/guardian-of-kailo" className="hover:underline text-blue-700">イベント「キルオの守護者」</Link>
         </li>
+        <li>
+          <Link href="/event/ver5-1/ver5-2_testserver" className="hover:underline text-blue-700">Ver5.2先行テストサーバー</Link>
+        </li>
       </ul>
     </div>
   );
