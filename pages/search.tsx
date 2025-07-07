@@ -9,11 +9,6 @@ import relics from "@/data/relics.json";
 import Link from "next/link";
 import Head from "next/head";
 
-// --- CN_infoネタバレ検索除外案: 検索対象データにCN_info系を含めない ---
-// - weapons, skills, matrices, traits, relics などのデータにはCN_info系の情報を混ぜないこと。
-// - もし将来的にCN_info系データを配列に追加する場合は、個別データにフラグ(isCN/hiddenFromSearch等)を付与し、ここで弾く。
-// - 万一同じデータ構造を使う場合は、idやslug, あるいは専用のプロパティで "CN_info" を判別して除外。
-
 interface SearchItem {
   id: string;
   name: string;
@@ -31,9 +26,14 @@ export default function SiteSearch() {
     if (typeof q === "string") {
       const keyword = q.toLowerCase();
 
+      // プロパティ存在チェック付きの検索避け判定
+      const isSearchable = (item: any) =>
+        !("isCN" in item && item.isCN) &&
+        !("isHiddenFromSearch" in item && item.isHiddenFromSearch) &&
+        !(item.id && typeof item.id === "string" && item.id.startsWith("CN_"));
+
       const match = (item: any, type: string, refId?: string): SearchItem | null => {
-        // --- 検索避け案: CN_info系のデータを除外するフラグ判定（今後の拡張性も考慮） ---
-        if (item.isCN || item.isHiddenFromSearch || (item.id && typeof item.id === "string" && item.id.startsWith("CN_"))) {
+        if (!isSearchable(item)) {
           return null; // 検索から除外
         }
         const name = item.name?.toLowerCase() || "";
@@ -58,9 +58,13 @@ export default function SiteSearch() {
       });
 
       skills.forEach(skill => {
-        // スキル自体がCN_info系の場合も除外
-        if (skill.isCN || skill.isHiddenFromSearch || (skill.id && typeof skill.id === "string" && skill.id.startsWith("CN_"))) return;
-        const weapon = weapons.find(w => w.skillIds?.includes(skill.id) && !w.isCN && !w.isHiddenFromSearch && !(w.id && typeof w.id === "string" && w.id.startsWith("CN_")));
+        if (!isSearchable(skill)) return;
+        // weaponsの中でも検索避け判定
+        const weapon = weapons.find(
+          w =>
+            w.skillIds?.includes(skill.id) &&
+            isSearchable(w)
+        );
         if (weapon) {
           const res = match(skill, "スキル", weapon.id); // refId: 武器ID
           if (res) allResults.push(res);

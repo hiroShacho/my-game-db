@@ -21,7 +21,7 @@ export default function CNInfoIndex() {
         <h1 className="text-xl font-bold mb-4">大陸版（CN）キャラクター情報</h1>
         <p className="mb-6 text-gray-700">
           ここでは中国（大陸）版で先行実装されているキャラクターの武器・ボリション・アバター特性などの情報を掲載します。<br />
-          ※データは非公式・大陸版の内容であり、グローバル版実装時には変更される可能性があります。
+          ※データは非公式・大陸版の内容であり、グローバル版実装時には変更される可能性があります。(数値は確実に変更になります)
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {cnCharacters.map((chara) => (

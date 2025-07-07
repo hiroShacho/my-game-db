@@ -11,20 +11,18 @@ import Head from "next/head";
 
 type TagType = '武器' | '凸効果' | 'スキル' | 'ボリション' | 'アバター特性' | 'アルケー';
 
-// --- CN_infoネタバレ検索避け案 ---
-// 1. 各データで isCN, isHiddenFromSearch, id/slugが"CN_"始まり等で除外
-// 2. 将来混入しても安心なようにフラグ判定を各箇所に
-
 const responsivePadding = { padding: "4vw", maxWidth: 600, margin: "0 auto" };
+
+// 検索避けフラグ判定
+const isSearchable = (item: any) =>
+  !("isCN" in item && item.isCN) &&
+  !("isHiddenFromSearch" in item && item.isHiddenFromSearch) &&
+  !(item.id && typeof item.id === "string" && item.id.startsWith("CN_"));
 
 const TagSearchPage: React.FC = () => {
   const [selectedTypes, setSelectedTypes] = useState<TagType[]>([]);
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [tagSearchMode, setTagSearchMode] = useState<'AND' | 'OR'>('AND');
-
-  // 検索対象からCN_info系を除外する判定関数
-  const isSearchable = (item: any) =>
-    !item?.isCN && !item?.isHiddenFromSearch && !(typeof item?.id === "string" && item.id.startsWith("CN_"));
 
   const toggleType = (type: TagType) => {
     const updated = selectedTypes.includes(type)
