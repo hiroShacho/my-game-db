@@ -18,6 +18,9 @@ const labelMap: Record<string, string> = {
 // パンくずから除外したいパス
 const excludePaths = ["event", "ver5-1","map"];
 
+// 「search」ページではパンくずリストのリンクを非表示にしたい
+const noLinkPaths = ["/search"];
+
 // 武器IDやその他IDを日本語名に変換する辞書（例）
 const weaponNameMap: Record<string, string> = { 
 "ThunderousHalberd":"雷霆の戟",
@@ -249,6 +252,22 @@ export default function Breadcrumb() {
 
   // 先頭にトップを追加（必要なら）
   displayLabels.unshift({ part: "top", href: "/", parentPath: [] });
+
+  // 検索ページなら全てリンクなしで表示
+  if (router.pathname === "/search") {
+    return (
+      <nav aria-label="パンくずリスト" className="text-sm mb-3">
+        <ol className="flex flex-wrap items-center space-x-1">
+          {displayLabels.map((crumb, idx) => (
+            <li key={crumb.href} className="flex items-center">
+              {idx > 0 && <span className="mx-1 text-gray-400">/</span>}
+              <span>{getBreadcrumbLabel(crumb.part, crumb.parentPath)}</span>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    );
+  }
 
   return (
     <nav aria-label="パンくずリスト" className="text-sm mb-3">

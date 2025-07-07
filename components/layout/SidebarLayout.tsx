@@ -18,6 +18,8 @@ const navLinks = [
   { href: "/relics", label: "アルケー一覧" },
 ];
 
+const cnInfoLink = { href: "/CN_info", label: "大陸版情報" };
+
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
   return (
     <div>
@@ -119,6 +121,15 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
                 {link.label}
               </a>
             ))}
+            {/* 大陸版情報へのリンクを他項目と少し離して */}
+            <div className="my-4" />
+            <a
+              href={cnInfoLink.href}
+              className="block font-bold text-red-700 hover:text-red-500"
+            >
+              {cnInfoLink.label}
+              <span className="ml-1 text-xs text-gray-400 align-top">(CN、ネタバレ注意)</span>
+            </a>
           </nav>
           <hr className="border-gray-200 my-2" />
           {/* モバイル時だけ下部に外部リンク・広告 */}
@@ -155,6 +166,15 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
                 {link.label}
               </a>
             ))}
+            {/* 大陸版情報へのリンクを他項目と少し離して */}
+            <div className="my-4" />
+            <a
+              href={cnInfoLink.href}
+              className="block font-bold text-red-700 hover:text-red-500"
+            >
+              {cnInfoLink.label}
+              <span className="ml-1 text-xs text-gray-400 align-top">(CN、ネタバレ注意)</span>
+            </a>
           </nav>
           <div className="px-4 pb-4">
             <InternalLinksBlock />

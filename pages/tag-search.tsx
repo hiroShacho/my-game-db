@@ -11,32 +11,9 @@ import Head from "next/head";
 
 type TagType = '武器' | '凸効果' | 'スキル' | 'ボリション' | 'アバター特性' | 'アルケー';
 
-// 追加: シンプルなメディアクエリを使ったスタイル
-const responsiveCardStyle: React.CSSProperties = {
-  border: '1px solid #ccc',
-  borderRadius: 8,
-  padding: 12,
-  background: '#fff',
-  boxShadow: '2px 2px 6px rgba(0,0,0,0.1)',
-  marginBottom: 12,
-  maxWidth: '100%',
-};
-
-const responsiveRowStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: 12,
-  flexWrap: 'wrap', // 画像とテキストが詰まりすぎないように
-};
-
-const responsiveImgStyle: React.CSSProperties = {
-  width: 64,
-  height: 64,
-  objectFit: 'cover',
-  marginRight: 16,
-  maxWidth: '30vw', // モバイルで大きすぎないように
-  minWidth: 40,
-};
+// --- CN_infoネタバレ検索避け案 ---
+// 1. 各データで isCN, isHiddenFromSearch, id/slugが"CN_"始まり等で除外
+// 2. 将来混入しても安心なようにフラグ判定を各箇所に
 
 const responsivePadding = { padding: "4vw", maxWidth: 600, margin: "0 auto" };
 
@@ -44,6 +21,10 @@ const TagSearchPage: React.FC = () => {
   const [selectedTypes, setSelectedTypes] = useState<TagType[]>([]);
   const [selectedTags, setSelectedTags] = useState<Tag[]>([]);
   const [tagSearchMode, setTagSearchMode] = useState<'AND' | 'OR'>('AND');
+
+  // 検索対象からCN_info系を除外する判定関数
+  const isSearchable = (item: any) =>
+    !item?.isCN && !item?.isHiddenFromSearch && !(typeof item?.id === "string" && item.id.startsWith("CN_"));
 
   const toggleType = (type: TagType) => {
     const updated = selectedTypes.includes(type)
@@ -65,28 +46,28 @@ const TagSearchPage: React.FC = () => {
   const getAllTagsForType = (type: TagType): Tag[] => {
     const tags = new Set<Tag>();
     if (type === '武器') {
-      weaponData.forEach((w) => w.tags?.forEach((t) => tags.add(t)));
+      weaponData.filter(isSearchable).forEach((w) => w.tags?.forEach((t) => tags.add(t)));
     }
     if (type === '凸効果') {
-      weaponData.forEach((w) =>
+      weaponData.filter(isSearchable).forEach((w) =>
         w.constellations?.forEach((c) =>
           c.tags?.forEach((t) => tags.add(t))
         )
       );
     }
     if (type === 'スキル') {
-      skillData.forEach((s) => s.tags?.forEach((t) => tags.add(t)));
+      skillData.filter(isSearchable).forEach((s) => s.tags?.forEach((t) => tags.add(t)));
     }
     if (type === 'ボリション') {
-      matrixData.forEach((m) =>
+      matrixData.filter(isSearchable).forEach((m) =>
         m.effects?.forEach((e) => e.tags?.forEach((t) => tags.add(t)))
       );
     }
     if (type === 'アバター特性') {
-      traitData.forEach((t) => t.tags?.forEach((t2) => tags.add(t2)));
+      traitData.filter(isSearchable).forEach((t) => t.tags?.forEach((t2) => tags.add(t2)));
     }
     if (type === 'アルケー') {
-      relicData.forEach((r) => {
+      relicData.filter(isSearchable).forEach((r) => {
         r.constellations?.forEach((c) =>
           c.tags?.forEach((t2) => tags.add(t2))
         );
@@ -114,11 +95,12 @@ const TagSearchPage: React.FC = () => {
 
   const renderResults = () => {
     if (selectedTypes.length === 0) return null;
-    const resultItems: JSX.Element[] = []; // ←型を明示
+    const resultItems: JSX.Element[] = [];
 
     // 武器
     if (selectedTypes.includes('武器')) {
       weaponData
+        .filter(isSearchable)
         .filter((w) => isMatch(w.tags))
         .forEach((w) => {
           resultItems.push(
@@ -145,11 +127,48 @@ const TagSearchPage: React.FC = () => {
 
     // 凸効果
     if (selectedTypes.includes('凸効果')) {
-      weaponData.forEach((w) => {
-        w.constellations?.forEach((c, idx) => {
-          if (isMatch(c.tags)) {
+      weaponData
+        .filter(isSearchable)
+        .forEach((w) => {
+          w.constellations?.forEach((c, idx) => {
+            if (isMatch(c.tags)) {
+              resultItems.push(
+                <div key={`constellation-${w.id}-${idx}`} style={cardStyle}>
+                  <div style={rowStyle}>
+                    <Link href={`/weapons/${w.slug}`}>
+                      <img
+                        src={`/images/${w.id}_img.PNG`}
+                        alt={w.name}
+                        style={imgStyle}
+                      />
+                    </Link>
+                    <div>
+                      <Link href={`/weapons/${w.slug}`}>
+                        <div>
+                          <strong>[凸効果]</strong> {w.name}：{idx + 1}凸
+                        </div>
+                      </Link>
+                      <div>アバター: {w.avatar}</div>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: 8 }}>{c.description}</div>
+                </div>
+              );
+            }
+          });
+        });
+    }
+
+    // スキル
+    if (selectedTypes.includes('スキル')) {
+      skillData
+        .filter(isSearchable)
+        .forEach((s) => {
+          if (isMatch(s.tags)) {
+            const w = weaponData.filter(isSearchable).find((w) => w.skillIds?.includes(s.id));
+            if (!w) return;
             resultItems.push(
-              <div key={`constellation-${w.id}-${idx}`} style={cardStyle}>
+              <div key={`skill-${s.id}`} style={cardStyle}>
                 <div style={rowStyle}>
                   <Link href={`/weapons/${w.slug}`}>
                     <img
@@ -160,86 +179,56 @@ const TagSearchPage: React.FC = () => {
                   </Link>
                   <div>
                     <Link href={`/weapons/${w.slug}`}>
-                      <div>
-                        <strong>[凸効果]</strong> {w.name}：{idx + 1}凸
-                      </div>
+                      <div><strong>[スキル]</strong> {s.name}</div>
                     </Link>
-                    <div>アバター: {w.avatar}</div>
+                    <div>武器: {w.name}（アバター: {w.avatar}）</div>
                   </div>
                 </div>
-                <div style={{ marginTop: 8 }}>{c.description}</div>
+                <div style={{ marginTop: 8 }}>{s.description}</div>
               </div>
             );
           }
         });
-      });
-    }
-
-    // スキル
-    if (selectedTypes.includes('スキル')) {
-      skillData.forEach((s) => {
-        if (isMatch(s.tags)) {
-          const w = weaponData.find((w) => w.skillIds?.includes(s.id));
-          if (!w) return;
-          resultItems.push(
-            <div key={`skill-${s.id}`} style={cardStyle}>
-              <div style={rowStyle}>
-                <Link href={`/weapons/${w.slug}`}>
-                  <img
-                    src={`/images/${w.id}_img.PNG`}
-                    alt={w.name}
-                    style={imgStyle}
-                  />
-                </Link>
-                <div>
-                  <Link href={`/weapons/${w.slug}`}>
-                    <div><strong>[スキル]</strong> {s.name}</div>
-                  </Link>
-                  <div>武器: {w.name}（アバター: {w.avatar}）</div>
-                </div>
-              </div>
-              <div style={{ marginTop: 8 }}>{s.description}</div>
-            </div>
-          );
-        }
-      });
     }
 
     // ボリション
     if (selectedTypes.includes('ボリション')) {
-      matrixData.forEach((m) => {
-        m.effects?.forEach((e, idx) => {
-          if (isMatch(e.tags)) {
-            resultItems.push(
-              <div key={`matrix-${m.id}-${idx}`} style={cardStyle}>
-                <div style={rowStyle}>
-                  <Link href={`/matrices/${m.id}`}>
-                    <img
-                      src={`/images/${m.id}_img.PNG`}
-                      alt={m.name}
-                      style={imgStyle}
-                    />
-                  </Link>
-                  <div>
+      matrixData
+        .filter(isSearchable)
+        .forEach((m) => {
+          m.effects?.forEach((e, idx) => {
+            if (isMatch(e.tags)) {
+              resultItems.push(
+                <div key={`matrix-${m.id}-${idx}`} style={cardStyle}>
+                  <div style={rowStyle}>
                     <Link href={`/matrices/${m.id}`}>
-                      <div>
-                        <strong>[ボリション]</strong> {m.name}（{e.set}）
-                      </div>
+                      <img
+                        src={`/images/${m.id}_img.PNG`}
+                        alt={m.name}
+                        style={imgStyle}
+                      />
                     </Link>
-                    <div>アバター: {m.avatar}</div>
+                    <div>
+                      <Link href={`/matrices/${m.id}`}>
+                        <div>
+                          <strong>[ボリション]</strong> {m.name}（{e.set}）
+                        </div>
+                      </Link>
+                      <div>アバター: {m.avatar}</div>
+                    </div>
                   </div>
+                  <div style={{ marginTop: 8 }}>{e.effect}</div>
                 </div>
-                <div style={{ marginTop: 8 }}>{e.effect}</div>
-              </div>
-            );
-          }
+              );
+            }
+          });
         });
-      });
     }
 
     // アバター特性
     if (selectedTypes.includes('アバター特性')) {
       traitData
+        .filter(isSearchable)
         .filter((t) => isMatch(t.tags))
         .forEach((t) => {
           resultItems.push(
@@ -266,11 +255,35 @@ const TagSearchPage: React.FC = () => {
 
     // アルケー
     if (selectedTypes.includes('アルケー')) {
-      relicData.forEach((r) => {
-        r.constellations?.forEach((c) => {
-          if (isMatch(c.tags)) {
+      relicData
+        .filter(isSearchable)
+        .forEach((r) => {
+          r.constellations?.forEach((c) => {
+            if (isMatch(c.tags)) {
+              resultItems.push(
+                <div key={`relic-constellation-${r.id}-${c.level}`} style={cardStyle}>
+                  <div style={rowStyle}>
+                    <Link href={`/relics/${r.id}`}>
+                      <img
+                        src={`/images/${r.id}_img.PNG`}
+                        alt={r.name}
+                        style={relicImgStyle}
+                      />
+                    </Link>
+                    <div>
+                      <Link href={`/relics/${r.id}`}>
+                        <div><strong>[アルケー]</strong> {r.name}（{c.level}効果）</div>
+                      </Link>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: 8 }}>{c.description}</div>
+                </div>
+              );
+            }
+          });
+          if (isMatch(r.baseTags)) {
             resultItems.push(
-              <div key={`relic-constellation-${r.id}-${c.level}`} style={cardStyle}>
+              <div key={`relic-desc-${r.id}`} style={cardStyle}>
                 <div style={rowStyle}>
                   <Link href={`/relics/${r.id}`}>
                     <img
@@ -281,37 +294,15 @@ const TagSearchPage: React.FC = () => {
                   </Link>
                   <div>
                     <Link href={`/relics/${r.id}`}>
-                      <div><strong>[アルケー]</strong> {r.name}（{c.level}効果）</div>
+                      <div><strong>[アルケー]</strong> {r.name}（全体説明）</div>
                     </Link>
                   </div>
                 </div>
-                <div style={{ marginTop: 8 }}>{c.description}</div>
+                <div style={{ marginTop: 8 }}>{r.description}</div>
               </div>
             );
           }
         });
-        if (isMatch(r.baseTags)) {
-          resultItems.push(
-            <div key={`relic-desc-${r.id}`} style={cardStyle}>
-              <div style={rowStyle}>
-                <Link href={`/relics/${r.id}`}>
-                  <img
-                    src={`/images/${r.id}_img.PNG`}
-                    alt={r.name}
-                    style={relicImgStyle}
-                  />
-                </Link>
-                <div>
-                  <Link href={`/relics/${r.id}`}>
-                    <div><strong>[アルケー]</strong> {r.name}（全体説明）</div>
-                  </Link>
-                </div>
-              </div>
-              <div style={{ marginTop: 8 }}>{r.description}</div>
-            </div>
-          );
-        }
-      });
     }
 
     return (
@@ -399,7 +390,7 @@ const TagSearchPage: React.FC = () => {
         <hr />
         <h2>検索結果</h2>
         <div style={{ overflowX: "auto" }}>
-          {renderResults()} {/* 各カードにresponsiveCardStyleやresponsiveRowStyleを適用 */}
+          {renderResults()}
         </div>
       </div>
     </SidebarLayout>

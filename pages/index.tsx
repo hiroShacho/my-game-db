@@ -109,8 +109,8 @@ export default function Home() {
       <section>
         <h2 className="text-lg sm:text-xl font-semibold mb-2">NEWS</h2>
         <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+          <li>・2025/07/07 サイドバーメニューに大陸版情報のページを追加。ガッツリネタバレなので閲覧は自己責任でお願いします。</li>
           <li>・2025/07/04 ガチャカレンダーのレイアウトを修正 & 探索マップに補給庫の情報を追加(探索ポイントは追加途中)。</li>
-          <li>・2025/06/28 復刻中のキャラの武器等の情報を追加 & 一部アイコンを修正。</li>
           <li>･･･</li>
           <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
         </ul>
