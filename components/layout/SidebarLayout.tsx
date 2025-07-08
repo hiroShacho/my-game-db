@@ -90,6 +90,7 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             fixed top-0 left-0 z-[9999] h-full w-64 bg-white shadow-lg transform transition-transform duration-200 ease-in-out
             ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
             lg:hidden
+            overflow-y-auto
           `}
         >
           {/* ドロワーヘッダー（モバイルのみ） */}
