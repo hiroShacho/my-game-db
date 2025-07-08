@@ -1032,5 +1032,85 @@
     "x": 648,
     "y": 667,
     "icon": "Expoint"
+  },
+  {
+    "id": "Expoint28",
+    "name": "探索ポイント・依頼",
+    "description": "アモスの頼みを聞く",
+    "x": 655,
+    "y": 605,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint29",
+    "name": "探索ポイント・箱",
+    "description": "生命植物研究所のゼロエナジーキューブ",
+    "x": 635,
+    "y": 590,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint30",
+    "name": "探索ポイント・ベイツ氏虫",
+    "description": "ベイツ氏虫を退治して開ける箱",
+    "x": 630,
+    "y": 585,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint31",
+    "name": "探索ポイント・箱",
+    "description": "生命植物研究所のゼロエナジーキューブ",
+    "x": 633,
+    "y": 580,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint32",
+    "name": "探索ポイント・依頼",
+    "description": "マイクの頼みを聞く",
+    "x": 660,
+    "y": 585,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint33",
+    "name": "探索ポイント・箱",
+    "description": "生命植物研究所のゼロエナジーキューブ",
+    "x": 655,
+    "y": 575,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint34",
+    "name": "探索ポイント・箱",
+    "description": "生命植物研究所のゼロエナジーキューブ",
+    "x": 665,
+    "y": 560,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint35",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "探検家ガイドの話を聞く",
+    "x": 675,
+    "y": 585,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint36",
+    "name": "探索ポイント・ベイツ氏虫",
+    "description": "ベイツ氏虫を退治して開ける箱",
+    "x": 670,
+    "y": 595,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint37",
+    "name": "探索ポイント・箱",
+    "description": "生命植物研究所外周のゼロエナジーキューブ（屋外）",
+    "x": 631,
+    "y": 540,
+    "icon": "Expoint"
   }
 ]

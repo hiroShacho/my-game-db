@@ -109,8 +109,8 @@ export default function Home() {
       <section>
         <h2 className="text-lg sm:text-xl font-semibold mb-2">NEWS</h2>
         <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+          <li>・2025/07/08 イベント「キルオの守護者」の「星々闘技場」について追記。探索ポイントを少し追加。</li>
           <li>・2025/07/07 Ver5.2の先行テストサーバーのページを作成。一部キャラ情報を追加。</li>
-          <li>・2025/07/07 サイドバーメニューに大陸版情報のページを追加。ガッツリネタバレなので閲覧は自己責任でお願いします。</li>
           <li>･･･</li>
           <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
         </ul>

@@ -21,8 +21,8 @@ export default function GuardianOfKailoEventPage() {
           Ver5.1のイベント「キルオの守護者」について、イベント内容ごとにまとめています。
         </p>
       </section>
-      {/* イベント紹介 1（背景色つき） */}
-      <section className="bg-blue-50 rounded shadow p-4 mb-6">
+      {/* イベント紹介 1（紫背景） */}
+      <section className="bg-purple-100 rounded shadow p-4 mb-6">
         <h2 className="text-lg font-semibold mb-2">宇宙船ピクシー</h2>
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <Image
@@ -102,8 +102,8 @@ export default function GuardianOfKailoEventPage() {
           </div>
         </div>
       </section>
-      {/* イベント紹介 2 */}
-      <section className="bg-white rounded shadow p-4 mb-6">
+      {/* イベント紹介 2（水色） */}
+      <section className="bg-cyan-100 rounded shadow p-4 mb-6">
         <h2 className="text-lg font-semibold mb-2">スターダストの試練</h2>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col sm:flex-row items-center gap-4">
@@ -128,7 +128,7 @@ export default function GuardianOfKailoEventPage() {
           <div className="flex flex-col items-center space-y-2">
             <Image
               src="/ver_event/New_Event_1_2_1.png"
-              alt="スターダスト宝箱"
+              alt="早見表"
               width={500}
               height={200}
               className="rounded w-full sm:w-[500px] h-auto object-cover"
@@ -149,20 +149,37 @@ export default function GuardianOfKailoEventPage() {
           </div>
         </div>
       </section>
-      {/* イベント紹介 3（未開催、画像なし） */}
-      <section className="bg-white rounded shadow p-4 mb-6">
-        <h2 className="text-lg font-semibold mb-2">星々闘技場（未開催）</h2>
-        <div className="flex flex-col sm:flex-row items-center gap-4">
-          <div className="w-full sm:w-72 h-28 bg-gray-200 flex items-center justify-center rounded text-gray-400">
-            画像準備中
+      {/* イベント紹介 3（ピンク） */}
+      <section className="bg-pink-100 rounded shadow p-4 mb-6">
+        <h2 className="text-lg font-semibold mb-2">星々闘技場</h2>
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <Image
+              src="/ver_event/New_Event_1_3.png"
+              alt="星々闘技場"
+              width={400}
+              height={150}
+              className="rounded w-full sm:w-72 h-auto object-cover"
+            />
+            <div>
+              <p className="text-gray-700">
+                内容は以前の爆撃アリーナそのまま<br />
+                爆弾は体で受け止めることも可能なので、着弾前に当たりに行くのも有効だぞ！
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                開催日：7月8日13:00～7月29日6:00(JST)
+              </p>
+            </div>
           </div>
-          <div>
-            <p className="text-gray-700">
-              かつての爆撃アリーナと似た内容と予想される。
-            </p>
-            <p className="text-gray-500 text-sm mt-2">
-              開催日：7月8日13:00～7月29日6:00(JST)
-            </p>
+          {/* 下に追加画像 */}
+          <div className="flex flex-col items-center space-y-2">
+            <Image
+              src="/ver_event/New_Event_1_3_1.png"
+              alt="早見表"
+              width={500}
+              height={200}
+              className="rounded w-full sm:w-[500px] h-auto object-cover"
+            />
           </div>
         </div>
       </section>
