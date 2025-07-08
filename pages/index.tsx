@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ReactElement } from "react";
@@ -7,7 +7,7 @@ import { GanttCalendar, GanttEvent } from "@/components/GanttCalendar";
 import { GiftCodeList } from "@/components/GiftCodeList";
 import Head from "next/head";
 
-// --- Gantt Chart Calendar Data（カレンダーに表示する内容） ---
+// Ganttイベント定義
 const GANTT_EVENTS: GanttEvent[] = [
   {
     label: "新コスチューム・田園フェアリー",
@@ -56,22 +56,22 @@ const GANTT_EVENTS: GanttEvent[] = [
     labelFontColor: "#200",
     start: 15,
     end: 29,
-  },
+  }
 ];
+
 const GANTT_MONTH = 7;
 const GANTT_YEAR = 2025;
-const GANTT_DAYS = 31; // 1日〜31日まで
+const GANTT_DAYS = 31;
 
 const eventImages: (string | null)[] = [
-  "/ver_event/Outfit_Meadow Whimsy.PNG",       // 田園フェアリー
-  "/ver_event/Simulacrum_Anka.PNG",            // アンカー
-  "/ver_event/Simulacrum_Plotti.PNG",          // パロッティ
-  "/ver_event/Simulacrum_Asurada.PNG",         // アスラーダ
-  "/ver_event/Outfit_Seabreeze Whispers.PNG",  // 海風のささやき
-  "/ver_event/Outfit_Seaside Vacation.PNG",    // 海辺の休日
+  "/ver_event/Outfit_Meadow Whimsy.PNG",
+  "/ver_event/Simulacrum_Anka.PNG",
+  "/ver_event/Simulacrum_Plotti.PNG",
+  "/ver_event/Simulacrum_Asurada.PNG",
+  "/ver_event/Outfit_Seabreeze Whispers.PNG",
+  "/ver_event/Outfit_Seaside Vacation.PNG",
 ];
 
-// ギフトコード一覧（内容はindex.tsxで管理）
 const GIFT_CODES = [
   {
     code: "TOF500601",
@@ -85,20 +85,15 @@ const GIFT_CODES = [
   }
 ];
 
-// ---- ここから既存ページ内容 ----
-
 export default function Home() {
   return (
     <>
       <Head>
         <title>【幻塔攻略】トップページ | 幻塔攻略データベース</title>
-        <meta 
-          name="viewport" 
-          content="width=device-width, initial-scale=0.3, minimum-scale=0.3, maximum-scale=3.0, user-scalable=yes"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="幻塔（Tower of Fantasy）の攻略・データベースのトップページです。" />
       </Head>
-      <div className="max-w-3xl mx-auto space-y-6 px-2 sm:px-6 py-4">
+      <div className="w-full max-w-full min-h-screen space-y-6 px-2 sm:px-6 py-4 overflow-x-hidden">
         {/* サイト紹介 */}
         <section>
           <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">幻塔攻略データベース</h1>
@@ -107,8 +102,7 @@ export default function Home() {
             各種コンテンツの情報は徐々に更新していきます。お待ちくだセい。現在はテストバージョン㌥。
           </p>
         </section>
-
-        {/* NEWS（ゲーム更新情報） */}
+        {/* NEWS */}
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2">NEWS</h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
@@ -118,22 +112,13 @@ export default function Home() {
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
         </section>
-
-        {/* 最新バージョンの注目コンテンツ */}
+        {/* 注目コンテンツ */}
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.1の注目コンテンツ</h2>
-
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* 新キャラカード */}
             <Link href="/weapons/TwinStars" className="block">
-              <div
-                className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
-                style={{
-                  backgroundImage: "url('/ver_event/New_Character.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "left",
-                }}
-              >
+              <div className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
+                style={{ backgroundImage: "url('/ver_event/New_Character.png')", backgroundSize: "cover", backgroundPosition: "left" }}>
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
@@ -145,17 +130,9 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-
-            {/* 新イベントカード */}
             <Link href="/event/ver5-1/guardian-of-kailo" className="block">
-              <div
-                className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
-                style={{
-                  backgroundImage: "url('/ver_event/New_Event_1.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
+              <div className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
+                style={{ backgroundImage: "url('/ver_event/New_Event_1.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
@@ -167,17 +144,9 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-
-            {/* 新イベントカード：Ver5.2先行テストサーバー */}
             <Link href="/event/ver5-1/ver5-2_testserver" className="block">
-              <div
-                className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
-                style={{
-                  backgroundImage: "url('/ver_event/New_Event_2.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              >
+              <div className="relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group"
+                style={{ backgroundImage: "url('/ver_event/New_Event_2.png')", backgroundSize: "cover", backgroundPosition: "center" }}>
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
@@ -189,23 +158,21 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-
-            {/* ギフトコード一覧 */}
             <div className="sm:col-span-2">
               <GiftCodeList codes={GIFT_CODES} />
             </div>
           </div>
-
-          {/* カレンダー */}
           <div className="mt-8 space-y-6">
             <div>
               <h3 className="text-md sm:text-lg font-semibold mb-2">公式イベントカレンダー</h3>
               <Image
                 src="/official-calendar.png"
                 alt="公式カレンダー"
-                width={900}
+                width={800}
                 height={400}
-                className="w-full h-auto rounded shadow"
+                className="w-full h-auto rounded shadow max-w-full"
+                sizes="100vw"
+                style={{ maxWidth: "100%" }}
               />
             </div>
             <div>
