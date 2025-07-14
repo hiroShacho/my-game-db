@@ -23,25 +23,25 @@ const cnInfoLink = { href: "/CN_info", label: "大陸版情報" };
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
   return (
     <div>
-      <div className="text-sm text-gray-600 mb-2 mt-4">幻塔公式リンク</div>
+      <div className="text-sm text-gray-600 mb-2 mt-4">幻塔公式SNSリンク</div>
       <div className={`flex flex-col items-center ${isMobile ? "space-y-2 mb-4" : "space-y-3 mb-6"}`}>
         <a href="https://tof.perfectworld.com/jp/" target="_blank" rel="noopener noreferrer">
-          <Image src="/ToF-official-HOME-icon.PNG" alt="公式サイト" width={isMobile ? 72 : 120} height={isMobile ? 72 : 120} />
+          <Image src="/ToF-official-HOME-icon.PNG" alt="公式サイト" width={isMobile ? 200 : 180} height={isMobile ? 200 : 180} />
         </a>
         <a href="https://x.com/ToF_JP" target="_blank" rel="noopener noreferrer">
-          <Image src="/ToF-official-x-icon.PNG" alt="公式X" width={isMobile ? 72 : 120} height={isMobile ? 72 : 120} />
+          <Image src="/ToF-official-x-icon.PNG" alt="公式X" width={isMobile ? 200 : 180} height={isMobile ? 200 : 180} />
         </a>
         <a href="https://www.youtube.com/@toweroffantasyJP" target="_blank" rel="noopener noreferrer">
-          <Image src="/ToF-official-youtube-icon.PNG" alt="公式YouTube" width={isMobile ? 72 : 120} height={isMobile ? 72 : 120} />
+          <Image src="/ToF-official-youtube-icon.PNG" alt="公式YouTube" width={isMobile ? 200 : 180} height={isMobile ? 200 : 180} />
         </a>
       </div>
-      <div className="text-sm text-gray-600 mb-2">管理人のSNSリンク</div>
+      <div className="text-sm text-gray-600 mb-2">管理人SNSリンク</div>
       <div className="flex flex-col items-center space-y-2">
         <a href="https://x.com/hiro28298793" target="_blank" rel="noopener noreferrer">
-          <Image src="/x-icon.png" alt="X (旧Twitter)" width={isMobile ? 48 : 80} height={isMobile ? 48 : 80} />
+          <Image src="/x-icon.png" alt="X (旧Twitter)" width={isMobile ? 200 : 180} height={isMobile ? 200 : 180} />
         </a>
         <a href="https://www.youtube.com/@hiro_Shacho_ToF" target="_blank" rel="noopener noreferrer">
-          <Image src="/youtube-icon.png" alt="YouTube" width={isMobile ? 48 : 80} height={isMobile ? 48 : 80} />
+          <Image src="/youtube-icon.png" alt="YouTube" width={isMobile ? 200 : 180} height={isMobile ? 200 : 180} />
         </a>
       </div>
       <div className="text-sm text-gray-600 mt-4">広告スペース</div>
