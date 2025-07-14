@@ -1112,5 +1112,85 @@
     "x": 631,
     "y": 540,
     "icon": "Expoint"
+  },
+  {
+    "id": "Expoint38",
+    "name": "探索ポイント・箱",
+    "description": "作業エリアのエントロピー失速カービンを使って開けるゼロエナジーキューブ（屋外）",
+    "x": 590,
+    "y": 630,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint39",
+    "name": "探索ポイント・箱",
+    "description": "作業エリアの超閾の目（屋外）",
+    "x": 610,
+    "y": 765,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint40",
+    "name": "探索ポイント・箱",
+    "description": "作業エリアの超閾の目（屋外）",
+    "x": 618,
+    "y": 755,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint41",
+    "name": "探索ポイント・箱",
+    "description": "作業エリアの虫卵収集（屋外）",
+    "x": 650,
+    "y": 725,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint42",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "探検家ガイドの話を聞く",
+    "x": 688,
+    "y": 668,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint43",
+    "name": "探索ポイント・ベイツ氏虫",
+    "description": "ベイツ氏虫を退治して開ける箱",
+    "x": 693,
+    "y": 668,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint44",
+    "name": "探索ポイント・箱",
+    "description": "作業エリアのエントロピー失速カービンを使って開けるゼロエナジーキューブ（屋外）",
+    "x": 703,
+    "y": 605,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint45",
+    "name": "探索ポイント・箱",
+    "description": "作業エリアの超閾の目（屋外）",
+    "x": 735,
+    "y": 745,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint46",
+    "name": "探索ポイント・箱",
+    "description": "作業エリアの超閾の目（屋外）",
+    "x": 795,
+    "y": 603,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint47",
+    "name": "探索ポイント・箱",
+    "description": "作業エリアのエントロピー失速カービンを使って開けるゼロエナジーキューブ（屋外）",
+    "x": 765,
+    "y": 490,
+    "icon": "Expoint"
   }
 ]

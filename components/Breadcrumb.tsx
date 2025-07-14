@@ -243,10 +243,10 @@ export default function Breadcrumb() {
   // パンくず表示用のラベル配列（除外パスは空にする）
   let displayLabels: { part: string, href: string, parentPath: string[] }[] = [];
   for (let i = 0; i < pathParts.length; i++) {
-    const part = pathParts[i];
+    const part = decodeURIComponent(pathParts[i]);
     if (excludePaths.includes(part)) continue;
     const href = "/" + pathParts.slice(0, i + 1).join("/");
-    const parentPath = pathParts.slice(0, i);
+    const parentPath = pathParts.slice(0, i).map(decodeURIComponent);
     displayLabels.push({ part, href, parentPath });
   }
 
