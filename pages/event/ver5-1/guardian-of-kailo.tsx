@@ -185,20 +185,42 @@ export default function GuardianOfKailoEventPage() {
           </div>
         </div>
       </section>
-      {/* イベント紹介 4（未開催、画像なし） */}
-      <section className="bg-white rounded shadow p-4 mb-6">
-        <h2 className="text-lg font-semibold mb-2">果てなき星域（未開催）</h2>
-        <div className="flex flex-col sm:flex-row items-center gap-4">
-          <div className="w-full sm:w-72 h-28 bg-gray-200 flex items-center justify-center rounded text-gray-400">
-            画像準備中
+      {/* イベント紹介 4（黄緑背景） */}
+      <section className="bg-lime-100 rounded shadow p-4 mb-6">
+        <h2 className="text-lg font-semibold mb-2">果てなき星域</h2>
+        <div className="flex flex-col gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <Image
+              src="/ver_event/New_Event_1_4.png"
+              alt="果てなき星域"
+              width={400}
+              height={150}
+              className="rounded w-full sm:w-72 h-auto object-cover"
+            />
+            <div>
+              <p className="text-gray-700">
+                いわゆるフォールガ〇ズ風のミニゲームイベント。<br />
+                従来通りなら一部アルケーの移動速度やジャンプ力UPが有効だぞ！<br />
+                とにかく生存重視で立ち回るか、バリアを使って積極的に落としにいくか、事前に下の足場を消して相手のペースを乱すか、自分の得意な戦略で勝利を掴もう！
+              </p>
+              <p className="text-gray-500 text-sm mt-2">
+                開催日：7月15日13:00～7月29日6:00(JST)
+              </p>
+            </div>
           </div>
-          <div>
-            <p className="text-gray-700">
-              いわゆるフォールガ〇ズ。一部アルケーの移動速度・ジャンプ力UPなどが有効。
-            </p>
-            <p className="text-gray-500 text-sm mt-2">
-              開催日：7月15日13:00～7月29日6:00(JST)
-            </p>
+          {/* 下に追加画像 */}
+          <div className="flex flex-col items-center space-y-2">
+            <Image
+              src="/ver_event/New_Event_1_4_1.png"
+              alt="果てなき星域 追加画像"
+              width={500}
+              height={200}
+              className="rounded w-full sm:w-[500px] h-auto object-cover"
+            />
+            {/* 必要に応じてキャプション追加 */}
+            <span className="text-xs sm:text-sm text-gray-700 mt-1">
+              報酬は商店のポイントのみ
+            </span>
           </div>
         </div>
       </section>

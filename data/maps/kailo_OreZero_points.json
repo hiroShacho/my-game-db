@@ -1192,5 +1192,85 @@
     "x": 765,
     "y": 490,
     "icon": "Expoint"
+  },
+  {
+    "id": "Expoint48",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間の虫卵収集（屋外）",
+    "x": 525,
+    "y": 715,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint49",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間の小惑星内にある恐怖の石像",
+    "x": 455,
+    "y": 770,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint50",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間の小惑星内にある虫卵収集",
+    "x": 453,
+    "y": 767,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint51",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間の小惑星内にあるゼロエナジーキューブ",
+    "x": 450,
+    "y": 770,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint52",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間の小惑星内にある無秩序晶石の柱",
+    "x": 440,
+    "y": 675,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint53",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間の小惑星外にあるゼロエナジーキューブ（屋外）",
+    "x": 395,
+    "y": 768,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint54",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間の小惑星内にある恐怖の石像",
+    "x": 390,
+    "y": 770,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint55",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間の重力コントローラーで開ける箱",
+    "x": 415,
+    "y": 560,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint56",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間の重力コントローラーで開ける箱",
+    "x": 410,
+    "y": 565,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint57",
+    "name": "探索ポイント・箱",
+    "description": "アルファ区間のエントロピー失速カービンを使って開けるゼロエナジーキューブ（屋外）",
+    "x": 368,
+    "y": 650,
+    "icon": "Expoint"
   }
 ]
