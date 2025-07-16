@@ -127,8 +127,8 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/07/16 Ver5.2先行テストサーバーの内容を更新しました。</li>
             <li>・2025/07/15 イベント「キルオの守護者」の「果て無き星域」について追記。探索ポイントを少し追加。</li>
-            <li>・2025/07/14 トップページのレイアウトを変更。雷属性の武器情報と探索マップの探索ポイントを追加。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
@@ -206,20 +206,20 @@ export default function Home() {
                   cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/New_Event_2.png')",
+                  backgroundImage: "url('/ver_event/New_Event_2_0.png')",
                   backgroundSize: "cover",
-                  backgroundPosition: "center"
+                  backgroundPosition: "center top"
                 }}
               >
                 {/* オーバーレイ: ホバーで色が濃く */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-all duration-200" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-200" />
                 {/* テキスト部分 */}
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     Ver5.2先行テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    Discordでテストサーバー募集開始！詳細・応募方法はこちら
+                    先行テストスタート！新キャラクターなどの情報はこちら！
                   </p>
                 </div>
               </div>
