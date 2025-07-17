@@ -57,8 +57,7 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
             alt="Sycomバナー"
             width={234}
             height={60}
-            border={0}
-            style={{ marginBottom: 4 }}
+            style={{ marginBottom: 4, border: "none" }}
           />
         </a>
         {/* eslint-disable-next-line @next/next/no-img-element */}
