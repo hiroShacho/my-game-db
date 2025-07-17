@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import { ReactElement, useState } from "react";
+import Link from "next/link";
 
 export default function Ver52TestServer() {
   const [showDetail, setShowDetail] = useState(false);
@@ -107,9 +108,61 @@ export default function Ver52TestServer() {
                 style={{ minHeight: 160 }}
               ></iframe>
             </div>
+            {/* ▼ ここから武器詳細リンク（カード風・横並び4カラム） */}
+            <div className="flex justify-center mt-4 mb-3">
+              <Link
+                href="/weapons/AF-010Servion"
+                className="flex w-full max-w-lg justify-between items-center border rounded shadow px-6 py-4 bg-white hover:bg-gray-50 transition"
+                style={{ minWidth: 340 }}
+              >
+                {/* レア度 */}
+                <div className="flex flex-col items-center flex-1 min-w-0">
+                  <Image
+                    src="/images/SSR.png"
+                    alt="SSR"
+                    width={60}
+                    height={60}
+                  />
+                </div>
+                {/* 武器画像＋名前（リンク色） */}
+                <div className="flex flex-col items-center flex-1 min-w-0">
+                  <Image
+                    src="/images/w_63_img.PNG"
+                    alt="サーバントAF-010"
+                    width={60}
+                    height={60}
+                    className="rounded"
+                  />
+                  <span className="text-sm text-blue-700 mt-1 hover:underline text-center">
+                    サーバントAF-010
+                  </span>
+                </div>
+                {/* 共鳴 */}
+                <div className="flex flex-col items-center flex-1 min-w-0">
+                  <Image
+                    src="/images/強攻.png"
+                    alt="強攻"
+                    width={44}
+                    height={44}
+                  />
+                  <span className="text-xs mt-1">強攻</span>
+                </div>
+                {/* 特質 */}
+                <div className="flex flex-col items-center flex-1 min-w-0">
+                  <Image
+                    src="/images/雷・氷.png"
+                    alt="雷・氷"
+                    width={44}
+                    height={44}
+                  />
+                  <span className="text-xs mt-1">雷・氷</span>
+                </div>
+              </Link>
+            </div>
+            {/* ▲ ここまで武器詳細リンク */}
           </div>
 
-          {/* 煙渺恒常入り */}
+          {/* 以下は既存のまま */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
               ■煙渺恒常入り
@@ -124,8 +177,6 @@ export default function Ver52TestServer() {
               sizes="100vw"
             />
           </div>
-
-          {/* フィオナ共感覚 */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
               ■フィオナ共感覚
@@ -140,8 +191,6 @@ export default function Ver52TestServer() {
               sizes="100vw"
             />
           </div>
-
-          {/* 新マップ・新ワールドボス・新ストーリー */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
               ■新マップ、新ワールドボス、新ストーリー追加
@@ -166,8 +215,6 @@ export default function Ver52TestServer() {
               />
             </div>
           </div>
-
-          {/* 新メカ武器追加 */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2">■新メカ武器追加</h3>
             <div className="flex flex-col sm:flex-row gap-3 mb-2">
@@ -196,8 +243,6 @@ export default function Ver52TestServer() {
               </div>
             </div>
           </div>
-
-          {/* 先鋒クラッシュにヨルムンガンド追加 */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2">■先鋒クラッシュにヨルムンガンド追加</h3>
             <Image
@@ -209,8 +254,6 @@ export default function Ver52TestServer() {
               sizes="100vw"
             />
           </div>
-
-          {/* 在りし日の幻・超域に72階追加 */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2">■在りし日の幻・超域に72階追加</h3>
             <Image
@@ -222,8 +265,6 @@ export default function Ver52TestServer() {
               sizes="100vw"
             />
           </div>
-
-          {/* 幻影の序列・超域の4属性に23階、異能15階追加 */}
           <div className="mb-6">
             <h3 className="text-lg font-semibold mb-2">■幻影の序列・超域の4属性に23階、異能15階追加</h3>
             <div className="flex flex-col sm:flex-row gap-3 mb-2">

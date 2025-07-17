@@ -45,6 +45,31 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
         </a>
       </div>
       <div className="text-sm text-gray-600 mt-4">広告スペース</div>
+      {/* バナーを広告スペース見出し直下、AdSenseBannerの上に表示 */}
+      <div className="flex flex-col items-center mt-1 mb-2">
+        <div className="text-xs text-gray-700 mb-1">
+          管理人がPC購入に使ったBTOサイト
+        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <a href="https://px.a8.net/svt/ejp?a8mat=459PZA+3ENBEA+34WQ+5YZ75" rel="nofollow" target="_blank">
+          <img
+            src="https://www26.a8.net/svt/bgt?aid=250716358206&wid=001&eno=01&mid=s00000014633001003000&mc=1"
+            alt="Sycomバナー"
+            width={234}
+            height={60}
+            border={0}
+            style={{ marginBottom: 4 }}
+          />
+        </a>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="https://www14.a8.net/0.gif?a8mat=459PZA+3ENBEA+34WQ+5YZ75"
+          width={1}
+          height={1}
+          alt=""
+          style={{ display: "none" }}
+        />
+      </div>
       <div className={`mt-2 ${isMobile ? "h-32" : "h-64"} text-center flex items-center justify-center rounded`}>
         <AdSenseBanner />
       </div>
@@ -71,7 +96,7 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       {/* 固定ヘッダー */}
-      <Header 
+      <Header
         onSidebarToggle={() => setSidebarOpen(true)}
         showSidebarButton={true}
       />
