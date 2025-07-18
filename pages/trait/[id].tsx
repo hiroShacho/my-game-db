@@ -27,9 +27,9 @@ export default function TraitDetail() {
       <div className="px-2 sm:px-8 py-4 max-w-2xl mx-auto space-y-4">
         <h1 className="text-xl sm:text-2xl font-bold mb-2">{trait.name}</h1>
         <div className="flex flex-col sm:flex-row gap-4 items-stretch">
-          {/* 画像エリア */}
+          {/* 画像エリア（青背景削除） */}
           <div className="flex-shrink-0 flex items-center sm:items-start justify-center sm:justify-center sm:h-full">
-            <div className="w-32 h-32 sm:w-48 sm:h-[250px] bg-blue-100 rounded flex items-center justify-center">
+            <div className="w-32 h-32 sm:w-48 sm:h-[250px] flex items-center justify-center">
               <Image
                 src={`/images/${trait.id}_img.PNG`}
                 alt={`${trait.name}の画像`}
@@ -44,7 +44,7 @@ export default function TraitDetail() {
           <div className="flex flex-col gap-3 flex-1 justify-center">
             <div className="border rounded-md p-2 sm:p-4 bg-gray-50 shadow-sm">
               <h2 className="text-base sm:text-lg font-semibold mb-1">効果</h2>
-              <p className="text-sm sm:text-base">{trait.description}</p>
+              <div className="text-xs sm:text-sm text-gray-700 whitespace-pre-line">{trait.description}</div>
             </div>
             <div className="border rounded-md p-2 sm:p-4 bg-gray-50 shadow-sm">
               <h2 className="text-base sm:text-lg font-semibold mb-1">評価</h2>

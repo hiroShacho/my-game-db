@@ -40,8 +40,8 @@ export default function MatrixDetailPage() {
         <div className="space-y-2">
           {(matrix.effects || []).map((eff, idx) => (
             <div key={idx} className="bg-gray-100 p-3 sm:p-4 rounded">
-              <div className="font-semibold text-sm sm:text-base text-gray-700">{eff.set}</div>
-              <div className="text-sm sm:text-base text-gray-800">{eff.effect}</div>
+              <div className="font-semibold text-sm sm:text-base text-gray-700 whitespace-pre-line">{eff.set}</div>
+              <div className="text-sm sm:text-base text-gray-800 whitespace-pre-line">{eff.effect}</div>
               {/* タグ */}
               {eff.tags && eff.tags.length > 0 && (
                 <div className="mt-1 flex flex-wrap gap-2">

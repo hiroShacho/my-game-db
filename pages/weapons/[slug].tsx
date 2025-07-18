@@ -269,7 +269,7 @@ export default function WeaponDetail() {
                           />
                           <div className="text-xs sm:text-sm font-semibold">{trait.name}</div>
                         </Link>
-                        <div className="text-xs sm:text-sm text-gray-700">{trait.description}</div>
+                        <div className="text-xs sm:text-sm text-gray-700 whitespace-pre-line">{trait.description}</div>
                       </div>
                     ))}
                   </div>

@@ -41,8 +41,8 @@ export default function MatricesPage() {
             <div className="sm:ml-4 flex flex-col justify-between h-full flex-grow w-full">
               {(matrix.effects || []).map((eff, idx) => (
                 <div key={idx} className="mb-3">
-                  <div className="text-sm font-semibold text-gray-700">{eff.set}</div>
-                  <div className="text-sm text-gray-800 mb-1">{eff.effect}</div>
+                  <div className="text-sm font-semibold text-gray-700 whitespace-pre-line">{eff.set}</div>
+                  <div className="text-sm text-gray-800 mb-1 whitespace-pre-line">{eff.effect}</div>
                   <div>
                     {(eff.tags || []).map((tag) => (
                       <span

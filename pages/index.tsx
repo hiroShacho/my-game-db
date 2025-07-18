@@ -127,8 +127,8 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/07/18 幻塔アニバーサリー記念投稿イベントのイベント紹介ページを作成しました。</li>
             <li>・2025/07/17 テストサーバーでの新キャラの情報を更新。武器一覧などにも掲載しているのでネタバレが嫌な人は注意。</li>
-            <li>・2025/07/16 Ver5.2先行テストサーバーの内容を更新しました。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
@@ -220,6 +220,35 @@ export default function Home() {
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
                     先行テストスタート！新キャラクターなどの情報はこちら！
+                  </p>
+                </div>
+              </div>
+            </Link>
+            <Link href="/event/ver5-1/Anniversary_Commemorative_Submission" className="block">
+              <div
+                className="
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
+                  transition-all duration-200
+                  hover:scale-105
+                  hover:shadow-2xl
+                  hover:ring-2 hover:ring-sky-400
+                  cursor-pointer
+                "
+                style={{
+                  backgroundImage: "url('/ver_event/New_Event_3.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center top"
+                }}
+              >
+                {/* オーバーレイ: ホバーで色が濃く */}
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-200" />
+                {/* テキスト部分 */}
+                <div className="relative z-10 p-4">
+                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                    幻塔アニバーサリー記念投稿イベント
+                  </h3>
+                  <p className="text-sm sm:text-base text-white drop-shadow">
+                    楽曲「Meant to Be」二次創作企画に参加してみよう！
                   </p>
                 </div>
               </div>

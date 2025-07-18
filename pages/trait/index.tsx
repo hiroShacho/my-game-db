@@ -29,9 +29,9 @@ export default function TraitListPage() {
                 key={trait.id}
                 className="flex flex-col sm:flex-row items-center border p-2 sm:p-4 rounded shadow-sm gap-4"
               >
-                {/* 画像エリア（リンク付き、余白色付き中央配置） */}
+                {/* 画像エリア（リンク付き、青背景を削除して中央配置） */}
                 <Link href={`/trait/${trait.id}`} className="flex-shrink-0 flex items-center justify-center">
-                  <div className="w-16 h-16 sm:w-28 sm:h-28 bg-blue-100 rounded flex items-center justify-center">
+                  <div className="w-16 h-16 sm:w-28 sm:h-28 flex items-center justify-center">
                     <Image
                       src={`/images/${trait.id}_img.PNG`}
                       alt={trait.name}
@@ -48,7 +48,7 @@ export default function TraitListPage() {
                       {trait.name}
                     </h2>
                   </Link>
-                  <div className="text-xs sm:text-sm text-gray-600 mb-1">{trait.description}</div>
+                  <div className="text-xs sm:text-sm text-gray-600 mb-1 whitespace-pre-line">{trait.description}</div>
                   <div className="flex flex-wrap gap-2 mb-1">
                     {trait.tags?.map((tag) => (
                       <span
