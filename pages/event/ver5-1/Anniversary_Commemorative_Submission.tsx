@@ -6,8 +6,6 @@ import Link from "next/link";
 import { ReactElement } from "react";
 
 export default function AnniversaryCommemorativeSubmission() {
-  // 折り畳み制御
-  const [showDiscordHowto, setShowDiscordHowto] = useState(false);
   // 画像拡大制御
   const [zoomImg, setZoomImg] = useState<string | null>(null);
 
@@ -61,62 +59,12 @@ export default function AnniversaryCommemorativeSubmission() {
             の2部門があり、共同創作もOKとのことです！（報酬の称号だけは投稿者のみ獲得可能なので注意）
           </p>
 
-          {/* ▼ 折り畳みタブ：公式Discordへの参加方法 */}
+          {/* Discord参加方法部分 非表示・アナウンス文のみ表示 */}
           <div className="mb-3">
-            <button
-              type="button"
-              onClick={() => setShowDiscordHowto(v => !v)}
-              className="font-semibold text-base sm:text-lg px-4 py-2 bg-blue-100 hover:bg-blue-200 rounded transition"
-              aria-expanded={showDiscordHowto}
-            >
-              {showDiscordHowto
-                ? "▲ 公式Discordサーバー参加方法（クリックで折りたたむ）"
-                : "▼ 公式Discordサーバー参加方法（クリックで展開）"}
-            </button>
-            {showDiscordHowto && (
-              <div className="mt-3 text-base sm:text-lg">
-                <ul className="list-decimal pl-6 mb-3">
-                  <li>
-                    <b>公式サイト</b>（<a href="https://tof.perfectworld.com/jp/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">https://tof.perfectworld.com/jp/</a>）にアクセス
-                  </li>
-                  <li>
-                    サイト内の「<b>Discord</b>」アイコンやメニューから公式Discordへ移動
-                  </li>
-                  <li>
-                    Discordのアカウントでログインし、<b>招待に同意</b>してサーバーへ参加！
-                  </li>
-                </ul>
-                <p className="mb-2">
-                  サーバー参加にはDiscordアカウントが必要です。<br />
-                  参加後は各種公式イベントの案内や、今回のアニバーサリー企画の詳細もチェックできます。
-                </p>
-                {/* Discordアイコンの位置を示す画像 */}
-                <div className="w-full flex justify-center my-3">
-                  <button
-                    type="button"
-                    className="focus:outline-none"
-                    onClick={() => setZoomImg("/ver_event/New_Event_2_2.png")}
-                    style={{ background: "none", padding: 0 }}
-                    aria-label="公式サイトのDiscordアイコン画像を拡大"
-                  >
-                    <Image
-                      src="/ver_event/New_Event_2_2.png"
-                      alt="公式サイトのDiscordアイコンの位置"
-                      width={600}
-                      height={200}
-                      className="rounded shadow w-full h-auto max-w-lg hover:scale-105 transition-transform"
-                      sizes="80vw"
-                      style={{ maxWidth: "100%", cursor: "zoom-in" }}
-                    />
-                  </button>
-                </div>
-                <p className="text-xs text-gray-500 text-center">
-                  ↑ 公式サイトのDiscordアイコンの場所（クリックで拡大）
-                </p>
-              </div>
-            )}
+            <div className="bg-yellow-50 border border-yellow-200 text-yellow-800 rounded p-3 text-base sm:text-lg">
+              現在はクリエイター向けのアナウンスしかないため、一般向けの募集情報を出す予定が無いか公式モデレーター様に確認中です。
+            </div>
           </div>
-          {/* ▲ 折り畳みタブここまで */}
 
           {/* 公式Discordの画像（拡大クリック対応） */}
           <div className="flex flex-col gap-2 mb-4">
