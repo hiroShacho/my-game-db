@@ -948,7 +948,7 @@
   {
     "id": "Expoint17",
     "name": "探索ポイント・依頼",
-    "description": "の頼みを聞く",
+    "description": "フラスの頼みを聞く",
     "x": 632,
     "y": 680,
     "icon": "Expoint"
@@ -1028,7 +1028,7 @@
   {
     "id": "Expoint27",
     "name": "探索ポイント・依頼",
-    "description": "の頼みを聞く",
+    "description": "ジェイソンの頼みを聞く",
     "x": 648,
     "y": 667,
     "icon": "Expoint"
@@ -1367,6 +1367,86 @@
     "description": "空港エリアのゼロエナジーキューブ",
     "x": 158,
     "y": 360,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint70",
+    "name": "探索ポイント・依頼",
+    "description": "空港エリアの悩める少女の頼みを聞く",
+    "x": 170,
+    "y": 365,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint71",
+    "name": "探索ポイント・依頼",
+    "description": "空港エリアのクリントンの頼みを聞く",
+    "x": 190,
+    "y": 368,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint72",
+    "name": "探索ポイント・箱",
+    "description": "空港エリアのゼロエナジーキューブ",
+    "x": 200,
+    "y": 360,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint73",
+    "name": "探索ポイント・箱",
+    "description": "空港エリアのベイツ氏虫を退治して開ける箱",
+    "x": 210,
+    "y": 370,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint74",
+    "name": "探索ポイント・箱",
+    "description": "空港エリアのゼロエナジーキューブ",
+    "x": 225,
+    "y": 373,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint75",
+    "name": "探索ポイント・箱",
+    "description": "空港エリアのベイツ氏虫を退治して開ける箱",
+    "x": 230,
+    "y": 370,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint76",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "空港エリアの探検家ガイドの話を聞く",
+    "x": 153,
+    "y": 355,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint77",
+    "name": "探索ポイント・箱",
+    "description": "空港エリアのベイツ氏虫を退治して開ける箱",
+    "x": 150,
+    "y": 340,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint78",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "空港エリアの探検家ガイドの話を聞く",
+    "x": 160,
+    "y": 343,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint79",
+    "name": "探索ポイント・箱",
+    "description": "空港エリアのゼロエナジーキューブ",
+    "x": 165,
+    "y": 338,
     "icon": "Expoint"
   }
 ]

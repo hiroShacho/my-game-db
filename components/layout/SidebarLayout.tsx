@@ -5,10 +5,9 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { AdSenseBanner } from "@/components/AdSenseBanner";
 import Breadcrumb from "@/components/Breadcrumb";
-import InternalLinksBlock from "@/components/InternalLinksBlock";
 
 // サイドバーメニュー構成を共通化
-const navLinks = [
+const basicNavLinks = [
   { href: "/", label: "トップ" },
   { href: "/tag-search", label: "タグ検索" },
   { href: "/map/kailo_OreZero_EXpoint", label: "探索マップ" },
@@ -16,10 +15,22 @@ const navLinks = [
   { href: "/matrices", label: "ボリション一覧" },
   { href: "/trait", label: "アバター特性一覧" },
   { href: "/relics", label: "アルケー一覧" },
+  { href: "/CN_info", label: "大陸版情報", isCn: true }
 ];
 
-const cnInfoLink = { href: "/CN_info", label: "大陸版情報" };
+const soloMultiPveLinks = [
+  { href: "/raid", label: "討伐作戦" }
+];
 
+const latestContentsLinks = [
+  { href: "/weapons/TwinStars", label: "アストール武器：二重星" },
+  { href: "/matrices/m_58", label: "アストールボリション" },
+  { href: "/trait/t_58", label: "アストール特性" },
+  { href: "/event/ver5-1/guardian-of-kailo", label: "イベント「キルオの守護者」" },
+  { href: "/event/ver5-1/ver5-2_testserver", label: "Ver5.2先行テストサーバー" }
+];
+
+// backupと同じSidebarLinksAndAdBlock
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
   return (
     <div>
@@ -45,7 +56,6 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
         </a>
       </div>
       <div className="text-sm text-gray-600 mt-4">広告スペース</div>
-      {/* バナーを広告スペース見出し直下、AdSenseBannerの上に表示 */}
       <div className="flex flex-col items-center mt-1 mb-2">
         <div className="text-xs text-gray-700 mb-1">
           管理人がPC購入に使ったBTOサイト
@@ -85,6 +95,16 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  // 全部初期値true（開いた状態）
+  const [latestOpen, setLatestOpen] = useState(true);
+  const [basicOpen, setBasicOpen] = useState(true);
+  const [soloMultiOpen, setSoloMultiOpen] = useState(true);
+
+  const sectionBtnBase =
+    "w-full flex items-center justify-between font-semibold py-2 px-4 bg-black text-white transition-colors";
+  const sectionBtnHover =
+    "hover:text-blue-500 hover:underline focus:text-blue-500 focus:underline";
+
   const handleSearch = () => {
     if (searchTerm.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
@@ -92,9 +112,65 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
     }
   };
 
+  const renderNavLinks = (links: typeof basicNavLinks) => (
+    <ul className="space-y-1">
+      {links.map(link =>
+        !link.isCn ? (
+          <li key={link.href}>
+            <a
+              href={link.href}
+              className="block text-black hover:text-blue-500 hover:underline transition-colors"
+            >
+              {link.label}
+            </a>
+          </li>
+        ) : (
+          <li key={link.href} className="mt-3">
+            <a
+              href={link.href}
+              className="block font-bold text-red-700 hover:text-red-500 transition-colors"
+            >
+              {link.label}
+              <span className="ml-1 text-xs text-gray-400 align-top">(CN、ネタバレ注意)</span>
+            </a>
+          </li>
+        )
+      )}
+    </ul>
+  );
+
+  const renderSoloMultiLinks = () => (
+    <ul className="space-y-1">
+      {soloMultiPveLinks.map(link => (
+        <li key={link.href}>
+          <a
+            href={link.href}
+            className="block text-black hover:text-blue-500 hover:underline transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+
+  const renderLatestContentsLinks = () => (
+    <ul className="space-y-1">
+      {latestContentsLinks.map(link => (
+        <li key={link.href}>
+          <a
+            href={link.href}
+            className="block text-black hover:text-blue-500 hover:underline transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      {/* 固定ヘッダー */}
       <Header
         onSidebarToggle={() => setSidebarOpen(true)}
         showSidebarButton={true}
@@ -102,7 +178,6 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
 
       {/* サイドバー（モバイルはドロワーのみ。PCは非表示） */}
       <div>
-        {/* Overlay for mobile sidebar */}
         <div
           className={`fixed inset-0 z-[9998] bg-black bg-opacity-30 transition-opacity duration-200 ${
             sidebarOpen ? "block" : "hidden"
@@ -140,36 +215,61 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
               検索
             </button>
           </div>
-          <nav className="space-y-2 text-sm px-4 pb-4">
-            {navLinks.map(link => (
-              <a key={link.href} href={link.href} className="block hover:text-blue-600">
-                {link.label}
-              </a>
-            ))}
-            {/* 大陸版情報へのリンクを他項目と少し離して */}
-            <div className="my-4" />
-            <a
-              href={cnInfoLink.href}
-              className="block font-bold text-red-700 hover:text-red-500"
+          <nav className="pb-4">
+            <button
+              className={`${sectionBtnBase} ${sectionBtnHover}`}
+              onClick={() => setLatestOpen(v => !v)}
+              aria-expanded={latestOpen}
+              aria-controls="latestNav"
+              type="button"
+              style={{ marginBottom: "2px" }}
             >
-              {cnInfoLink.label}
-              <span className="ml-1 text-xs text-gray-400 align-top">(CN、ネタバレ注意)</span>
-            </a>
+              <span>最新バージョンのコンテンツ</span>
+              <span>{latestOpen ? "▲" : "▼"}</span>
+            </button>
+            <div id="latestNav" className={`${latestOpen ? "block" : "hidden"} pl-4`}>
+              {renderLatestContentsLinks()}
+            </div>
+            <button
+              className={`${sectionBtnBase} ${sectionBtnHover} mt-2`}
+              onClick={() => setBasicOpen(v => !v)}
+              aria-expanded={basicOpen}
+              aria-controls="basicNav"
+              type="button"
+              style={{ marginBottom: "2px" }}
+            >
+              <span>基本データ</span>
+              <span>{basicOpen ? "▲" : "▼"}</span>
+            </button>
+            <div id="basicNav" className={`${basicOpen ? "block" : "hidden"} pl-4`}>
+              {renderNavLinks(basicNavLinks)}
+            </div>
+            <button
+              className={`${sectionBtnBase} ${sectionBtnHover} mt-2`}
+              onClick={() => setSoloMultiOpen(v => !v)}
+              aria-expanded={soloMultiOpen}
+              aria-controls="soloMultiNav"
+              type="button"
+              style={{ marginBottom: "2px" }}
+            >
+              <span>ソロ・マルチPVE</span>
+              <span>{soloMultiOpen ? "▲" : "▼"}</span>
+            </button>
+            <div id="soloMultiNav" className={`${soloMultiOpen ? "block" : "hidden"} pl-4`}>
+              {renderSoloMultiLinks()}
+            </div>
           </nav>
           <hr className="border-gray-200 my-2" />
           {/* モバイル時だけ下部に外部リンク・広告 */}
           <div className="px-4 pb-8 overflow-y-auto">
-            <InternalLinksBlock />
+            {/* InternalLinksBlockはbackupに従い未定義のまま省略 */}
             <SidebarLinksAndAdBlock isMobile />
           </div>
         </aside>
       </div>
 
-      {/* 3カラム構成（PCはヘッダー下でライン揃え） */}
       <div className="flex flex-1 w-full">
-        {/* サイドバー（PCのみ） */}
         <aside className="hidden lg:block lg:w-60 bg-gray-100 border-r pt-16">
-          {/* 検索フォーム */}
           <div className="p-4">
             <input
               type="text"
@@ -185,25 +285,50 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
               検索
             </button>
           </div>
-          <nav className="space-y-2 text-sm px-4 pb-4">
-            {navLinks.map(link => (
-              <a key={link.href} href={link.href} className="block hover:text-blue-600">
-                {link.label}
-              </a>
-            ))}
-            {/* 大陸版情報へのリンクを他項目と少し離して */}
-            <div className="my-4" />
-            <a
-              href={cnInfoLink.href}
-              className="block font-bold text-red-700 hover:text-red-500"
+          <nav className="pb-4">
+            <button
+              className={`${sectionBtnBase} ${sectionBtnHover}`}
+              onClick={() => setLatestOpen(v => !v)}
+              aria-expanded={latestOpen}
+              aria-controls="latestNav"
+              type="button"
+              style={{ marginBottom: "2px" }}
             >
-              {cnInfoLink.label}
-              <span className="ml-1 text-xs text-gray-400 align-top">(CN、ネタバレ注意)</span>
-            </a>
+              <span>最新バージョンのコンテンツ</span>
+              <span>{latestOpen ? "▲" : "▼"}</span>
+            </button>
+            <div id="latestNav" className={`${latestOpen ? "block" : "hidden"} pl-4`}>
+              {renderLatestContentsLinks()}
+            </div>
+            <button
+              className={`${sectionBtnBase} ${sectionBtnHover} mt-2`}
+              onClick={() => setBasicOpen(v => !v)}
+              aria-expanded={basicOpen}
+              aria-controls="basicNav"
+              type="button"
+              style={{ marginBottom: "2px" }}
+            >
+              <span>基本データ</span>
+              <span>{basicOpen ? "▲" : "▼"}</span>
+            </button>
+            <div id="basicNav" className={`${basicOpen ? "block" : "hidden"} pl-4`}>
+              {renderNavLinks(basicNavLinks)}
+            </div>
+            <button
+              className={`${sectionBtnBase} ${sectionBtnHover} mt-2`}
+              onClick={() => setSoloMultiOpen(v => !v)}
+              aria-expanded={soloMultiOpen}
+              aria-controls="soloMultiNav"
+              type="button"
+              style={{ marginBottom: "2px" }}
+            >
+              <span>ソロ・マルチPVE</span>
+              <span>{soloMultiOpen ? "▲" : "▼"}</span>
+            </button>
+            <div id="soloMultiNav" className={`${soloMultiOpen ? "block" : "hidden"} pl-4`}>
+              {renderSoloMultiLinks()}
+            </div>
           </nav>
-          <div className="px-4 pb-4">
-            <InternalLinksBlock />
-          </div>
         </aside>
 
         {/* メインコンテンツ */}
@@ -212,7 +337,7 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
           {children}
         </main>
 
-        {/* 広告・外部リンク（PCのみ） */}
+        {/* SNSリンク・広告（PC右端） */}
         <aside className="hidden xl:block w-64 bg-gray-50 p-4 border-l pt-16">
           <SidebarLinksAndAdBlock />
         </aside>

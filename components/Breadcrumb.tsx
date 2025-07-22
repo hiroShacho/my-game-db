@@ -12,6 +12,8 @@ const labelMap: Record<string, string> = {
   "matrices": "ボリション一覧",
   "trait": "アバター特性一覧",
   "relics": "アルケー一覧",
+  "raid": "討伐作戦",
+  "ScorchingNightmare": "燃え上がるナイトメア" ,
   // 必要に応じて追加
 };
 

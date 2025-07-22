@@ -62,7 +62,7 @@ export default function AnniversaryCommemorativeSubmission() {
           {/* Discord参加方法部分 非表示・アナウンス文のみ表示 */}
           <div className="mb-3">
             <div className="bg-yellow-50 border border-yellow-200 text-yellow-800 rounded p-3 text-base sm:text-lg">
-              現在はクリエイター向けのアナウンスしかないため、一般向けの募集情報を出す予定が無いか公式モデレーター様に確認中です。
+              本イベントは公式クリエイター限定の催しです。どうしても参加したいという人は公式クリエイターに共同制作者として動画制作に携われるか聞いてみよう。（個人の都合があるので断られても文句を言うのはやめよう！）
             </div>
           </div>
 
