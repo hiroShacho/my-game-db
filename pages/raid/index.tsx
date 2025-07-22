@@ -1,163 +1,78 @@
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 
-// データ一元管理
 const raids = [
   { key: "ScorchingNightmare", title: "燃え上がるナイトメア", href: "/raid/ScorchingNightmare" },
-  // { key: "AnotherRaid", title: "別の討伐作戦", href: "/raid/AnotherRaid" },
+  // 他の討伐作戦...
 ];
 
-// 表示したいkeyをここで選ぶだけ
-const currentWeekKeys = ["ScorchingNightmare"];
-const limitedKey: string | null = null; // 例: "AnotherRaid"
-
-const PLACEHOLDER_PAST_RAIDS = 6;
-
 export default function RaidIndexPage() {
-  const [pastOpen, setPastOpen] = useState(true);
-
-  // 過去の討伐作戦（空き枠埋めあり）
-  const filledPastRaids = [
-    ...raids,
-    ...Array(Math.max(0, PLACEHOLDER_PAST_RAIDS - raids.length)).fill({ placeholder: true }),
-  ];
-
-  // 今週・限定討伐を選択
-  const weeklyRaids = raids.filter(r => currentWeekKeys.includes(r.key));
-  const limitedRaid = limitedKey ? raids.find(r => r.key === limitedKey) : null;
-
   return (
     <>
       <Head>
         <title>討伐作戦ポータル | 幻塔攻略データベース</title>
-        <meta name="description" content="幻塔の各種討伐作戦へのリンク・今週/限定討伐情報をまとめたページです。" />
       </Head>
-      <div className="mx-auto max-w-md px-4 py-8">
-        <h1 className="text-xl font-bold mb-6">討伐作戦一覧</h1>
+      {/* ▼ヒーローヘッダー */}
+      <div className="relative w-full h-48 sm:h-64 overflow-hidden rounded-lg shadow mb-6 flex items-center justify-center bg-gradient-to-r from-emerald-500 to-blue-400">
+        <Image
+          src="/raid/portal_main.PNG"
+          alt="討伐作戦イメージ"
+          fill
+          style={{ objectFit: "cover", opacity: 0.5 }}
+          className="pointer-events-none select-none"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow mb-2">討伐作戦一覧</h1>
+          <p className="text-white text-base sm:text-lg font-semibold bg-emerald-700/60 px-4 py-1 rounded">
+            幻塔の討伐作戦一覧・攻略ページ
+          </p>
+        </div>
+      </div>
 
-        {/* 過去の討伐作戦（折りたたみ） */}
-        <section className="mb-8">
-          <button
-            className="w-full flex justify-between items-center bg-gray-200 rounded px-3 py-2 mb-2 font-semibold text-base focus:outline-none"
-            onClick={() => setPastOpen(o => !o)}
-            aria-expanded={pastOpen}
-            aria-controls="pastRaidsPanel"
-            type="button"
-          >
-            <span>過去の討伐作戦</span>
-            <span>{pastOpen ? "▲" : "▼"}</span>
-          </button>
-          <div id="pastRaidsPanel" className={pastOpen ? "block" : "hidden"}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 border p-4 bg-white">
-              {filledPastRaids.map((raid, idx) =>
-                raid.placeholder ? (
-                  <div
-                    key={`placeholder-${idx}`}
-                    className="flex flex-col items-center justify-center border-4 border-dashed border-gray-300 rounded-lg p-4 bg-gray-50 text-gray-400 min-h-[160px]"
-                  >
-                    <span className="text-lg font-bold">随時追加</span>
-                  </div>
-                ) : (
-                  <Link
-                    href={raid.href}
-                    key={raid.key}
-                    className="flex flex-col items-center"
-                  >
-                    <div
-                      className="flex items-center justify-center border-4 border-green-600 rounded-lg mb-2"
-                      style={{
-                        width: "100%",
-                        aspectRatio: "16/9",
-                        minHeight: "110px",
-                        background: "white",
-                        boxSizing: "border-box",
-                      }}
-                    >
-                      <Image
-                        src={`/raid/${raid.key}.PNG`}
-                        alt={raid.title}
-                        fill={false}
-                        width={320}
-                        height={180}
-                        style={{
-                          objectFit: "contain",
-                          objectPosition: "center",
-                          maxWidth: "100%",
-                          maxHeight: "100%",
-                          borderRadius: "4px"
-                        }}
-                      />
-                    </div>
-                    <div className="w-full text-center">
-                      <span className="text-base text-blue-700 font-bold hover:underline">
-                        {raid.title}
-                      </span>
-                    </div>
-                  </Link>
-                )
-              )}
-            </div>
-          </div>
-        </section>
+      <div className="mx-auto max-w-2xl px-4 py-6">
+        {/* ▼ナビゲーションカード */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <Link href="/raid/ScorchingNightmare" className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-emerald-400">
+            <Image src="/raid/ScorchingNightmare.PNG" alt="燃え上がるナイトメア" width={200} height={112} className="rounded mb-2" />
+            <span className="text-lg font-bold text-emerald-800 group-hover:text-emerald-600">燃え上がるナイトメア</span>
+            <span className="text-xs text-emerald-700 mt-2 bg-emerald-100 rounded px-2 py-1">開催中</span>
+          </Link>
+          {/* 他のレイドもカードで追加 */}
+        </div>
 
-        {/* 今週の討伐作戦（画像大きめ） */}
-        <section className="mb-8">
-          <h2 className="text-lg font-semibold mb-2">今週の討伐作戦</h2>
-          {weeklyRaids.length === 0 ? (
-            <div className="text-gray-500">今週の討伐作戦はありません</div>
-          ) : (
-            <ul className="space-y-6">
-              {weeklyRaids.map(raid => (
-                <li key={raid.key} className="flex items-center space-x-4">
-                  <div className="relative w-44 h-24 flex-shrink-0">
-                    <Image
-                      src={`/raid/${raid.key}.PNG`}
-                      alt={raid.title}
-                      fill
-                      style={{ objectFit: "cover", borderRadius: "6px" }}
-                      sizes="176px"
-                    />
-                  </div>
-                  <Link href={raid.href} className="text-blue-700 font-semibold hover:underline text-lg">
-                    {raid.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          )}
-        </section>
-
-        {/* 限定討伐 */}
+        {/* ▼アーカイブ/過去の討伐作戦 */}
         <section>
-          <h2 className="text-lg font-semibold mb-2">限定討伐</h2>
-          {limitedRaid ? (
-            <div className="flex items-center space-x-3">
-              <div className="relative w-20 h-12 flex-shrink-0">
-                <Image
-                  src={`/raid/${limitedRaid.key}.PNG`}
-                  alt={limitedRaid.title}
-                  fill
-                  style={{ objectFit: "cover", borderRadius: "4px" }}
-                  sizes="80px"
-                />
-              </div>
-              <Link href={limitedRaid.href} className="text-red-600 font-bold hover:underline">
-                {limitedRaid.title}
-              </Link>
+          <h2 className="text-lg font-semibold text-emerald-700 mb-2">過去の討伐作戦アーカイブ</h2>
+          <div className="grid grid-cols-2 gap-4">
+            <Link
+              href="/raid/ScorchingNightmare"
+              className="group bg-white border-2 border-emerald-400 rounded flex flex-col items-center justify-center h-28 hover:-translate-y-1 hover:shadow-xl transition"
+            >
+              <Image
+                src="/raid/ScorchingNightmare.PNG"
+                alt="燃え上がるナイトメア"
+                width={120}
+                height={68}
+                className="rounded mb-1"
+                style={{ objectFit: "contain", maxHeight: "60px" }}
+              />
+              <span className="text-sm font-bold text-emerald-800 group-hover:text-emerald-600">燃え上がるナイトメア<br /><span className="text-xs text-emerald-500">(詳細ページへ)</span></span>
+            </Link>
+            {/* 空き枠や新作予定はグレーアウトで表現 */}
+            <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded flex items-center justify-center h-28 text-gray-400 font-bold">
+              随時追加予定
             </div>
-          ) : (
-            <div className="text-gray-500">現在開催中の限定討伐はありません</div>
-          )}
+            {/* 他の討伐作戦... */}
+          </div>
         </section>
       </div>
     </>
   );
 }
 
-// サイドバー付きレイアウトでラップ
 RaidIndexPage.getLayout = function getLayout(page: ReactElement) {
   return <SidebarLayout>{page}</SidebarLayout>;
 };
