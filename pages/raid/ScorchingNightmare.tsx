@@ -184,10 +184,10 @@ export default function ScorchingNightmarePage() {
           />
         </div>
 
-        {/* ▼追加：ヒーローソロ攻略項目 */}
-        <SectionTitle icon="sports_martial_arts">ヒーローならソロ攻略も可能</SectionTitle>
+        {/* ▼追加：チャレンジソロ攻略項目 */}
+        <SectionTitle icon="sports_martial_arts">チャレンジでもソロ攻略可能</SectionTitle>
         <div>
-          <span className="font-bold text-emerald-700">ヒーロー</span>難易度なら、恩恵共鳴で異能ノーラを使えばソロ攻略も十分可能です。<br /><br />
+          <span className="font-bold text-emerald-700">チャレンジ</span>でも恩恵共鳴で異能ノーラを使えばソロ攻略も可能です。<br /><br />
           <span className="font-bold text-orange-700">ポイント</span><br />
           ■ギミックの正確な処理と回復タイミングの把握が重要<br />
           ■たき火の栗拾いギミックでは回復手段を惜しみなく使おう<br />
@@ -198,8 +198,8 @@ export default function ScorchingNightmarePage() {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/Gjs36tQt760"
-            title="ヒーローでソロ攻略動画"
+            src="https://youtu.be/-xfHQO-Jd7k"
+            title="チャレンジでソロ攻略動画"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
