@@ -198,7 +198,7 @@ export default function ScorchingNightmarePage() {
           <iframe
             width="560"
             height="315"
-            src="https://youtu.be/-xfHQO-Jd7k"
+            src="https://www.youtube.com/embed/-xfHQO-Jd7k"
             title="チャレンジでソロ攻略動画"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
