@@ -1448,5 +1448,85 @@
     "x": 165,
     "y": 338,
     "icon": "Expoint"
+  },
+  {
+    "id": "Expoint80",
+    "name": "探索ポイント・箱",
+    "description": "空港エリアのゼロエナジーキューブ",
+    "x": 180,
+    "y": 355,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint81",
+    "name": "探索ポイント・探検家ガイド",
+    "description": "空港エリアの探検家ガイドの話を聞く",
+    "x": 190,
+    "y": 345,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint82",
+    "name": "探索ポイント・箱",
+    "description": "空港エリアの超域の目",
+    "x": 240,
+    "y": 280,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint83",
+    "name": "探索ポイント・箱",
+    "description": "空港エリア外周の小惑星内の恐怖の石像",
+    "x": 240,
+    "y": 265,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint84",
+    "name": "探索ポイント・箱",
+    "description": "空港エリア外周の小惑星内のゼロエナジーキューブ",
+    "x": 235,
+    "y": 260,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint85",
+    "name": "探索ポイント・箱",
+    "description": "ガンマ区間の乱気流チェイス",
+    "x": 385,
+    "y": 255,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint86",
+    "name": "探索ポイント・箱",
+    "description": "ガンマ区間のエントロピー失速カービンを使って開けるゼロエナジーキューブ",
+    "x": 295,
+    "y": 155,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint87",
+    "name": "探索ポイント・箱",
+    "description": "ガンマ区間のゼロエナジーキューブ",
+    "x": 305,
+    "y": 165,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint88",
+    "name": "探索ポイント・箱",
+    "description": "ガンマ区間の虫卵収集",
+    "x": 325,
+    "y": 173,
+    "icon": "Expoint"
+  },
+  {
+    "id": "Expoint89",
+    "name": "探索ポイント・箱",
+    "description": "ガンマ区間の恐怖の石像",
+    "x": 400,
+    "y": 150,
+    "icon": "Expoint"
   }
 ]

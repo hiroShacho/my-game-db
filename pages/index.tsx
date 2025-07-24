@@ -120,15 +120,15 @@ export default function Home() {
         <section>
           <p className="text-sm sm:text-base text-gray-600">
             本サイトは、幻塔の最新コンテンツ・各種武器等を確認できる非公式の攻略サイトです。
-            各種コンテンツの情報は徐々に更新していきます。お待ちくだセい。現在はテストバージョン㌥。
+            各種コンテンツの情報は徐々に更新していきます。
           </p>
         </section>
         {/* NEWS */}
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/07/24 武器情報と探索ポイントの情報を追加。討伐作戦「燃え上がるナイトメア」のページを微修正。</li>
             <li>・2025/07/22 メニューのデザインを変更。「ソロ・マルチPVE」として討伐作戦のページを追加。随時更新していきます。</li>
-            <li>・2025/07/18 幻塔アニバーサリー記念投稿イベントのイベント紹介ページを作成しました。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>

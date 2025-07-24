@@ -126,6 +126,10 @@ export default function ScorchingNightmarePage() {
           全ての分身を倒すとアスラーダに最大HP×5%のダメージを与え、ダメージ軽減効果を1つ解除できる。<br />
           一定時間内に分身を撃破できないとアスラーダはHPを回復し、分身の居た位置に刀が刺さって「ギミック①：追命の火」と同じ炎の範囲が出現する。
         </div>
+        {/* ▼ここに強調バナー（PointBanner）を追加 */}
+        <PointBanner>
+          8分40秒ごろに最初の分身ギミックが発動し、それ以降1分ごとにギミックが発動する。
+        </PointBanner>
 
         <SectionTitle icon="waves">ギミック③：刀陣の振動</SectionTitle>
         <div>
