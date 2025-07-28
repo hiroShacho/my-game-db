@@ -25,7 +25,6 @@ export default function StarRating({ score = 0, size = 24 }: Props) {
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     backgroundClip: "text",
-    textFillColor: "transparent",
     verticalAlign: "middle",
     fontFamily: "inherit",
     margin: 0,
