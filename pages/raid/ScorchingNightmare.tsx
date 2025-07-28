@@ -72,6 +72,15 @@ export default function ScorchingNightmarePage() {
           燃え上がるナイトメア 討伐作戦 攻略
         </h1>
 
+        {/* 画像だけ表示（枠・キャプションなし、中央寄せ） */}
+        <Image
+          src="/raid/ScorchingNightmare.PNG"
+          alt="燃え上がるナイトメアフィールド全景"
+          width={480}
+          height={270}
+          style={{ display: "block", margin: "0 auto" }}
+        />
+
         <PointBanner>
           ギミックを理解して正しく対処しないとダメージが入らない！回復役も重要！
         </PointBanner>

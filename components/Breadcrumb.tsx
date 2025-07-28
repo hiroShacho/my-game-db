@@ -14,6 +14,7 @@ const labelMap: Record<string, string> = {
   "relics": "アルケー一覧",
   "raid": "討伐作戦",
   "ScorchingNightmare": "燃え上がるナイトメア" ,
+  "TrafficControl": "交通管制",
   // 必要に応じて追加
 };
 

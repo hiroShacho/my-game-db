@@ -127,8 +127,8 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/07/28 討伐作戦に「交通管制」のページを作成。</li>
             <li>・2025/07/24 武器情報と探索ポイントの情報を追加。討伐作戦「燃え上がるナイトメア」のページを微修正。</li>
-            <li>・2025/07/22 メニューのデザインを変更。「ソロ・マルチPVE」として討伐作戦のページを追加。随時更新していきます。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
