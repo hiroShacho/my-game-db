@@ -177,7 +177,7 @@ export default function ScorchingNightmarePage() {
           そのため、敵の行動は絶対に妨害しないようにしよう！
           また、地馳は定期的にフィールド中央に戻ろうとするが、プレイヤーが目の前にいるだけで地馳は中央に戻れなくなってしまう。<br />
           地馳が動けなくなるとその分だけ弱点攻撃のチャンスが減ってしまうので注意しよう！
-          <blockquote className="twitter-tweet" data-media-max-width="560"><p lang="ja" dir="ltr">見た目に対してフィジカルが弱すぎる<a href="https://twitter.com/hashtag/%E5%B9%BB%E5%A1%94?src=hash&amp;ref_src=twsrc%5Etfw">#幻塔</a> <a href="https://twitter.com/hashtag/ToF?src=hash&amp;ref_src=twsrc%5Etfw">#ToF</a> <a href="https://t.co/LvCW4csG4m">pic.twitter.com/LvCW4csG4m</a></p>&mdash; hiro_Shacho (@hiro28298793) <a href="https://twitter.com/hiro28298793/status/1923418329542283470?ref_src=twsrc%5Etfw">May 16, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          <blockquote className="twitter-tweet" data-media-max-width="560"><p lang="ja" dir="ltr">見た目に対してフィジカルが弱すぎる<a href="https://twitter.com/hashtag/%E5%B9%BB%E5%A1%94?src=hash&amp;ref_src=twsrc%5Etfw">#幻塔</a> <a href="https://twitter.com/hashtag/ToF?src=hash&amp;ref_src=twsrc%5Etfw">#ToF</a> <a href="https://t.co/LvCW4csG4m">pic.twitter.com/LvCW4csG4m</a></p>&mdash; hiro_Shacho (@hiro28298793) <a href="https://twitter.com/hiro28298793/status/1923418329542283470?ref_src=twsrc%5Etfw">May 16, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charSet="utf-8"></script>
         </div>
         <PointBanner>
           フィオナのボルテックスのような引き寄せ効果を当てると中央に戻ろうとする行動をキャンセルできるぞ！
