@@ -10,66 +10,93 @@ import Head from "next/head";
 // Ganttイベント定義
 const GANTT_EVENTS: GanttEvent[] = [
   {
-    label: "新コスチューム・田園フェアリー",
-    color: "#83e28f",
-    labelColor: "#83e28f",
+    label: "新コスチューム：海塩スターコーデ",
+    color: "#9ccffc",
+    labelColor: "#9ccffc",
     labelFontColor: "#200",
     start: 1,
-    end: 29,
+    end: 28,
   },
   {
-    label: "復刻プレアバ・アンカー",
+    label: "復刻プレアバ：榴火",
     color: "#ff4141",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
     start: 1,
-    end: 8,
+    end: 12,
   },
   {
-    label: "復刻プレアバ・パロッティ",
+    label: "復刻プレアバ：篁",
     color: "#e3a3f8",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
-    start: 4,
-    end: 18,
+    start: 1,
+    end: 12,
   },
   {
-    label: "復刻プレアバ・アスラーダ",
+    label: "復刻プレアバ：凌寒",
     color: "#8e80f8",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
-    start: 15,
-    end: 29,
+    start: 1,
+    end: 12,
   },
   {
-    label: "復刻コスチューム・海辺の休日",
+    label: "復刻プレアバ：フィオナ",
+    color: "#4e80f8",
+    labelColor: "#e3a3f8",
+    labelFontColor: "#200",
+    start: 1,
+    end: 12,
+  },
+  {
+    label: "復刻プレアバ：ノーラ",
+    color: "#ae80f8",
+    labelColor: "#e3a3f8",
+    labelFontColor: "#200",
+    start: 12,
+    end: 28,
+  },
+  {
+    label: "復刻プレアバ：凛夜",
+    color: "#83e28f",
+    labelColor: "#e3a3f8",
+    labelFontColor: "#200",
+    start: 12,
+    end: 28,
+  },
+  {
+    label: "復刻コスチューム：オリジナル・サマー",
     color: "#9cccf5",
     labelColor: "#8ee2f8",
     labelFontColor: "#200",
-    start: 4,
-    end: 18,
+    start: 1,
+    end: 12,
   },
   {
-    label: "復刻コスチューム・海風のささやき",
-    color: "#396eb5",
+    label: "復刻コスチューム：きらめきインニス",
+    color: "#9ccccf",
     labelColor: "#8ee2f8",
     labelFontColor: "#200",
-    start: 15,
-    end: 29,
+    start: 12,
+    end: 28,
   }
 ];
 
-const GANTT_MONTH = 7;
+const GANTT_MONTH = 8;
 const GANTT_YEAR = 2025;
 const GANTT_DAYS = 31;
 
 const eventImages: (string | null)[] = [
-  "/ver_event/Outfit_Meadow Whimsy.PNG",
-  "/ver_event/Simulacrum_Anka.PNG",
-  "/ver_event/Simulacrum_Plotti.PNG",
-  "/ver_event/Simulacrum_Asurada.PNG",
-  "/ver_event/Outfit_Seabreeze Whispers.PNG",
-  "/ver_event/Outfit_Seaside Vacation.PNG",
+  "/ver_event/Outfit_Cosmic Coast.PNG",
+  "/ver_event/Simulacrum_Liu.PNG",
+  "/ver_event/Simulacrum_Mimi.PNG",
+  "/ver_event/Simulacrum_Linghan.PNG",
+  "/ver_event/Simulacrum_Fiona.PNG",
+  "/ver_event/Simulacrum_Nola.PNG",
+  "/ver_event/Simulacrum_Lin.PNG",
+  "/ver_event/Outfit_Summer Special.PNG",
+  "/ver_event/Outfit_Innarsian Fashion.PNG",
 ];
 
 const GIFT_CODES = [
@@ -79,9 +106,9 @@ const GIFT_CODES = [
     expire: "2025/12/30",
   },
   {
-    code: "624star",
-    desc: "ver5.1バージョン引き換えコード",
-    expire: "2025/07/29",
+    code: "",
+    desc: "ver5.2バージョン引き換えコード",
+    expire: "2025/08/28",
   }
 ];
 
@@ -95,7 +122,7 @@ export default function Home() {
       </Head>
       <div className="relative w-full h-40 sm:h-64 rounded-lg overflow-hidden mb-6 shadow-lg">
         <Image
-          src="/hero-banner.png" // 任意の目立つ画像を用意
+          src="/hero-banner.png"
           alt="幻塔メインビジュアル"
           className="object-cover w-full h-full"
           fill
@@ -123,21 +150,68 @@ export default function Home() {
             各種コンテンツの情報は徐々に更新していきます。
           </p>
         </section>
-        {/* NEWS */}
+        {/* NEWS */} 
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/07/29 ver5.2の注目コンテンツを更新。</li>
             <li>・2025/07/28 武器詳細ページのレイアウトを変更。キルオ：ゼロ鉱山区の探索ポイント追加完了。</li>
-            <li>・2025/07/28 討伐作戦に「交通管制」のページを作成。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
         </section>
         {/* 注目コンテンツ */}
         <section>
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.1の注目コンテンツ</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.2の注目コンテンツ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <Link href="/weapons/TwinStars" className="block">
+            {/* 追加：ver5.2アップデート情報まとめバナー */}
+            <Link href="/event/ver5-2/New_ver_info" className="block sm:col-span-2">
+              <div
+                className="
+                  relative rounded-lg shadow-lg h-48 sm:h-64 flex items-center justify-center overflow-hidden group
+                  transition-all duration-200
+                  hover:scale-105 hover:shadow-2xl
+                  hover:ring-4 hover:ring-pink-400
+                  border-4 border-cyan-400
+                  cursor-pointer
+                "
+                style={{
+                  background: "linear-gradient(90deg, #4eeef8 0%, #f8b64e 100%)"
+                }}
+              >
+                {/* 画像（暗め） */}
+                <Image
+                  src="/ver_event/New_ver_top.png"
+                  alt="ver5.2アップデート情報まとめ"
+                  fill
+                  sizes="100vw"
+                  className="object-cover w-full h-full"
+                  style={{ objectPosition: "center" }}
+                  priority
+                />
+                <div className="absolute inset-0 bg-black/30 pointer-events-none" />
+
+                {/* 横線デザイン */}
+                <div className="absolute inset-0 pointer-events-none">
+                  {[...Array(32)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute left-0 w-full h-[2px] bg-white/30"
+                      style={{
+                        top: `${(100 / 33) * (i + 1)}%`
+                      }}
+                    />
+                  ))}
+                </div>
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-3xl sm:text-5xl font-bold text-white drop-shadow-lg bg-black/75 px-6 py-3 rounded-lg border border-pink-300">
+                    ver5.2アップデート情報まとめ
+                  </span>
+                </div>
+              </div>
+            </Link>
+            <Link href="/weapons/AF-010Servion" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -158,108 +232,96 @@ export default function Home() {
                 {/* テキスト部分 */}
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    アストール
+                    シードル
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    アストールの武器詳細をチェック
+                    シードルの武器詳細をチェック
                   </p>
                 </div>
               </div>
             </Link>
-            <Link href="/event/ver5-1/guardian-of-kailo" className="block">
+            <div className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  hover:scale-105
-                  hover:shadow-2xl
-                  hover:ring-2 hover:ring-sky-400
-                  cursor-pointer
+                  cursor-default
+                  bg-gray-200
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/New_Event_1.png')",
+                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center"
                 }}
               >
                 {/* オーバーレイ: ホバーで色が濃く */}
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
+                <div className="absolute inset-0 bg-black/10 transition-all duration-200" />
                 {/* テキスト部分 */}
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    イベント「キルオの守護者」
+                    イベント「星光夏祭り」
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    「キルオの守護者」の詳細はこちら
+                    準備中
                   </p>
                 </div>
               </div>
-            </Link>
-            <Link href="/event/ver5-1/ver5-2_testserver" className="block">
+            </div>
+            {/* 画像のみ表示（リンクなし） */}
+            <div className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  hover:scale-105
-                  hover:shadow-2xl
-                  hover:ring-2 hover:ring-sky-400
-                  cursor-pointer
+                  cursor-default
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/New_Event_2_0.png')",
+                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                {/* オーバーレイ: ホバーで色が濃く */}
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-200" />
-                {/* テキスト部分 */}
+                <div className="absolute inset-0 bg-black/20" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    Ver5.2先行テストサーバー
+                    Ver5.3先行テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    先行テストスタート！新キャラクターなどの情報はこちら！
+                    準備中
                   </p>
                 </div>
               </div>
-            </Link>
-            <Link href="/event/ver5-1/Anniversary_Commemorative_Submission" className="block">
+            </div>
+            <div className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  hover:scale-105
-                  hover:shadow-2xl
-                  hover:ring-2 hover:ring-sky-400
-                  cursor-pointer
+                  cursor-default
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/New_Event_3.png')",
+                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                {/* オーバーレイ: ホバーで色が濃く */}
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/50 transition-all duration-200" />
-                {/* テキスト部分 */}
+                <div className="absolute inset-0 bg-black/20" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    幻塔アニバーサリー記念投稿イベント
+                    その他のイベント
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    楽曲「Meant to Be」二次創作企画に参加してみよう！
+                    準備中
                   </p>
                 </div>
               </div>
-            </Link>
-            <div className="sm:col-span-2">
+            </div>            <div className="sm:col-span-2">
               <GiftCodeList codes={GIFT_CODES} />
             </div>
           </div>
           <div className="mt-8 space-y-6">
             <div>
-              <h3 className="text-md sm:text-lg font-semibold mb-2">2025年7月 衣装・プレアバ ガチャスケジュール</h3>
+              <h3 className="text-md sm:text-lg font-semibold mb-2">2025年8月 衣装・プレアバ ガチャスケジュール</h3>
               <GanttCalendar
                 events={GANTT_EVENTS}
                 images={eventImages}

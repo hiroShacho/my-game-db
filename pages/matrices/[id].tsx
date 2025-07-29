@@ -4,6 +4,7 @@ import weapons from "@/data/weapons.json";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
+import StarRating from "@/components/StarRating";
 
 export default function MatrixDetailPage() {
   const router = useRouter();
@@ -59,12 +60,11 @@ export default function MatrixDetailPage() {
           ))}
         </div>
 
-        {/* 評価 */}
+        {/* 評価 */} 
         <div className="bg-gray-100 p-3 rounded space-y-1">
           <div className="font-semibold text-sm text-gray-700">評価</div>
-          <div className="text-sm text-yellow-500">
-            {"★".repeat(Number(matrix.ratingStars || 0)).padEnd(5, "☆")}
-          </div>
+          {/* StarRatingコンポーネントで表示 */}
+          <StarRating score={Number(matrix.ratingStars || 0)} size={16} />
           <div className="text-sm text-gray-800">
             {matrix.ratingComment || "評価コメントは準備中です。"}
           </div>

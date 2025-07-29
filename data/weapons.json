@@ -13,7 +13,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SR","雷","強攻"],
+    "tags": ["恒常","SR","雷","強攻"],
     "skillIds": [
       "s_101",
       "s_102",
@@ -73,7 +73,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SR","氷","剛毅"],
+    "tags": ["恒常","SR","氷","剛毅"],
     "skillIds": [
       "s_201",
       "s_202",
@@ -133,7 +133,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SR","雷","恩恵"],
+    "tags": ["恒常","SR","雷","恩恵"],
     "skillIds": [
       "s_301",
       "s_302",
@@ -192,7 +192,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SR","氷","強攻"],
+    "tags": ["恒常","SR","氷","強攻"],
     "skillIds": [
       "s_401",
       "s_402",
@@ -246,7 +246,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SR","物理","強攻"],
+    "tags": ["恒常","SR","物理","強攻"],
     "skillIds": [
       "s_501",
       "s_502",
@@ -304,7 +304,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["R","雷","強攻"],
+    "tags": ["恒常","R","雷","強攻"],
     "skillIds": [
       "s_601",
       "s_602",
@@ -331,7 +331,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["R","物理","強攻"],
+    "tags": ["恒常","R","物理","強攻"],
     "skillIds": [
       "s_701",
       "s_702",
@@ -359,7 +359,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["R","炎","強攻"],
+    "tags": ["恒常","R","炎","強攻"],
     "skillIds": [
       "s_801",
       "s_802",
@@ -386,7 +386,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["R","氷","強攻"],
+    "tags": ["恒常","R","氷","強攻"],
     "skillIds": [
       "s_901",
       "s_902",
@@ -413,7 +413,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","雷","強攻"],
+    "tags": ["恒常","SSR","雷","強攻"],
     "skillIds": [
       "s_1001",
       "s_1002",
@@ -473,7 +473,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","氷","恩恵"],
+    "tags": ["恒常","SSR","氷","恩恵"],
     "skillIds": [
       "s_1101",
       "s_1102",
@@ -532,7 +532,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","炎","強攻"],
+    "tags": ["恒常","SSR","炎","強攻"],
     "skillIds": [
       "s_1201",
       "s_1202",
@@ -592,7 +592,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","物理","強攻"],
+    "tags": ["恒常","SSR","物理","強攻"],
     "skillIds": [
       "s_1301",
       "s_1302",
@@ -651,7 +651,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","氷","強攻"],
+    "tags": ["恒常","SSR","氷","強攻"],
     "skillIds": [
       "s_1401",
       "s_1402",
@@ -709,7 +709,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","炎","剛毅"],
+    "tags": ["恒常","SSR","炎","剛毅"],
     "skillIds": [
       "s_1501",
       "s_1502",
@@ -767,7 +767,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","雷","強攻"],
+    "tags": ["恒常","SSR","雷","強攻"],
     "skillIds": [
       "s_1601",
       "s_1602",
@@ -825,7 +825,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","氷","剛毅"],
+    "tags": ["恒常","SSR","氷","剛毅"],
     "skillIds": [
       "s_1701",
       "s_1702",
@@ -887,7 +887,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","炎","恩恵"],
+    "tags": ["恒常","SSR","炎","恩恵"],
     "skillIds": [
       "s_1801",
       "s_1802",
@@ -946,7 +946,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","雷","恩恵"],
+    "tags": ["恒常","SSR","雷","恩恵"],
     "skillIds": [
       "s_1901",
       "s_1902",
@@ -1005,7 +1005,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","氷","強攻"],
+    "tags": ["恒常","SSR","氷","強攻"],
     "skillIds": [
       "s_2001",
       "s_2002",
@@ -1063,7 +1063,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": ["https://youtu.be/8zUV-2MtD_M?list=PLKua5tWzOdfUzGTKc3F18T8Zh1h1joYEJ"],
-    "tags": ["SSR","物理","強攻"],
+    "tags": ["恒常","SSR","物理","強攻"],
     "skillIds": [
       "s_2101",
       "s_2102",
@@ -1122,7 +1122,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","炎","強攻"],
+    "tags": ["恒常","SSR","炎","強攻"],
     "skillIds": [
       "s_2201",
       "s_2202",
@@ -1181,7 +1181,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","異能","恩恵"],
+    "tags": ["限定","SSR","異能","恩恵"],
     "skillIds": [
       "s_3401",
       "s_3402",
@@ -1240,15 +1240,15 @@
     "name": "規衡",
     "description": "規則の狭間で、裁かれるは天地。幾重もの鍛錬を経て、残るは鋭さ。一片の偏りも見せず、二つは分かたれ。雲の如き公平さで、剣は天を平定す",
     "avatar": "煙渺",
-    "strategy": "",
-    "ratingScore": 0,
-    "ratingAttacker": null,
-    "ratingSupporter": null,
-    "ratingReroll": null,
-    "ratingExplore": null,
-    "ratingText": "",
+    "strategy": "基本的にはスキル発動で獲得できる灼刃を活かして戦う。灼刃は回避攻撃をした際に1つ消費して追加のダメージを与える。このダメージは武器が物理か炎属性ならその属性に合わせた属性になるので、煙渺のボリションと合わせて物理/炎の両方で使いまわしが可能だぞ！",
+    "ratingScore": 4,
+    "ratingAttacker": 2,
+    "ratingSupporter": 3.5,
+    "ratingReroll": 3,
+    "ratingExplore": 4,
+    "ratingText": "恒常武器としては非常に優秀なサポート・探索性能を有している。物理と炎の両方で使える性能なので、コスパも非常に良い。\nただし、炎で使う場合はヴォイドとの噛み合いが悪い点は注意(ヴォイドが異能属性になってしまう)。",
     "videoUrls": [""],
-    "tags": ["SSR","物理・炎","強攻"],
+    "tags": ["恒常","SSR","物理・炎","強攻"],
     "skillIds": [
       "s_4401",
       "s_4402",
@@ -1309,7 +1309,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","雷・氷","恩恵"],
+    "tags": ["限定","SSR","雷・氷","恩恵"],
     "skillIds": [
       "s_4501",
       "s_4502",
@@ -1369,7 +1369,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","炎・物理","強攻"],
+    "tags": ["限定","SSR","炎・物理","強攻"],
     "skillIds": [
       "s_4601",
       "s_4602",
@@ -1432,7 +1432,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","雷・氷","強攻"],
+    "tags": ["絶版","SSR","雷・氷","強攻"],
     "skillIds": [
       "s_4901",
       "s_4902",
@@ -1492,7 +1492,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","炎・物理","強攻"],
+    "tags": ["限定","SSR","炎・物理","強攻"],
     "skillIds": [
       "s_5001",
       "s_5002",
@@ -1552,7 +1552,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": [""],
-    "tags": ["SSR","物理・炎","強攻"],
+    "tags": ["限定","SSR","物理・炎","強攻"],
     "skillIds": [
       "s_5201",
       "s_5202",
@@ -1612,7 +1612,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": ["https://youtu.be/GM0CJTKvhmM"],
-    "tags": ["SSR","異能","強攻"],
+    "tags": ["限定","SSR","異能","強攻"],
     "skillIds": [
       "s_5301",
       "s_5302",
@@ -1675,7 +1675,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": ["https://youtu.be/yID8orP9a3Q","https://youtu.be/-9bv1BbKWY4"],
-    "tags": ["SSR","雷・氷","剛毅"],
+    "tags": ["限定","SSR","雷・氷","剛毅"],
     "skillIds": [
       "s_5401",
       "s_5402",
@@ -1737,7 +1737,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": ["https://youtu.be/jvTDG_64TVw","https://youtu.be/xN3KXFSK0rk"],
-    "tags": ["SSR","炎・物理","強攻"],
+    "tags": ["限定","SSR","炎・物理","強攻"],
     "skillIds": [
       "s_5501",
       "s_5502",
@@ -1798,7 +1798,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": ["https://youtu.be/clKfRogOGJI","https://youtu.be/DlmA0a4ME6U"],
-    "tags": ["SSR","氷・雷","恩恵"],
+    "tags": ["限定","SSR","氷・雷","恩恵"],
     "skillIds": [
       "s_5601",
       "s_5602",
@@ -1861,7 +1861,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": ["https://youtu.be/0VRgg6qnyPo","https://youtu.be/w2MmCyVXDP0"],
-    "tags": ["SSR","物理・炎","強攻"],
+    "tags": ["限定","SSR","物理・炎","強攻"],
     "skillIds": [
       "s_5701",
       "s_5702",
@@ -1922,7 +1922,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": ["https://youtu.be/cN5OPPh0sQY","https://youtu.be/m2CY9P0lRqo"],
-    "tags": ["SSR","異能","強攻"],
+    "tags": ["限定","SSR","異能","強攻"],
     "skillIds": [
       "s_5801",
       "s_5802",
@@ -1986,7 +1986,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": ["https://youtu.be/QzN7C1_-GIQ"],
-    "tags": ["SSR","雷・氷","強攻"],
+    "tags": ["限定","SSR","雷・氷","強攻"],
     "skillIds": [
       "s_5901",
       "s_5902",
@@ -2048,7 +2048,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls": ["https://youtu.be/ATgR0VywDk0","https://youtu.be/zpKnl68LlTU"],
-    "tags": ["SSR","炎・物理","強攻"],
+    "tags": ["限定","SSR","炎・物理","強攻"],
     "skillIds": [
       "s_6001",
       "s_6002",
@@ -2110,7 +2110,7 @@
     "ratingExplore": null,
     "ratingText": "",
     "videoUrls":["https://youtu.be/Q4kyqlzvoy8","https://youtu.be/0m-7xnSQMOE"],
-    "tags": ["SSR","氷・雷","強攻"],
+    "tags": ["限定","SSR","氷・雷","強攻"],
     "skillIds": [
       "s_6101",
       "s_6102",
@@ -2171,7 +2171,7 @@
     "ratingExplore": 5,
     "ratingText": "物理属性のメインアタッカーかつ最新の剛毅武器。\n剛毅としての性能は武器を完凸しないと物足りない部分があるが、完凸すれば強攻・剛毅どちらでも活躍してくれるのでリソースを使う価値は高い。\nリソースに制限があるリセマラにおいても、圧倒的な探索性能のおかげで無凸確保に十二分な価値がある。",
     "videoUrls":["https://youtu.be/9X_os4YFD0Q","https://youtu.be/I1_NEd7JzEA"],
-    "tags": ["SSR","物理・炎","剛毅"],
+    "tags": ["限定","SSR","物理・炎","剛毅"],
     "skillIds": [
       "s_6201",
       "s_6202",
@@ -2233,12 +2233,12 @@
     "strategy": "スキルで通常攻撃を強化したら、クロスロンド(回避派生の通常攻撃)の準備時間が経過するまで強化通常攻撃を撃ち続け、クロスロンドが解放されたら回避攻撃⇒クロスロンド⇒通常5段目をループしてサポーターのバフが切れる前に瞬歩連撃(第2スキル)を発動しよう。\n",
     "ratingScore": 3.5,
     "ratingAttacker": 4,
-    "ratingSupporter": 2.5,
+    "ratingSupporter": 1.5,
     "ratingReroll": 3,
     "ratingExplore": 0,
     "ratingText":"雷属性の最新のメインアタッカーなので、雷のアタッカー武器が欲しい人にはおススメ。\n裏ダメージが無く、武器凸・ボリション効果はシードル自身のスキル倍率を強化する効果が多いため、将来サポーターとして活躍する場面は無さそう。（バフの総量ならサポーターのアントリアと同程度だが、裏ダメージが一切無いのが痛い）",
-    "videoUrls":["https://youtu.be/wQ5bAocmWEI"],
-    "tags": ["SSR","雷・氷","強攻"],
+    "videoUrls":["https://youtu.be/JS2dgVir0Y4","https://youtu.be/wQ5bAocmWEI"],
+    "tags": ["限定","SSR","雷・氷","強攻"],
     "skillIds": [
       "s_6301",
       "s_6302",

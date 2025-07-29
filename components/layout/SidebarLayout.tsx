@@ -23,11 +23,10 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/weapons/TwinStars", label: "アストール武器：二重星" },
-  { href: "/matrices/m_58", label: "アストールボリション" },
-  { href: "/trait/t_58", label: "アストール特性" },
-  { href: "/event/ver5-1/guardian-of-kailo", label: "イベント「キルオの守護者」" },
-  { href: "/event/ver5-1/ver5-2_testserver", label: "Ver5.2先行テストサーバー" }
+  { href: "/weapons/AF-010Servion", label: "シードル武器：サーバントAF-010" },
+  { href: "/matrices/m_59", label: "シードルボリション" },
+  { href: "/trait/t_59", label: "シードル特性" },
+  { href: "/event/ver5-2/Starlit_Summer_Festival", label: "イベント「星光夏祭り」" }
 ];
 
 // backupと同じSidebarLinksAndAdBlock
