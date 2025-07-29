@@ -26,7 +26,6 @@ const latestContentsLinks = [
   { href: "/weapons/AF-010Servion", label: "シードル武器：サーバントAF-010" },
   { href: "/matrices/m_59", label: "シードルボリション" },
   { href: "/trait/t_59", label: "シードル特性" },
-  { href: "/event/ver5-2/Starlit_Summer_Festival", label: "イベント「星光夏祭り」" }
 ];
 
 // backupと同じSidebarLinksAndAdBlock
