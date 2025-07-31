@@ -6,7 +6,6 @@ import Image from "next/image";
 import { AdSenseBanner } from "@/components/AdSenseBanner";
 import Breadcrumb from "@/components/Breadcrumb";
 
-// サイドバーメニュー構成を共通化
 const basicNavLinks = [
   { href: "/", label: "トップ" },
   { href: "/tag-search", label: "タグ検索" },
@@ -26,9 +25,9 @@ const latestContentsLinks = [
   { href: "/weapons/AF-010Servion", label: "シードル武器：サーバントAF-010" },
   { href: "/matrices/m_59", label: "シードルボリション" },
   { href: "/trait/t_59", label: "シードル特性" },
+  { href: "/event/ver5-2/Starlit_Summer_Festival", label: "イベント「星光夏祭り」" },
 ];
 
-// backupと同じSidebarLinksAndAdBlock
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
   return (
     <div>
@@ -58,8 +57,8 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
         <div className="text-xs text-gray-700 mb-1">
           管理人がPC購入に使ったBTOサイト
         </div>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <a href="https://px.a8.net/svt/ejp?a8mat=459PZA+3ENBEA+34WQ+5YZ75" rel="nofollow" target="_blank">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="https://www26.a8.net/svt/bgt?aid=250716358206&wid=001&eno=01&mid=s00000014633001003000&mc=1"
             alt="Sycomバナー"
@@ -77,7 +76,7 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
           style={{ display: "none" }}
         />
       </div>
-      <div className={`mt-2 ${isMobile ? "h-32" : "h-64"} text-center flex items-center justify-center rounded`}>
+      <div className="text-center flex items-center justify-center rounded m-0 p-0" style={{ margin: 0, padding: 0 }}>
         <AdSenseBanner />
       </div>
     </div>
@@ -93,7 +92,6 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  // 全部初期値true（開いた状態）
   const [latestOpen, setLatestOpen] = useState(true);
   const [basicOpen, setBasicOpen] = useState(true);
   const [soloMultiOpen, setSoloMultiOpen] = useState(true);
@@ -173,8 +171,7 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
         onSidebarToggle={() => setSidebarOpen(true)}
         showSidebarButton={true}
       />
-
-      {/* サイドバー（モバイルはドロワーのみ。PCは非表示） */}
+      {/* モバイルサイドバー */}
       <div>
         <div
           className={`fixed inset-0 z-[9998] bg-black bg-opacity-30 transition-opacity duration-200 ${
@@ -190,14 +187,12 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             overflow-y-auto
           `}
         >
-          {/* ドロワーヘッダー（モバイルのみ） */}
           <div className="h-16 flex items-center justify-between px-4 border-b">
             <span className="font-bold text-lg">メニュー</span>
             <button onClick={() => setSidebarOpen(false)} aria-label="閉じる">
               ×
             </button>
           </div>
-          {/* 検索フォーム */}
           <div className="p-4">
             <input
               type="text"
@@ -258,14 +253,11 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             </div>
           </nav>
           <hr className="border-gray-200 my-2" />
-          {/* モバイル時だけ下部に外部リンク・広告 */}
           <div className="px-4 pb-8 overflow-y-auto">
-            {/* InternalLinksBlockはbackupに従い未定義のまま省略 */}
             <SidebarLinksAndAdBlock isMobile />
           </div>
         </aside>
       </div>
-
       <div className="flex flex-1 w-full">
         <aside className="hidden lg:block lg:w-60 bg-gray-100 border-r pt-16">
           <div className="p-4">
@@ -328,16 +320,21 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             </div>
           </nav>
         </aside>
-
-        {/* メインコンテンツ */}
         <main className="flex-1 px-2 sm:px-4 md:px-8 py-6 max-w-4xl mx-auto bg-white shadow rounded pt-16">
           <Breadcrumb />
           {children}
         </main>
-
-        {/* SNSリンク・広告（PC右端） */}
-        <aside className="hidden xl:block w-64 bg-gray-50 p-4 border-l pt-16">
+        <aside className="hidden xl:block w-64 bg-gray-50 p-0 border-l pt-16">
           <SidebarLinksAndAdBlock />
+          <div className="flex flex-col items-center m-0 p-0">
+            <a
+              href="/skeb"
+              className="block text-base font-semibold text-sky-700 underline hover:text-pink-600 transition m-0 p-0"
+              style={{ marginTop: 0, paddingTop: 0 }}
+            >
+              Skebで制作リクエストをしたい方へ
+            </a>
+          </div>
         </aside>
       </div>
       <Footer />
