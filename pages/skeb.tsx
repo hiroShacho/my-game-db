@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import Head from "next/head";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 
