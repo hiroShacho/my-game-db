@@ -34,6 +34,14 @@ const GANTT_EVENTS: GanttEvent[] = [
     end: 28,
   },
   {
+    label: "新プレアバ：シードル",
+    color: "#8ffff0",
+    labelColor: "#e3a3f8",
+    labelFontColor: "#200",
+    start: 1,
+    end: 28,
+  },
+  {
     label: "復刻プレアバ：榴火",
     color: "#ff4141",
     labelColor: "#e3a3f8",
@@ -91,6 +99,7 @@ const eventImages: (string | null)[] = [
   "/ver_event/Outfit_Cosmic Coast.PNG",
   "/ver_event/Outfit_Summer Special.PNG",
   "/ver_event/Outfit_Innarsian Fashion.PNG",
+  "/ver_event/Simulacrum_Hipper.PNG",
   "/ver_event/Simulacrum_Liu.PNG",
   "/ver_event/Simulacrum_Mimi.PNG",
   "/ver_event/Simulacrum_Linghan.PNG",
@@ -155,8 +164,8 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/08/01 ver5.2アップデート情報まとめを更新。</li>
             <li>・2025/07/31 イベント「星光夏祭り」のページを作成。</li>
-            <li>・2025/07/29 ver5.2の注目コンテンツを更新。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>

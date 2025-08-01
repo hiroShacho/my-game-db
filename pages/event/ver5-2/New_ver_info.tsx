@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ReactElement } from "react";
@@ -24,7 +24,7 @@ const fionaCards: FionaCardProps[] = [
   },
   {
     title: "3凸",
-    description: "フィオナの武器「月星の環」の連携スキル効果: 強攻/均衡効果の持続時間、剛毅共鳴の耐性アップ時間、恩恵共鳴の回復時間がそれぞれ60秒に延長される。",
+    description: "フィオナの武器「月星の環」の連携スキル効果: 強攻/均衡効果の持続時間、剛毅共鳴の耐性アップ時間、恩恵共鳴の回復時間がそれぞれ延長される。",
     idx: 3,
   },
   {
@@ -66,7 +66,117 @@ const SectionTitle = ({
   </div>
 );
 
+const costumeImages = [
+  {
+    src: "/ver_event/Outfit_Cosmic Coast.PNG",
+    alt: "【水着】新コスチューム：海塩スターコーデ",
+    label: "【水着】新コスチューム：海塩スターコーデ",
+    date: "07/29(火)メンテナンス後 - 08/28(木) 06:00（JST）"
+  },
+  {
+    src: "/ver_event/Outfit_Summer Special.PNG",
+    alt: "【水着】復刻コスチューム：オリジナル・サマー",
+    label: "【水着】復刻コスチューム：オリジナル・サマー",
+    date: "07/29(火)メンテナンス後 - 08/12(火) 06:00（JST）"
+  },
+  {
+    src: "/ver_event/Outfit_Innarsian Fashion.PNG",
+    alt: "復刻コスチューム：きらめきインニス",
+    label: "復刻コスチューム：きらめきインニス",
+    date: "08/12(火) 13:00 - 08/28(木) 06:00（JST）"
+  }
+];
+
+const gachaDates = [
+  {
+    label: "【水着】新コスチューム：海塩スターコーデ",
+    date: "07/29(火)メンテナンス後 - 08/28(木) 06:00（JST）",
+  },
+  {
+    label: "【水着】復刻コスチューム：オリジナル・サマー",
+    date: "07/29(火)メンテナンス後 - 08/12(火) 06:00（JST）",
+  },
+  {
+    label: "復刻コスチューム：きらめきインニス",
+    date: "08/12(火) 13:00 - 08/28(木) 06:00（JST）",
+  },
+  {
+    label: "【水着】新プレミアムアバター：シードル「しなやかな夏」",
+    date: "07/29(火)メンテナンス後 - 08/28(木) 06:00（JST）",
+  },
+  {
+    label: "復刻プレミアムアバター：榴火「清廉潔墨」",
+    date: "07/29(火)メンテナンス後 - 08/12(火) 06:00（JST）",
+  },
+  {
+    label: "復刻プレミアムアバター：篁(ミミ)「晴空幽篁」",
+    date: "07/29(火)メンテナンス後 - 08/12(火) 06:00（JST）",
+  },
+  {
+    label: "【水着】復刻プレミアムアバター：凌寒「夏咲き霜花」",
+    date: "07/29(火)メンテナンス後 - 08/12(火) 06:00（JST）",
+  },
+  {
+    label: "復刻プレミアムアバター：フィオナ「星空の誓い」",
+    date: "07/29(火)メンテナンス後 - 08/12(火) 06:00（JST）",
+  },
+  {
+    label: "【水着】復刻プレミアムアバター：ノーラ「海岸の風」",
+    date: "08/12(火) 13:00 - 08/28(木) 06:00（JST）",
+  },
+  {
+    label: "【水着】復刻プレミアムアバター：凛夜「夏影の舞」",
+    date: "08/12(火) 13:00 - 08/28(木) 06:00（JST）",
+  },
+];
+
+// カレンダー画像拡大表示用モーダル
+const CalendarModal = ({
+  isOpen,
+  onClose,
+  imgSrc,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  imgSrc: string;
+}) => {
+  if (!isOpen) return null;
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+      onClick={onClose}
+    >
+      <div
+        className="relative"
+        onClick={e => e.stopPropagation()}
+        style={{ maxWidth: "95vw", maxHeight: "95vh" }}
+      >
+        <button
+          onClick={onClose}
+          className="absolute top-2 right-2 bg-white rounded-full px-3 py-1 shadow text-gray-700 text-lg z-10"
+          aria-label="閉じる"
+        >
+          ×
+        </button>
+        <img
+          src={imgSrc}
+          alt="Ver5.2バージョンカレンダー拡大"
+          style={{
+            maxWidth: "90vw",
+            maxHeight: "90vh",
+            objectFit: "contain",
+            borderRadius: "12px",
+            boxShadow: "0 4px 24px rgba(0,0,0,0.2)"
+          }}
+        />
+      </div>
+    </div>
+  );
+};
+
 export default function NewVerInfo() {
+  const [calendarOpen, setCalendarOpen] = useState(false);
+
   return (
     <>
       <Head>
@@ -135,12 +245,101 @@ export default function NewVerInfo() {
               style={{ objectPosition: "center 25%" }}
             />
           </div>
-          <div className="bg-orange-50 border-l-4 border-orange-400 p-4 text-gray-700 text-sm rounded">
+          <div className="bg-orange-50 border-l-4 border-orange-400 p-4 text-gray-700 text-sm rounded mb-4">
             次のキャラが恩恵になりそうなので、次で恒常入りしないグレイフォックスは復刻から外れた模様。
             <br />
             ブレヴィは順当に行けば次のver5.3で恒常入りするので、無凸の素体確保ができる最後のチャンスになるだろう。
             <br />
             ヤノがいないのは謎。
+          </div>
+        </section>
+
+        {/* ▼▼▼ 追加：全属性復刻ガチャの下に追記（ガチャ日程のみ） ▼▼▼ */}
+        <section>
+          <SectionTitle icon={<span title="カレンダー">🗓️</span>}>
+            各種ガチャ日程
+          </SectionTitle>
+          <div className="bg-gradient-to-br from-blue-50 to-cyan-100 border-l-4 border-blue-400 p-4 rounded mb-4">
+            <ul className="list-disc ml-6 text-gray-800 text-base sm:text-lg mb-4">
+              {gachaDates.map((item, idx) => (
+                <li key={idx} className="mb-4">
+                  <div className="font-semibold">{item.label}</div>
+                  <div className="ml-4 text-lg sm:text-2xl font-bold text-blue-700">{item.date}</div>
+                </li>
+              ))}
+            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-2">
+              {costumeImages.map((img, idx) => (
+                <div key={idx} className="flex flex-col items-center bg-white rounded shadow p-2">
+                  <div className="relative w-44 h-44 mb-2 rounded overflow-hidden border">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover"
+                      sizes="176px"
+                      style={{ objectPosition: "center" }}
+                    />
+                  </div>
+                  <div className="text-base font-semibold text-gray-700 text-center">{img.label}</div>
+                  <div className="text-lg sm:text-2xl font-bold text-blue-700 text-center">{img.date}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* ▲▲▲ 追加ここまで ▲▲▲ */}
+
+        {/* ▼▼▼ バージョンカレンダーは分離・背景も変更 ▼▼▼ */}
+        <section>
+          <SectionTitle icon={<span title="バージョンカレンダー">📅</span>}>
+            Ver5.2_バージョンカレンダー
+          </SectionTitle>
+          <div className="bg-gradient-to-br from-pink-50 to-amber-50 border-l-4 border-pink-400 p-4 rounded mb-4 flex flex-col items-center">
+            <div
+              className="relative w-full max-w-3xl h-80 sm:h-[36rem] rounded-lg overflow-hidden shadow cursor-pointer transition hover:shadow-2xl"
+              title="クリックで拡大"
+              onClick={() => setCalendarOpen(true)}
+              style={{ border: "2px solid #a0e3ef" }}
+            >
+              <Image
+                src="/official-calendar.png"
+                alt="Ver5.2_バージョンカレンダー"
+                fill
+                className="object-contain w-full h-full"
+                sizes="(max-width: 1024px) 100vw, 900px"
+                priority
+              />
+            </div>
+            <div className="text-xs text-gray-500 mt-1">(画像をクリックで拡大表示できます)</div>
+          </div>
+          <CalendarModal
+            isOpen={calendarOpen}
+            onClose={() => setCalendarOpen(false)}
+            imgSrc="/official-calendar.png"
+          />
+        </section>
+        {/* ▲▲▲ バージョンカレンダー分離ここまで ▲▲▲ */}
+
+        {/* 連合2倍作戦 */}
+        <section>
+          <SectionTitle icon={<span title="作戦">⚔️</span>}>
+            連合2倍作戦
+          </SectionTitle>
+          <div className="bg-gradient-to-br from-green-50 to-yellow-50 border-l-4 border-green-400 p-4 rounded mb-4 flex flex-col items-center">
+            <div className="relative w-full max-w-2xl aspect-[5/2] rounded-lg overflow-hidden shadow mb-2 bg-white border">
+              <Image
+                src="/ver_event/Event_jo.png"
+                alt="連合2倍作戦"
+                fill
+                className="object-contain"
+                sizes="(max-width: 900px) 100vw, 800px"
+                priority
+              />
+            </div>
+            <div className="text-sm text-gray-700 text-center">
+              連合作戦の報酬が2倍になるイベントが開催！
+            </div>
           </div>
         </section>
 
