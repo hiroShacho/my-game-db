@@ -7,6 +7,7 @@ import Image from "next/image";
 const raids = [
   { key: "ScorchingNightmare", title: "燃え上がるナイトメア", href: "/raid/ScorchingNightmare" },
   { key: "TrafficControl", title: "交通管制", href: "/raid/TrafficControl" },
+  { key: "SwarmGuard", title: "ガードバグ陣", href: "/raid/SwarmGuard" },
   // 他の討伐作戦...
 ];
 
@@ -36,10 +37,17 @@ export default function RaidIndexPage() {
       <div className="mx-auto max-w-2xl px-4 py-6">
         {/* ▼ナビゲーションカード */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          {/* 交通管制（開催中） */}
           <Link href="/raid/TrafficControl" className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-emerald-400">
             <Image src="/raid/TrafficControl.PNG" alt="交通管制" width={200} height={112} className="rounded mb-2" />
             <span className="text-lg font-bold text-emerald-800 group-hover:text-emerald-600">交通管制</span>
             <span className="text-xs text-emerald-700 mt-2 bg-emerald-100 rounded px-2 py-1">開催中</span>
+          </Link>
+          {/* ガードバグ陣（限定討伐） */}
+          <Link href="/raid/SwarmGuard" className="group bg-yellow-50 border-yellow-400 border-2 rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center">
+            <Image src="/raid/SwarmGuard.PNG" alt="ガードバグ陣" width={200} height={112} className="rounded mb-2 border border-yellow-300" />
+            <span className="text-lg font-bold text-yellow-900 group-hover:text-yellow-700">ガードバグ陣</span>
+            <span className="text-xs text-yellow-900 mt-2 bg-yellow-200 rounded px-2 py-1 font-bold">限定討伐</span>
           </Link>
           {/* 他のレイドもカードで追加 */}
         </div>
@@ -75,6 +83,23 @@ export default function RaidIndexPage() {
                 style={{ objectFit: "contain", maxHeight: "60px" }}
               />
               <span className="text-sm font-bold text-emerald-800 group-hover:text-emerald-600">交通管制<br /><span className="text-xs text-emerald-500">(詳細ページへ)</span></span>
+            </Link>
+            {/* ガードバグ陣（アーカイブには通常色で追加） */}
+            <Link
+              href="/raid/SwarmGuard"
+              className="group bg-white border-2 border-emerald-400 rounded flex flex-col items-center justify-center h-28 hover:-translate-y-1 hover:shadow-xl transition"
+            >
+              <Image
+                src="/raid/SwarmGuard.PNG"
+                alt="ガードバグ陣"
+                width={120}
+                height={68}
+                className="rounded mb-1"
+                style={{ objectFit: "contain", maxHeight: "60px" }}
+              />
+              <span className="text-sm font-bold text-emerald-800 group-hover:text-emerald-600">
+                ガードバグ陣<br /><span className="text-xs text-emerald-500">(詳細ページへ)</span>
+              </span>
             </Link>
             {/* 空き枠や新作予定はグレーアウトで表現 */}
             <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded flex items-center justify-center h-28 text-gray-400 font-bold">

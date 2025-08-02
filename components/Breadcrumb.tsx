@@ -15,6 +15,7 @@ const labelMap: Record<string, string> = {
   "raid": "討伐作戦",
   "ScorchingNightmare": "燃え上がるナイトメア" ,
   "TrafficControl": "交通管制",
+  "SwarmGuard":"ガードバグ陣",
   // 必要に応じて追加
 };
 

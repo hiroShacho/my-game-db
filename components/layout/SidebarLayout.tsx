@@ -26,6 +26,7 @@ const latestContentsLinks = [
   { href: "/matrices/m_59", label: "シードルボリション" },
   { href: "/trait/t_59", label: "シードル特性" },
   { href: "/event/ver5-2/Starlit_Summer_Festival", label: "イベント「星光夏祭り」" },
+  { href: "/raid/SwarmGuard", label: "討伐作戦「ガードバグ陣」" },
 ];
 
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
