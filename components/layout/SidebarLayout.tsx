@@ -78,6 +78,17 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
           style={{ display: "none" }}
         />
       </div>
+      {/* Skebリンクをここに移動 */}
+      <div className="flex flex-col items-center m-0 p-0">
+        <a
+          href="/skeb"
+          className="block text-base font-semibold text-sky-700 underline hover:text-pink-600 transition m-0 p-0"
+          style={{ marginTop: 0, paddingTop: 0 }}
+        >
+          Skebで制作リクエストをしたい方へ
+        </a>
+      </div>
+      {/* AdSense広告ユニットをSkebリンクの下に移動 */}
       <div className="text-center flex items-center justify-center rounded m-0 p-0" style={{ margin: 0, padding: 0 }}>
         <AdSenseBanner />
       </div>
@@ -161,7 +172,7 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
         <li key={link.href}>
           <a
             href={link.href}
-            className="block text-black hover:text-blue-500 hover:underline transition-colors"
+            className="block text-black hover:text-blue-500 hover:text-blue-500 hover:underline transition-colors"
           >
             {link.label}
           </a>
@@ -331,15 +342,6 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
         </main>
         <aside className="hidden xl:block w-64 bg-gray-50 p-0 border-l pt-16">
           <SidebarLinksAndAdBlock />
-          <div className="flex flex-col items-center m-0 p-0">
-            <a
-              href="/skeb"
-              className="block text-base font-semibold text-sky-700 underline hover:text-pink-600 transition m-0 p-0"
-              style={{ marginTop: 0, paddingTop: 0 }}
-            >
-              Skebで制作リクエストをしたい方へ
-            </a>
-          </div>
         </aside>
       </div>
       <Footer />
