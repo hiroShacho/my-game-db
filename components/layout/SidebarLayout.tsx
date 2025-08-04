@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import { AdSenseBanner } from "@/components/AdSenseBanner";
 import Breadcrumb from "@/components/Breadcrumb";
+import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
 
 const basicNavLinks = [
   { href: "/", label: "トップ" },
@@ -79,6 +80,9 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
       </div>
       <div className="text-center flex items-center justify-center rounded m-0 p-0" style={{ margin: 0, padding: 0 }}>
         <AdSenseBanner />
+      </div>
+      <div className="flex items-center justify-center my-2">
+        <AdSenseSidebarUnit />
       </div>
     </div>
   );
