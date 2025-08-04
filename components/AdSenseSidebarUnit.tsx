@@ -1,8 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export function AdSenseSidebarUnit() {
-  const adRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     try {
       // @ts-ignore
@@ -18,7 +16,6 @@ export function AdSenseSidebarUnit() {
       data-ad-slot="4091968809"
       data-ad-format="auto"
       data-full-width-responsive="true"
-      ref={adRef}
     />
   );
 }
