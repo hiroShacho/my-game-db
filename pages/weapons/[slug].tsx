@@ -305,7 +305,23 @@ export default function WeaponDetail() {
                     この武器には凸効果が存在しません。
                   </p>
                 )}
+
               </section>
+              {/* アバター共感覚（Synesthesia） */}
+              {Array.isArray(weapon.synesthesia) && weapon.synesthesia.length > 0 && (
+                <section>
+                  <h2 className={h2Class} style={h2Style}>
+                    アバター共感覚
+                  </h2>
+                  <ul className="list-disc list-inside text-xs sm:text-sm mt-1 space-y-1">
+                    {weapon.synesthesia.map((e, i) => (
+                      <li key={i}>
+                        <strong>{e.level}</strong>: {e.description}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
 
               {/* スキル */}
               <section>

@@ -164,8 +164,8 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/08/04 討伐作戦「元素警戒」のページを作成。</li>
             <li>・2025/08/03 討伐作戦「ガードバグ陣」のページを作成。</li>
-            <li>・2025/08/01 ver5.2アップデート情報まとめを更新。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
