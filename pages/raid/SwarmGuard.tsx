@@ -213,6 +213,16 @@ export default function SwarmGuardPage() {
             src="/raid/SwarmGuard_5.mp4"
             caption="膝をついている状態が弱体状態。時間は短いので強攻は火力を出せるタイミングで異種カマグモを倒そう。"
           />
+          {/* ここから追加 */}
+          <div className="mt-2">
+            <strong>【追記】</strong><br />カマグモたちに与えられるダメージは100で固定になっているため、実質的にヒット数で倒すギミックとなっている。<br />
+            アスラーダ討伐の分身のような時空の裂け目でダメージが与えられないバグはないが、カマグモを倒した時に貰えるバフが<strong>強攻</strong>ではなくヒット数の多いフィオナを持った恩恵に持ってかれる可能性が高いのは注意。
+          </div>
+          <CaptionedImage
+            src="/raid/SwarmGuard_5.PNG"
+            alt="カマグモへのダメージは100固定"
+            caption="電磁ブレードでも最新武器でもダメージは100で固定"
+          />
         </div>
 
         <SectionTitle icon="warning">HP85%の召喚スキップに注意！</SectionTitle>
