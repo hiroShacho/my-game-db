@@ -164,8 +164,8 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/08/06 Ver5.3テストサーバー募集に関するページを作成。復刻中の武器評価も更新。</li>
             <li>・2025/08/05 討伐「ガードバグ陣」追記。一部武器評価・コメントを追加。残りの武器情報と併せて地道に更新予定。</li>
-            <li>・2025/08/04 討伐作戦「元素警戒」のページを作成。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
@@ -280,31 +280,39 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* 画像のみ表示（リンクなし） */}
-            <div className="block">
+            {/* ▼▼▼ ここから追加 ▼▼▼ */}
+            <Link href="/event/ver5-2/ver5-3_testserver" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  cursor-default
+                  hover:scale-105
+                  hover:shadow-2xl
+                  hover:ring-2 hover:ring-sky-400
+                  cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_2.png')",
                   backgroundSize: "cover",
-                  backgroundPosition: "center top"
+                  backgroundPosition: "center"
                 }}
               >
-                <div className="absolute inset-0 bg-black/20" />
+                {/* 画像を暗くするオーバーレイ */}
+                <div className="absolute inset-0 bg-black/50" />
+                {/* テキスト部分 */}
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     Ver5.3先行テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    準備中
+                    公式Discordで募集開始！<br />
+                    詳細・最新情報はこちら
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
+            {/* ▲▲▲ ここまで追加 ▲▲▲ */}
+            {/* 画像のみ表示（リンクなし） */}
             <div className="block">
               <div
                 className="
