@@ -5,6 +5,7 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
 import StarRating from "@/components/StarRating";
+import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit"; // 追加
 
 export default function MatrixDetailPage() {
   const router = useRouter();
@@ -94,6 +95,11 @@ export default function MatrixDetailPage() {
             該当する武器が見つかりません。
           </div>
         )}
+
+        {/* 広告表示を追加 */}
+        <div className="flex justify-center my-4">
+          <AdSenseSidebarUnit />
+        </div>
       </div>
     </SidebarLayout>
    </>

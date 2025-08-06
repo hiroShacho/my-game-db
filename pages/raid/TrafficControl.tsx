@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Head from "next/head";
 import Image from "next/image";
+import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
 
 // セクションタイトル（装飾強化・アイコン付き・帯色）
 function SectionTitle({ icon, children }: { icon?: string; children: React.ReactNode }) {
@@ -195,6 +196,11 @@ export default function ScorchingNightmarePage() {
           基本は火力役の強攻が1,2人、剛毅が1人、残りは全員恩恵にするのが良い。<br />
           弱点攻撃を必ず成功させることが重要なので、敵の弱点が出る位置とタイミングを覚えることと、敵の動きを妨害しないことを意識しよう！<br />
           敵の攻撃は火力が高めなので、恩恵は攻撃の度に回復ができるよう準備しておこう。<br />
+        </div>
+
+        {/* 広告挿入 */}
+        <div className="flex justify-center my-4">
+          <AdSenseSidebarUnit />
         </div>
 
         <SectionTitle icon="movie">解説動画</SectionTitle>

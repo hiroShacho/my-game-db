@@ -86,7 +86,7 @@ export default function RaidIndexPage() {
               <span className="text-sm font-bold text-emerald-800 group-hover:text-emerald-600">燃え上がるナイトメア<br /><span className="text-xs text-emerald-500">(詳細ページへ)</span></span>
             </Link>
             <Link
-              href="/raid/Traffic Control"
+              href="/raid/TrafficControl"
               className="group bg-white border-2 border-emerald-400 rounded flex flex-col items-center justify-center h-28 hover:-translate-y-1 hover:shadow-xl transition"
             >
               <Image

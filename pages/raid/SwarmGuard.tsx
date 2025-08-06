@@ -2,6 +2,7 @@ import { ReactElement, useState } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Head from "next/head";
 import Image from "next/image";
+import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
 
 // セクションタイトル（装飾強化・アイコン付き・帯色）
 function SectionTitle({ icon, children }: { icon?: string; children: React.ReactNode }) {
@@ -248,6 +249,11 @@ export default function SwarmGuardPage() {
           女王虫は定期的に中央にワープするので、時空の裂け目などが空ぶらないようになるべくフィールド中央に固定したい。<br />
           恩恵は基本は回復とバフに専念すれば良いが、卵を踏んだりカマグモを倒さないように注意。<br />
           特にグレイフォックスの3凸効果やフィオナ共感覚1凸の火力でカマグモを倒してしまうことが多いので、バフ・回復・連携エナジー獲得以外の不要な動きはしないようにしよう。
+        </div>
+
+        {/* 広告挿入 */}
+        <div className="flex justify-center my-4">
+          <AdSenseSidebarUnit />
         </div>
 
         <SectionTitle icon="sync_alt">理想(?)の流れ</SectionTitle>

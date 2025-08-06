@@ -2,6 +2,7 @@ import { ReactElement, useState } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Head from "next/head";
 import Image from "next/image";
+import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
 
 // セクションタイトル（装飾強化・アイコン付き・帯色）
 function SectionTitle({ icon, children }: { icon?: string; children: React.ReactNode }) {
@@ -170,6 +171,11 @@ export default function ElementAlartPage() {
           グレイフォックスを持った恩恵がいればそうそう即死はしないので、ギミック担当を用意しつつ削り切ろう。<br />
           討伐自体が少し古めなので、強攻がインフレした今では分身ギミックを無視しても攻略可能だが、最初の柱のギミックは飛廉が無敵になるのでギミックのダメージが来る前にゴリ押すというのは難しい。<br />
           無理に最速クリアを目指すよりギミックを意識したチームで挑んだ方が安定してクリアできるのでしっかり役割分担するようにしよう。
+        </div>
+
+        {/* 広告挿入 */}
+        <div className="flex justify-center my-4">
+          <AdSenseSidebarUnit />
         </div>
 
         <SectionTitle icon="person">ソロ攻略も可能</SectionTitle>

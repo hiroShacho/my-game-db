@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Head from "next/head";
 import Image from "next/image";
+import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
 
 // セクションタイトル（装飾強化・アイコン付き・帯色）
 function SectionTitle({ icon, children }: { icon?: string; children: React.ReactNode }) {
@@ -180,6 +181,11 @@ export default function ScorchingNightmarePage() {
           最初の内は強攻でもダメージをあまり与えられないので、ギミックで敵の体力と耐性を削りつつ耐えることに専念しよう。<br />
           炎の波が発生するとチーム全員が倒れる危険性が高まるので、不用意に炎の範囲には近づかず常に周囲の状況に注意しよう。<br />
           また、恩恵はHPシールドを貼るより回復能力が高いキャラを採用しよう！
+        </div>
+
+        {/* 広告挿入 */}
+        <div className="flex justify-center my-4">
+          <AdSenseSidebarUnit />
         </div>
 
         <SectionTitle icon="movie">解説動画</SectionTitle>

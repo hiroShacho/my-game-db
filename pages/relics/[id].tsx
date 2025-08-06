@@ -3,6 +3,7 @@ import relicsData from '@/data/relics.json';
 import Image from 'next/image';
 import Head from 'next/head';
 import SidebarLayout from '@/components/layout/SidebarLayout';
+import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit"; // 追加
 
 type Props = {
   relic: any;
@@ -69,6 +70,11 @@ export default function RelicDetailPage({ relic }: Props) {
         <div className="mb-4 sm:mb-6">
           <h2 className="text-base sm:text-lg font-semibold mb-2">評価</h2>
           <p className="text-sm sm:text-base">{relic.evaluation || '評価はまだ登録されていません。'}</p>
+        </div>
+
+        {/* 広告追加：評価の下 */}
+        <div className="flex justify-center my-4">
+          <AdSenseSidebarUnit />
         </div>
       </div>
     </SidebarLayout>
