@@ -4,12 +4,21 @@ import Image from "next/image";
 import { ReactElement } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Head from "next/head";
+// import weapons data
+import weaponsData from "@/data/weapons.json";
 
 type FionaCardProps = {
   title: string;
   description: string;
   idx: number;
 };
+
+// 武器IDリスト（全属性+フィオナ復刻ガチャ対象）
+const rerunWeaponIds = [
+  "w_34", "w_45", "w_46", "w_50", "w_51", "w_52", "w_53", "w_54", "w_55", "w_57", "w_58", "w_59", "w_60", "w_61"
+];
+// 対象武器データ取得
+const rerunWeapons = weaponsData.filter(w => rerunWeaponIds.includes(w.id));
 
 const fionaCards: FionaCardProps[] = [
   {
@@ -229,15 +238,15 @@ export default function NewVerInfo() {
           </div>
         </section>
 
-        {/* ②全属性復刻ガチャ */}
+        {/* ②全属性+フィオナ復刻ガチャ */}
         <section>
           <SectionTitle icon={<span title="ガチャ">🎲</span>}>
-            全属性復刻ガチャ
+            全属性+フィオナ復刻ガチャ
           </SectionTitle>
           <div className="relative w-full h-32 sm:h-48 rounded-lg overflow-hidden shadow mb-2">
             <Image
               src="/ver_event/Rerun.png"
-              alt="全属性復刻ガチャ"
+              alt="全属性+フィオナ復刻ガチャ"
               fill
               className="object-cover w-full h-full"
               sizes="100vw"
@@ -252,6 +261,31 @@ export default function NewVerInfo() {
             <br />
             ヤノがいないのは謎。
           </div>
+          {/* ▼▼▼ 追加：復刻武器一覧（詳細ページリンク＋評価） ▼▼▼ */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-6">
+            {rerunWeapons.map(w => (
+              <Link
+                key={w.id}
+                href={`/weapons/${w.slug}`}
+                className="block bg-white rounded shadow hover:shadow-lg hover:ring-2 hover:ring-pink-400 transition-all p-3 text-center"
+              >
+                <div className="flex flex-col items-center">
+                  <Image
+                    src={`/images/${w.id}_img.PNG`}
+                    alt={w.name}
+                    width={64}
+                    height={64}
+                    className="rounded border mb-2"
+                  />
+                  <span className="font-semibold text-gray-800 mb-1">{w.name}</span>
+                  <span className="px-2 py-1 bg-yellow-200 text-yellow-800 text-sm rounded font-bold">
+                    {typeof w.ratingScore === "number" ? `評価: ${w.ratingScore}` : "評価なし"}
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          {/* ▲▲▲ 追加ここまで ▲▲▲ */}
         </section>
 
         {/* ▼▼▼ 追加：全属性復刻ガチャの下に追記（ガチャ日程のみ） ▼▼▼ */}
