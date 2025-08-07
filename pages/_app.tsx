@@ -15,5 +15,14 @@ type AppPropsWithLayout = AppProps & {
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
-  return getLayout(<Component {...pageProps} />);
+  return (
+    <>
+      <Script
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+        strategy="afterInteractive"
+        crossOrigin="anonymous"
+      />
+      {getLayout(<Component {...pageProps} />)}
+    </>
+  );
 }

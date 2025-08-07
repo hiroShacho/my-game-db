@@ -164,8 +164,8 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/08/07 復刻されていない限定武器の評価を更新。</li>
             <li>・2025/08/06 Ver5.3テストサーバー募集に関するページを作成。復刻中の武器評価も更新。</li>
-            <li>・2025/08/05 討伐「ガードバグ陣」追記。一部武器評価・コメントを追加。残りの武器情報と併せて地道に更新予定。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
