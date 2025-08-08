@@ -288,11 +288,9 @@ export default function WeaponDetail() {
               </section>
 
               {/* 広告追加：運用方法と凸効果の間 */}
-              {process.env.NODE_ENV === "production" && (
-                <div className="flex justify-center my-4">
-                  <AdSenseContentUnit />
-                </div>
-              )}
+              <div className="flex justify-center my-4">
+                <AdSenseContentUnit />
+              </div>
 
               {/* 凸効果 */}
               <section>

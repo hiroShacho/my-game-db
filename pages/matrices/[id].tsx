@@ -97,11 +97,9 @@ export default function MatrixDetailPage() {
         )}
 
         {/* 広告表示を追加 */}
-        {process.env.NODE_ENV === "production" && (
-          <div className="flex justify-center my-4">
-            <AdSenseContentUnit />
-          </div>
-        )}
+        <div className="flex justify-center my-4">
+          <AdSenseContentUnit />
+        </div>
       </div>
     </SidebarLayout>
    </>

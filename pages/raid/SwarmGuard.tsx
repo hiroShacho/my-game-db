@@ -251,11 +251,9 @@ export default function SwarmGuardPage() {
         </div>
 
         {/* 広告挿入 */}
-        {process.env.NODE_ENV === "production" && (
-          <div className="flex justify-center my-4">
-            <AdSenseContentUnit />
-          </div>
-        )}
+        <div className="flex justify-center my-4">
+          <AdSenseContentUnit />
+        </div>
 
         <SectionTitle icon="sync_alt">理想(?)の流れ</SectionTitle>
         <div>

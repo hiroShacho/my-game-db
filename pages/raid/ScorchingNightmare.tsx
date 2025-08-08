@@ -184,11 +184,9 @@ export default function ScorchingNightmarePage() {
         </div>
 
         {/* 広告挿入 */}
-        {process.env.NODE_ENV === "production" && (
-          <div className="flex justify-center my-4">
-            <AdSenseContentUnit />
-          </div>
-        )}
+        <div className="flex justify-center my-4">
+          <AdSenseContentUnit />
+        </div>
 
         <SectionTitle icon="movie">解説動画</SectionTitle>
         <div className="w-full flex justify-center my-4">

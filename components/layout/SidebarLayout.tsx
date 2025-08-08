@@ -88,11 +88,9 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
         </a>
       </div>
       {/* AdSense広告ユニットをSkebリンクの下に移動 */}
-      {process.env.NODE_ENV === "production" && (
-        <div className="flex items-center justify-center my-2">
-          <AdSenseSidebarUnit />
-        </div>
-      )}
+      <div className="flex items-center justify-center my-2">
+        <AdSenseSidebarUnit />
+      </div>
     </div>
   );
 }

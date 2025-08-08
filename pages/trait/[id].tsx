@@ -80,11 +80,9 @@ export default function TraitDetail() {
               <div className="text-blue-600 hover:underline sm:text-sm text-center mt-1">アバター「{trait.avatar}」の武器を見る</div>
             </Link>
             {/* 広告追加：武器リンクの下 */}
-            {process.env.NODE_ENV === "production" && (
-              <div className="flex justify-center my-4">
-                <AdSenseContentUnit />
-              </div>
-            )}
+            <div className="flex justify-center my-4">
+              <AdSenseContentUnit />
+            </div>
           </div>
         ) : (
           <div className="text-xs sm:text-sm text-gray-500 mt-4">対応する武器が見つかりませんでした。</div>

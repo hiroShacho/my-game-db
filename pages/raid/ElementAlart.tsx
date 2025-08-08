@@ -174,11 +174,9 @@ export default function ElementAlartPage() {
         </div>
 
         {/* 広告挿入 */}
-        {process.env.NODE_ENV === "production" && (
-          <div className="flex justify-center my-4">
-            <AdSenseContentUnit />
-          </div>
-        )}
+        <div className="flex justify-center my-4">
+          <AdSenseContentUnit />
+        </div>
 
         <SectionTitle icon="person">ソロ攻略も可能</SectionTitle>
         <div>

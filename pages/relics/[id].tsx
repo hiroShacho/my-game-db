@@ -73,11 +73,9 @@ export default function RelicDetailPage({ relic }: Props) {
         </div>
 
         {/* 広告追加：評価の下 */}
-        {process.env.NODE_ENV === "production" && (
-          <div className="flex justify-center my-4">
-            <AdSenseContentUnit />
-          </div>
-        )}
+        <div className="flex justify-center my-4">
+          <AdSenseContentUnit />
+        </div>
       </div>
     </SidebarLayout>
    </>
