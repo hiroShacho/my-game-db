@@ -88,7 +88,7 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
         </a>
       </div>
       {/* AdSense広告ユニットをSkebリンクの下に移動 */}
-      <div className="flex items-center justify-center my-2">
+      <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
         <AdSenseSidebarUnit />
       </div>
     </div>

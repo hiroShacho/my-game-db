@@ -288,7 +288,7 @@ export default function WeaponDetail() {
               </section>
 
               {/* 広告追加：運用方法と凸効果の間 */}
-              <div className="flex justify-center my-4">
+              <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
                 <AdSenseContentUnit />
               </div>
 
