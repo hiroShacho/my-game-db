@@ -5,7 +5,7 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
 import StarRating from "@/components/StarRating";
-import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit"; // 追加
+import { AdSenseSidebarUnit } from "@/components/AdSenseContentUnit"; // 追加
 
 export default function MatrixDetailPage() {
   const router = useRouter();
@@ -97,9 +97,11 @@ export default function MatrixDetailPage() {
         )}
 
         {/* 広告表示を追加 */}
-        <div className="flex justify-center my-4">
-          <AdSenseSidebarUnit />
-        </div>
+        {process.env.NODE_ENV === "production" && (
+          <div className="flex justify-center my-4">
+            <AdSenseContentUnit />
+          </div>
+        )}
       </div>
     </SidebarLayout>
    </>

@@ -3,7 +3,7 @@ import relicsData from '@/data/relics.json';
 import Image from 'next/image';
 import Head from 'next/head';
 import SidebarLayout from '@/components/layout/SidebarLayout';
-import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit"; // 追加
+import { AdSenseSidebarUnit } from "@/components/AdSenseContentUnit"; // 追加
 
 type Props = {
   relic: any;
@@ -73,9 +73,11 @@ export default function RelicDetailPage({ relic }: Props) {
         </div>
 
         {/* 広告追加：評価の下 */}
-        <div className="flex justify-center my-4">
-          <AdSenseSidebarUnit />
-        </div>
+        {process.env.NODE_ENV === "production" && (
+          <div className="flex justify-center my-4">
+            <AdSenseContentUnit />
+          </div>
+        )}
       </div>
     </SidebarLayout>
    </>

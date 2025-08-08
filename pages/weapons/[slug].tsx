@@ -8,7 +8,7 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
 import StarRating from "@/components/StarRating";
-import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit"; // 追加
+import { AdSenseSidebarUnit } from "@/components/AdSenseContentUnit"; // 追加
 
 const skillCategories = ["通常攻撃", "回避", "スキル", "連携スキル"];
 
@@ -288,9 +288,11 @@ export default function WeaponDetail() {
               </section>
 
               {/* 広告追加：運用方法と凸効果の間 */}
-              <div className="flex justify-center my-4">
-                <AdSenseSidebarUnit />
-              </div>
+              {process.env.NODE_ENV === "production" && (
+                <div className="flex justify-center my-4">
+                  <AdSenseContentUnit />
+                </div>
+              )}
 
               {/* 凸効果 */}
               <section>

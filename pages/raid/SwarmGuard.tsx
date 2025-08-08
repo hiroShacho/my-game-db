@@ -2,7 +2,7 @@ import { ReactElement, useState } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Head from "next/head";
 import Image from "next/image";
-import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
+import { AdSenseSidebarUnit } from "@/components/AdSenseContentUnit";
 
 // セクションタイトル（装飾強化・アイコン付き・帯色）
 function SectionTitle({ icon, children }: { icon?: string; children: React.ReactNode }) {
@@ -143,23 +143,7 @@ export default function SwarmGuardPage() {
           女王虫は強力なダメージ軽減効果を持っているため、火力UPにつながるギミックを把握して<strong>強攻</strong>をできる限り強化しよう！
         </div>
 
-        <SectionTitle icon="shield">ボスの無敵状態に注意！</SectionTitle>
-        <div>
-          女王虫はHPが一定以下になるとギミック④：カマグモ召喚を行う。<br />
-          この際、HPが70%、40%のタイミングで無敵状態になって攻撃をしてくる。<br />
-          この無敵状態の間に召喚されたカマグモを倒すとギミックによるダメージが入らない。<br />
-          そのため、HP70%、40%のタイミングではカマグモを倒さずに回避に専念しよう。<br />
-          <span className="font-bold text-red-700">
-            特に、強攻の各種裏ダメージや恩恵のグレイフォックス3凸効果はカマグモを倒しがちなので、女王虫のHPに常に気を配りつつ、召喚&無敵のタイミングでフィールドの端っこへ避難するようにしよう。
-          </span>
-          <CaptionedImage
-            src="/raid/SwarmGuard_1.PNG"
-            alt="無敵状態解説"
-            caption="4ゲージ目の半分と2ゲージ目に入ったタイミングで無敵に"
-          />
-        </div>
-
-        <SectionTitle icon="psychology_alt">ギミック①：混乱フェロモン</SectionTitle>
+        <SectionTitle icon="question_mark">ギミック①：混乱フェロモン</SectionTitle>
         <div>
           一定間隔でプレイヤーが指定され、その足元に範囲円が表示される。数秒するとそのプレイヤーを中心にダメージエリアが生成される。<br />
           このダメージエリア内にいると毎秒ダメージを受け、一定時間このダメージエリア内にいると混乱状態になり、操作反転と継続ダメージのデバフを付与される。<br />
@@ -226,6 +210,21 @@ export default function SwarmGuardPage() {
           />
         </div>
 
+        <SectionTitle icon="shield">ボスの無敵状態に注意！</SectionTitle>
+        <div>
+          女王虫がカマグモ召喚を行う際、HPが70%、40%のタイミングで無敵状態になって攻撃をしてくる。<br />
+          この無敵状態の間に召喚されたカマグモを倒すとギミックによるダメージが入らない。<br />
+          そのため、HP70%、40%のタイミングではカマグモを倒さずに回避に専念しよう。<br />
+          <span className="font-bold text-red-700">
+            特に、強攻の各種裏ダメージや恩恵のグレイフォックス3凸効果はカマグモを倒しがちなので、女王虫のHPに常に気を配りつつ、召喚&無敵のタイミングでフィールドの端っこへ避難するようにしよう。
+          </span>
+          <CaptionedImage
+            src="/raid/SwarmGuard_1.PNG"
+            alt="無敵状態解説"
+            caption="4ゲージ目の半分と2ゲージ目に入ったタイミングで無敵に"
+          />
+        </div>
+
         <SectionTitle icon="warning">HP85%の召喚スキップに注意！</SectionTitle>
         <div>
           女王虫が弱体状態になるのと同時にHPが召喚ラインまで減少するとカマグモが召喚されないことがある。<br />
@@ -252,9 +251,11 @@ export default function SwarmGuardPage() {
         </div>
 
         {/* 広告挿入 */}
-        <div className="flex justify-center my-4">
-          <AdSenseSidebarUnit />
-        </div>
+        {process.env.NODE_ENV === "production" && (
+          <div className="flex justify-center my-4">
+            <AdSenseContentUnit />
+          </div>
+        )}
 
         <SectionTitle icon="sync_alt">理想(?)の流れ</SectionTitle>
         <div>
@@ -272,8 +273,20 @@ export default function SwarmGuardPage() {
         </div>
 
         <SectionTitle icon="movie">解説動画</SectionTitle>
-        <div>
-          準備中
+        <div className="w-full flex justify-center my-4">
+          <div className="relative w-full" style={{ maxWidth: 560 }}>
+            <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+              <iframe
+                src="https://www.youtube.com/embed/R8JnqJi1RFc"
+                title="ガードバグ陣 討伐作戦 攻略 解説動画"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded shadow border border-lime-200"
+                style={{ maxWidth: "100%" }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </>

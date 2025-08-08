@@ -2,7 +2,7 @@ import { ReactElement, useState } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Head from "next/head";
 import Image from "next/image";
-import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
+import { AdSenseSidebarUnit } from "@/components/AdSenseContentUnit";
 
 // セクションタイトル（装飾強化・アイコン付き・帯色）
 function SectionTitle({ icon, children }: { icon?: string; children: React.ReactNode }) {
@@ -174,9 +174,11 @@ export default function ElementAlartPage() {
         </div>
 
         {/* 広告挿入 */}
-        <div className="flex justify-center my-4">
-          <AdSenseSidebarUnit />
-        </div>
+        {process.env.NODE_ENV === "production" && (
+          <div className="flex justify-center my-4">
+            <AdSenseContentUnit />
+          </div>
+        )}
 
         <SectionTitle icon="person">ソロ攻略も可能</SectionTitle>
         <div>

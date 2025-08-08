@@ -151,7 +151,7 @@ export default function Home() {
             最新イベント・攻略・ガチャ情報をお届けする㌥！
           </div>
         </div>
-      </div>
+      </div>	
       <div className="w-full max-w-full min-h-screen space-y-6 px-2 sm:px-6 py-4 overflow-x-hidden">
         {/* サイト紹介 */}
         <section>
@@ -160,12 +160,33 @@ export default function Home() {
             各種コンテンツの情報は徐々に更新していきます。
           </p>
         </section>
+        {/* ▼▼▼ ここに連合2倍イベント開催中バナー ▼▼▼ */}
+        <div className="flex justify-center mb-4">
+          <div
+            className="px-6 py-2 rounded-lg shadow-md bg-gradient-to-r from-yellow-200 via-orange-100 to-pink-100 border border-yellow-400 text-center"
+            style={{
+              maxWidth: "600px",
+              minWidth: "340px",
+              width: "100%",
+              fontWeight: 700,
+              fontSize: "1.2rem",
+              color: "#b85d00",
+              letterSpacing: "0.05em",
+              boxShadow: "0 2px 8px rgba(255,150,60,0.12)"
+            }}
+          >
+            <span role="img" aria-label="spark">✨</span>
+            <span className="mx-2">連合2倍イベント開催中！</span>
+            <span role="img" aria-label="spark">✨</span>
+          </div>
+        </div>
+        {/* ▲▲▲ ここまで追加 ▲▲▲ */}
         {/* NEWS */}
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/08/08 Ver3.5以降の武器情報を追加。ガードバグ陣の解説動画を討伐のページに掲載。(宣伝)</li>
             <li>・2025/08/07 復刻されていない限定武器の評価を更新。</li>
-            <li>・2025/08/06 Ver5.3テストサーバー募集に関するページを作成。復刻中の武器評価も更新。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>

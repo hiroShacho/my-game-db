@@ -3,7 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { AdSenseBanner } from "@/components/AdSenseBanner";
 import Breadcrumb from "@/components/Breadcrumb";
 import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
 
@@ -89,12 +88,11 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
         </a>
       </div>
       {/* AdSense広告ユニットをSkebリンクの下に移動 */}
-      <div className="text-center flex items-center justify-center rounded m-0 p-0" style={{ margin: 0, padding: 0 }}>
-        <AdSenseBanner />
-      </div>
-      <div className="flex items-center justify-center my-2">
-        <AdSenseSidebarUnit />
-      </div>
+      {process.env.NODE_ENV === "production" && (
+        <div className="flex items-center justify-center my-2">
+          <AdSenseSidebarUnit />
+        </div>
+      )}
     </div>
   );
 }
