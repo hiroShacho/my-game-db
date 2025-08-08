@@ -8,7 +8,7 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
 import StarRating from "@/components/StarRating";
-import { AdSenseSidebarUnit } from "@/components/AdSenseContentUnit"; // 追加
+import { AdSenseContentUnit } from "@/components/AdSenseContentUnit"; // 追加
 
 const skillCategories = ["通常攻撃", "回避", "スキル", "連携スキル"];
 

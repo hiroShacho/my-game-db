@@ -2,7 +2,7 @@ import { ReactElement, useState } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Head from "next/head";
 import Image from "next/image";
-import { AdSenseSidebarUnit } from "@/components/AdSenseContentUnit";
+import { AdSenseContentUnit } from "@/components/AdSenseContentUnit";
 
 // セクションタイトル（装飾強化・アイコン付き・帯色）
 function SectionTitle({ icon, children }: { icon?: string; children: React.ReactNode }) {

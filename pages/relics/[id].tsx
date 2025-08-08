@@ -3,7 +3,7 @@ import relicsData from '@/data/relics.json';
 import Image from 'next/image';
 import Head from 'next/head';
 import SidebarLayout from '@/components/layout/SidebarLayout';
-import { AdSenseSidebarUnit } from "@/components/AdSenseContentUnit"; // 追加
+import { AdSenseContentUnit } from "@/components/AdSenseContentUnit"; // 追加
 
 type Props = {
   relic: any;
