@@ -1,17 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 export function AdSenseContentUnit() {
-  const adRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    // 必ずクライアントサイドで呼ばれるように
-    try {
-      // @ts-ignore
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (e) {}
+    if (process.env.NODE_ENV === "production") {
+      try {
+        // @ts-ignore
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {}
+    }
   }, []);
 
-  // 本番環境以外ではダミー枠を表示
   if (process.env.NODE_ENV !== "production") {
     return (
       <div
@@ -39,7 +37,6 @@ export function AdSenseContentUnit() {
       data-ad-slot="3426192736"
       data-ad-format="auto"
       data-full-width-responsive="true"
-      ref={adRef}
     />
   );
 }
