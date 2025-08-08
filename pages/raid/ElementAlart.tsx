@@ -174,7 +174,7 @@ export default function ElementAlartPage() {
         </div>
 
         {/* 広告挿入 */}
-        <div className="flex justify-center my-4">
+        <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
           <AdSenseContentUnit />
         </div>
 

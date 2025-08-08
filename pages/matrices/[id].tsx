@@ -97,7 +97,7 @@ export default function MatrixDetailPage() {
         )}
 
         {/* 広告表示を追加 */}
-        <div className="flex justify-center my-4">
+        <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
           <AdSenseContentUnit />
         </div>
       </div>
