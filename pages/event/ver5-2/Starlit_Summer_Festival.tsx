@@ -175,9 +175,39 @@ export default function StarlitSummerFestival() {
         {/* イベント③ 果敢なサバイバル */}
         <section>
           <SectionTitle icon="🍉">イベント③：果敢なサバイバル</SectionTitle>
+          {/* 上部画像追加 */}
+          <div className="flex justify-center my-2">
+            <div className="relative w-full max-w-md h-40 sm:h-56 rounded-lg overflow-hidden shadow">
+              <Image
+                src="/ver_event/New_Event_1_3.png"
+                alt="果敢なサバイバル"
+                fill
+                className="object-contain w-full h-full"
+                sizes="(max-width: 768px) 95vw, 400px"
+                priority={false}
+              />
+            </div>
+          </div>
           <div className="bg-gray-50 border-l-4 border-green-400 p-4 rounded mb-2 text-sm text-gray-800">
-            未開催<br />
-            過去のイベント「フルーツショット」と同様の内容と思われる。
+            <br />
+            過去のイベント「フルーツショット」とゲーム内容は同じ。<br />
+            Mi-aがピョンピョン飛び跳ねたりしゃがむ姿がキュート㌥
+          </div>
+          {/* 下部画像＋キャプション */}
+          <div className="flex flex-col items-center my-2">
+            <div className="relative w-full max-w-md h-44 sm:h-64 rounded-lg overflow-hidden shadow">
+              <Image
+                src="/ver_event/New_Event_1_3_1.png"
+                alt="色んなMi-aが見れるキュートなミニゲーム"
+                fill
+                className="object-contain w-full h-full"
+                sizes="(max-width: 768px) 95vw, 400px"
+                priority={false}
+              />
+            </div>
+            <span className="text-xs text-gray-600 mt-2">
+              色んなMi-aが見れるキュートなミニゲーム
+            </span>
           </div>
         </section>
 
