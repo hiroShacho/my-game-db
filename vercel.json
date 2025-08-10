@@ -1,14 +1,14 @@
 {
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "www.tofguideanddb.vercel.app"
         }
       ],
-      "destination": "https://tofguideanddb.vercel.app/:1",
+      "destination": "https://tofguideanddb.vercel.app/:path*",
       "permanent": true
     }
   ]
