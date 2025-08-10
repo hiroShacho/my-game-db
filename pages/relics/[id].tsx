@@ -1,3 +1,4 @@
+import React from "react";
 import { GetStaticPaths, GetStaticProps } from 'next';
 import relicsData from '@/data/relics.json';
 import Image from 'next/image';
@@ -8,6 +9,20 @@ import { AdSenseContentUnit } from "@/components/AdSenseContentUnit"; // 追加
 type Props = {
   relic: any;
 };
+
+// 改行(\n)を<br />に変換するヘルパー
+function formatWithBr(text: string) {
+  return text.split('\n').map((line, idx, arr) =>
+    idx < arr.length - 1 ? (
+      <React.Fragment key={idx}>
+        {line}
+        <br />
+      </React.Fragment>
+    ) : (
+      line
+    )
+  );
+}
 
 export default function RelicDetailPage({ relic }: Props) {
   return (
@@ -34,7 +49,9 @@ export default function RelicDetailPage({ relic }: Props) {
           <div className="flex-1">
             <h1 className="text-xl sm:text-3xl font-bold">{relic.name}</h1>
             {relic.description && (
-              <p className="mt-2 text-gray-700 text-sm sm:text-base">{relic.description}</p>
+              <p className="mt-2 text-gray-700 text-sm sm:text-base whitespace-pre-line">
+                {formatWithBr(relic.description)}
+              </p>
             )}
           </div>
         </div>
@@ -60,7 +77,9 @@ export default function RelicDetailPage({ relic }: Props) {
             {relic.constellations.map((effect: { level: string; description: string }, index: number) => (
               <div key={index} className="border p-2 sm:p-3 mb-2 rounded bg-gray-50">
                 <p className="font-semibold mb-1">{effect.level}</p>
-                <p className="text-sm sm:text-base">{effect.description}</p>
+                <p className="text-sm sm:text-base whitespace-pre-line">
+                  {formatWithBr(effect.description)}
+                </p>
               </div>
             ))}
           </div>
@@ -69,7 +88,9 @@ export default function RelicDetailPage({ relic }: Props) {
         {/* 評価 */}
         <div className="mb-4 sm:mb-6">
           <h2 className="text-base sm:text-lg font-semibold mb-2">評価</h2>
-          <p className="text-sm sm:text-base">{relic.evaluation || '評価はまだ登録されていません。'}</p>
+          <p className="text-sm sm:text-base whitespace-pre-line">
+            {relic.evaluation ? formatWithBr(relic.evaluation) : '評価はまだ登録されていません。'}
+          </p>
         </div>
 
         {/* 広告追加：評価の下 */}
