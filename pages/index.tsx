@@ -129,6 +129,9 @@ export default function Home() {
         <title>【幻塔攻略】トップページ | 幻塔攻略データベース</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="幻塔（Tower of Fantasy）の攻略・データベースのトップページです。" />
+        {/* ▼▼▼ 追加 ▼▼▼ */}
+        <link rel="canonical" href="https://tofguideanddb.vercel.app/" />
+        {/* ▲▲▲ 追加 ▲▲▲ */}
       </Head>
       <div className="relative w-full h-40 sm:h-64 rounded-lg overflow-hidden mb-6 shadow-lg">
         <Image
