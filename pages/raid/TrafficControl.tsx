@@ -199,8 +199,10 @@ export default function ScorchingNightmarePage() {
         </div>
 
         {/* 広告挿入 */}
-        <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
-          <AdSenseContentUnit />
+        <div style={{ textAlign: "center" }}>
+          <div style={{ display: "inline-block", width: 320, minWidth: 200, maxWidth: '100%' }}>
+            <AdSenseContentUnit />
+          </div>
         </div>
 
         <SectionTitle icon="movie">解説動画</SectionTitle>

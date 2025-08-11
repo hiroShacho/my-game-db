@@ -13,6 +13,7 @@ const labelMap: Record<string, string> = {
   "trait": "アバター特性一覧",
   "relics": "アルケー一覧",
   "raid": "討伐作戦",
+  "MatrixHacking":"マトリックスハッキング",
   "ElementAlart": "元素警戒",
   "ScorchingNightmare": "燃え上がるナイトメア" ,
   "TrafficControl": "交通管制",
