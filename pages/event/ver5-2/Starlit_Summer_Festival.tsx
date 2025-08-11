@@ -193,6 +193,32 @@ export default function StarlitSummerFestival() {
             過去のイベント「フルーツショット」とゲーム内容は同じ。<br />
             Mi-aがピョンピョン飛び跳ねたりしゃがむ姿がキュート㌥
           </div>
+          {/* 2分耐久で称号を獲得できるぞ！＋画像横並び */}
+          <div className="bg-emerald-50 border-l-4 border-emerald-400 p-3 rounded mb-2 text-sm text-emerald-900 font-semibold flex flex-col items-center">
+            2分耐久で称号を獲得できるぞ！
+            <div className="flex flex-row gap-2 mt-2 w-full justify-center">
+              <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-lg overflow-hidden shadow">
+                <Image
+                  src="/ver_event/New_Event_1_3_2.png"
+                  alt="2分称号画像1"
+                  fill
+                  className="object-contain w-full h-full"
+                  sizes="(max-width: 768px) 40vw, 200px"
+                  priority={false}
+                />
+              </div>
+              <div className="relative w-40 h-28 sm:w-56 sm:h-36 rounded-lg overflow-hidden shadow">
+                <Image
+                  src="/ver_event/New_Event_1_3_3.png"
+                  alt="2分称号画像2"
+                  fill
+                  className="object-contain w-full h-full"
+                  sizes="(max-width: 768px) 40vw, 200px"
+                  priority={false}
+                />
+              </div>
+            </div>
+          </div>
           {/* 下部画像＋キャプション */}
           <div className="flex flex-col items-center my-2">
             <div className="relative w-full max-w-md h-44 sm:h-64 rounded-lg overflow-hidden shadow">
