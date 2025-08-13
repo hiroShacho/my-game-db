@@ -244,7 +244,6 @@ function WeaponCardHorizontal({ weapon }: { weapon: any }) {
   );
 }
 
-
 // 縦並び（限定/恒常2カラム用）
 function WeaponCardVertical({ weapon }: { weapon: any }) {
   const traitTags = weapon.tags.filter((tag: string) =>
@@ -312,7 +311,7 @@ function WeaponCardVertical({ weapon }: { weapon: any }) {
 
       {/* 特質 */}
       <div className="flex space-x-2 sm:space-x-4">
-        {traitTags.map((tag) => (
+        {traitTags.map((tag: string) => (
           <div key={tag} className="flex flex-col items-center">
             <Image
               src={`/images/${tag}.png`}
