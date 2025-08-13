@@ -18,7 +18,7 @@ const h2Style = { borderLeft: "8px solid #17e6ff" };
 
 export default function WeaponDetail() {
   const router = useRouter();
-  const { slug, q } = router.query;
+  const { slug, q, sort } = router.query; // sortクエリも取得
   const [selectedTab, setSelectedTab] = useState<string>("通常攻撃");
   const [highlightId, setHighlightId] = useState<string | null>(null);
   const [keyword, setKeyword] = useState<string | null>(null);
@@ -160,7 +160,7 @@ export default function WeaponDetail() {
                   タグ
                 </h2>
                 <div className="mt-1 flex flex-wrap gap-2">
-                  {weapon.tags.map((tag) => (
+                  {weapon.tags.map((tag: string) => (
                     <span
                       key={tag}
                       className="inline-block bg-blue-100 text-blue-800 text-xs sm:text-sm px-2 py-1 rounded"
@@ -335,7 +335,7 @@ export default function WeaponDetail() {
                   スキル
                 </h2>
                 <div className="flex gap-1 sm:gap-2 mb-2">
-                  {skillCategories.map((category) => (
+                  {skillCategories.map((category: string) => (
                     <button
                       key={category}
                       onClick={() => setSelectedTab(category)}
@@ -366,7 +366,7 @@ export default function WeaponDetail() {
                         {highlightKeyword(skill.description)}
                       </p>
                       <div className="mt-1 flex flex-wrap gap-2">
-                        {skill.tags.map((tag) => (
+                        {skill.tags.map((tag: string) => (
                           <span
                             key={tag}
                             className="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded"

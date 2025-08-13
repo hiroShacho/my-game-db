@@ -6,7 +6,6 @@ import weapons from "@/data/weapons.json";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-// 並び替えタブのラベル
 const SORT_TABS = [
   { key: "default", label: "実装順" },
   { key: "rarity", label: "レア度順" },
@@ -18,20 +17,21 @@ const SORT_TABS = [
 export default function WeaponsPage() {
   const router = useRouter();
 
-  const getSortFromQuery = () => {
-    const q = typeof router.query.sort === "string" ? router.query.sort : "";
-    if (SORT_TABS.some(tab => tab.key === q)) return q as typeof SORT_TABS[number]["key"];
-    return "default";
-  };
-
+  // SSR時もCSR時も必ず"同じHTML構造"を返すため、デフォルト値で描画！
   const [sortKey, setSortKey] = useState<string>("default");
 
+  // クエリが利用可能になったらクライアントだけで上書き
   useEffect(() => {
-    if (!router.isReady) return;
-    setSortKey(getSortFromQuery());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.isReady, router.query.sort]);
+    // クエリがセットされたらsortKeyを更新
+    const q = typeof router.query.sort === "string" ? router.query.sort : "";
+    if (SORT_TABS.some(tab => tab.key === q)) {
+      setSortKey(q);
+    } else {
+      setSortKey("default");
+    }
+  }, [router.query.sort]); // isReadyは不要
 
+  // 並び替え変更
   const handleSortChange = (key: string) => {
     setSortKey(key);
     router.replace(
@@ -41,22 +41,16 @@ export default function WeaponsPage() {
     );
   };
 
-  // クエリがreadyじゃなければnull返す（白画面対策でローディング表示でもOK）
-  if (!router.isReady) return null;
+  // --- ここから下は全く変えなくてOK ---
 
-  // w_1 ～ w_9（昇順）
   const group1 = weapons
     .filter((w) => /^w_[1-9]$/.test(w.id))
     .sort((a, b) => parseInt(a.id.split("_")[1]) - parseInt(b.id.split("_")[1]));
-
-  // w_10 以降（降順）
   const group2 = weapons
     .filter((w) => /^w_(\d{2,})$/.test(w.id))
     .sort((a, b) => parseInt(b.id.split("_")[1]) - parseInt(a.id.split("_")[1]));
-
   let sortedWeapons = [...group2, ...group1];
 
-  // 通常ソート
   if (sortKey === "rarity") {
     const rarityOrder = { SSR: 0, SR: 1, R: 2 };
     sortedWeapons.sort((a, b) => {
@@ -86,7 +80,6 @@ export default function WeaponsPage() {
     });
   }
 
-  // 限定/恒常分離
   let limitedWeapons: typeof weapons = [];
   let permanentWeapons: typeof weapons = [];
   if (sortKey === "limited") {
@@ -114,7 +107,7 @@ export default function WeaponsPage() {
                 ? "bg-blue-500 text-white font-bold shadow"
                 : "bg-gray-100 text-gray-600 hover:bg-blue-100"
             } text-sm transition`}
-            onClick={() => setSortKey(tab.key as any)}
+            onClick={() => handleSortChange(tab.key)}
           >
             {tab.label}
           </button>
@@ -159,7 +152,8 @@ export default function WeaponsPage() {
   );
 }
 
-// 横並び（レア度・画像・名前、隣に共鳴と特質）-- 画像サイズUP＆武器名改行防止
+// 以下はそのまま
+
 function WeaponCardHorizontal({ weapon }: { weapon: any }) {
   const traitTags = weapon.tags.filter((tag: string) =>
     [
@@ -193,7 +187,10 @@ function WeaponCardHorizontal({ weapon }: { weapon: any }) {
         </div>
         {/* 武器画像 + 名前（リンク） */}
         <Link
-          href={`/weapons/${weapon.slug}`}
+          href={{
+            pathname: `/weapons/${weapon.slug}`,
+            query: { sort: undefined }
+          }}
           className="flex flex-col items-center w-28 sm:w-32"
           style={{ minWidth: "5rem" }}
         >
@@ -244,7 +241,6 @@ function WeaponCardHorizontal({ weapon }: { weapon: any }) {
   );
 }
 
-// 縦並び（限定/恒常2カラム用）
 function WeaponCardVertical({ weapon }: { weapon: any }) {
   const traitTags = weapon.tags.filter((tag: string) =>
     [
@@ -279,7 +275,10 @@ function WeaponCardVertical({ weapon }: { weapon: any }) {
 
       {/* 武器画像 + 名前（リンク） */}
       <Link
-        href={`/weapons/${weapon.slug}`}
+        href={{
+          pathname: `/weapons/${weapon.slug}`,
+          query: { sort: undefined }
+        }}
         className="flex flex-col items-center w-24 sm:w-32"
       >
         <Image
