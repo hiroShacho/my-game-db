@@ -227,7 +227,7 @@ function WeaponCardHorizontal({ weapon }: { weapon: any }) {
           </div>
         )}
         <div className="flex space-x-2 sm:space-x-3">
-          {traitTags.map((tag) => (
+          {traitTags.map((tag: string) => (
             <div key={tag} className="flex flex-col items-center">
               <Image
                 src={`/images/${tag}.png`}
