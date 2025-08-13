@@ -32,6 +32,7 @@ function getPeriodLabel(idNum: number) {
 }
 
 // 期間ごとに武器をグルーピング（最新バージョンが上になるよう逆順）
+// w_1～w_9は昇順、w_10以降は降順
 function groupWeaponsByPeriod(weaponsList: typeof weapons) {
   const groups: { [period: string]: typeof weapons } = {};
   for (const weapon of weaponsList) {
@@ -42,9 +43,24 @@ function groupWeaponsByPeriod(weaponsList: typeof weapons) {
     groups[period].push(weapon);
   }
   // PERIOD_LABELSを逆順で返す（最新Verが上）
+  // 各グループの中でw_1～w_9は昇順、w_10以降は降順
   return [...PERIOD_LABELS]
     .reverse()
-    .map(({ label }) => ({ label, weapons: groups[label] || [] }))
+    .map(({ label }) => {
+      const ws = groups[label] || [];
+      const group1 = ws.filter(w => {
+        const idNum = parseInt(w.id.split("_")[1]);
+        return idNum >= 1 && idNum <= 9;
+      }).sort((a, b) => parseInt(a.id.split("_")[1]) - parseInt(b.id.split("_")[1]));
+      const group2 = ws.filter(w => {
+        const idNum = parseInt(w.id.split("_")[1]);
+        return idNum >= 10;
+      }).sort((a, b) => parseInt(b.id.split("_")[1]) - parseInt(a.id.split("_")[1]));
+      return {
+        label,
+        weapons: [...group2, ...group1],
+      };
+    })
     .filter((g) => g.weapons.length > 0);
 }
 
@@ -54,6 +70,16 @@ export default function WeaponsPage() {
 
   // 折りたたみ状態管理：periodLabel => boolean
   const [openPeriods, setOpenPeriods] = useState<{ [period: string]: boolean }>({});
+
+  // 並び替え変更
+  const handleSortChange = (key: string) => {
+    setSortKey(key);
+    router.replace(
+      { pathname: router.pathname, query: { ...router.query, sort: key } },
+      undefined,
+      { shallow: true }
+    );
+  };
 
   useEffect(() => {
     const q = typeof router.query.sort === "string" ? router.query.sort : "";
@@ -74,13 +100,13 @@ export default function WeaponsPage() {
     }
   }, [sortKey]);
 
+  // 並びロジック
   const group1 = weapons
     .filter((w) => /^w_[1-9]$/.test(w.id))
     .sort((a, b) => parseInt(a.id.split("_")[1]) - parseInt(b.id.split("_")[1]));
   const group2 = weapons
     .filter((w) => /^w_(\d{2,})$/.test(w.id))
     .sort((a, b) => parseInt(b.id.split("_")[1]) - parseInt(a.id.split("_")[1]));
-  // 最新IDほど上になるよう逆順
   let sortedWeapons = [...group2, ...group1];
 
   if (sortKey === "resonance") {
