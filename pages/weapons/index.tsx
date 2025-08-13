@@ -8,40 +8,71 @@ import { useRouter } from "next/router";
 
 const SORT_TABS = [
   { key: "default", label: "実装順" },
-  { key: "rarity", label: "レア度順" },
   { key: "resonance", label: "共鳴順" },
   { key: "trait", label: "特質順" },
   { key: "limited", label: "限定/恒常" },
 ];
 
+// 期間ラベルの設定
+const PERIOD_LABELS = [
+  { from: 1, to: 22, label: "Ver1.0～1.5（アーシャ編）" },
+  { from: 23, to: 36, label: "Ver2.0～2.5（ヴェラ編）" },
+  { from: 37, to: 50, label: "Ver3.0～3.8（九域編）※未掲載有り" },
+  { from: 51, to: 60, label: "Ver4.0～4.8（ゴゾトス編）" },
+  { from: 61, to: 63, label: "Ver5.0～5.2（キルオ編）" },
+];
+
+function getPeriodLabel(idNum: number) {
+  for (const period of PERIOD_LABELS) {
+    if (idNum >= period.from && idNum <= period.to) {
+      return period.label;
+    }
+  }
+  return "";
+}
+
+// 期間ごとに武器をグルーピング（最新バージョンが上になるよう逆順）
+function groupWeaponsByPeriod(weaponsList: typeof weapons) {
+  const groups: { [period: string]: typeof weapons } = {};
+  for (const weapon of weaponsList) {
+    const idNum = parseInt(weapon.id.split("_")[1]);
+    const period = getPeriodLabel(idNum);
+    if (!period) continue;
+    if (!groups[period]) groups[period] = [];
+    groups[period].push(weapon);
+  }
+  // PERIOD_LABELSを逆順で返す（最新Verが上）
+  return [...PERIOD_LABELS]
+    .reverse()
+    .map(({ label }) => ({ label, weapons: groups[label] || [] }))
+    .filter((g) => g.weapons.length > 0);
+}
+
 export default function WeaponsPage() {
   const router = useRouter();
-
-  // SSR時もCSR時も必ず"同じHTML構造"を返すため、デフォルト値で描画！
   const [sortKey, setSortKey] = useState<string>("default");
 
-  // クエリが利用可能になったらクライアントだけで上書き
+  // 折りたたみ状態管理：periodLabel => boolean
+  const [openPeriods, setOpenPeriods] = useState<{ [period: string]: boolean }>({});
+
   useEffect(() => {
-    // クエリがセットされたらsortKeyを更新
     const q = typeof router.query.sort === "string" ? router.query.sort : "";
     if (SORT_TABS.some(tab => tab.key === q)) {
       setSortKey(q);
     } else {
       setSortKey("default");
     }
-  }, [router.query.sort]); // isReadyは不要
+  }, [router.query.sort]);
 
-  // 並び替え変更
-  const handleSortChange = (key: string) => {
-    setSortKey(key);
-    router.replace(
-      { pathname: router.pathname, query: { ...router.query, sort: key } },
-      undefined,
-      { shallow: true }
-    );
-  };
-
-  // --- ここから下は全く変えなくてOK ---
+  // 実装順の場合のみ初期展開状態（全部開く）
+  useEffect(() => {
+    if (sortKey === "default") {
+      const group = groupWeaponsByPeriod(sortedWeapons);
+      const allOpen: { [period: string]: boolean } = {};
+      group.forEach((g) => { allOpen[g.label] = true; });
+      setOpenPeriods(allOpen);
+    }
+  }, [sortKey]);
 
   const group1 = weapons
     .filter((w) => /^w_[1-9]$/.test(w.id))
@@ -49,16 +80,10 @@ export default function WeaponsPage() {
   const group2 = weapons
     .filter((w) => /^w_(\d{2,})$/.test(w.id))
     .sort((a, b) => parseInt(b.id.split("_")[1]) - parseInt(a.id.split("_")[1]));
+  // 最新IDほど上になるよう逆順
   let sortedWeapons = [...group2, ...group1];
 
-  if (sortKey === "rarity") {
-    const rarityOrder = { SSR: 0, SR: 1, R: 2 };
-    sortedWeapons.sort((a, b) => {
-      const rA = a.tags.find((t: string) => ["R", "SR", "SSR"].includes(t)) || "SSR";
-      const rB = b.tags.find((t: string) => ["R", "SR", "SSR"].includes(t)) || "SSR";
-      return rarityOrder[rA as keyof typeof rarityOrder] - rarityOrder[rB as keyof typeof rarityOrder];
-    });
-  } else if (sortKey === "resonance") {
+  if (sortKey === "resonance") {
     const resonanceOrder = { "強攻": 0, "剛毅": 1, "恩恵": 2 };
     sortedWeapons.sort((a, b) => {
       const aTag = a.tags.find((t: string) => Object.keys(resonanceOrder).includes(t));
@@ -85,6 +110,37 @@ export default function WeaponsPage() {
   if (sortKey === "limited") {
     limitedWeapons = sortedWeapons.filter((w) => w.tags.includes("限定"));
     permanentWeapons = sortedWeapons.filter((w) => w.tags.includes("恒常"));
+  }
+
+  // 折りたたみボタンの切り替え
+  const togglePeriod = (periodLabel: string) => {
+    setOpenPeriods((prev) => ({
+      ...prev,
+      [periodLabel]: !prev[periodLabel],
+    }));
+  };
+
+  // 実装順のみバージョン区切りごとに折りたたみ（最新バージョンが上）
+  function renderCollapsiblePeriods() {
+    const groups = groupWeaponsByPeriod(sortedWeapons);
+    return groups.map(({ label, weapons }) => (
+      <div key={label}>
+        <button
+          type="button"
+          className="w-full flex justify-between items-center bg-gray-100 border-b border-gray-300 py-2 px-3 font-bold text-xs text-gray-700 hover:bg-blue-100 transition"
+          onClick={() => togglePeriod(label)}
+          aria-expanded={openPeriods[label]}
+        >
+          <span>{label}</span>
+          <span>{openPeriods[label] ? "▲" : "▼"}</span>
+        </button>
+        <div className={`${openPeriods[label] ? "block" : "hidden"} space-y-6`}>
+          {weapons.map((weapon) => (
+            <WeaponCardHorizontal key={weapon.id} weapon={weapon} />
+          ))}
+        </div>
+      </div>
+    ));
   }
 
   return (
@@ -140,11 +196,14 @@ export default function WeaponsPage() {
           </div>
         </div>
       ) : (
-        // 通常 横並びカード
+        // 実装順（折りたたみ区切り）・共鳴順・特質順
         <div className="space-y-6">
-          {sortedWeapons.map((weapon) => (
-            <WeaponCardHorizontal key={weapon.id} weapon={weapon} />
-          ))}
+          {sortKey === "default"
+            ? renderCollapsiblePeriods()
+            : sortedWeapons.map((weapon) => (
+                <WeaponCardHorizontal key={weapon.id} weapon={weapon} />
+              ))
+          }
         </div>
       )}
     </div>
@@ -152,7 +211,7 @@ export default function WeaponsPage() {
   );
 }
 
-// 以下はそのまま
+// --- 以下はそのまま ---
 
 function WeaponCardHorizontal({ weapon }: { weapon: any }) {
   const traitTags = weapon.tags.filter((tag: string) =>
