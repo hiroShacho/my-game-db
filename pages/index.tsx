@@ -133,15 +133,15 @@ export default function Home() {
         <link rel="canonical" href="https://tofguideanddb.vercel.app/" />
         {/* ▲▲▲ 追加 ▲▲▲ */}
       </Head>
-      <div className="relative w-full max-w-screen overflow-hidden mb-6 shadow-lg" style={{maxWidth:"100vw"}}>
+      <div className="relative w-full h-40 sm:h-64 rounded-lg overflow-hidden mb-6 shadow-lg">
         <Image
           src="/hero-banner.png"
           alt="幻塔メインビジュアル"
-          className="object-cover"
+          className="object-cover w-full h-full"
           fill
           priority
           sizes="100vw"
-          style={{ objectPosition: "center bottom" }}
+          style={{ zIndex: 1, objectPosition: "center bottom" }}
         />
         <div
           className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex flex-col justify-center p-6"
@@ -163,7 +163,7 @@ export default function Home() {
             各種コンテンツの情報は徐々に更新していきます。
           </p>
         </section>
-        {/* ▼▼▼ ここに連合2倍イベント開催中バナー ▼▼▼ */}
+        {/* 連合2倍イベント開催中バナー */}
         <div className="flex justify-center mb-4">
           <div
             className="px-6 py-2 rounded-lg shadow-md bg-gradient-to-r from-yellow-200 via-orange-100 to-pink-100 border border-yellow-400 text-center"
@@ -183,10 +183,11 @@ export default function Home() {
             <span role="img" aria-label="spark">✨</span>
           </div>
         </div>
-        {/* ▲▲▲ ここまで追加 ▲▲▲ */}
         {/* NEWS */}
         <section>
-          <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS
+            <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
+          </h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
             <li>・2025/08/13 Ver2.0～2.5のヴェラ武器を追加。評価・運用文とボリションは後日追加予定。</li>
             <li>・2025/08/11 討伐作戦「マトリックスハッキング」のページを作成。アルケー一覧を更新。</li>
@@ -198,7 +199,7 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.2の注目コンテンツ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* 追加：ver5.2アップデート情報まとめバナー */}
+            {/* ver5.2アップデート情報まとめバナー */}
             <Link href="/event/ver5-2/New_ver_info" className="block sm:col-span-2">
               <div
                 className="
@@ -213,7 +214,6 @@ export default function Home() {
                   background: "linear-gradient(90deg, #4eeef8 0%, #f8b64e 100%)"
                 }}
               >
-                {/* 画像（暗め） */}
                 <Image
                   src="/ver_event/New_ver_top.png"
                   alt="ver5.2アップデート情報まとめ"
@@ -224,7 +224,6 @@ export default function Home() {
                   priority
                 />
                 <div className="absolute inset-0 bg-black/30 pointer-events-none" />
-
                 {/* 横線デザイン */}
                 <div className="absolute inset-0 pointer-events-none">
                   {[...Array(32)].map((_, i) => (
@@ -237,7 +236,6 @@ export default function Home() {
                     />
                   ))}
                 </div>
-
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-3xl sm:text-5xl font-bold text-white drop-shadow-lg bg-black/75 px-6 py-3 rounded-lg border border-pink-300">
                     ver5.2アップデート情報まとめ
@@ -261,9 +259,7 @@ export default function Home() {
                   backgroundPosition: "left"
                 }}
               >
-                {/* オーバーレイ: ホバーで色が濃く */}
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
-                {/* テキスト部分 */}
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     シードル
@@ -274,7 +270,6 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* 星光夏祭り イベントリンク表示に戻す */}
             <Link href="/event/ver5-2/Starlit_Summer_Festival" className="block">
               <div
                 className="
@@ -291,9 +286,7 @@ export default function Home() {
                   backgroundPosition: "center"
                 }}
               >
-                {/* オーバーレイ: ホバーで色が濃く */}
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
-                {/* テキスト部分 */}
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     イベント「星光夏祭り」
@@ -304,7 +297,6 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* ▼▼▼ ここから追加 ▼▼▼ */}
             <Link href="/event/ver5-2/ver5-3_testserver" className="block">
               <div
                 className="
@@ -321,9 +313,7 @@ export default function Home() {
                   backgroundPosition: "center"
                 }}
               >
-                {/* 画像を暗くするオーバーレイ */}
                 <div className="absolute inset-0 bg-black/50" />
-                {/* テキスト部分 */}
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     Ver5.3先行テストサーバー
@@ -335,8 +325,6 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* ▲▲▲ ここまで追加 ▲▲▲ */}
-            {/* 画像のみ表示（リンクなし） */}
             <div className="block">
               <div
                 className="
