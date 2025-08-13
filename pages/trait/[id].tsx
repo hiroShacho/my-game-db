@@ -45,7 +45,7 @@ export default function TraitDetail() {
           <div className="flex flex-col gap-3 flex-1 justify-center">
             <div className="border rounded-md p-2 sm:p-4 bg-gray-50 shadow-sm">
               <h2 className="text-base sm:text-lg font-semibold mb-1">効果</h2>
-              <div className="text-xs sm:text-sm text-gray-700 whitespace-pre-line">{trait.description}</div>
+              <div className="text-xs sm:text-sm text-gray-700 whitespace-pre-line font-mono">{trait.description}</div>
             </div>
             <div className="border rounded-md p-2 sm:p-4 bg-gray-50 shadow-sm">
               <h2 className="text-base sm:text-lg font-semibold mb-1">評価</h2>

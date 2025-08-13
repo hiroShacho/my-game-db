@@ -133,15 +133,15 @@ export default function Home() {
         <link rel="canonical" href="https://tofguideanddb.vercel.app/" />
         {/* ▲▲▲ 追加 ▲▲▲ */}
       </Head>
-      <div className="relative w-full h-40 sm:h-64 rounded-lg overflow-hidden mb-6 shadow-lg">
+      <div className="relative w-full max-w-screen overflow-hidden mb-6 shadow-lg" style={{maxWidth:"100vw"}}>
         <Image
           src="/hero-banner.png"
           alt="幻塔メインビジュアル"
-          className="object-cover w-full h-full"
+          className="object-cover"
           fill
           priority
           sizes="100vw"
-          style={{ zIndex: 1, objectPosition: "center bottom" }}
+          style={{ objectPosition: "center bottom" }}
         />
         <div
           className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent flex flex-col justify-center p-6"
@@ -188,8 +188,8 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS<span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span></h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/08/13 Ver2.0～2.5のヴェラ武器を追加。評価・運用文とボリションは後日追加予定。</li>
             <li>・2025/08/11 討伐作戦「マトリックスハッキング」のページを作成。アルケー一覧を更新。</li>
-            <li>・2025/08/10 アルケー一覧を更新。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>

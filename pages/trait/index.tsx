@@ -48,7 +48,7 @@ export default function TraitListPage() {
                       {trait.name}
                     </h2>
                   </Link>
-                  <div className="text-xs sm:text-sm text-gray-600 mb-1 whitespace-pre-line">{trait.description}</div>
+                  <div className="text-xs sm:text-sm text-gray-700 whitespace-pre-line font-mono">{trait.description}</div>
                   <div className="flex flex-wrap gap-2 mb-1">
                     {trait.tags?.map((tag) => (
                       <span

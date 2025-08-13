@@ -463,7 +463,7 @@ export default function WeaponDetail() {
                                 {trait.name}
                               </div>
                             </Link>
-                            <div className="text-xs sm:text-sm text-gray-700 whitespace-pre-line">
+                            <div className="text-xs sm:text-sm text-gray-700 whitespace-pre-line font-mono">
                               {trait.description}
                             </div>
                           </div>
