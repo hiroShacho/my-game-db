@@ -68,8 +68,18 @@ export default function WeaponsPage() {
   const router = useRouter();
   const [sortKey, setSortKey] = useState<string>("default");
 
+  // セッションストレージKEY
+  const STORAGE_KEY = "weaponListOpenPeriods";
+
   // 折りたたみ状態管理：periodLabel => boolean
   const [openPeriods, setOpenPeriods] = useState<{ [period: string]: boolean }>({});
+
+  // 展開状態の保存
+  const saveOpenPeriods = (periods: { [period: string]: boolean }) => {
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(periods));
+    }
+  };
 
   // 並び替え変更
   const handleSortChange = (key: string) => {
@@ -89,16 +99,6 @@ export default function WeaponsPage() {
       setSortKey("default");
     }
   }, [router.query.sort]);
-
-  // 実装順の場合のみ初期展開状態（全部開く）
-  useEffect(() => {
-    if (sortKey === "default") {
-      const group = groupWeaponsByPeriod(sortedWeapons);
-      const allOpen: { [period: string]: boolean } = {};
-      group.forEach((g) => { allOpen[g.label] = true; });
-      setOpenPeriods(allOpen);
-    }
-  }, [sortKey]);
 
   // 並びロジック
   const group1 = weapons
@@ -138,12 +138,30 @@ export default function WeaponsPage() {
     permanentWeapons = sortedWeapons.filter((w) => w.tags.includes("恒常"));
   }
 
+  // 実装順の場合のみ初期展開状態（セッションストレージ優先・なければ全開）
+  useEffect(() => {
+    if (sortKey === "default") {
+      const saved = typeof window !== "undefined" ? sessionStorage.getItem(STORAGE_KEY) : null;
+      if (saved) {
+        setOpenPeriods(JSON.parse(saved));
+      } else {
+        const group = groupWeaponsByPeriod(sortedWeapons);
+        const allOpen: { [period: string]: boolean } = {};
+        group.forEach((g) => { allOpen[g.label] = true; });
+        setOpenPeriods(allOpen);
+        saveOpenPeriods(allOpen);
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sortKey]);
+
   // 折りたたみボタンの切り替え
   const togglePeriod = (periodLabel: string) => {
-    setOpenPeriods((prev) => ({
-      ...prev,
-      [periodLabel]: !prev[periodLabel],
-    }));
+    setOpenPeriods((prev) => {
+      const next = { ...prev, [periodLabel]: !prev[periodLabel] };
+      saveOpenPeriods(next);
+      return next;
+    });
   };
 
   // 実装順のみバージョン区切りごとに折りたたみ（最新バージョンが上）
