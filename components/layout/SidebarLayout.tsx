@@ -27,6 +27,7 @@ const latestContentsLinks = [
   { href: "/trait/t_59", label: "シードル特性" },
   { href: "/event/ver5-2/Starlit_Summer_Festival", label: "イベント「星光夏祭り」" },
   { href: "/raid/SwarmGuard", label: "討伐作戦「ガードバグ陣」" },
+  { href: "/event/ver5-2/ver5-3_testserver", label: "Ver5.3テストサーバー" },
 ];
 
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {

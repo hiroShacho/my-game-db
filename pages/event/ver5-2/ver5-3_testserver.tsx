@@ -5,8 +5,14 @@ import { ReactElement, useState } from "react";
 import Link from "next/link";
 
 export default function Ver53TestServer() {
-  // ページ初期表示時に展開状態（true）で表示する
-  const [showDetail, setShowDetail] = useState(true);
+  // 初期状態は折りたたみ（非表示）
+  const [showDetail, setShowDetail] = useState(false);
+
+  // YouTube URLから埋め込みURLを作成
+  const getEmbedUrl = (url: string): string => {
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]+)/);
+    return match ? `https://www.youtube.com/embed/${match[1]}` : url;
+  };
 
   return (
     <>
@@ -14,7 +20,6 @@ export default function Ver53TestServer() {
         <title>【幻塔攻略】Ver5.3先行テストサーバー | 幻塔攻略データベース</title>
         <meta name="description" content="幻塔（Tower of Fantasy）のVer5.3先行テストサーバーの情報まとめページ。" />
       </Head>
-      {/* ↓ max-w-2xl & space-y-6で統一 */}
       <div className="w-full max-w-2xl mx-auto px-2 sm:px-4 py-8 space-y-6">
         <section>
           <div className="mb-3">
@@ -85,9 +90,95 @@ export default function Ver53TestServer() {
           <h2 className="text-lg sm:text-xl font-semibold mb-2">ここから下はテストサーバーの情報を記載していきます。</h2>
         </section>
 
-        {/* ▼▼▼ 追加情報ここから ▼▼▼ */}
-        <section>
-          {/* 現状何も記載しない */}
+        {/* ▼▼▼ 追加情報 ▼▼▼ */}
+        <section className="space-y-8">
+          {/* ラクシス性能解説動画 */}
+          <div>
+            <h3 className="font-bold text-base sm:text-lg mb-2">■ラクシス性能解説動画</h3>
+            <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow mb-2">
+              <iframe
+                src={getEmbedUrl("https://youtu.be/CWW446lx_UI")}
+                title="ラクシス性能解説動画"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded"
+              ></iframe>
+            </div>
+          </div>
+
+          {/* ブレヴィ恒常入り */}
+          <div>
+            <h3 className="font-bold text-base sm:text-lg mb-2">■ブレヴィ恒常入り！</h3>
+            <div className="mb-2">
+              <Image
+                src="/ver_event/New_Event_2_7.png"
+                alt="ブレヴィ恒常入り"
+                width={800}
+                height={400}
+                className="rounded shadow w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* ラクシスのアバターストーリーと宿舎追加 */}
+          <div>
+            <h3 className="font-bold text-base sm:text-lg mb-2">■ラクシスのアバターストーリーと宿舎追加！</h3>
+            <div className="mb-2">
+              <Image
+                src="/ver_event/New_Event_2_8.png"
+                alt="ラクシスのアバターストーリー追加"
+                width={800}
+                height={400}
+                className="rounded shadow w-full h-auto mb-2"
+              />
+              <Image
+                src="/ver_event/New_Event_2_9.png"
+                alt="ラクシス宿舎追加"
+                width={800}
+                height={400}
+                className="rounded shadow w-full h-auto"
+              />
+            </div>
+          </div>
+
+          {/* 在りし日の幻・超域と幻影の序列・超域新階層追加 */}
+          <div>
+            <h3 className="font-bold text-base sm:text-lg mb-2">■在りし日の幻・超域と幻影の序列・超域に新階層追加！</h3>
+            <p className="mb-2">4属性に24階、異能に16階が追加！</p>
+            <Image
+              src="/ver_event/New_Event_2_10.png"
+              alt="新階層追加"
+              width={800}
+              height={400}
+              className="rounded shadow w-full h-auto"
+            />
+          </div>
+
+          {/* 先鋒クラッシュにハイエナメカが追加 */}
+          <div>
+            <h3 className="font-bold text-base sm:text-lg mb-2">■先鋒クラッシュにハイエナメカが追加！</h3>
+            <Image
+              src="/ver_event/New_Event_2_11.png"
+              alt="ハイエナメカ追加"
+              width={800}
+              height={400}
+              className="rounded shadow w-full h-auto"
+            />
+          </div>
+
+          {/* 通行証アルケーが追加？ */}
+          <div>
+            <h3 className="font-bold text-base sm:text-lg mb-2">■通行証アルケーが追加？</h3>
+            <p className="mb-2">詳細な効果は不明だが、新アルケーが一覧に追加されている</p>
+            <Image
+              src="/ver_event/New_Event_2_12.png"
+              alt="通行証アルケー"
+              width={800}
+              height={400}
+              className="rounded shadow w-full h-auto"
+            />
+          </div>
         </section>
       </div>
     </>
