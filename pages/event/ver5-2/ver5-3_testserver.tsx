@@ -105,6 +105,17 @@ export default function Ver53TestServer() {
                 className="absolute top-0 left-0 w-full h-full rounded"
               ></iframe>
             </div>
+            {/* 追加：女性アバターの連携アニメーション */}
+            <div className="mb-2">
+              <p className="font-semibold text-pink-700 text-sm sm:text-base mb-2">
+                女性アバターは連携アニメーションでウィンクできるぞ！
+              </p>
+              <video
+                src="/ver_event/New_Event_2_13.mp4"
+                controls
+                className="rounded shadow w-full h-auto"
+              ></video>
+            </div>
           </div>
 
           {/* ブレヴィ恒常入り */}
@@ -137,8 +148,19 @@ export default function Ver53TestServer() {
                 alt="ラクシス宿舎追加"
                 width={800}
                 height={400}
-                className="rounded shadow w-full h-auto"
+                className="rounded shadow w-full h-auto mb-2"
               />
+              {/* 追加：交流アクション動画 */}
+              <div className="mt-2">
+                <p className="font-semibold text-pink-700 text-sm sm:text-base mb-2">
+                  結構攻めた交流アクションも...！？
+                </p>
+                <video
+                  src="/ver_event/New_Event_2_14.mp4"
+                  controls
+                  className="rounded shadow w-full h-auto"
+                ></video>
+              </div>
             </div>
           </div>
 
