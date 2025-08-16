@@ -15,7 +15,7 @@ const weapon = {
   ratingScore: 4,
   ratingAttacker: 3.5,
   ratingSupporter: 4.5,
-  ratingReroll: 4,
+  ratingReroll: 2,
   ratingExplore: 0,
   ratingText: "限定で初の炎・恩恵武器。炎強攻編成ではメインアタッカーを努め、恩恵では編成に入れているだけで仕事をしてくれる。というより味方への回復・バフ効果が全てお供のコハルビに搭載されているので、ラクシスの武器本体で回復・バフを撒くことはできない。バフについては武器5凸とボリション4セットに効果が付いているので、恩恵で採用する場合にはそれなりにリソースをつぎ込む必要がある(ボリションは無凸でOK)。",
   videoUrls: ["https://youtu.be/CWW446lx_UI"],
