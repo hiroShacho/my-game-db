@@ -92,6 +92,7 @@ const weaponNameMap: Record<string, string> = {
 "Swish":"スベスベ",
 "TwinStars": "二重星",
 "AF-010Servion":"サーバントAF-010",
+"EternalSalvation":"ホーリージャッジメント",
 //仮でボリションと特性はパンくずだけ変える
 "m_1":"エコー",
 "t_1":"エコー",
@@ -211,6 +212,8 @@ const weaponNameMap: Record<string, string> = {
 "t_58":"アストール",
 "m_59":"シードル",
 "t_59":"シードル",
+"m_60":"ラクシス",
+"t_60":"ラクシス",
 "r_1":"フロスト砲",
 "r_2":"ジェットパック",
 "r_3":"溶岩爆弾",

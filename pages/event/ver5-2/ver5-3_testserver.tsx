@@ -92,6 +92,24 @@ export default function Ver53TestServer() {
 
         {/* ▼▼▼ 追加情報 ▼▼▼ */}
         <section className="space-y-8">
+          {/* ラクシス性能詳細へのリンク */}
+          <div>
+            <h3 className="font-bold text-base sm:text-lg mb-2">■ラクシス性能詳細</h3>
+            <Link
+              href="/event/ver5-2/NewChara"
+              className="flex items-center gap-3 p-3 rounded bg-blue-50 hover:bg-blue-100 border border-blue-200 transition"
+            >
+              <Image
+                src="/images/w_64_img.PNG"
+                alt="ホーリージャッジメント"
+                width={64}
+                height={64}
+                className="rounded shadow"
+              />
+              <span className="font-semibold text-blue-700 text-lg">新武器・ボリション・アバター特性まとめはこちら</span>
+            </Link>
+          </div>
+
           {/* ラクシス性能解説動画 */}
           <div>
             <h3 className="font-bold text-base sm:text-lg mb-2">■ラクシス性能解説動画</h3>
