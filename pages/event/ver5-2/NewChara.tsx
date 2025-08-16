@@ -271,26 +271,6 @@ export default function Ver52NewCharaPage() {
                   {matrix.ratingComment || "評価コメントは準備中です。"}
                 </div>
               </div>
-              {/* 対応武器へのリンク */}
-              <div className="text-center mt-4 space-y-2">
-                <Link href={`/weapons/${weapon.slug}`}>
-                  <Image
-                    src={`/images/${weapon.id}_img.PNG`}
-                    alt={`${weapon.name}の画像`}
-                    width={80}
-                    height={80}
-                    className="rounded mx-auto hover:opacity-80 transition"
-                  />
-                </Link>
-                <div>
-                  <Link
-                    href={`/weapons/${weapon.slug}`}
-                    className="text-blue-600 hover:underline"
-                  >
-                    アバター「{matrix.avatar}」の武器を見る
-                  </Link>
-                </div>
-              </div>
             </section>
           )}
 
@@ -332,20 +312,6 @@ export default function Ver52NewCharaPage() {
                     </div>
                   )}
                 </div>
-              </div>
-              {/* アバター武器リンク */}
-              <div className="mt-4">
-                <div className="text-xs sm:text-sm text-gray-500 mb-1">武器リンク：</div>
-                <Link href={`/weapons/${weapon.slug}`} className="inline-block">
-                  <Image
-                    src={`/images/${weapon.id}_img.PNG`}
-                    alt={`${weapon.name}の画像`}
-                    width={80}
-                    height={80}
-                    className="rounded"
-                  />
-                  <div className="text-blue-600 hover:underline sm:text-sm text-center mt-1">アバター「{trait.avatar}」の武器を見る</div>
-                </Link>
               </div>
             </section>
           )}
