@@ -74,13 +74,15 @@ export default function ScorchingNightmarePage() {
           交通管制 討伐作戦 攻略
         </h1>
         {/* 画像だけ表示（枠・キャプションなし） */}
-        <Image
-          src="/raid/TrafficControl.PNG"
-          alt="交通管制フィールド全景"
-          width={480}
-          height={270}
-          style={{ display: "block", margin: "0 auto" }} // 中央寄せしたい場合
-        />
+        <div className="rounded-lg shadow mb-4 mx-auto w-fit" style={{ maxWidth: "100%" }}>
+          <Image
+            src="/raid/TrafficControl.PNG"
+            alt="交通管制フィールド全景"
+            width={640}
+            height={320}
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        </div>
 
         <PointBanner>
           ギミックによる割合ダメージと強力な攻撃を受けきるための回復が重要！

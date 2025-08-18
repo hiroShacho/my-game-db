@@ -74,13 +74,15 @@ export default function ScorchingNightmarePage() {
         </h1>
 
         {/* 画像だけ表示（枠・キャプションなし、中央寄せ） */}
-        <Image
-          src="/raid/ScorchingNightmare.PNG"
-          alt="燃え上がるナイトメアフィールド全景"
-          width={480}
-          height={270}
-          style={{ display: "block", margin: "0 auto" }}
-        />
+        <div className="rounded-lg shadow mb-4 mx-auto w-fit" style={{ maxWidth: "100%" }}>
+          <Image
+            src="/raid/ScorchingNightmare.PNG"
+            alt="燃え上がるナイトメアフィールド全景"
+            width={640}
+            height={320}
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        </div>
 
         <PointBanner>
           ギミックを理解して正しく対処しないとダメージが入らない！回復役も重要！
