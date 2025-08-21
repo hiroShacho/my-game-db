@@ -8,23 +8,21 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
 import StarRating from "@/components/StarRating";
-import { AdSenseContentUnit } from "@/components/AdSenseContentUnit"; // 追加
+import { AdSenseContentUnit } from "@/components/AdSenseContentUnit";
 
 const skillCategories = ["通常攻撃", "回避", "スキル", "連携スキル"];
-
 const h2Class =
   "text-base sm:text-lg font-semibold mb-2 border-b-2 border-teal-500 pl-3 relative";
 const h2Style = { borderLeft: "8px solid #17e6ff" };
 
 export default function WeaponDetail() {
   const router = useRouter();
-  const { slug, q, sort } = router.query; // sortクエリも取得
+  const { slug, q, sort } = router.query;
   const [selectedTab, setSelectedTab] = useState<string>("通常攻撃");
   const [highlightId, setHighlightId] = useState<string | null>(null);
   const [keyword, setKeyword] = useState<string | null>(null);
   const hasScrolled = useRef(false);
 
-  // slugで検索
   const weapon = weapons.find((w) => w.slug === String(slug));
   const skillList = weapon
     ? skills.filter(
@@ -35,7 +33,6 @@ export default function WeaponDetail() {
 
   useEffect(() => {
     if (typeof window === "undefined" || !weapon) return;
-
     if (!hasScrolled.current && window.location.hash) {
       const targetId = window.location.hash.substring(1);
       const skill = skillList.find((s) => s.id === targetId);
@@ -56,14 +53,12 @@ export default function WeaponDetail() {
         }
       }
     }
-
     if (typeof q === "string") {
       setKeyword(q.toLowerCase());
     }
   }, [slug, skillList, q, weapon]);
 
   const filteredSkills = skillList.filter((s) => s.tags.includes(selectedTab));
-
   const highlightKeyword = (text: string) => {
     if (!keyword) return text;
     const regex = new RegExp(`(${keyword})`, "gi");
@@ -100,28 +95,27 @@ export default function WeaponDetail() {
             <div className="p-4">武器が見つかりません。</div>
           ) : (
             <>
-              {/* 武器基本情報 */}
-              <div className="flex flex-col sm:flex-row items-center gap-4">
-                <img
-                  src={`/images/${weapon.id}_img.PNG`}
-                  alt={weapon.name}
-                  className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
-                />
-                <div className="space-y-2 mt-2 w-full">
-                  <h1 className="text-2xl sm:text-3xl font-bold">
-                    {weapon.name}
-                  </h1>
-                  <div className="flex gap-4 items-start flex-wrap">
+              {/* 武器基本情報（左：画像＋武器名＋共鳴＋特質、右：説明文） */}
+              <div className="flex flex-row gap-4 items-start">
+                {/* 左カラム */}
+                <div className="flex flex-col items-start min-w-[140px]">
+                  <img
+                    src={`/images/${weapon.id}_img.PNG`}
+                    alt={weapon.name}
+                    className="w-32 h-32 sm:w-32 sm:h-32 object-contain"
+                  />
+                  <h1 className="text-2xl sm:text-3xl font-bold mt-2">{weapon.name}</h1>
+                  <div className="flex gap-4 items-start flex-wrap mt-1">
                     {/* レア度 */}
                     <img
                       src={`/images/${weapon.tags.find((tag) =>
                         ["R", "SR", "SSR"].includes(tag)
                       )}.png`}
                       alt="レア度"
-                      className="h-6 sm:h-8 mt-2"
+                      className="h-6 sm:h-8"
                     />
                     {/* 共鳴 */}
-                    <div className="text-center mt-2">
+                    <div className="text-center">
                       <img
                         src={`/images/${weapon.tags.find((tag) =>
                           ["強攻", "剛毅", "恩恵"].includes(tag)
@@ -129,14 +123,14 @@ export default function WeaponDetail() {
                         alt="共鳴"
                         className="h-6 sm:h-8"
                       />
-                      <div className="text-xs sm:text-sm mt-1">
+                      <div className="text-xs sm:text-sm">
                         {weapon.tags.find((tag) =>
                           ["強攻", "剛毅", "恩恵"].includes(tag)
                         )}
                       </div>
                     </div>
                     {/* 特質 */}
-                    <div className="text-center mt-2">
+                    <div className="text-center">
                       <img
                         src={`/images/${weapon.tags.find((tag) =>
                           tag.match(/雷|氷|炎|物理|異能/)
@@ -144,7 +138,7 @@ export default function WeaponDetail() {
                         alt="属性"
                         className="h-6 sm:h-8"
                       />
-                      <div className="text-xs sm:text-sm mt-1">
+                      <div className="text-xs sm:text-sm">
                         {weapon.tags.find((tag) =>
                           tag.match(/雷|氷|炎|物理|異能/)
                         )}
@@ -152,8 +146,14 @@ export default function WeaponDetail() {
                     </div>
                   </div>
                 </div>
+                {/* 右カラム：説明文 */}
+                <div className="flex-1 min-w-0 flex items-start">
+                  <div className="bg-white border-2 border-emerald-500/90 shadow-lg rounded-lg px-3 py-2 text-sm text-gray-900 whitespace-pre-line font-semibold w-full">
+                    {weapon.description}
+                  </div>
+                </div>
               </div>
-
+              {/* 以下は一切位置変えずそのまま */}
               {/* タグ */}
               <section>
                 <h2 className="text-base sm:text-lg font-semibold mb-2 pl-3 relative">
@@ -171,12 +171,11 @@ export default function WeaponDetail() {
                 </div>
               </section>
 
-              {/* 評価セクション（枠/区切り/ランク表示なし） */}
+              {/* 評価セクション */}
               <section>
                 <h2 className={h2Class} style={h2Style}>
                   評価点
                 </h2>
-                {/* 総合評価 強調 */}
                 <div className="flex justify-center items-center mt-3 mb-4">
                   <div className="bg-yellow-200 border-4 border-yellow-400 rounded-lg shadow-lg px-8 py-4 flex flex-col items-center">
                     <span className="text-xl sm:text-2xl font-bold text-yellow-700 mb-2">
@@ -192,7 +191,6 @@ export default function WeaponDetail() {
                     </div>
                   </div>
                 </div>
-                {/* 他の評価 テーブル枠でまとめて表示（星＋数値のみ、項目ラベル背景色付き - セル全体に色を広げる） */}
                 <div className="overflow-x-auto">
                   <table className="w-full border border-gray-300 text-center bg-white rounded-lg shadow-sm">
                     <thead>
@@ -213,7 +211,6 @@ export default function WeaponDetail() {
                     </thead>
                     <tbody>
                       <tr>
-                        {/* アタッカー */}
                         <td className="px-2 py-4 border-r border-b border-gray-200 align-top">
                           <div className="flex flex-col items-center justify-center">
                             <StarRating score={weapon.ratingAttacker ?? 0} />
@@ -224,7 +221,6 @@ export default function WeaponDetail() {
                             </span>
                           </div>
                         </td>
-                        {/* サポーター */}
                         <td className="px-2 py-4 border-r border-b border-gray-200 align-top">
                           <div className="flex flex-col items-center justify-center">
                             <StarRating score={weapon.ratingSupporter ?? 0} />
@@ -235,7 +231,6 @@ export default function WeaponDetail() {
                             </span>
                           </div>
                         </td>
-                        {/* リセマラ */}
                         <td className="px-2 py-4 border-r border-b border-gray-200 align-top">
                           <div className="flex flex-col items-center justify-center">
                             <StarRating score={weapon.ratingReroll ?? 0} />
@@ -246,7 +241,6 @@ export default function WeaponDetail() {
                             </span>
                           </div>
                         </td>
-                        {/* 探索 */}
                         <td className="px-2 py-4 border-b border-gray-200 align-top">
                           <div className="flex flex-col items-center justify-center">
                             <StarRating score={weapon.ratingExplore ?? 0} />
@@ -261,7 +255,6 @@ export default function WeaponDetail() {
                     </tbody>
                   </table>
                 </div>
-                {/* 評価コメントまとめて表示（下部） */}
                 <div className="mt-4">
                   {weapon.ratingText ? (
                     <p className="whitespace-pre-wrap">{weapon.ratingText}</p>
@@ -286,12 +279,9 @@ export default function WeaponDetail() {
                   </p>
                 )}
               </section>
-
-              {/* 広告追加：運用方法と凸効果の間 */}
               <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
                 <AdSenseContentUnit />
               </div>
-
               {/* 凸効果 */}
               <section>
                 <h2 className={h2Class} style={h2Style}>
@@ -311,9 +301,8 @@ export default function WeaponDetail() {
                     この武器には凸効果が存在しません。
                   </p>
                 )}
-
               </section>
-              {/* アバター共感覚（Synesthesia） */}
+              {/* アバター共感覚 */}
               {Array.isArray(weapon.synesthesia) && weapon.synesthesia.length > 0 && (
                 <section>
                   <h2 className={h2Class} style={h2Style}>
@@ -349,7 +338,6 @@ export default function WeaponDetail() {
                     </button>
                   ))}
                 </div>
-
                 {filteredSkills.length > 0 ? (
                   filteredSkills.map((skill) => (
                     <div
