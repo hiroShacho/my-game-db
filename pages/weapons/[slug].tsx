@@ -176,6 +176,13 @@ export default function WeaponDetail() {
                 <h2 className={h2Class} style={h2Style}>
                   評価点
                 </h2>
+                {/* 注釈: 限定/恒常 */}
+                {(weapon.tags.includes("限定") || weapon.tags.includes("恒常")) && (
+                  <div className="text-xs text-gray-600 mb-1">
+                    {weapon.tags.includes("限定") && "※限定武器の中での評価です"}
+                    {weapon.tags.includes("恒常") && "※恒常武器の中での評価です"}
+                  </div>
+                )}
                 <div className="flex justify-center items-center mt-3 mb-4">
                   <div className="bg-yellow-200 border-4 border-yellow-400 rounded-lg shadow-lg px-8 py-4 flex flex-col items-center">
                     <span className="text-xl sm:text-2xl font-bold text-yellow-700 mb-2">
