@@ -41,17 +41,24 @@ const TagSearchPage: React.FC = () => {
     );
   };
 
+  // ★ synesthesiaのtagsも含める
   const getAllTagsForType = (type: TagType): Tag[] => {
     const tags = new Set<Tag>();
     if (type === '武器') {
       weaponData.filter(isSearchable).forEach((w) => w.tags?.forEach((t) => tags.add(t)));
     }
     if (type === '凸効果') {
-      weaponData.filter(isSearchable).forEach((w) =>
+      weaponData.filter(isSearchable).forEach((w) => {
         w.constellations?.forEach((c) =>
           c.tags?.forEach((t) => tags.add(t))
-        )
-      );
+        );
+        // synesthesiaも対象にする
+        if (Array.isArray(w.synesthesia)) {
+          w.synesthesia.forEach((s) =>
+            s.tags?.forEach((t: Tag) => tags.add(t))
+          );
+        }
+      });
     }
     if (type === 'スキル') {
       skillData.filter(isSearchable).forEach((s) => s.tags?.forEach((t) => tags.add(t)));
@@ -128,6 +135,7 @@ const TagSearchPage: React.FC = () => {
       weaponData
         .filter(isSearchable)
         .forEach((w) => {
+          // 通常の凸効果
           w.constellations?.forEach((c, idx) => {
             if (isMatch(c.tags)) {
               resultItems.push(
@@ -154,6 +162,35 @@ const TagSearchPage: React.FC = () => {
               );
             }
           });
+          // ★ synesthesiaの凸効果も検索・表示
+          if (Array.isArray(w.synesthesia)) {
+            w.synesthesia.forEach((s, sIdx) => {
+              if (isMatch(s.tags)) {
+                resultItems.push(
+                  <div key={`synesthesia-${w.id}-${sIdx}`} style={cardStyle}>
+                    <div style={rowStyle}>
+                      <Link href={`/weapons/${w.slug}`}>
+                        <img
+                          src={`/images/${w.id}_img.PNG`}
+                          alt={w.name}
+                          style={imgStyle}
+                        />
+                      </Link>
+                      <div>
+                        <Link href={`/weapons/${w.slug}`}>
+                          <div>
+                            <strong>[共感覚]</strong> {w.name}：{s.level}
+                          </div>
+                        </Link>
+                        <div>アバター: {w.avatar}</div>
+                      </div>
+                    </div>
+                    <div style={{ marginTop: 8 }}>{s.description}</div>
+                  </div>
+                );
+              }
+            });
+          }
         });
     }
 
