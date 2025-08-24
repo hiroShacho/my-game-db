@@ -163,26 +163,7 @@ export default function Home() {
             各種コンテンツの情報は徐々に更新していきます。
           </p>
         </section>
-        {/* 連合2倍イベント開催中バナー */}
-        <div className="flex justify-center mb-4">
-          <div
-            className="px-6 py-2 rounded-lg shadow-md bg-gradient-to-r from-yellow-200 via-orange-100 to-pink-100 border border-yellow-400 text-center"
-            style={{
-              maxWidth: "600px",
-              minWidth: "340px",
-              width: "100%",
-              fontWeight: 700,
-              fontSize: "1.2rem",
-              color: "#b85d00",
-              letterSpacing: "0.05em",
-              boxShadow: "0 2px 8px rgba(255,150,60,0.12)"
-            }}
-          >
-            <span role="img" aria-label="spark">✨</span>
-            <span className="mx-2">連合2倍イベント開催中！</span>
-            <span role="img" aria-label="spark">✨</span>
-          </div>
-        </div>
+
         {/* NEWS */}
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS
