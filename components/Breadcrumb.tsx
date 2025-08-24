@@ -12,6 +12,8 @@ const labelMap: Record<string, string> = {
   "matrices": "ボリション一覧",
   "trait": "アバター特性一覧",
   "relics": "アルケー一覧",
+  "jointoperation":"連合作戦",
+  "TheEndGame":"最終公演",
   "raid": "討伐作戦",
   "GluttonousFeast":"暴食の饗宴",
   "ElementAlart": "元素警戒",
