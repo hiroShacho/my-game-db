@@ -6,6 +6,7 @@ import Image from "next/image";
 
 // 仮の9つの連合作戦データ
 const jointOps = [
+  { key: "Jo4", title: "ハイエナアリーナ", img: "/JointOperation/jo_HyenaArena.PNG", link: "/jointoperation/HyenaArena" },
   { key: "Jo5", title: "最終公演", img: "/JointOperation/jo_TheEndGame.PNG", link: "/jointoperation/TheEndGame" },
 ];
 
