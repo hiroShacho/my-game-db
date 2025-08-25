@@ -18,6 +18,7 @@ const labelMap: Record<string, string> = {
   "GluttonousFeast":"暴食の饗宴",
   "ElementAlart": "元素警戒",
   "MatrixHacking":"マトリックスハッキング",
+  "RealmofPhantasm":"イリュージョンシフト",
   "ScorchingNightmare": "燃え上がるナイトメア" ,
   "TrafficControl": "交通管制",
   "SwarmGuard":"ガードバグ陣",

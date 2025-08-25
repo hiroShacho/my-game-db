@@ -8,6 +8,7 @@ const raids = [
   { key: "GluttonousFeast", title: "暴食の饗宴", href: "/raid/GluttonousFeast" },
   { key: "ElementAlart", title: "元素警戒", href: "/raid/ElementAlart" },
   { key: "MatrixHacking", title: "マトリックスハッキング", href: "/raid/MatrixHacking" },
+  { key: "RealmofPhantasm", title: "イリュージョンシフト", href: "/raid/RealmofPhantasm" },
   { key: "ScorchingNightmare", title: "燃え上がるナイトメア", href: "/raid/ScorchingNightmare" },
   { key: "TrafficControl", title: "交通管制", href: "/raid/TrafficControl" },
   { key: "SwarmGuard", title: "ガードバグ陣", href: "/raid/SwarmGuard" },
@@ -30,9 +31,9 @@ export default function RaidIndexPage() {
           className="pointer-events-none select-none"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow mb-2">討伐作戦一覧</h1>
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow mb-2">討伐作戦</h1>
           <p className="text-white text-base sm:text-lg font-semibold bg-emerald-700/60 px-4 py-1 rounded">
-            幻塔の討伐作戦一覧・攻略ページ
+            討伐作戦一覧・攻略ページ
           </p>
         </div>
       </div>
@@ -40,10 +41,10 @@ export default function RaidIndexPage() {
       <div className="mx-auto max-w-2xl px-4 py-6">
         {/* ▼ナビゲーションカード */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-          {/* 開催中（暴食の饗宴に変更） */}
-          <Link href="/raid/GluttonousFeast" className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-emerald-400">
-            <Image src="/raid/GluttonousFeast.PNG" alt="暴食の饗宴" width={200} height={112} className="rounded mb-2" />
-            <span className="text-lg font-bold text-emerald-800 group-hover:text-emerald-600">暴食の饗宴</span>
+          {/* 開催中（イリュージョンシフトに変更） */}
+          <Link href="/raid/RealmofPhantasm" className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-emerald-400">
+            <Image src="/raid/RealmofPhantasm.PNG" alt="イリュージョンシフト" width={200} height={112} className="rounded mb-2" />
+            <span className="text-lg font-bold text-emerald-800 group-hover:text-emerald-600">イリュージョンシフト</span>
             <span className="text-xs text-emerald-700 mt-2 bg-emerald-100 rounded px-2 py-1">開催中</span>
           </Link>
           {/* ガードバグ陣（限定討伐） */}
@@ -89,7 +90,7 @@ export default function RaidIndexPage() {
               />
               <span className="text-sm font-bold text-emerald-800 group-hover:text-emerald-600">元素警戒<br /><span className="text-xs text-emerald-500">(詳細ページへ)</span></span>
             </Link>
-            {/* 追加: マトリックスハッキング（アーカイブ: 元素警戒と燃え上がるナイトメアの間） */}
+            {/* 追加: マトリックスハッキング */}
             <Link
               href="/raid/MatrixHacking"
               className="group bg-white border-2 border-emerald-400 rounded flex flex-col items-center justify-center h-28 hover:-translate-y-1 hover:shadow-xl transition"
@@ -104,6 +105,23 @@ export default function RaidIndexPage() {
               />
               <span className="text-sm font-bold text-emerald-800 group-hover:text-emerald-600">
                 マトリックスハッキング<br /><span className="text-xs text-emerald-500">(詳細ページへ)</span>
+              </span>
+            </Link>
+            {/* 追加: イリュージョンシフト */}
+            <Link
+              href="/raid/RealmofPhantasm"
+              className="group bg-white border-2 border-emerald-400 rounded flex flex-col items-center justify-center h-28 hover:-translate-y-1 hover:shadow-xl transition"
+            >
+              <Image
+                src="/raid/RealmofPhantasm.PNG"
+                alt="イリュージョンシフト"
+                width={120}
+                height={68}
+                className="rounded mb-1"
+                style={{ objectFit: "contain", maxHeight: "60px" }}
+              />
+              <span className="text-sm font-bold text-emerald-800 group-hover:text-emerald-600">
+                イリュージョンシフト<br /><span className="text-xs text-emerald-500">(詳細ページへ)</span>
               </span>
             </Link>
             <Link

@@ -117,7 +117,7 @@ export default function JointOperationIndex() {
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
           <h1 className="text-xl sm:text-3xl font-extrabold text-white drop-shadow mb-1">連合作戦</h1>
           <p className="text-white text-sm sm:text-base font-semibold bg-cyan-700/60 px-4 py-1 rounded">
-            連合作戦ダンジョン一覧・攻略ポータル
+            連合作戦ダンジョン一覧・攻略ページ
           </p>
         </div>
       </div>
