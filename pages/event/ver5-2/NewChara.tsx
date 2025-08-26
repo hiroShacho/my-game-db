@@ -105,7 +105,7 @@ export default function Ver52NewCharaPage() {
     <>
       <Head>
         <title>【幻塔攻略】Ver5.2新武器・ボリション・アバター特性まとめ | 幻塔攻略データベース</title>
-        <meta name="description" content="幻塔（Tower of Fantasy）Ver5.2新武器・ボリション・アバター特性のテストサーバー先行情報まとめページ。" />
+        <meta name="description" content="幻塔（Tower of Fantasy）Ver5.3新武器・ボリション・アバター特性のテストサーバー先行情報まとめページ。" />
       </Head>
       <SidebarLayout>
         <div className="max-w-3xl mx-auto space-y-8 px-2 sm:px-6 py-6">
