@@ -170,8 +170,8 @@ export default function Home() {
             <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
           </h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/08/26 連合作戦「ロストバレー」のページを作成。</li>
             <li>・2025/08/25 連合作戦「ハイエナアリーナ」、討伐作戦「イリュージョンシフト」、大陸版新キャラクターのページを作成。</li>
-            <li>・2025/08/24 連合作戦のページを作成。ステージごとの詳細ページは随時更新予定。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
