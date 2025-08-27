@@ -9,6 +9,7 @@ const jointOps = [
   { key: "Jo4", title: "ハイエナアリーナ", img: "/JointOperation/jo_HyenaArena.PNG", link: "/jointoperation/HyenaArena" },
   { key: "Jo5", title: "最終公演", img: "/JointOperation/jo_TheEndGame.PNG", link: "/jointoperation/TheEndGame" },
   { key: "Jo6", title: "ロストバレー", img: "/JointOperation/jo_SadnessValley.PNG", link: "/jointoperation/SadnessValley" },
+  { key: "Jo8", title: "地核深焔", img: "/JointOperation/jo_CoreflameDepths.PNG", link: "/jointoperation/CoreflameDepths" },
 ];
 
 // 武器リスト（簡略 ver.）

@@ -16,6 +16,7 @@ const labelMap: Record<string, string> = {
   "HyenaArena":"ハイエナアリーナ",
   "TheEndGame":"最終公演",
   "SadnessValley":"ロストバレー",
+  "CoreflameDepths":"地核深焔",
   "raid": "討伐作戦",
   "GluttonousFeast":"暴食の饗宴",
   "ElementAlart": "元素警戒",
