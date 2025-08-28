@@ -189,7 +189,7 @@ export default function NewVerInfo() {
           </div>
           <div className="flex gap-4 flex-wrap mb-4">
             <Link
-              href="/weapons/w_64"
+              href="/weapons/EternalSalvation"
               className="block bg-white rounded shadow hover:shadow-lg hover:ring-2 hover:ring-pink-400 transition-all px-4 py-3 w-64 text-center"
             >
               <div className="flex flex-col items-center gap-2">
@@ -325,7 +325,7 @@ export default function NewVerInfo() {
           </SectionTitle>
           <div className="flex gap-4 flex-wrap mb-4">
             <Link
-              href="/weapons/w_45"
+              href="/weapons/Pactcrest☆Metz"
               className="block bg-white rounded shadow hover:shadow-lg hover:ring-2 hover:ring-sky-400 transition-all px-4 py-3 w-64 text-center"
             >
               <div className="flex flex-col items-center gap-2">
@@ -345,8 +345,8 @@ export default function NewVerInfo() {
           {/* ここに画像2枚を並べる（今は仮の画像名） */}
           <RowImages
             images={[
-              { src: "/ver_event/SuperCompute_1.png", alt: "超速演算レベル15解放その1" },
-              { src: "/ver_event/SuperCompute_2.png", alt: "超速演算レベル15解放その2" },
+              { src: "/ver_event/SuperCompute_1.PNG", alt: "エンジン・リアクター" },
+              { src: "/ver_event/SuperCompute_2.PNG", alt: "外骨格・グラス" },
             ]}
             height={192}
           />
@@ -374,8 +374,8 @@ export default function NewVerInfo() {
           {/* ここに画像2枚を並べるスペースを用意（仮画像名） */}
           <RowImages
             images={[
-              { src: "/ver_event/GuildBase_1.png", alt: "ギルドベース追加その1" },
-              { src: "/ver_event/GuildBase_2.png", alt: "ギルドベース追加その2" },
+              { src: "/ver_event/GuildBase_1.PNG", alt: "ギルドベース入り口" },
+              { src: "/ver_event/GuildBase_2.PNG", alt: "6つの部屋から選択" },
             ]}
             height={192}
           />

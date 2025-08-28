@@ -10,103 +10,75 @@ import Head from "next/head";
 // Ganttイベント定義
 const GANTT_EVENTS: GanttEvent[] = [
   {
-    label: "新コスチューム：海塩スターコーデ",
-    color: "#9ccffc",
-    labelColor: "#9ccffc",
-    labelFontColor: "#200",
-    start: 1,
-    end: 28,
-  },
-  {
-    label: "復刻コスチューム：オリジナル・サマー",
+    label: "ライドガチャ",
     color: "#9cccf5",
     labelColor: "#8ee2f8",
     labelFontColor: "#200",
     start: 1,
-    end: 12,
+    end: 10,
   },
   {
-    label: "復刻コスチューム：きらめきインニス",
+    label: "復刻コスチューム：威風堂々",
     color: "#9ccccf",
     labelColor: "#8ee2f8",
     labelFontColor: "#200",
-    start: 12,
-    end: 28,
+    start: 10,
+    end: 23,
   },
   {
-    label: "新プレアバ：シードル",
+    label: "新プレアバ：ラクシス",
     color: "#8ffff0",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
     start: 1,
-    end: 28,
+    end: 23,
   },
   {
-    label: "復刻プレアバ：榴火",
+    label: "復刻プレアバ：ブレヴィ",
     color: "#ff4141",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
     start: 1,
-    end: 12,
+    end: 10,
   },
   {
-    label: "復刻プレアバ：篁",
+    label: "復刻プレアバ：パロッティ",
     color: "#e3a3f8",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
     start: 1,
-    end: 12,
+    end: 10,
   },
   {
-    label: "復刻プレアバ：凌寒",
+    label: "復刻プレアバ：姫玉",
     color: "#8e80f8",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
-    start: 1,
-    end: 12,
+    start: 10,
+    end: 23,
   },
   {
-    label: "復刻プレアバ：フィオナ",
+    label: "復刻プレアバ：アスラーダ",
     color: "#4e80f8",
     labelColor: "#e3a3f8",
     labelFontColor: "#200",
-    start: 1,
-    end: 12,
-  },
-  {
-    label: "復刻プレアバ：ノーラ",
-    color: "#ae80f8",
-    labelColor: "#e3a3f8",
-    labelFontColor: "#200",
-    start: 12,
-    end: 28,
-  },
-  {
-    label: "復刻プレアバ：凛夜",
-    color: "#83e28f",
-    labelColor: "#e3a3f8",
-    labelFontColor: "#200",
-    start: 12,
-    end: 28,
+    start: 10,
+    end: 23,
   }
 ];
 
-const GANTT_MONTH = 8;
+const GANTT_MONTH = 9;
 const GANTT_YEAR = 2025;
-const GANTT_DAYS = 31;
+const GANTT_DAYS = 30;
 
 const eventImages: (string | null)[] = [
-  "/ver_event/Outfit_Cosmic Coast.PNG",
-  "/ver_event/Outfit_Summer Special.PNG",
-  "/ver_event/Outfit_Innarsian Fashion.PNG",
-  "/ver_event/Simulacrum_Hipper.PNG",
-  "/ver_event/Simulacrum_Liu.PNG",
-  "/ver_event/Simulacrum_Mimi.PNG",
-  "/ver_event/Simulacrum_Linghan.PNG",
-  "/ver_event/Simulacrum_Fiona.PNG",
-  "/ver_event/Simulacrum_Nola.PNG",
-  "/ver_event/Simulacrum_Lin.PNG",
-
+  "/ver_event/Outfit_Vehicle Mystery Box.PNG",
+  "/ver_event/Outfit_Elite Grandeur.PNG",
+  "/ver_event/Simulacrum_Lechesis.PNG",
+  "/ver_event/Simulacrum_Brevey.PNG",
+  "/ver_event/Simulacrum_Plotti.PNG",
+  "/ver_event/Simulacrum_JiYu.PNG",
+  "/ver_event/Simulacrum_Asurada.PNG",
 ];
 
 const GIFT_CODES = [
@@ -114,11 +86,6 @@ const GIFT_CODES = [
     code: "TOF500601",
     desc: "Discord配布コード",
     expire: "2025/12/30",
-  },
-  {
-    code: "dream729",
-    desc: "ver5.2バージョン引き換えコード",
-    expire: "2025/08/28",
   }
 ];
 
@@ -170,7 +137,7 @@ export default function Home() {
             <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
           </h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
-            <li>・2025/08/28 連合作戦「パーティータイム」のページを作成。</li>
+            <li>・2025/08/28 Ver5.3の情報を掲載。連合作戦「パーティタイム」のページを作成。</li>
             <li>・2025/08/27 連合作戦「地核深焔」のページを作成。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
@@ -178,10 +145,10 @@ export default function Home() {
         </section>
         {/* 注目コンテンツ */}
         <section>
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.2の注目コンテンツ</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.3の注目コンテンツ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* ver5.2アップデート情報まとめバナー */}
-            <Link href="/event/ver5-2/New_ver_info" className="block sm:col-span-2">
+            {/* ver5.3アップデート情報まとめバナー */}
+            <Link href="/event/ver5-3/New_ver_info" className="block sm:col-span-2">
               <div
                 className="
                   relative rounded-lg shadow-lg h-48 sm:h-64 flex items-center justify-center overflow-hidden group
@@ -197,7 +164,7 @@ export default function Home() {
               >
                 <Image
                   src="/ver_event/New_ver_top.png"
-                  alt="ver5.2アップデート情報まとめ"
+                  alt="ver5.3アップデート情報まとめ"
                   fill
                   sizes="100vw"
                   className="object-cover w-full h-full"
@@ -219,12 +186,13 @@ export default function Home() {
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-3xl sm:text-5xl font-bold text-white drop-shadow-lg bg-black/75 px-6 py-3 rounded-lg border border-pink-300">
-                    ver5.2アップデート情報まとめ
+                    ver5.3アップデート情報まとめ
                   </span>
                 </div>
               </div>
             </Link>
-            <Link href="/weapons/AF-010Servion" className="block">
+            {/* ラクシスの武器詳細 */}
+            <Link href="/weapons/EternalSalvation" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -243,70 +211,40 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    シードル
+                    ラクシス
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    シードルの武器詳細をチェック
+                    ラクシスの武器詳細をチェック
                   </p>
                 </div>
               </div>
             </Link>
-            <Link href="/event/ver5-2/Starlit_Summer_Festival" className="block">
+            {/* その他のイベント（準備中） */}
+            <div className="block sm:col-span-1">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  hover:scale-105
-                  hover:shadow-2xl
-                  hover:ring-2 hover:ring-sky-400
-                  cursor-pointer
+                  cursor-default
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/New_Event_1.png')",
+                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
                   backgroundSize: "cover",
-                  backgroundPosition: "center"
+                  backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
+                <div className="absolute inset-0 bg-black/20" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    イベント「星光夏祭り」
+                    その他のイベント
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    「星光夏祭り」の詳細はこちら
+                    準備中
                   </p>
                 </div>
               </div>
-            </Link>
-            <Link href="/event/ver5-2/ver5-3_testserver" className="block">
-              <div
-                className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
-                  transition-all duration-200
-                  hover:scale-105
-                  hover:shadow-2xl
-                  hover:ring-2 hover:ring-sky-400
-                  cursor-pointer
-                "
-                style={{
-                  backgroundImage: "url('/ver_event/New_Event_2.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center"
-                }}
-              >
-                <div className="absolute inset-0 bg-black/50" />
-                <div className="relative z-10 p-4">
-                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    Ver5.3先行テストサーバー
-                  </h3>
-                  <p className="text-sm sm:text-base text-white drop-shadow">
-                    公式Discordで募集開始！<br />
-                    詳細・最新情報はこちら
-                  </p>
-                </div>
-              </div>
-            </Link>
-            <div className="block">
+            </div>
+            <div className="block sm:col-span-1">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -336,7 +274,7 @@ export default function Home() {
           </div>
           <div className="mt-8 space-y-6">
             <div>
-              <h3 className="text-md sm:text-lg font-semibold mb-2">2025年8月 衣装・プレアバ ガチャスケジュール</h3>
+              <h3 className="text-md sm:text-lg font-semibold mb-2">2025年9月 衣装・プレアバ ガチャスケジュール</h3>
               <GanttCalendar
                 events={GANTT_EVENTS}
                 images={eventImages}

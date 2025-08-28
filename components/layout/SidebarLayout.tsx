@@ -23,12 +23,9 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/weapons/AF-010Servion", label: "シードル武器：サーバントAF-010" },
-  { href: "/matrices/m_59", label: "シードルボリション" },
-  { href: "/trait/t_59", label: "シードル特性" },
-  { href: "/event/ver5-2/Starlit_Summer_Festival", label: "イベント「星光夏祭り」" },
-  { href: "/raid/SwarmGuard", label: "討伐作戦「ガードバグ陣」" },
-  { href: "/event/ver5-2/ver5-3_testserver", label: "Ver5.3テストサーバー" },
+  { href: "/weapons/EternalSalvation", label: "ラクシス武器：ホーリージャッジメント" },
+  { href: "/matrices/m_60", label: "ラクシスボリション" },
+  { href: "/trait/t_60", label: "ラクシス特性" },
 ];
 
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
