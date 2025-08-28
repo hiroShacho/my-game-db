@@ -86,6 +86,11 @@ const GIFT_CODES = [
     code: "TOF500601",
     desc: "Discord配布コード",
     expire: "2025/12/30",
+  },
+  {
+    code: "whisper0828",
+    desc: "Ver5.3バージョン引き換えコード",
+    expire: "2025/09/23",
   }
 ];
 
