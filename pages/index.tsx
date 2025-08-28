@@ -224,31 +224,34 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* その他のイベント（準備中） */}
-            <div className="block sm:col-span-1">
+            {/* その他のイベント（準備中＋咲き誇りの刻リンク） */}
+            <Link href="/event/ver5-3/The_Wild_Bloom" className="block sm:col-span-1">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  cursor-default
+                  hover:scale-105
+                  hover:shadow-2xl
+                  hover:ring-2 hover:ring-emerald-400
+                  cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_1.png')",
                   backgroundSize: "cover",
-                  backgroundPosition: "center top"
+                  backgroundPosition: "center"
                 }}
               >
                 <div className="absolute inset-0 bg-black/20" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    その他のイベント
+                    咲き誇りの刻
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    準備中
+                    イベントの内容はこちら
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
             <div className="block sm:col-span-1">
               <div
                 className="
