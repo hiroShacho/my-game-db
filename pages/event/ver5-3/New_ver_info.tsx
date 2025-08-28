@@ -93,9 +93,11 @@ const SectionTitle = ({
 const RowImages = ({
   images,
   height = 192,
+  objectPositionArray,
 }: {
   images: { src: string; alt: string }[];
   height?: number;
+  objectPositionArray?: (string | undefined)[];
 }) => (
   <div className="flex flex-col sm:flex-row gap-4 justify-center my-3">
     {images.map((img, i) => (
@@ -106,6 +108,9 @@ const RowImages = ({
           fill
           className="object-cover rounded shadow border"
           sizes="320px"
+          style={{
+            objectPosition: objectPositionArray && objectPositionArray[i] ? objectPositionArray[i] : undefined,
+          }}
         />
       </div>
     ))}
@@ -371,13 +376,14 @@ export default function NewVerInfo() {
           <SectionTitle icon={<span title="ギルド">🏰</span>}>
             ギルドベース追加
           </SectionTitle>
-          {/* ここに画像2枚を並べるスペースを用意（仮画像名） */}
+          {/* 1枚目だけ objectPosition を下にする */}
           <RowImages
             images={[
               { src: "/ver_event/GuildBase_1.PNG", alt: "ギルドベース入り口" },
               { src: "/ver_event/GuildBase_2.PNG", alt: "6つの部屋から選択" },
             ]}
             height={192}
+            objectPositionArray={["center 80%", "center"]}
           />
         </section>
 
