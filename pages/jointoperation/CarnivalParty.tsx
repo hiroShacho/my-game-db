@@ -84,22 +84,22 @@ export default function CarnivalPartyPage() {
   return (
     <>
       <Head>
-        <title>連合作戦「パーティタイム」攻略 | 幻塔攻略データベース</title>
-        <meta name="description" content="連合作戦「パーティタイム」のダンジョン構成・ボスギミック・攻略ポイントを解説！" />
+        <title>連合作戦「パーティータイム」攻略 | 幻塔攻略データベース</title>
+        <meta name="description" content="連合作戦「パーティータイム」のダンジョン構成・ボスギミック・攻略ポイントを解説！" />
         {/* Google Fonts: Material Symbols Outlined */}
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </Head>
       <div className="mx-auto max-w-3xl px-2 sm:px-4 py-6">
         <h1 className="text-3xl font-extrabold mb-4 text-pink-600 flex items-center gap-2">
           <span className="material-symbols-outlined text-pink-500">celebration</span>
-          連合作戦「パーティタイム」 攻略
+          連合作戦「パーティータイム」 攻略
         </h1>
 
         {/* トップ画像 */}
         <div className="rounded-lg shadow mb-4 mx-auto w-fit flex justify-center" style={{ maxWidth: "100%" }}>
           <Image
             src="/JointOperation/jo_CarnivalParty.PNG"
-            alt="パーティタイム ダンジョン全景"
+            alt="パーティータイム ダンジョン全景"
             width={560}
             height={320}
             style={{ maxWidth: "100%", height: "auto", display: "block", marginLeft: "auto", marginRight: "auto" }}
@@ -108,7 +108,7 @@ export default function CarnivalPartyPage() {
 
         <SectionTitle icon="account_tree">ダンジョン構成</SectionTitle>
         <div>
-          ボス戦とリズムゲーだけの独特なダンジョン。<br />
+          ボス戦 + リズムゲーの独特なダンジョン。<br />
           スタート地点からまっすぐ進むとすぐにボス戦が始まり、<br />
           ステージから降りてくるボスを1体ずつ倒すとリズムゲーが始まる。<br />
           リズムゲーでは迫りくる攻撃の種類に応じたアクションをすることでダメージを防げる。<br />
