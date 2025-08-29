@@ -6,6 +6,7 @@ import Image from "next/image";
 
 // 仮の9つの連合作戦データ
 const jointOps = [
+  { key: "Jo3", title: "隔離区域", img: "/JointOperation/jo_QuarantineZone.PNG", link: "/jointoperation/QuarantineZone" },
   { key: "Jo4", title: "ハイエナアリーナ", img: "/JointOperation/jo_HyenaArena.PNG", link: "/jointoperation/HyenaArena" },
   { key: "Jo5", title: "最終公演", img: "/JointOperation/jo_TheEndGame.PNG", link: "/jointoperation/TheEndGame" },
   { key: "Jo6", title: "ロストバレー", img: "/JointOperation/jo_SadnessValley.PNG", link: "/jointoperation/SadnessValley" },
@@ -19,13 +20,13 @@ const weapons = [
     slug: "AF-010Servion",
     name: "シードル",
     img: "/images/w_63_img.PNG",
-    desc: "現状、連合作戦で一番火力が出る武器。スキルを使ったらあとは適当に攻撃を振ってるだけでも敵が溶けていく。攻撃の追尾性能も比較的高いため、シードル無凸を持っているなら連合には必ず持って行きたい。",
+    desc: "ver5.3以前は火力最強だったがほどほどの強さに調整された。それでも攻撃の倍率自体は高めなのでアントリアとセットで運用しよう。",
   },
   {
     slug: "Requiem",
     name: "アントリア",
     img: "/images/w_59_img.PNG",
-    desc: "移動性能に秀でた武器。火力はシードルに劣るものの、スキル使用後時間経過で使用できる「特殊攻撃パターン-豪雨」は一瞬で敵の体力を消し飛ばせる火力を秘めている。移動はアントリア、戦闘はシードルという使い分けが強力。",
+    desc: "移動性能に秀でた武器。スキル使用後に裏に回した際の「サポート攻撃システムS.A.S」が非常に強力。表運用でもスキル使用後時間経過で使用できる「特殊攻撃パターン-豪雨」は一瞬で敵の体力を消し飛ばせる火力を秘めている。移動はアントリア、戦闘はシードルという使い分けが楽なのでおススメ。",
   },
   {
     slug: "TwinStars",

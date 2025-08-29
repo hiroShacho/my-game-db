@@ -13,6 +13,7 @@ const labelMap: Record<string, string> = {
   "trait": "アバター特性一覧",
   "relics": "アルケー一覧",
   "jointoperation":"連合作戦",
+  "QuarantineZone":"隔離区域",
   "HyenaArena":"ハイエナアリーナ",
   "TheEndGame":"最終公演",
   "SadnessValley":"ロストバレー",
