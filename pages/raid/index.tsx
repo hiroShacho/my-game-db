@@ -18,11 +18,11 @@ type RaidCard = {
 
 const raidCards: RaidCard[] = [
   {
-    key: "RealmofPhantasm",
-    title: "イリュージョンシフト",
-    href: "/raid/RealmofPhantasm",
+    key: "GluttonousFeast",
+    title: "暴食の饗宴",
+    href: "/raid/GluttonousFeast",
     status: "開催中",
-    img: "/raid/RealmofPhantasm.PNG",
+    img: "/raid/GluttonousFeast.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
