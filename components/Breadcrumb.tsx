@@ -18,6 +18,7 @@ const labelMap: Record<string, string> = {
   "TheEndGame":"最終公演",
   "SadnessValley":"ロストバレー",
   "CarnivalParty":"パーティータイム",
+  "PursuitofFate":"運命の追撃",
   "CoreflameDepths":"地核深焔",
   "raid": "討伐作戦",
   "GluttonousFeast":"暴食の饗宴",

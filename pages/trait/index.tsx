@@ -62,7 +62,7 @@ export default function TraitListPage() {
                   {weapon && (
                     <div className="flex items-center gap-2 mt-1">
                       <span className="text-xs sm:text-sm text-gray-500">対応武器:</span>
-                      <Link href={`/weapons/${weapon.id}`} className="flex items-center gap-1">
+                      <Link href={`/weapons/${weapon.slug}`} className="flex items-center gap-1">
                         <Image
                           src={`/images/${weapon.id}_img.PNG`}
                           alt={weapon.name}
