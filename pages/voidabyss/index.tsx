@@ -32,7 +32,7 @@ const CollapsibleSection = ({
   );
 };
 
-// 拡大画像モーダル
+// 拡大画像モーダル（画面最大化）
 const Modal = ({
   open,
   onClose,
@@ -47,31 +47,31 @@ const Modal = ({
   if (!open) return null;
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
       onClick={onClose}
       aria-modal="true"
       tabIndex={-1}
     >
       <div
-        className="relative bg-white rounded-lg p-2 shadow-lg max-w-4xl w-[96vw] max-h-[90vh] flex flex-col items-center"
+        className="relative bg-white rounded-lg shadow-lg w-screen h-screen max-w-[98vw] max-h-[98vh] flex flex-col items-center justify-center"
         onClick={e => e.stopPropagation()}
       >
         <button
-          className="absolute top-2 right-2 text-2xl text-gray-700 hover:text-red-600"
+          className="absolute top-4 right-4 text-2xl text-gray-700 hover:text-red-600 bg-white/70 px-3 py-1 rounded-full z-20"
           onClick={onClose}
           aria-label="閉じる"
           type="button"
         >
           ×
         </button>
-        <div className="relative w-full h-[60vh] min-h-[300px] max-h-[72vh]">
+        <div className="relative w-full h-full flex items-center justify-center">
           <Image
             src={src}
             alt={alt}
             fill
             className="object-contain"
             style={{ background: "#fff" }}
-            sizes="90vw"
+            sizes="100vw"
             priority={false}
           />
         </div>
@@ -205,14 +205,13 @@ export default function VoidAbyssPage() {
           title={
             <span>
               <span className="material-symbols-outlined text-sky-400 align-middle mr-2">info</span>
-              基本説明（ここをクリックで展開・収納）
+              基本説明・技術バフ・ステージバフ・進め方（ここをクリックで展開・収納）
             </span>
           }
         >
           {/* 基本説明 */}
           <div className="mb-6 space-y-2">
             <div>最大4人で攻略するPVEコンテンツの1つ。<br />
-              出てくるボスが毎月変化する、いわゆる月課コンテンツ。<br />
               ステージ外で集める「技術バフ」とステージ内で集めるバフ（以降はステージバフと呼ぶ）があり、
               この2つのバフでしっかり強化することでとてつもないステータス強化が可能となっている。</div>
             <CaptionedImage
@@ -273,7 +272,6 @@ export default function VoidAbyssPage() {
               onClick={() => openModal("/VoidAbyss/va_bosswarp.PNG", "鍵が集まったらボスへワープしよう")}
             />
           </div>
-
           {/* 技術バフについて */}
           <div className="mb-6 space-y-2">
             <div>
@@ -326,7 +324,6 @@ export default function VoidAbyssPage() {
               onClick={() => openModal("/VoidAbyss/va_techbuff_rankup.PNG", "エナジーの消費が増えると直接ランクⅡのバフが出ることも")}
             />
           </div>
-
           {/* ステージバフについて */}
           <div className="mb-6 space-y-2">
             <div>
@@ -353,7 +350,6 @@ export default function VoidAbyssPage() {
               onClick={openModal}
             />
           </div>
-
           {/* 進め方 */}
           <div className="mb-6 space-y-2">
             <div>
@@ -383,7 +379,7 @@ export default function VoidAbyssPage() {
               onClick={openModal}
             />
             <div>
-              なお、一度クリアしたステージに再挑戦したい場合は「月間BOSS」から挑戦したいボスの再挑戦を押そう。
+              なお、一度クリアステージに再度挑戦したい場合は「月間BOSS」から挑戦したいボスの再挑戦を押そう。
             </div>
             <RowImages
               items={[
@@ -404,7 +400,6 @@ export default function VoidAbyssPage() {
             />
           </div>
         </CollapsibleSection>
-
         {/* おススメの技術バフ */}
         <section>
           <div className="flex items-center gap-2 mb-2 pl-3" style={{ borderLeft: "8px solid #17e6a7", borderBottom: "2.5px solid #17e6a7", paddingBottom: 2, width: "fit-content" }}>
@@ -479,7 +474,6 @@ export default function VoidAbyssPage() {
             onClick={() => openModal("/VoidAbyss/va_techbuff_KnackforAdvancement.PNG", "アビスなら高凸の能力も使えるぞ！")}
           />
         </section>
-
         {/* 技術バフ一覧 */}
         <section>
           <div className="flex items-center gap-2 mb-2 pl-3" style={{ borderLeft: "8px solid #17e6a7", borderBottom: "2.5px solid #17e6a7", paddingBottom: 2, width: "fit-content" }}>
@@ -514,7 +508,6 @@ export default function VoidAbyssPage() {
             </table>
           </div>
         </section>
-
         {/* ステージバフ一覧 */}
         <section>
           <div className="flex items-center gap-2 mb-2 pl-3" style={{ borderLeft: "8px solid #17e6a7", borderBottom: "2.5px solid #17e6a7", paddingBottom: 2, width: "fit-content" }}>
@@ -546,7 +539,6 @@ export default function VoidAbyssPage() {
             </table>
           </div>
         </section>
-
         {/* ボス攻略 */}
         <section>
           <div className="flex items-center gap-2 mb-2 pl-3" style={{ borderLeft: "8px solid #17e6a7", borderBottom: "2.5px solid #17e6a7", paddingBottom: 2, width: "fit-content" }}>
@@ -593,7 +585,6 @@ export default function VoidAbyssPage() {
             </div>
           </div>
         </section>
-
         {/* ソロ攻略は難易度高め */}
         <section>
           <div className="flex items-center gap-2 mb-2 pl-3" style={{ borderLeft: "8px solid #17e6a7", borderBottom: "2.5px solid #17e6a7", paddingBottom: 2, width: "fit-content" }}>
@@ -624,7 +615,6 @@ export default function VoidAbyssPage() {
             ))}
           </div>
         </section>
-
         {/* 拡大モーダル */}
         <Modal
           open={modalOpen && modalImage !== null}
