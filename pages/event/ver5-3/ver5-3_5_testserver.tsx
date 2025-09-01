@@ -74,7 +74,7 @@ export default function Ver535TestServer() {
                   />
                 </div>
                 <p className="mb-3">
-                  応募期間は10日(水)の11時までなので、早めに応募しておきましょう！<br />
+                  応募期間は3日(水)の11時までなので、早めに応募しておきましょう！<br />
                   応募フォームに書いてある情報によると、テストの開始は10日(水)からとなっています。
                 </p>
                 <div className="mb-4 text-red-800 font-bold">
