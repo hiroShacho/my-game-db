@@ -156,10 +156,101 @@ export default function TheWildBloom() {
 
         {/* 荒野開拓者 */}
         <section className="rounded-xl px-2 sm:px-6 py-4 mb-2 shadow bg-[#faf6ef]">
-          <SectionTitle icon="🤝">荒野開拓者（未開放）</SectionTitle>
-          <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800">
-            運命の包囲網形式の協力型PVE<br />
-            恐らくボスは女王中
+          <SectionTitle icon="🤝">荒野開拓者</SectionTitle>
+          <div className="flex flex-col gap-4">
+            {/* 1 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-full max-w-2xl h-48 sm:h-64 rounded-lg overflow-hidden shadow bg-white cursor-pointer mb-2"
+                onClick={() => openModal("/ver_event/New_Event_1_2_1.PNG", "荒野開拓者イベントマップ")}>
+                <Image
+                  src="/ver_event/New_Event_1_2_1.PNG"
+                  alt="荒野開拓者イベントマップ"
+                  fill
+                  className="object-contain w-full h-full"
+                  sizes="(max-width: 1300px) 95vw, 700px"
+                />
+                <span className="absolute bottom-2 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded z-10 pointer-events-none">
+                  クリックで拡大
+                </span>
+              </div>
+              <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800 w-full max-w-2xl">
+                運命の包囲網形式のPVEイベント<br />
+                ラスボスの女王虫撃破を目指して武器とバフを集めよう！
+              </div>
+            </div>
+            {/* 2 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-full max-w-2xl h-44 sm:h-56 rounded-lg overflow-hidden shadow bg-white cursor-pointer mb-2"
+                onClick={() => openModal("/ver_event/New_Event_1_2_2.PNG", "ラクシス武器必須枠")}>
+                <Image
+                  src="/ver_event/New_Event_1_2_2.PNG"
+                  alt="ラクシス武器必須枠"
+                  fill
+                  className="object-contain w-full h-full"
+                  sizes="(max-width: 900px) 95vw, 600px"
+                />
+                <span className="absolute bottom-2 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded z-10 pointer-events-none">
+                  クリックで拡大
+                </span>
+              </div>
+              <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800 w-full max-w-2xl">
+                今回はラクシスの武器が必ず武器一覧に入るようになっている。
+              </div>
+            </div>
+            {/* 3 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-full max-w-2xl h-44 sm:h-56 rounded-lg overflow-hidden shadow bg-white cursor-pointer mb-2"
+                onClick={() => openModal("/ver_event/New_Event_1_2_3.PNG", "ボス討伐でバフ獲得")}>
+                <Image
+                  src="/ver_event/New_Event_1_2_3.PNG"
+                  alt="ボス討伐でバフ獲得"
+                  fill
+                  className="object-contain w-full h-full"
+                  sizes="(max-width: 900px) 95vw, 600px"
+                />
+                <span className="absolute bottom-2 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded z-10 pointer-events-none">
+                  クリックで拡大
+                </span>
+              </div>
+              <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800 w-full max-w-2xl">
+                基本は武器を集めつつ、各地のボスを倒してバフを獲得して女王虫解放に備えよう。
+              </div>
+            </div>
+            {/* 4 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-full max-w-2xl h-44 sm:h-56 rounded-lg overflow-hidden shadow bg-white cursor-pointer mb-2"
+                onClick={() => openModal("/ver_event/New_Event_1_2_4.PNG", "お金で最高ランク武器とバフ購入")}>
+                <Image
+                  src="/ver_event/New_Event_1_2_4.PNG"
+                  alt="お金で最高ランク武器とバフ購入"
+                  fill
+                  className="object-contain w-full h-full"
+                  sizes="(max-width: 900px) 95vw, 600px"
+                />
+                <span className="absolute bottom-2 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded z-10 pointer-events-none">
+                  クリックで拡大
+                </span>
+              </div>
+              <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800 w-full max-w-2xl">
+                道中で手に入るお金を使えば最高ランクの武器とバフを購入できるぞ！
+              </div>
+            </div>
+            {/* 5 */}
+            <div className="flex flex-col items-center">
+              <div className="relative w-full max-w-2xl h-44 sm:h-56 rounded-lg overflow-hidden shadow bg-white cursor-pointer mb-2"
+                onClick={() => openModal("/ver_event/New_Event_1_2_5.PNG", "荒野開拓者イメージ")}>
+                <Image
+                  src="/ver_event/New_Event_1_2_5.PNG"
+                  alt="荒野開拓者イメージ"
+                  fill
+                  className="object-contain w-full h-full"
+                  sizes="(max-width: 900px) 95vw, 600px"
+                />
+                <span className="absolute bottom-2 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded z-10 pointer-events-none">
+                  クリックで拡大
+                </span>
+              </div>
+            </div>
           </div>
         </section>
 
