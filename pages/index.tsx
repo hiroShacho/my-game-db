@@ -142,8 +142,8 @@ export default function Home() {
             <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
           </h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/09/01 イベントページに「Ver5.35テストサーバー」のページを作成。</li>
             <li>・2025/08/31 PVEコンテンツ「虚空のアビス」のページを作成。</li>
-            <li>・2025/08/30 連合作戦「運命の追撃」のページを作成。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
@@ -252,6 +252,37 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
+            {/* ▼▼▼ 追加：Ver5.35テストサーバーへのリンク ▼▼▼ */}
+            <Link href="/event/ver5-3/ver5-3_5_testserver" className="block sm:col-span-1">
+              <div
+                className="
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
+                  transition-all duration-200
+                  hover:scale-105
+                  hover:shadow-2xl
+                  hover:ring-2 hover:ring-blue-400
+                  cursor-pointer
+                "
+                style={{
+                  backgroundImage: "url('/ver_event/New_Event_2.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center top"
+                }}
+              >
+                <div className="absolute inset-0 bg-blue-900/30" />
+                <div className="relative z-10 p-4">
+                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                    Ver5.35テストサーバー
+                  </h3>
+                  <p className="text-sm sm:text-base text-white drop-shadow">
+                    テストサーバーの案内・参加方法
+                  </p>
+                </div>
+              </div>
+            </Link>
+            {/* ▲▲▲ 追加ここまで ▲▲▲ */}
+
             <div className="block sm:col-span-1">
               <div
                 className="
