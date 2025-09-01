@@ -27,6 +27,8 @@ const latestContentsLinks = [
   { href: "/weapons/EternalSalvation", label: "ラクシス武器：ホーリージャッジメント" },
   { href: "/matrices/m_60", label: "ラクシスボリション" },
   { href: "/trait/t_60", label: "ラクシス特性" },
+  { href: "/event/ver5-3/The_Wild_Bloom", label: "イベント「咲き誇りの刻」" },
+  { href: "/event/ver5-3/ver5-3_5_testserver", label: "Ver5.35テストサーバー" },
 ];
 
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
