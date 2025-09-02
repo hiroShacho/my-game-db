@@ -5,7 +5,8 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
 import StarRating from "@/components/StarRating";
-import { AdSenseContentUnit } from "@/components/AdSenseContentUnit"; // 追加
+import { AdSenseContentUnit } from "@/components/AdSenseContentUnit";
+import { AdSenseContentUnit2 } from "@/components/AdSenseContentUnit2";
 
 export default function MatrixDetailPage() {
   const router = useRouter();
@@ -96,9 +97,10 @@ export default function MatrixDetailPage() {
           </div>
         )}
 
-        {/* 広告表示を追加 */}
-        <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
+        {/* 広告表示：2つ横並び */}
+        <div className="flex flex-row gap-2 mb-4" style={{ justifyContent: "center" }}>
           <AdSenseContentUnit />
+          <AdSenseContentUnit2 />
         </div>
       </div>
     </SidebarLayout>

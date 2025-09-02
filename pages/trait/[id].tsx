@@ -5,7 +5,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import SidebarLayout from '@/components/layout/SidebarLayout'
 import Head from "next/head";
-import { AdSenseContentUnit } from "@/components/AdSenseContentUnit"; // 追加
+import { AdSenseContentUnit } from "@/components/AdSenseContentUnit";
+import { AdSenseContentUnit2 } from "@/components/AdSenseContentUnit2";
 
 export default function TraitDetail() {
   const router = useRouter()
@@ -37,7 +38,6 @@ export default function TraitDetail() {
                 width={160}
                 height={160}
                 className="object-contain rounded"
-                // fillは使わない
               />
             </div>
           </div>
@@ -79,9 +79,10 @@ export default function TraitDetail() {
               />
               <div className="text-blue-600 hover:underline sm:text-sm text-center mt-1">アバター「{trait.avatar}」の武器を見る</div>
             </Link>
-            {/* 広告追加：武器リンクの下 */}
-            <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
+            {/* 広告追加：武器リンクの下に2つ横並びで表示 */}
+            <div className="flex flex-row gap-2 mt-4 mb-2" style={{ justifyContent: "center" }}>
               <AdSenseContentUnit />
+              <AdSenseContentUnit2 />
             </div>
           </div>
         ) : (

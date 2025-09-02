@@ -4,7 +4,8 @@ import relicsData from '@/data/relics.json';
 import Image from 'next/image';
 import Head from 'next/head';
 import SidebarLayout from '@/components/layout/SidebarLayout';
-import { AdSenseContentUnit } from "@/components/AdSenseContentUnit"; // 追加
+import { AdSenseContentUnit } from "@/components/AdSenseContentUnit";
+import { AdSenseContentUnit2 } from "@/components/AdSenseContentUnit2";
 
 type Props = {
   relic: any;
@@ -93,9 +94,10 @@ export default function RelicDetailPage({ relic }: Props) {
           </p>
         </div>
 
-        {/* 広告追加：評価の下 */}
-        <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
+        {/* 広告追加：評価の下に2つ横並び */}
+        <div className="flex flex-row gap-2 mb-4" style={{ justifyContent: "center" }}>
           <AdSenseContentUnit />
+          <AdSenseContentUnit2 />
         </div>
       </div>
     </SidebarLayout>

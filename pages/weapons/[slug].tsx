@@ -9,6 +9,7 @@ import Link from "next/link";
 import Head from "next/head";
 import StarRating from "@/components/StarRating";
 import { AdSenseContentUnit } from "@/components/AdSenseContentUnit";
+import { AdSenseContentUnit2 } from "@/components/AdSenseContentUnit2";
 
 const skillCategories = ["通常攻撃", "回避", "スキル", "連携スキル"];
 const h2Class =
@@ -286,8 +287,10 @@ export default function WeaponDetail() {
                   </p>
                 )}
               </section>
-              <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
+              {/* 広告2つを横並びで表示 */}
+              <div className="flex flex-row gap-2 mb-4" style={{ justifyContent: "center" }}>
                 <AdSenseContentUnit />
+                <AdSenseContentUnit2 />
               </div>
               {/* 凸効果 */}
               <section>
