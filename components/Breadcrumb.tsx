@@ -12,6 +12,8 @@ const labelMap: Record<string, string> = {
   "matrices": "ボリション一覧",
   "trait": "アバター特性一覧",
   "relics": "アルケー一覧",
+  "tutorial":"序盤の進め方",
+  "levelup":"育成要素のまとめ",
   "jointoperation":"連合作戦",
   "DeepseaProvingGround":"深海訓練所",
   "QuarantineZone":"隔離区域",
@@ -34,7 +36,7 @@ const labelMap: Record<string, string> = {
 };
 
 // パンくずから除外したいパス
-const excludePaths = ["event", "ver5-1","ver5-2","ver5-3","map"];
+const excludePaths = ["event", "ver5-1","ver5-2","ver5-3","map", "newbie"];
 
 // 「search」ページではパンくずリストのリンクを非表示にしたい
 const noLinkPaths = ["/search"];

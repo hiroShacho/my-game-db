@@ -31,6 +31,12 @@ const latestContentsLinks = [
   { href: "/event/ver5-3/ver5-3_5_testserver", label: "Ver5.35テストサーバー" },
 ];
 
+// 追加: 新規・初心者向け項目
+const newbieLinks = [
+  { href: "/newbie/tutorial", label: "ゲーム序盤の進め方" },
+  { href: "/newbie/levelup", label: "育成要素のまとめ" }
+];
+
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
   return (
     <div>
@@ -109,6 +115,8 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
   const [latestOpen, setLatestOpen] = useState(true);
   const [basicOpen, setBasicOpen] = useState(true);
   const [soloMultiOpen, setSoloMultiOpen] = useState(true);
+  // 新規・初心者向けセクションの開閉状態
+  const [newbieOpen, setNewbieOpen] = useState(true);
 
   const sectionBtnBase =
     "w-full flex items-center justify-between font-semibold py-2 px-4 bg-black text-white transition-colors";
@@ -171,6 +179,22 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
           <a
             href={link.href}
             className="block text-black hover:text-blue-500 hover:text-blue-500 hover:underline transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
+
+  // 新規・初心者向けセクションのリンクレンダリング
+  const renderNewbieLinks = () => (
+    <ul className="space-y-1">
+      {newbieLinks.map(link => (
+        <li key={link.href}>
+          <a
+            href={link.href}
+            className="block text-black hover:text-green-600 hover:underline transition-colors"
           >
             {link.label}
           </a>
@@ -251,6 +275,21 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             <div id="basicNav" className={`${basicOpen ? "block" : "hidden"} pl-4`}>
               {renderNavLinks(basicNavLinks)}
             </div>
+            {/* 新規・初心者向けセクション */}
+            <button
+              className={`${sectionBtnBase} ${sectionBtnHover} mt-2`}
+              onClick={() => setNewbieOpen(v => !v)}
+              aria-expanded={newbieOpen}
+              aria-controls="newbieNav"
+              type="button"
+              style={{ marginBottom: "2px" }}
+            >
+              <span>新規・初心者向け</span>
+              <span>{newbieOpen ? "▲" : "▼"}</span>
+            </button>
+            <div id="newbieNav" className={`${newbieOpen ? "block" : "hidden"} pl-4`}>
+              {renderNewbieLinks()}
+            </div>
             <button
               className={`${sectionBtnBase} ${sectionBtnHover} mt-2`}
               onClick={() => setSoloMultiOpen(v => !v)}
@@ -317,6 +356,21 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             </button>
             <div id="basicNav" className={`${basicOpen ? "block" : "hidden"} pl-4`}>
               {renderNavLinks(basicNavLinks)}
+            </div>
+            {/* 新規・初心者向けセクション */}
+            <button
+              className={`${sectionBtnBase} ${sectionBtnHover} mt-2`}
+              onClick={() => setNewbieOpen(v => !v)}
+              aria-expanded={newbieOpen}
+              aria-controls="newbieNav"
+              type="button"
+              style={{ marginBottom: "2px" }}
+            >
+              <span>新規・初心者向け</span>
+              <span>{newbieOpen ? "▲" : "▼"}</span>
+            </button>
+            <div id="newbieNav" className={`${newbieOpen ? "block" : "hidden"} pl-4`}>
+              {renderNewbieLinks()}
             </div>
             <button
               className={`${sectionBtnBase} ${sectionBtnHover} mt-2`}
