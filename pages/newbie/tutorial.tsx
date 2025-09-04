@@ -259,7 +259,7 @@ export default function TutorialPage() {
         <div className="mb-4">
           連合作戦にマッチングで挑戦して2回活力を消費して報酬を受け取ろう。<br />
           連合作戦についての詳しい説明は
-          <Link href="/jointoperation" className="text-blue-600 underline ml-1" target="_blank" rel="noopener">
+          <Link href="/jointoperation" className="text-blue-600 underline ml-1">
             こちらのページ
           </Link>
           に掲載しているのでチェックしておこう！
@@ -285,7 +285,7 @@ export default function TutorialPage() {
         <SectionTitle icon="trending_up">⑤レベルを上げて他のコンテンツにも触れていこう！</SectionTitle>
         <div className="mb-4">
           幻塔の戦闘コンテンツ・育成要素にはデイリー（デイリー懸賞・連合作戦・Mi-aのキッチン）等でレベルを上げることで解放されるモノの他に、ストーリーを進めることで解放されるモノも存在する。<br />
-          まずはデイリーをこなしながらストーリーを進めてレベル100を目指そう！
+          まずはデイリーをこなしながらストーリーを進めてレベル100を目指そう！ついでにバージョンごとに開催されているイベントにも参加するようにしよう！
         </div>
         <CaptionedImage
           src="/Newbie/tutorial/tutorial_content.PNG"
