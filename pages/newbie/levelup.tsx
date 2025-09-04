@@ -229,8 +229,88 @@ export default function LevelUpPage() {
           onClick={() => openModal("/Newbie/levelup/levelup_DistributionArmor.PNG", "最初は配布防具を装備しよう")}
         />
 
-        {/* ②防具レベルアップ */}
-        <SectionTitle icon="star">②防具のレベルを上げよう！</SectionTitle>
+        {/* ②防具を突破・タイタン化しよう！ */}
+        <SectionTitle icon="auto_awesome">②防具を突破・タイタン化しよう！</SectionTitle>
+        <div className="mb-4">
+          プレイヤーのレベルが90に到達すると解放される。<br />
+          防具を最大までランクアップした後に突破を選択すると専用の画面が表示される。
+        </div>
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/levelup/levelup_augment.PNG",
+              alt: "防具メニューの突破を押す",
+              caption: "防具メニューの突破を押す",
+            },
+            {
+              src: "/Newbie/levelup/levelup_titan.PNG",
+              alt: "突破の画面が表示される",
+              caption: "突破の画面が表示される",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
+        />
+        <div className="mb-4">
+          この画面で突破に必要なアイテムを消費することで防具突破が可能。<br />
+          突破するたびにステータスがランダムに上下し、突破を重ねるごとに最大値に近づいていく。<br />
+          防具を一度突破すると見た目が変化し、突破を続けることで防具が「タイタン」と名の付く防具に変化する。<br />
+          防具がタイタン化するまでに最大で80回の突破が必要になり、タイタン化することでレアステータスというランダムに変化する特殊なステータスが付与される。
+        </div>
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/levelup/levelup_titangears.PNG",
+              alt: "突破1回目とタイタン化で防具の見た目が変化する",
+              caption: "突破1回目とタイタン化で防具の見た目が変化する",
+            },
+            {
+              src: "/Newbie/levelup/levelup_titanrarestate.PNG",
+              alt: "タイタン化でステータス突破にレアステータスが付く",
+              caption: "タイタン化でステータス突破にレアステータスが付く",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
+        />
+        <div className="mb-4">
+          防具の突破には突破因子とそれぞれの防具に対応したモジュールが必要になる。<br />
+          どちらも毎週のドリームハウスでの交換やイベント商店で入手可能で、モジュールに関してはワールドボスの箱を強制解読すればワールドボス一覧の地馳までのボスで10個、地馳より後のボスで10個が毎週獲得できる。<br />
+          そのため毎週必ず地馳までのボスを合計10回、地馳より後のボスを合計10回倒すようにしよう！
+        </div>
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/levelup/levelup_titanFactor.PNG",
+              alt: "突破素材：突破因子",
+              caption: "突破素材：突破因子",
+            },
+            {
+              src: "/Newbie/levelup/levelup_titanModule.PNG",
+              alt: "突破素材：モジュール",
+              caption: "突破素材：モジュール",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
+        />
+        <div className="mb-4">
+          注意点として、防具の突破状況を他の防具に引き継ぐには煙水晶を消費する。<br />
+          そのため防具の突破はある程度厳選が進んでからするのを推奨する。<br />
+          また、防具突破に関する詳細は別の記事で解説予定なので、今から突破を進める場合は一先ず防具全部位のタイタン化を目指そう！
+        </div>
+        <CaptionedImage
+          src="/Newbie/levelup/levelup_titanHandover.PNG"
+          alt="突破状況の引継ぎには煙水晶が必要なので注意！"
+          caption="突破状況の引継ぎには煙水晶が必要なので注意！"
+          onClick={() => openModal("/Newbie/levelup/levelup_titanHandover.PNG", "突破状況の引継ぎには煙水晶が必要なので注意！")}
+        />
+
+        {/* ③防具レベルアップ */}
+        <SectionTitle icon="star">③防具のレベルを上げよう！</SectionTitle>
         <div className="mb-4">
           防具は★ランクを上げる他にも強化モジュールとコインを使用してレベルを上げることができる。<br />
           このレベルは同じ部位の別防具に変更する際に引き継げるので今装備している防具のレベルだけ上げていけば問題ない。
@@ -246,8 +326,8 @@ export default function LevelUpPage() {
           onClick={() => openModal("/Newbie/levelup/levelup_bonus.PNG", "基本の部位のレベルを一定まで上げると強化ボーナス！")}
         />
 
-        {/* ③武器・ボリションレベル */}
-        <SectionTitle icon="military_tech">③武器とボリションのレベルを上げよう！</SectionTitle>
+        {/* ④武器・ボリションレベル */}
+        <SectionTitle icon="military_tech">④武器とボリションのレベルを上げよう！</SectionTitle>
         <div className="mb-4">
           武器とボリションはそれぞれレベルを上げて基礎ステータスを強化できる。<br />
           武器は最大でレベル200、ボリションはレベル100まで強化できる。<br />
@@ -260,12 +340,12 @@ export default function LevelUpPage() {
           onClick={() => openModal("/Newbie/levelup/levelup_weapons.PNG", "武器・ボリションのレベルを上げるとステータスが大きく伸びる")}
         />
 
-        {/* ④超速演算 */}
-        <SectionTitle icon="memory">④超速演算を進めよう！</SectionTitle>
+        {/* ⑤超速演算 */}
+        <SectionTitle icon="memory">⑤超速演算を進めよう！</SectionTitle>
         <div className="mb-4">
           レベル80で開放される育成要素。<br />
           データソースを使用して演算レベルを上げることでステータスUPが可能。<br />
-          データソースは探索・ゴゾトス以降のボス箱で鍵を使用・終焉試練・煙水晶での購入で手に入るが、供給量に対して消費量が圧倒的に多い上に定期的に入手できる手段がボス箱か煙水晶での購入くらいしかない。<br />
+          データソースは探索・ゴゾトス以降のボス箱で鍵を使用・先鋒クラッシュ・終焉試練・煙水晶での購入で手に入るが、供給量に対して消費量が圧倒的に多い上に定期的に入手できる手段がボス箱か煙水晶での購入くらいしかない。<br />
           効果は大きいがその分リソース要求も多いので無料分を集めつつ余裕があるなら煙水晶での購入もしてみよう。（煙水晶での購入も毎週20個までに制限されている）
         </div>
         <CaptionedImage
@@ -275,8 +355,8 @@ export default function LevelUpPage() {
           onClick={() => openModal("/Newbie/levelup/levelup_Supercomputing.PNG", "リソース要求量は多いが効果も大きい")}
         />
 
-        {/* ⑤宇宙支援システム */}
-        <SectionTitle icon="satellite_alt">⑤宇宙支援システムを進めよう！</SectionTitle>
+        {/* ⑥宇宙支援システム */}
+        <SectionTitle icon="satellite_alt">⑥宇宙支援システムを進めよう！</SectionTitle>
         <div className="mb-4">
           ストーリーをキルオ編のメカが解放される所まで進めると宇宙支援システムを解放できる。<br />
           ゼロコアを消費してモジュールレベルを上げることで各属性攻撃力・ダメージ、各コンテンツでのダメージをUPするバフを獲得できる。<br />
@@ -303,8 +383,8 @@ export default function LevelUpPage() {
           onClick={openModal}
         />
 
-        {/* ⑥源泉・強能注射剤 */}
-        <SectionTitle icon="syringe">⑥源泉・強能注射剤を使おう！</SectionTitle>
+        {/* ⑦源泉・強能注射剤 */}
+        <SectionTitle icon="syringe">⑦源泉・強能注射剤を使おう！</SectionTitle>
         <div className="mb-4">
           探索や幻影の序列の報酬で手に入る注射剤は使用するとステータスを永続で強化できる。<br />
           1つ1つの効果量はそこまで大きいわけではないが、塵も積もれば山となる。注射剤だけで基礎攻撃力に2000以上の差がついていた何てことにも。
@@ -316,8 +396,8 @@ export default function LevelUpPage() {
           onClick={() => openModal("/Newbie/levelup/levelup_Shots.PNG", "効果は永続なので手に入れ次第使おう！")}
         />
 
-        {/* ⑦昇格ドライブ */}
-        <SectionTitle icon="battery_charging_full">⑦昇格ドライブを使おう！</SectionTitle>
+        {/* ⑧昇格ドライブ */}
+        <SectionTitle icon="battery_charging_full">⑧昇格ドライブを使おう！</SectionTitle>
         <div className="mb-4">
           連合作戦やイベント商店で手に入る昇格ドライブはアバターの友好度を上げることで使用可能になり、使用するとHPや攻撃力を永続的に強化してくれる。<br />
           アバター1人分の強化値はそこまで高いわけではないが、全てのアバターのドライブを解放すれば2000以上の基礎攻撃力を獲得できるので可能な限り解放するようにしよう！
@@ -329,8 +409,8 @@ export default function LevelUpPage() {
           onClick={() => openModal("/Newbie/levelup/levelup_Drive.PNG", "地道に解放していこう！")}
         />
 
-        {/* ⑧アルケー4凸 */}
-        <SectionTitle icon="auto_fix_high">⑧アルケーの4凸効果を解放しよう！</SectionTitle>
+        {/* ⑨アルケー4凸 */}
+        <SectionTitle icon="auto_fix_high">⑨アルケーの4凸効果を解放しよう！</SectionTitle>
         <div className="mb-4">
           全てのアルケーには凸数を4凸まで上げると常時発動のステータスアップ効果が用意されている。<br />
           この効果はアルケーを使用していなくても効果が発動（アルケーセットに入れなくても発動）するのでレア度に関わらず凸数を上げるようにしたい。<br />
@@ -343,8 +423,8 @@ export default function LevelUpPage() {
           onClick={() => openModal("/Newbie/levelup/levelup_Relics.PNG", "4凸効果でダメージUP!")}
         />
 
-        {/* ⑨サプレッサー */}
-        <SectionTitle icon="security">⑨サプレッサーのレベルを上げよう！</SectionTitle>
+        {/* ⑩サプレッサー */}
+        <SectionTitle icon="security">⑩サプレッサーのレベルを上げよう！</SectionTitle>
         <div className="mb-4">
           物語の序盤から登場するサプレッサーはレベルを上げることでステータスの強化に繋がる。<br />
           といっても1回ごとの強化幅はそこまで大きくないのと、強化に必要な素材の入手機会が限られているのであまり気にする必要はない。<br />
