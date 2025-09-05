@@ -14,6 +14,7 @@ const labelMap: Record<string, string> = {
   "relics": "アルケー一覧",
   "tutorial":"序盤の進め方",
   "levelup":"育成要素のまとめ",
+  "distribution":"防具厳選について",
   "jointoperation":"連合作戦",
   "DeepseaProvingGround":"深海訓練所",
   "QuarantineZone":"隔離区域",

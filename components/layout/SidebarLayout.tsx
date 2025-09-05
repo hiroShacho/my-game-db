@@ -34,7 +34,8 @@ const latestContentsLinks = [
 // 追加: 新規・初心者向け項目
 const newbieLinks = [
   { href: "/newbie/tutorial", label: "ゲーム序盤の進め方" },
-  { href: "/newbie/levelup", label: "育成要素のまとめ" }
+  { href: "/newbie/levelup", label: "育成要素のまとめ" },
+  { href: "/newbie/distribution", label: "防具厳選について" }
 ];
 
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {

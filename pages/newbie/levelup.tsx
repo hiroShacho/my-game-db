@@ -1,6 +1,7 @@
 import { ReactElement, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 
 // 拡大画像モーダル
@@ -220,7 +221,11 @@ export default function LevelUpPage() {
           理想のステータスや数値などはある程度解明されているが、実際にその理想値を出そうとするととにかくランダム要素の壁が多い。<br /><br />
           新規プレイヤーはイベントの「いざ！チュートリアルから冒険の旅へ！」で獲得できる防具を装備すればある程度の厳選をスキップしてゲームを始められるので、必ずミッションをこなして防具を受け取るようにしよう！<br />
           最初の内は配布の防具を使い、ある程度防具が集まったら厳選を進めていこう。<br />
-          （具体的な厳選の方法や目標設定については別記事を作成予定）
+          （具体的な厳選の方法や目標設定については
+          <Link href="/newbie/distribution" className="text-green-700 underline">
+            防具厳選について
+          </Link>
+          の記事で解説）
         </div>
         <CaptionedImage
           src="/Newbie/levelup/levelup_DistributionArmor.PNG"
