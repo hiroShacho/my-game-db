@@ -582,7 +582,7 @@ export default function VoidAbyssPage() {
               </div>
             </div>
             <div>
-              <span className="font-bold text-lg text-purple-700">・鉄桶</span>
+              <span className="font-bold text-lg text-purple-700">・鉄俑</span>
               <div className="ml-4">
                 とにかく高火力。<br />
                 攻撃範囲も広めで、さらにHPが減るとテリトリーを展開してダメージを軽減しながら攻撃してくる。<br />
