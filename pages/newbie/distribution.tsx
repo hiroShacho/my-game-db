@@ -112,7 +112,7 @@ function RowImages({
 }) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center my-2">
-      {images.slice(0, 2).map((img) => ( // 最大2枚並列
+      {images.slice(0, 2).map((img) => (
         <div key={img.src} className="flex flex-col items-center">
           <div
             className="relative rounded-lg shadow border-2 border-orange-200 overflow-hidden bg-white cursor-pointer"
@@ -307,6 +307,7 @@ export default function DistributionPage() {
           onClick={() => openModal("/Newbie/distribution/distribution_check.PNG", "タイタン防具は引継ぎのプレビューでステータスをチェックしよう！（誤操作で引き継がないよう注意！）")}
         />
 
+        {/* ■ヴェラ防具のステータスは？ */}
         <SectionTitle icon="science">ヴェラ防具のステータスは？</SectionTitle>
         <div className="mb-4">
           ここまで基本防具について見てきたが、ヴェラ防具にはこれまで無かったステータスが見受けられる。<br />
@@ -392,6 +393,51 @@ export default function DistributionPage() {
           caption="おひとつ1万2千円！（廃課金を基準にしてはいけない理由の一つ）"
           onClick={() => openModal("/Newbie/distribution/distribution_whale.PNG", "おひとつ1万2千円！（廃課金を基準にしてはいけない理由の一つ）")}
         />
+
+        {/* ■データ中継器の使い方 */}
+        <SectionTitle icon="settings_input_component">データ中継器の使い方</SectionTitle>
+        <div className="mb-4">
+          防具のランクアップの際、データ中継器を消費することで任意のランダムステータスを1つだけランクアップの候補から外すことが出来る。<br />
+          ランクアップの画面で中継器の「使用」を押すと対象外にするランダムステータスを選択できる。<br />
+          1つランクアップするたびに1個消費するので、一気にランクを最大の5まで上げるときは5個同時に消費する必要がある。
+        </div>
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/distribution/distribution_repeater.PNG",
+              alt: "中継器はそこまで入手機会が多くないのでなるべく慎重に使おう",
+              caption: "中継器はそこまで入手機会が多くないのでなるべく慎重に使おう",
+            },
+            {
+              src: "/Newbie/distribution/distribution_userepeater.PNG",
+              alt: "ランクアップの画面で使用数を選択できるが、まとめて使うのはおススメしない",
+              caption: "ランクアップの画面で使用数を選択できるが、まとめて使うのはおススメしない",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
+        />
+        <div className="mb-4">
+          中継器自体がそれなりに貴重なので、使用の際は1つずつランクアップして望まないステータスが上昇した防具はそこで諦めて無駄な消費を抑えるようにしよう。<br />
+          基本的には本命となるランダムステータスが揃った防具での使用を推奨する。<br />
+          ガントレットとサバトンであれば「会心」・「攻撃」・「属性攻撃」が揃った防具に中継器を使用し、「会心」はあるが「攻撃」と「属性攻撃」が片方しか付いていない防具は中継器を使わずにランクアップして「会心」が5跳ねしたら妥協として使うくらいの緩さで良い。<br />
+          その他の基本防具でも目当ての「属性攻撃」と「攻撃」に他の「属性攻撃」がついた3OP、4OP防具は中継器を使う or 目当ての「属性攻撃」と「攻撃」が揃った2OPの時点で中継器を使うかを自分で判断してランクアップしよう。（前者にこだわると厳選が遅くなる可能性が高いが、上手くいけば全属性対応の防具を作れる）
+        </div>
+
+        {/* ■未検証の内容（まことしやかに語られる噂） */}
+        <SectionTitle icon="help">未検証の内容（まことしやかに語られる噂）</SectionTitle>
+        <div className="mb-4">
+          管理人側での検証はまだだが感覚的に正しそうと判断した情報についてここに掲載しておく。<br /><br />
+          <b>①強化を繰り返すことで良い結果が出やすくなる</b><br />
+          防具のランクアップを繰り返していくと段々とランクアップ時の上昇値が大きくなっていく。<br />
+          感覚的には5回のランクアップを繰り返していくごとに上昇し、一定数の防具を強化することで上昇値の下限と上限が最大になる模様。（5回強化を60個以上かつこのカウントは部位ごとに独立している？）<br />
+          要するに強化を繰り返すほど良い防具が出来やすくなるということ。<br /><br />
+          <b>②1番上に上昇してほしいステータスが付いた防具の2つ目のステータスに中継器を使うと良い結果が出やすくなる</b><br />
+          ある程度ランクアップを繰り返しているとランダムステータスの上に付いているステータスほどランクアップの対象に選ばれやすいのでは？というのを感じる人が多い。<br />
+          そのため、ランダムステータスの一番上に5跳ねしてほしいステータスが付いた防具で上から2つ目のステータスに中継器を使うのが一番5跳ねの期待値が高いはず...という噂がある。<br />
+          5跳ねを狙うなら3OP、4OPであろうと目当てのステータス以外が上がること自体が無駄なので、厳選の際は目当てのステータスが一番上に付いていたらラッキー程度に捕らえよう。
+        </div>
 
         <SectionTitle icon="check_circle">まとめ</SectionTitle>
         <div className="mb-4">

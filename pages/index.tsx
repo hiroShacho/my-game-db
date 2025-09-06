@@ -142,8 +142,8 @@ export default function Home() {
             <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
           </h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/09/06 「防具厳選について」のページに追記（データ中継器と噂について）。</li>
             <li>・2025/09/05 「新規・初心者向け」に「防具厳選について」のページを作成。</li>
-            <li>・2025/09/04 連合作戦「深海訓練所」のページを作成。「新規・初心者向け」のコンテンツを作成。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
