@@ -15,6 +15,8 @@ const labelMap: Record<string, string> = {
   "tutorial":"序盤の進め方",
   "levelup":"育成要素のまとめ",
   "distribution":"防具厳選について",
+  "basicknowledge":"基礎知識",
+  "trivia":"豆知識",
   "jointoperation":"連合作戦",
   "DeepseaProvingGround":"深海訓練所",
   "QuarantineZone":"隔離区域",
