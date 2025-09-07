@@ -17,6 +17,7 @@ function Modal({
   alt: string;
 }) {
   if (!open) return null;
+  const isVideo = !!src.match(/\.(mp4|webm|ogg)$/);
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
@@ -36,16 +37,22 @@ function Modal({
         >
           ×
         </button>
-        <div className="relative w-[90vw] h-[70vh] sm:w-[70vw] sm:h-[70vh] min-h-[200px] max-h-[80vh]">
-          <Image
-            src={src}
-            alt={alt}
-            fill
-            className="object-contain"
-            style={{ background: "#fff" }}
-            sizes="100vw"
-            priority={false}
-          />
+        <div className="relative w-[90vw] h-[70vh] sm:w-[70vw] sm:h-[70vh] min-h-[200px] max-h-[80vh] flex items-center justify-center">
+          {isVideo ? (
+            <video src={src} controls style={{ width: "100%", height: "100%" }}>
+              {alt}
+            </video>
+          ) : (
+            <Image
+              src={src}
+              alt={alt}
+              fill
+              className="object-contain"
+              style={{ background: "#fff" }}
+              sizes="100vw"
+              priority={false}
+            />
+          )}
         </div>
       </div>
     </div>
@@ -68,6 +75,7 @@ function CaptionedImage({
   h?: number;
   onClick?: () => void;
 }) {
+  const isVideo = !!src.match(/\.(mp4|webm|ogg)$/);
   return (
     <div className="flex flex-col items-center my-4 w-full">
       <div
@@ -81,13 +89,17 @@ function CaptionedImage({
         onClick={onClick}
         title="クリックで拡大"
       >
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-contain"
-          sizes="100vw"
-        />
+        {isVideo ? (
+          <video src={src} controls style={{ width: "100%", height: "100%" }} />
+        ) : (
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className="object-contain"
+            sizes="100vw"
+          />
+        )}
         <span className="absolute bottom-1 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded pointer-events-none">
           クリックで拡大
         </span>
@@ -113,35 +125,49 @@ function RowImages({
 }) {
   return (
     <div className="flex flex-col sm:flex-row gap-4 justify-center my-2">
-      {images.slice(0, 2).map((img) => (
-        <div key={img.src} className="flex flex-col items-center">
-          <div
-            className="relative rounded-lg shadow border-2 border-blue-200 overflow-hidden bg-white cursor-pointer"
-            style={{
-              width: w,
-              maxWidth: "96vw",
-              aspectRatio: `${w} / ${h}`,
-              background: "#fff",
-            }}
-            onClick={() => onClick && onClick(img.src, img.alt)}
-            title="クリックで拡大"
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              className="object-contain"
-              sizes="100vw"
-            />
-            <span className="absolute bottom-1 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded pointer-events-none">
-              クリックで拡大
-            </span>
+      {images.slice(0, 2).map((img) => {
+        const isVideo = !!img.src.match(/\.(mp4|webm|ogg)$/);
+        return (
+          <div key={img.src} className="flex flex-col items-center">
+            <div
+              className="relative rounded-lg shadow border-2 border-blue-200 overflow-hidden bg-white cursor-pointer"
+              style={{
+                width: w,
+                maxWidth: "96vw",
+                aspectRatio: `${w} / ${h}`,
+                background: "#fff",
+              }}
+              onClick={() => onClick && onClick(img.src, img.alt)}
+              title="クリックで拡大"
+            >
+              {isVideo ? (
+                <video
+                  src={img.src}
+                  controls
+                  style={{ width: "100%", height: "100%" }}
+                  poster=""
+                >
+                  {img.alt}
+                </video>
+              ) : (
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-contain"
+                  sizes="100vw"
+                />
+              )}
+              <span className="absolute bottom-1 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded pointer-events-none">
+                クリックで拡大
+              </span>
+            </div>
+            <div className="bg-blue-50 px-2 py-1 text-xs text-blue-800 border-t border-blue-200 w-full text-center max-w-xs">
+              {img.caption}
+            </div>
           </div>
-          <div className="bg-blue-50 px-2 py-1 text-xs text-blue-800 border-t border-blue-200 w-full text-center max-w-xs">
-            {img.caption}
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -216,7 +242,7 @@ export default function TriviaPage() {
     {
       level: "レベル50～59",
       contents: [
-        { name: "人工島", reward: false }, // 報酬ありラベルを削除
+        { name: "人工島", reward: false },
         { name: "幻影の序列", reward: true },
       ],
     },
@@ -224,7 +250,7 @@ export default function TriviaPage() {
       level: "レベル60～69",
       contents: [
         { name: "討伐作戦", reward: true },
-        { name: "人工島建築", reward: true }, // 追加
+        { name: "人工島建築", reward: true },
       ],
     },
     {
@@ -403,6 +429,33 @@ export default function TriviaPage() {
               src: "/Newbie/trivia/trivia_PVP2.PNG",
               alt: "トップリーグ&臨界の淵のランク報酬",
               caption: "トップリーグ&臨界の淵のランク報酬",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
+        />
+
+        {/* 灰蝕値（グレイバイト）に気を付けよう！ */}
+        <SectionTitle icon="warning">灰蝕値（グレイバイト）に気を付けよう！</SectionTitle>
+        <div className="mb-4">
+          ヴェラ編実装以降、一部の敵がグレイバイトという効果を所持するようになった。<br />
+          この効果を持った敵から攻撃を受けると灰蝕値ゲージが溜まっていき、このゲージが満タンになるとあらゆるバフが解除される上に即死級の大ダメージを受ける。<br />
+          基本的に一部の武器に付いている死亡回避効果が無ければ灰蝕値が満タンになった時点で即死が確定するので、グレイバイト効果を持った敵の攻撃は極力受けないように立ち回ろう。<br />
+          灰蝕値は時間経過意外に一部の武器で減少させることが可能だが、強攻においてはフィオナの回避と連携スキルの回復でしか減少できない。<br />
+          恩恵であればブレヴィとグレイフォックスの回復効果と連携スキルに自身と味方の灰蝕値を減少させる効果が付いているので、基本的に灰蝕値の回復は恩恵頼りになる。
+        </div>
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/trivia/trivia_grayingbite1.PNG",
+              alt: "バフ解除・即死ダメージ・バフ無効の効果が発動する",
+              caption: "バフ解除・即死ダメージ・バフ無効の効果が発動する",
+            },
+            {
+              src: "/Newbie/trivia/trivia_grayingbite2.mp4",
+              alt: "灰蝕値が満タンになると基本的には即死する",
+              caption: "灰蝕値が満タンになると基本的には即死する",
             },
           ]}
           w={350}

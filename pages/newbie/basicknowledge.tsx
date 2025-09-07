@@ -98,6 +98,53 @@ function CaptionedImage({
   );
 }
 
+// 画像を横並び（クリックで拡大）
+function RowImages({
+  images,
+  w = 350,
+  h = 200,
+  onClick,
+}: {
+  images: { src: string; alt: string; caption: string }[];
+  w?: number;
+  h?: number;
+  onClick?: (src: string, alt: string) => void;
+}) {
+  return (
+    <div className="flex flex-col sm:flex-row gap-4 justify-center my-2">
+      {images.map((img) => (
+        <div key={img.src} className="flex flex-col items-center">
+          <div
+            className="relative rounded-lg shadow border-2 border-blue-200 overflow-hidden bg-white cursor-pointer"
+            style={{
+              width: w,
+              maxWidth: "96vw",
+              aspectRatio: `${w} / ${h}`,
+              background: "#fff",
+            }}
+            onClick={() => onClick && onClick(img.src, img.alt)}
+            title="クリックで拡大"
+          >
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              className="object-contain"
+              sizes="100vw"
+            />
+            <span className="absolute bottom-1 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded pointer-events-none">
+              クリックで拡大
+            </span>
+          </div>
+          <div className="bg-blue-50 px-2 py-1 text-xs text-blue-800 border-t border-blue-200 w-full text-center max-w-xs">
+            {img.caption}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // セクションタイトル
 function SectionTitle({ icon, children }: { icon?: string; children: React.ReactNode }) {
   return (
@@ -152,8 +199,8 @@ export default function BasicKnowledgePage() {
           onClick={() => openModal("/Newbie/basicknowledge/basicknowledge_roll.PNG", "各ロールごとにバフが発動")}
         />
         <div className="mb-4">
-          このバフがあることからチーム戦では基本的に強攻が火力、剛毅がタンク（攻撃を受ける役）、恩恵が回復を担当する。<br />
-          ソロだと時々恩恵編成の火力が強攻編成よりも高いことがあるが、チームでは強攻に最終ダメージが追加で40%付く上に恩恵が使うフィオナのリンク（味方を1人指定してバフを付与する効果）による攻撃力UPは強攻・均衡に対してしか効果が無い。<br />
+          このバフがあることからチーム戦では基本的に強攻が火力、剛毅がタンク、恩恵が回復を担当する。<br />
+          ソロだと時々恩恵編成のサボテン火力が強攻編成よりも高いことがあるが、チームでは強攻に最終ダメージが追加で40%付く上に恩恵フィオナのリンク（ディヴィジョン）による攻撃力UPは強攻・均衡に対してしか効果が無い。<br />
           そのため、チームでの戦闘では余程のことが無い限り火力恩恵が強攻に勝つことは不可能となっている。
         </div>
         <CaptionedImage
@@ -252,6 +299,54 @@ export default function BasicKnowledgePage() {
           alt="一緒に貰える箱にも煙水晶が入っていることもあるぞ！"
           caption="一緒に貰える箱に煙水晶が入っていることもあるぞ！"
           onClick={() => openModal("/Newbie/basicknowledge/basicknowledge_crewrewards.PNG", "一緒に貰える箱にも煙水晶が入っていることもあるぞ！")}
+        />
+
+        {/* 火力の測定はサボテンで！ */}
+        <SectionTitle icon="sports_score">火力の測定はサボテンで！</SectionTitle>
+        <div className="mb-4">
+          このゲームでDPS（秒間にどれだけ火力を出せるか）を測る時はサボテンのサンドバックを使用する。<br />
+          メニューにある訓練センターの極限テストを選んで専用のエリアに入って計測するのが一般的。<br />
+          計測時間は在りし日の幻等と同じ2分30秒で測るのが一般的となっている。
+        </div>
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/basicknowledge/basicknowledge_cactus1.PNG",
+              alt: "極限テストで計測しよう！",
+              caption: "極限テストで計測しよう！",
+            },
+            {
+              src: "/Newbie/basicknowledge/basicknowledge_cactus2.PNG",
+              alt: "サボテンは友達！ｺﾜｸﾅｲ!",
+              caption: "サボテンは友達！ｺﾜｸﾅｲ!",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
+        />
+        <div className="mb-4">
+          Mi-aの食事バフ・食べ物のバフを使うか等の細かい条件は人によって変わってくるが、大体の人はバフの有無を併記してくれている。<br />
+          このゲームは如何に一番火力が高くなるスキル回しを安定して回し続けられるかで火力が大きく変わってくる。<br />
+          そのため、少しでも火力を出したい人はSNS上で最前線のプレイヤーが出しているスキル回しを参考にサボテンで練習してみよう！<br />
+          ちなみにサボテン自体はミラポリスのHOTTAスタジオとのびのび広場、九域の浄化広場やギルドルームにもあるが、一番安定して計測できるのは訓練センターなのでソロで測るなら訓練センターにしよう。
+        </div>
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/basicknowledge/basicknowledge_cactus3.PNG",
+              alt: "ミラポリスにもサボテンはあるが少しゲームが重いことも",
+              caption: "ミラポリスにもサボテンはあるが少しゲームが重いことも",
+            },
+            {
+              src: "/Newbie/basicknowledge/basicknowledge_cactus4.PNG",
+              alt: "九域にもサボテンの代わりになる解き放たれし蓮の柱がある",
+              caption: "九域にもサボテンの代わりになる解き放たれし蓮の柱がある",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
         />
 
         <Modal
