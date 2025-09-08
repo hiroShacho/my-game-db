@@ -5,10 +5,8 @@ import { useRouter } from "next/router";
 
 export default function Header({
   onSidebarToggle,
-  showSidebarButton = false,
 }: {
   onSidebarToggle?: () => void;
-  showSidebarButton?: boolean;
 }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchInput, setSearchInput] = useState("");
@@ -27,40 +25,40 @@ export default function Header({
 
   return (
     <header className="bg-gray-800 text-white fixed top-0 left-0 w-full z-50 shadow">
-      <div className="flex flex-row items-center justify-between px-4 py-3 relative">
-        <div className="text-lg sm:text-xl font-bold whitespace-nowrap">
+      <div className="flex flex-row items-center justify-between px-3 py-1 relative" style={{ minHeight: 50 }}>
+        {/* サイト名 - 左寄せ（mr-autoで右側スペースを広げる） */}
+        <div className="text-base sm:text-lg font-bold whitespace-nowrap mr-auto">
           <Link href="/">幻塔攻略データベース｜Tower of Fantasy</Link>
         </div>
-        {/* ハンバーガーボタンを絶対配置で右上に */}
-        {showSidebarButton && (
-          <button
-            className="block lg:hidden absolute right-4 top-1/2 -translate-y-1/2 z-[9999] p-2 rounded bg-gray-700"
-            onClick={onSidebarToggle}
-            aria-label="サイドバーを開く"
-            style={{ touchAction: "manipulation" }}
-          >
-            <Menu className="w-7 h-7" />
-          </button>
-        )}
+        {/* モバイル用メニューボタン（ハンバーガー+下に文字） */}
+        <button
+          className="lg:hidden flex flex-col items-center bg-blue-600 text-white font-bold py-0.5 px-1 shadow rounded-md mr-2"
+          style={{ minWidth: 40 }}
+          onClick={onSidebarToggle}
+          aria-label="メニューを開く"
+        >
+          <Menu className="w-5 h-5 mb-0.5" />
+          <span className="text-[10px] font-semibold leading-none">メニュー</span>
+        </button>
         {/* 検索フォーム（PCのみ） */}
-        <form onSubmit={handleSearch} className="hidden lg:flex items-center space-x-2 ml-8">
+        <form onSubmit={handleSearch} className="hidden lg:flex items-center space-x-2 ml-6">
           <input
             name="q"
             type="text"
             placeholder="サイト内検索"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
-            className="px-3 py-1 rounded text-black w-64"
+            className="px-2 py-0.5 rounded text-black w-48 text-sm"
           />
           <button
             type="submit"
-            className="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 text-sm"
+            className="bg-blue-500 text-white px-2 py-0.5 rounded hover:bg-blue-600 text-xs"
           >
             検索
           </button>
         </form>
         {/* PCメニュー */}
-        <nav className="hidden lg:flex space-x-4 text-sm ml-8">
+        <nav className="hidden lg:flex space-x-3 text-xs ml-6">
           <Link href="/" className="hover:text-blue-400">トップ</Link>
           <Link href="/tag-search" className="hover:text-blue-400">タグ検索</Link>
           <Link href="/map/kailo_OreZero_EXpoint" className="hover:text-blue-400">探索マップ</Link>

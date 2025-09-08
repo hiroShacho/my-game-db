@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
+import { Menu } from "lucide-react";
 
 const basicNavLinks = [
   { href: "/", label: "トップ" },
@@ -118,7 +119,6 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
   const [latestOpen, setLatestOpen] = useState(true);
   const [basicOpen, setBasicOpen] = useState(true);
   const [soloMultiOpen, setSoloMultiOpen] = useState(true);
-  // 新規・初心者向けセクションの開閉状態
   const [newbieOpen, setNewbieOpen] = useState(true);
 
   const sectionBtnBase =
@@ -190,7 +190,6 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
     </ul>
   );
 
-  // 新規・初心者向けセクションのリンクレンダリング
   const renderNewbieLinks = () => (
     <ul className="space-y-1">
       {newbieLinks.map(link => (
@@ -206,11 +205,12 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
     </ul>
   );
 
+  // ヘッダーの高さを正確に指定（py-3 = 24px, plus border/shadow等、56pxが多いが64px=pt-16も可）
+  // ここではpt-[56px]で指定（必要に応じて調整してください）
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Header
         onSidebarToggle={() => setSidebarOpen(true)}
-        showSidebarButton={true}
       />
       {/* モバイルサイドバー */}
       <div>
@@ -391,7 +391,8 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             </div>
           </nav>
         </aside>
-        <main className="flex-1 px-2 sm:px-4 md:px-8 py-6 max-w-4xl mx-auto bg-white shadow rounded pt-16">
+        {/* ここでpt-[56px]でヘッダー高さ分の余白を追加 */}
+        <main className="flex-1 px-2 sm:px-4 md:px-8 py-6 max-w-4xl mx-auto bg-white shadow rounded pt-[60px]">
           <Breadcrumb />
           {children}
         </main>
