@@ -300,6 +300,23 @@ export default function BasicKnowledgePage() {
           caption="一緒に貰える箱に煙水晶が入っていることもあるぞ！"
           onClick={() => openModal("/Newbie/basicknowledge/basicknowledge_crewrewards.PNG", "一緒に貰える箱にも煙水晶が入っていることもあるぞ！")}
         />
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/basicknowledge/basicknowledge_crewrewardsbox1.PNG",
+              alt: "ギルド特典",
+              caption: "ギルド特典",
+            },
+            {
+              src: "/Newbie/basicknowledge/basicknowledge_crewrewardsbox2.PNG",
+              alt: "ギルド特典の中身",
+              caption: "ギルド特典の中身",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
+        />
 
         {/* 火力の測定はサボテンで！ */}
         <SectionTitle icon="sports_score">火力の測定はサボテンで！</SectionTitle>

@@ -342,7 +342,8 @@ export default function TriviaPage() {
           <div className="mb-4">
             レベル50で解放される人工島はアーシャ・ベンジスでカレイドの話を聞いた後に飛行機に乗って移動できる。<br />
             この人工島の探索値を840まで上げるかレベル60になったタイミングで人工島建築が解放される。<br />
-            ワールドマップの人工島と人工島建築で入れる人工島は別扱いで、ワールドマップの方は探索があるが人工島建築の方は探索が無く施設の増築で報酬を得る形式になっている。
+            ワールドマップの人工島と人工島建築で入れる人工島は別扱いで、ワールドマップの方は探索があるが人工島建築の方は探索が無く施設の増築で報酬を得る形式になっている。<br />
+            人工島建築の工房では専用のアイテムを消費してSSRボリションガチャを引けるぞ！
           </div>
           <RowImages
             images={[
@@ -370,8 +371,25 @@ export default function TriviaPage() {
               },
               {
                 src: "/Newbie/trivia/trivia_island4.PNG",
-                alt: "「進む」を押そう",
-                caption: "「進む」を押そう",
+                alt: "「進む」を押すと人工島に入れる",
+                caption: "「進む」を押すと人工島に入れる",
+              },
+            ]}
+            w={350}
+            h={200}
+            onClick={openModal}
+          />
+          <RowImages
+            images={[
+              {
+                src: "/Newbie/trivia/trivia_island5.PNG",
+                alt: "人工島建築に入ってから工房を選択しよう",
+                caption: "人工島建築に入ってから工房を選択しよう",
+              },
+              {
+                src: "/Newbie/trivia/trivia_island6.PNG",
+                alt: "工房でSSRボリションを作成できるぞ！",
+                caption: "工房でSSRボリションの作成ガチャができるぞ！",
               },
             ]}
             w={350}
