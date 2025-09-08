@@ -29,6 +29,7 @@ const labelMap: Record<string, string> = {
   "voidabyss":"虚空のアビス",
   "raid": "討伐作戦",
   "GluttonousFeast":"暴食の饗宴",
+  "PrisonofExecution":"刑辟牢獄",
   "ElementAlart": "元素警戒",
   "MatrixHacking":"マトリックスハッキング",
   "RealmofPhantasm":"イリュージョンシフト",
