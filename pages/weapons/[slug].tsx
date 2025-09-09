@@ -106,9 +106,71 @@ export default function WeaponDetail() {
             <div className="p-4">武器が見つかりません。</div>
           ) : (
             <>
-              {/* 武器基本情報 */}
-              <div className="flex flex-row gap-4 items-start">
-                <div className="flex flex-col items-start min-w-[140px]">
+              {/* 武器基本情報・description配置 */}
+              <div className="flex flex-row gap-4 items-start flex-wrap">
+                {/* モバイル（sm未満）は中央寄せ・descriptionは下に */}
+                <div className="w-full block sm:hidden">
+                  <div className="flex flex-col items-center justify-center w-full">
+                    <img
+                      src={`/images/${weapon.id}_img.PNG`}
+                      alt={weapon.name}
+                      className="w-32 h-32 object-contain"
+                    />
+                    <h1 className="text-2xl font-bold mt-2 text-center">{weapon.name}</h1>
+                    <div className="flex gap-4 items-center justify-center flex-wrap mt-1">
+                      <img
+                        src={`/images/${weapon.tags.find((tag) =>
+                          ["R", "SR", "SSR"].includes(tag)
+                        )}.png`}
+                        alt="レア度"
+                        className="h-6"
+                      />
+                      <div className="text-center">
+                        <img
+                          src={`/images/${weapon.tags.find((tag) =>
+                            ["強攻", "剛毅", "恩恵"].includes(tag)
+                          )}.png`}
+                          alt="共鳴"
+                          className="h-6"
+                        />
+                        <div className="text-xs text-center">
+                          {weapon.tags.find((tag) =>
+                            ["強攻", "剛毅", "恩恵"].includes(tag)
+                          )}
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={`/images/${weapon.tags.find((tag) =>
+                            tag.match(/雷|氷|炎|物理|異能/)
+                          )}.png`}
+                          alt="属性"
+                          className="h-6"
+                        />
+                        <div className="text-xs text-center">
+                          {weapon.tags.find((tag) =>
+                            tag.match(/雷|氷|炎|物理|異能/)
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* descriptionを下に配置。max-w, min-w, word-break対策 */}
+                  <div className="flex justify-center mt-4 mb-2 w-full">
+                    <div
+                      className="bg-white border-2 border-emerald-500/90 shadow-lg rounded-lg px-3 py-2 text-sm text-gray-900 whitespace-pre-line font-semibold w-full max-w-md text-center"
+                      style={{
+                        minWidth: 0,
+                        maxWidth: "340px",
+                        wordBreak: "break-word"
+                      }}
+                    >
+                      {weapon.description}
+                    </div>
+                  </div>
+                </div>
+                {/* PC/タブレットは従来通り（横並び） */}
+                <div className="hidden sm:flex flex-col items-start min-w-[140px] flex-shrink-0">
                   <img
                     src={`/images/${weapon.id}_img.PNG`}
                     alt={weapon.name}
@@ -153,8 +215,16 @@ export default function WeaponDetail() {
                     </div>
                   </div>
                 </div>
-                <div className="flex-1 min-w-0 flex items-start">
-                  <div className="bg-white border-2 border-emerald-500/90 shadow-lg rounded-lg px-3 py-2 text-sm text-gray-900 whitespace-pre-line font-semibold w-full">
+                {/* PC/タブレット用: description右側（max-width/min-width/word-break対策） */}
+                <div className="hidden sm:flex flex-1 min-w-0 items-start">
+                  <div
+                    className="bg-white border-2 border-emerald-500/90 shadow-lg rounded-lg px-3 py-2 text-sm text-gray-900 whitespace-pre-line font-semibold w-full"
+                    style={{
+                      minWidth: 0,
+                      maxWidth: "340px",
+                      wordBreak: "break-word"
+                    }}
+                  >
                     {weapon.description}
                   </div>
                 </div>
@@ -327,7 +397,8 @@ export default function WeaponDetail() {
                       </span>
                     </div>
                   </div>
-                </div>                <div className="mt-4">
+                </div>
+                <div className="mt-4">
                   {weapon.ratingText ? (
                     <p className="whitespace-pre-wrap">{weapon.ratingText}</p>
                   ) : (
