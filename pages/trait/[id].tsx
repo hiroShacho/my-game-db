@@ -79,10 +79,10 @@ export default function TraitDetail() {
               />
               <div className="text-blue-600 hover:underline sm:text-sm text-center mt-1">アバター「{trait.avatar}」の武器を見る</div>
             </Link>
-            {/* 広告追加：武器リンクの下に2つ横並びで表示 */}
+            {/* 広告追加：武器リンクの下にAdSenseContentUnitのみ表示 */}
             <div className="flex flex-row gap-2 mt-4 mb-2" style={{ justifyContent: "center" }}>
               <AdSenseContentUnit />
-              <AdSenseContentUnit2 />
+              {/* <AdSenseContentUnit2 /> */}
             </div>
           </div>
         ) : (

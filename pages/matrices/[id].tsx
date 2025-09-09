@@ -97,10 +97,10 @@ export default function MatrixDetailPage() {
           </div>
         )}
 
-        {/* 広告表示：2つ横並び */}
+        {/* 広告表示：AdSenseContentUnitのみ */}
         <div className="flex flex-row gap-2 mb-4" style={{ justifyContent: "center" }}>
           <AdSenseContentUnit />
-          <AdSenseContentUnit2 />
+          {/* <AdSenseContentUnit2 /> */}
         </div>
       </div>
     </SidebarLayout>

@@ -139,8 +139,8 @@ export default function Home() {
             <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
           </h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/09/10 モバイルの一部ページ（武器・ボリション・アバター特性・アルケー）の横幅が大きすぎた問題を修正。</li>
             <li>・2025/09/09 モバイルのメニューボタン表示を修正。</li>
-            <li>・2025/09/08 討伐作戦「刑辟牢獄」のページを作成。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>

@@ -8,8 +8,6 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
 import StarRating from "@/components/StarRating";
-import { AdSenseContentUnit } from "@/components/AdSenseContentUnit";
-import { AdSenseContentUnit2 } from "@/components/AdSenseContentUnit2";
 
 const skillCategories = ["通常攻撃", "回避", "スキル", "連携スキル"];
 const h2Class =
@@ -18,7 +16,7 @@ const h2Style = { borderLeft: "8px solid #17e6ff" };
 
 export default function WeaponDetail() {
   const router = useRouter();
-  const { slug, q, sort } = router.query;
+  const { slug, q } = router.query;
   const [selectedTab, setSelectedTab] = useState<string>("通常攻撃");
   const [highlightId, setHighlightId] = useState<string | null>(null);
   const [keyword, setKeyword] = useState<string | null>(null);
@@ -81,6 +79,18 @@ export default function WeaponDetail() {
     return match ? `https://www.youtube.com/embed/${match[1]}` : url;
   };
 
+  // 評価ボックスの色をPCと合わせる
+  const evalBoxStyles = [
+    // アタッカー
+    "bg-red-100 border-red-300",
+    // サポーター
+    "bg-green-100 border-green-300",
+    // リセマラ
+    "bg-yellow-100 border-yellow-300",
+    // 探索
+    "bg-blue-100 border-blue-300"
+  ];
+
   return (
     <>
       <Head>
@@ -96,9 +106,8 @@ export default function WeaponDetail() {
             <div className="p-4">武器が見つかりません。</div>
           ) : (
             <>
-              {/* 武器基本情報（左：画像＋武器名＋共鳴＋特質、右：説明文） */}
+              {/* 武器基本情報 */}
               <div className="flex flex-row gap-4 items-start">
-                {/* 左カラム */}
                 <div className="flex flex-col items-start min-w-[140px]">
                   <img
                     src={`/images/${weapon.id}_img.PNG`}
@@ -107,7 +116,6 @@ export default function WeaponDetail() {
                   />
                   <h1 className="text-2xl sm:text-3xl font-bold mt-2">{weapon.name}</h1>
                   <div className="flex gap-4 items-start flex-wrap mt-1">
-                    {/* レア度 */}
                     <img
                       src={`/images/${weapon.tags.find((tag) =>
                         ["R", "SR", "SSR"].includes(tag)
@@ -115,7 +123,6 @@ export default function WeaponDetail() {
                       alt="レア度"
                       className="h-6 sm:h-8"
                     />
-                    {/* 共鳴 */}
                     <div className="text-center">
                       <img
                         src={`/images/${weapon.tags.find((tag) =>
@@ -130,7 +137,6 @@ export default function WeaponDetail() {
                         )}
                       </div>
                     </div>
-                    {/* 特質 */}
                     <div className="text-center">
                       <img
                         src={`/images/${weapon.tags.find((tag) =>
@@ -147,14 +153,12 @@ export default function WeaponDetail() {
                     </div>
                   </div>
                 </div>
-                {/* 右カラム：説明文 */}
                 <div className="flex-1 min-w-0 flex items-start">
                   <div className="bg-white border-2 border-emerald-500/90 shadow-lg rounded-lg px-3 py-2 text-sm text-gray-900 whitespace-pre-line font-semibold w-full">
                     {weapon.description}
                   </div>
                 </div>
               </div>
-              {/* 以下は一切位置変えずそのまま */}
               {/* タグ */}
               <section>
                 <h2 className="text-base sm:text-lg font-semibold mb-2 pl-3 relative">
@@ -171,20 +175,19 @@ export default function WeaponDetail() {
                   ))}
                 </div>
               </section>
-
-              {/* 評価セクション */}
+              {/* 評価点 */}
               <section>
                 <h2 className={h2Class} style={h2Style}>
                   評価点
                 </h2>
-                {/* 注釈: 限定/恒常 */}
                 {(weapon.tags.includes("限定") || weapon.tags.includes("恒常")) && (
                   <div className="text-xs text-gray-600 mb-1">
                     {weapon.tags.includes("限定") && "※限定武器の中での評価です"}
                     {weapon.tags.includes("恒常") && "※恒常武器の中での評価です"}
                   </div>
                 )}
-                <div className="flex justify-center items-center mt-3 mb-4">
+                {/* PC表示（総合評価・テーブル） */}
+                <div className="hidden sm:flex justify-center items-center mt-3 mb-4">
                   <div className="bg-yellow-200 border-4 border-yellow-400 rounded-lg shadow-lg px-8 py-4 flex flex-col items-center">
                     <span className="text-xl sm:text-2xl font-bold text-yellow-700 mb-2">
                       総合評価
@@ -199,7 +202,7 @@ export default function WeaponDetail() {
                     </div>
                   </div>
                 </div>
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto w-full hidden sm:block">
                   <table className="w-full border border-gray-300 text-center bg-white rounded-lg shadow-sm">
                     <thead>
                       <tr>
@@ -242,7 +245,7 @@ export default function WeaponDetail() {
                         <td className="px-2 py-4 border-r border-b border-gray-200 align-top">
                           <div className="flex flex-col items-center justify-center">
                             <StarRating score={weapon.ratingReroll ?? 0} />
-                            <span className="mt-2 text-lg text-gray-700 font-bold">
+                            <span className="mt-2 text-lg font-bold text-gray-700">
                               {weapon.ratingReroll !== undefined
                                 ? weapon.ratingReroll
                                 : "-"}
@@ -252,7 +255,7 @@ export default function WeaponDetail() {
                         <td className="px-2 py-4 border-b border-gray-200 align-top">
                           <div className="flex flex-col items-center justify-center">
                             <StarRating score={weapon.ratingExplore ?? 0} />
-                            <span className="mt-2 text-lg text-gray-700 font-bold">
+                            <span className="mt-2 text-lg font-bold text-gray-700">
                               {weapon.ratingExplore !== undefined
                                 ? weapon.ratingExplore
                                 : "-"}
@@ -263,7 +266,68 @@ export default function WeaponDetail() {
                     </tbody>
                   </table>
                 </div>
-                <div className="mt-4">
+                {/* モバイル専用総合評価 */}
+                <div className="sm:hidden w-full">
+                  {/* 総合評価（装飾豪華版、キラキラなし、サイズはそのまま） */}
+                  <div className="w-full flex justify-center items-center mb-2">
+                    <div
+                      className="flex flex-col items-center w-full bg-gradient-to-br from-yellow-100 to-yellow-200 border-2 border-yellow-400 rounded-xl px-4 py-3 shadow-lg relative"
+                      style={{
+                        boxShadow:
+                          "0 2px 8px 0 rgba(255, 200, 50, 0.15), 0 0 0 4px #ffe06644",
+                        borderImage:
+                          "linear-gradient(135deg, #ffd700 40%, #fff3cd 100%) 1",
+                      }}
+                    >
+                      {/* 総合評価タイトル */}
+                      <span className="text-base font-bold text-yellow-800 mb-1 tracking-wide drop-shadow">
+                        総合評価
+                      </span>
+                      <div className="flex items-center">
+                        <StarRating score={weapon.ratingScore ?? 0} />
+                        <span className="ml-2 text-xl font-bold text-yellow-700 drop-shadow">
+                          {weapon.ratingScore !== undefined
+                            ? weapon.ratingScore
+                            : "未登録"}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  {/* 1段目：アタッカー＋サポーター */}
+                  <div className="flex w-full gap-2 mb-2">
+                    <div className={`flex-1 flex flex-col items-center p-2 border rounded ${evalBoxStyles[0]}`}>
+                      <span className="text-xs font-semibold mb-1">アタッカー評価</span>
+                      <StarRating score={weapon.ratingAttacker ?? 0} />
+                      <span className="mt-1 text-lg font-bold text-gray-700">
+                        {weapon.ratingAttacker ?? "-"}
+                      </span>
+                    </div>
+                    <div className={`flex-1 flex flex-col items-center p-2 border rounded ${evalBoxStyles[1]}`}>
+                      <span className="text-xs font-semibold mb-1">サポーター評価</span>
+                      <StarRating score={weapon.ratingSupporter ?? 0} />
+                      <span className="mt-1 text-lg font-bold text-gray-700">
+                        {weapon.ratingSupporter ?? "-"}
+                      </span>
+                    </div>
+                  </div>
+                  {/* 2段目：リセマラ＋探索 */}
+                  <div className="flex w-full gap-2">
+                    <div className={`flex-1 flex flex-col items-center p-2 border rounded ${evalBoxStyles[2]}`}>
+                      <span className="text-xs font-semibold mb-1">リセマラ評価</span>
+                      <StarRating score={weapon.ratingReroll ?? 0} />
+                      <span className="mt-1 text-lg font-bold text-gray-700">
+                        {weapon.ratingReroll ?? "-"}
+                      </span>
+                    </div>
+                    <div className={`flex-1 flex flex-col items-center p-2 border rounded ${evalBoxStyles[3]}`}>
+                      <span className="text-xs font-semibold mb-1">探索評価</span>
+                      <StarRating score={weapon.ratingExplore ?? 0} />
+                      <span className="mt-1 text-lg font-bold text-gray-700">
+                        {weapon.ratingExplore ?? "-"}
+                      </span>
+                    </div>
+                  </div>
+                </div>                <div className="mt-4">
                   {weapon.ratingText ? (
                     <p className="whitespace-pre-wrap">{weapon.ratingText}</p>
                   ) : (
@@ -271,34 +335,20 @@ export default function WeaponDetail() {
                   )}
                 </div>
               </section>
-
-              {/* 運用方法 */}
+              {/* --- 以下はそのまま --- */}
               <section>
-                <h2 className={h2Class} style={h2Style}>
-                  運用方法
-                </h2>
+                <h2 className={h2Class} style={h2Style}>運用方法</h2>
                 {weapon.strategy ? (
                   <p className="text-xs sm:text-sm text-gray-800 mt-1 whitespace-pre-wrap">
                     {weapon.strategy}
                   </p>
                 ) : (
-                  <p className="text-xs sm:text-sm text-gray-500 mt-1">
-                    ※運用方法は未登録です。
-                  </p>
+                  <p className="text-xs sm:text-sm text-gray-500 mt-1">※運用方法は未登録です。</p>
                 )}
               </section>
-              {/* 広告2つを横並びで表示 */}
-              <div className="flex flex-row gap-2 mb-4" style={{ justifyContent: "center" }}>
-                <AdSenseContentUnit />
-                <AdSenseContentUnit2 />
-              </div>
-              {/* 凸効果 */}
               <section>
-                <h2 className={h2Class} style={h2Style}>
-                  凸効果
-                </h2>
-                {Array.isArray(weapon.constellations) &&
-                weapon.constellations.length > 0 ? (
+                <h2 className={h2Class} style={h2Style}>凸効果</h2>
+                {Array.isArray(weapon.constellations) && weapon.constellations.length > 0 ? (
                   <ul className="list-disc list-inside text-xs sm:text-sm mt-1 space-y-1">
                     {weapon.constellations.map((e, i) => (
                       <li key={i}>
@@ -312,27 +362,8 @@ export default function WeaponDetail() {
                   </p>
                 )}
               </section>
-              {/* アバター共感覚 */}
-              {Array.isArray(weapon.synesthesia) && weapon.synesthesia.length > 0 && (
-                <section>
-                  <h2 className={h2Class} style={h2Style}>
-                    アバター共感覚
-                  </h2>
-                  <ul className="list-disc list-inside text-xs sm:text-sm mt-1 space-y-1">
-                    {weapon.synesthesia.map((e, i) => (
-                      <li key={i}>
-                        <strong>{e.level}</strong>: {e.description}
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              {/* スキル */}
               <section>
-                <h2 className={h2Class} style={h2Style}>
-                  スキル
-                </h2>
+                <h2 className={h2Class} style={h2Style}>スキル</h2>
                 <div className="flex gap-1 sm:gap-2 mb-2">
                   {skillCategories.map((category: string) => (
                     <button
@@ -381,12 +412,8 @@ export default function WeaponDetail() {
                   </p>
                 )}
               </section>
-
-              {/* ボリション */}
               <section>
-                <h2 className={h2Class} style={h2Style}>
-                  ボリション
-                </h2>
+                <h2 className={h2Class} style={h2Style}>ボリション</h2>
                 {weapon.avatar ? (
                   matrices.some((m) => m.avatar === weapon.avatar) ? (
                     <div className="flex flex-col gap-2 mt-2">
@@ -432,12 +459,8 @@ export default function WeaponDetail() {
                   </p>
                 )}
               </section>
-
-              {/* アバター特性 */}
               <section>
-                <h2 className={h2Class} style={h2Style}>
-                  アバター特性
-                </h2>
+                <h2 className={h2Class} style={h2Style}>アバター特性</h2>
                 {weapon.avatar ? (
                   traits.some((t) => t.avatar === weapon.avatar) ? (
                     <div className="flex flex-col gap-2 mt-2">
@@ -478,7 +501,6 @@ export default function WeaponDetail() {
                   </p>
                 )}
               </section>
-
               {/* 武器解説動画 */}
               {Array.isArray(weapon.videoUrls) && weapon.videoUrls.length > 0 && (
                 <section>

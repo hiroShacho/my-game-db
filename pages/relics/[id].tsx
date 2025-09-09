@@ -94,10 +94,10 @@ export default function RelicDetailPage({ relic }: Props) {
           </p>
         </div>
 
-        {/* 広告追加：評価の下に2つ横並び */}
+        {/* 広告追加：AdSenseContentUnitのみ表示 */}
         <div className="flex flex-row gap-2 mb-4" style={{ justifyContent: "center" }}>
           <AdSenseContentUnit />
-          <AdSenseContentUnit2 />
+          {/* <AdSenseContentUnit2 /> */}
         </div>
       </div>
     </SidebarLayout>
