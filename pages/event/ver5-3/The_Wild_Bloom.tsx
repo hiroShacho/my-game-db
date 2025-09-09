@@ -256,9 +256,29 @@ export default function TheWildBloom() {
 
         {/* 初志の招待状 */}
         <section className="rounded-xl px-2 sm:px-6 py-4 mb-2 shadow bg-[#f6faff]">
-          <SectionTitle icon="🎫">初志の招待状（未開放）</SectionTitle>
+          <SectionTitle icon="🎫">初志の招待状</SectionTitle>
+          {/* トップ画像 */}
+          <div className="flex justify-center mb-3">
+            <div
+              className="relative w-full max-w-xl h-44 sm:h-56 rounded-lg overflow-hidden shadow bg-white cursor-pointer"
+              onClick={() => openModal("/ver_event/New_Event_1_3_1.PNG", "初志の招待状トップ画像")}
+            >
+              <Image
+                src="/ver_event/New_Event_1_3_1.PNG"
+                alt="初志の招待状トップ画像"
+                fill
+                className="object-contain w-full h-full"
+                sizes="(max-width: 900px) 95vw, 500px"
+              />
+              <span className="absolute bottom-2 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded z-10 pointer-events-none">
+                クリックで拡大
+              </span>
+            </div>
+          </div>
           <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800">
-            アイテム提出系のイベント
+            アイテム提出形式のイベント
+            <br />
+            アイテム収集のクエストは毎日4つずつ解放され、7日間のクエストを全てクリアするとラクシスからのサプライズがあるらしい...？
           </div>
         </section>
 
