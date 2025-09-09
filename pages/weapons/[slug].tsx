@@ -91,13 +91,13 @@ export default function WeaponDetail() {
         />
       </Head>
       <SidebarLayout>
-        <div className="max-w-3xl mx-auto space-y-6 px-2 sm:px-6 py-4">
+        <div className="mx-auto max-w-3xl px-2 sm:px-4 py-6">
           {!weapon ? (
             <div className="p-4">武器が見つかりません。</div>
           ) : (
             <>
               {/* 武器基本情報（左：画像＋武器名＋共鳴＋特質、右：説明文） */}
-              <div className="flex flex-row gap-4 items-start">
+              <div className="flex flex-row gap-4 items-start mb-6">
                 {/* 左カラム */}
                 <div className="flex flex-col items-start min-w-[140px]">
                   <img
@@ -156,7 +156,7 @@ export default function WeaponDetail() {
               </div>
               {/* 以下は一切位置変えずそのまま */}
               {/* タグ */}
-              <section>
+              <section className="mb-6">
                 <h2 className="text-base sm:text-lg font-semibold mb-2 pl-3 relative">
                   タグ
                 </h2>
@@ -173,7 +173,7 @@ export default function WeaponDetail() {
               </section>
 
               {/* 評価セクション */}
-              <section>
+              <section className="mb-6">
                 <h2 className={h2Class} style={h2Style}>
                   評価点
                 </h2>
@@ -273,7 +273,7 @@ export default function WeaponDetail() {
               </section>
 
               {/* 運用方法 */}
-              <section>
+              <section className="mb-6">
                 <h2 className={h2Class} style={h2Style}>
                   運用方法
                 </h2>
@@ -293,7 +293,7 @@ export default function WeaponDetail() {
                 <AdSenseContentUnit2 />
               </div>
               {/* 凸効果 */}
-              <section>
+              <section className="mb-6">
                 <h2 className={h2Class} style={h2Style}>
                   凸効果
                 </h2>
@@ -314,7 +314,7 @@ export default function WeaponDetail() {
               </section>
               {/* アバター共感覚 */}
               {Array.isArray(weapon.synesthesia) && weapon.synesthesia.length > 0 && (
-                <section>
+                <section className="mb-6">
                   <h2 className={h2Class} style={h2Style}>
                     アバター共感覚
                   </h2>
@@ -329,7 +329,7 @@ export default function WeaponDetail() {
               )}
 
               {/* スキル */}
-              <section>
+              <section className="mb-6">
                 <h2 className={h2Class} style={h2Style}>
                   スキル
                 </h2>
@@ -383,7 +383,7 @@ export default function WeaponDetail() {
               </section>
 
               {/* ボリション */}
-              <section>
+              <section className="mb-6">
                 <h2 className={h2Class} style={h2Style}>
                   ボリション
                 </h2>
@@ -434,7 +434,7 @@ export default function WeaponDetail() {
               </section>
 
               {/* アバター特性 */}
-              <section>
+              <section className="mb-6">
                 <h2 className={h2Class} style={h2Style}>
                   アバター特性
                 </h2>
@@ -481,7 +481,7 @@ export default function WeaponDetail() {
 
               {/* 武器解説動画 */}
               {Array.isArray(weapon.videoUrls) && weapon.videoUrls.length > 0 && (
-                <section>
+                <section className="mb-6">
                   <h2 className={h2Class} style={h2Style}>
                     武器解説動画
                   </h2>
