@@ -64,6 +64,88 @@ function groupWeaponsByPeriod(weaponsList: typeof weapons) {
     .filter((g) => g.weapons.length > 0);
 }
 
+// --- 簡易表示用: 表形式で各バージョンごとに武器画像を8個ずつ横並びで表示（大きい枠＋枠付きバージョン表記＋段揃え） ---
+function SimpleWeaponTable() {
+  const tableGroups = groupWeaponsByPeriod(weapons);
+  const IMAGE_SIZE = 48;
+  const IMAGES_PER_ROW = 8;
+  // バージョン表記（例: "Ver1.0～1.5（アーシャ編）"）を数値と編に分ける
+  function extractVersionParts(label: string) {
+    const match = label.match(/^Ver([\d\.～]+)（(.+)編）$/);
+    return match ? { ver: match[1], arc: match[2] } : { ver: label, arc: "" };
+  }
+
+  return (
+    <div className="mb-8">
+      <div className="border-2 border-blue-400 bg-blue-50 rounded-xl p-4 shadow-md">
+        <div className="text-lg font-bold mb-4 text-blue-700 text-center">簡易表示</div>
+        <div className="space-y-4">
+          {tableGroups.map((group) => {
+            // 8個ずつ分割
+            const rows: typeof weapons[][] = [];
+            for (let i = 0; i < group.weapons.length; i += IMAGES_PER_ROW) {
+              rows.push(group.weapons.slice(i, i + IMAGES_PER_ROW));
+            }
+            // 段数・最大武器数（横幅揃え用）
+            const maxRowLength = IMAGES_PER_ROW;
+            const versionParts = extractVersionParts(group.label);
+
+            return (
+              <div key={group.label}>
+                {rows.map((row, idx) => (
+                  <div className="flex items-center mb-1" key={idx}>
+                    {/* 最初の行の左端に枠付きバージョン表記 */}
+                    {idx === 0 ? (
+                      <div className="flex flex-col items-center justify-center mr-2">
+                        <div
+                          className="border border-gray-400 rounded-lg px-2 py-1 bg-white text-center min-w-[80px] max-w-[120px] shadow"
+                          style={{ boxSizing: "border-box" }}
+                        >
+                          <span className="block text-xs font-bold text-blue-800">{versionParts.ver}</span>
+                          <span className="block text-[0.8rem] text-gray-600">{versionParts.arc}</span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="min-w-[80px] mr-2"></div>
+                    )}
+                    {/* 武器画像（リンク）を隙間なく横並び。段の横幅を揃える */}
+                    {row.map((weapon) => (
+                      <Link href={`/weapons/${weapon.slug}`} key={weapon.id} className="inline-block mx-0">
+                        <Image
+                          src={`/images/${weapon.id}_img.PNG`}
+                          alt={weapon.name}
+                          width={IMAGE_SIZE}
+                          height={IMAGE_SIZE}
+                          className="rounded border border-gray-200 bg-white"
+                          style={{ display: "block", margin: 0, padding: 0 }}
+                        />
+                      </Link>
+                    ))}
+                    {/* 横幅揃えのための空セル（武器が足りない場合） */}
+                    {[...Array(maxRowLength - row.length)].map((_, i) => (
+                      <div
+                        key={`empty-${i}`}
+                        style={{
+                          width: IMAGE_SIZE,
+                          height: IMAGE_SIZE,
+                          display: "inline-block",
+                          margin: 0,
+                          padding: 0,
+                          background: "transparent",
+                        }}
+                      ></div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function WeaponsPage() {
   const router = useRouter();
   const [sortKey, setSortKey] = useState<string>("default");
@@ -196,6 +278,9 @@ export default function WeaponsPage() {
 
     <div className="mx-auto max-w-md px-4">
       <h1 className="text-xl font-bold mb-4">武器一覧</h1>
+
+      {/* 簡易表示（追加部分） */}
+      <SimpleWeaponTable />
 
       {/* 並び替えタブ */}
       <div className="mb-4 flex space-x-2">
