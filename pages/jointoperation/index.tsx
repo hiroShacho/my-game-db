@@ -140,7 +140,7 @@ export default function JointOperationIndex() {
                 className="group bg-white rounded-lg shadow hover:shadow-xl transition flex flex-col items-center border border-cyan-300 py-2 px-2 sm:py-3 sm:px-3"
                 style={{ minHeight: 120, minWidth: 0 }}
               >
-                <div className="w-[90px] h-[90px] sm:w-[90px] sm:h-[90px] flex items-center justify-center mb-1">
+                <div className="w-[50px] h-[90px] sm:w-[90px] sm:h-[90px] flex items-center justify-center mb-1">
                   <Image
                     src={jo.img}
                     alt={jo.title}

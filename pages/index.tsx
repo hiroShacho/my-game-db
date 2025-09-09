@@ -101,9 +101,7 @@ export default function Home() {
         <title>【幻塔攻略】トップページ | 幻塔攻略データベース</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="幻塔（Tower of Fantasy）の攻略・データベースのトップページです。" />
-        {/* ▼▼▼ 追加 ▼▼▼ */}
         <link rel="canonical" href="https://tofguideanddb.vercel.app/" />
-        {/* ▲▲▲ 追加 ▲▲▲ */}
       </Head>
       <div className="relative w-full h-40 sm:h-64 rounded-lg overflow-hidden mb-6 shadow-lg">
         <Image
@@ -126,7 +124,7 @@ export default function Home() {
             最新イベント・攻略・ガチャ情報をお届けする㌥！
           </div>
         </div>
-      </div>	
+      </div>
       <div className="w-full max-w-full min-h-screen space-y-6 px-2 sm:px-6 py-4 overflow-x-hidden">
         {/* サイト紹介 */}
         <section>
@@ -135,7 +133,6 @@ export default function Home() {
             各種コンテンツの情報は徐々に更新していきます。
           </p>
         </section>
-
         {/* NEWS */}
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS
@@ -196,7 +193,7 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* ラクシスの武器詳細 */}
+            {/* ラクシスの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
             <Link href="/weapons/EternalSalvation" className="block">
               <div
                 className="
@@ -216,7 +213,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    ラクシス
+                    ラクシス武器：ホーリージャッジメント
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
                     ラクシスの武器詳細をチェック
@@ -224,7 +221,7 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* その他のイベント（準備中＋咲き誇りの刻リンク） */}
+            {/* 咲き誇りの刻 イベント */}
             <Link href="/event/ver5-3/The_Wild_Bloom" className="block sm:col-span-1">
               <div
                 className="
@@ -252,8 +249,7 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-
-            {/* ▼▼▼ 追加：Ver5.35テストサーバーへのリンク ▼▼▼ */}
+            {/* Ver5.35テストサーバー */}
             <Link href="/event/ver5-3/ver5-3_5_testserver" className="block sm:col-span-1">
               <div
                 className="
@@ -281,8 +277,7 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* ▲▲▲ 追加ここまで ▲▲▲ */}
-
+            {/* その他のイベント（準備中） */}
             <div className="block sm:col-span-1">
               <div
                 className="
