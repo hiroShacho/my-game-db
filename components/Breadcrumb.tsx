@@ -58,7 +58,7 @@ const weaponNameMap: Record<string, string> = {
 "FrostedSpear":"フロストスピア",
 "Thunderblades":"疾雷の双刃",
 "AbsoluteZero":"零度の指針",
-"Scythe of the Crow":"レイヴンの大鎌",
+"ScytheoftheCrow":"レイヴンの大鎌",
 "ChakramoftheSeas":"海の戦輪",
 "IcewindArrow":"氷風の矢",
 "MoltenShieldV2":"V2メルトシールド",

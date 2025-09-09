@@ -82,7 +82,7 @@ function SimpleWeaponTable() {
         <div className="space-y-4">
           {tableGroups.map((group) => {
             // 8個ずつ分割
-            const rows: typeof weapons[][] = [];
+            const rows: Array<typeof weapons[0][]> = [];
             for (let i = 0; i < group.weapons.length; i += IMAGES_PER_ROW) {
               rows.push(group.weapons.slice(i, i + IMAGES_PER_ROW));
             }
