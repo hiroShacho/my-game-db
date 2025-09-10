@@ -4,39 +4,40 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Image from "next/image";
 import Link from "next/link";
 
-// --- Ver5.2新武器・ボリション・アバター特性データ ---
+// --- Ver5.35新武器・ボリション・アバター特性データ ---
 const weapon = {
-  id: "w_64",
-  slug: "EternalSalvation",
-  name: "ホーリージャッジメント",
-  avatar: "ラクシス",
-  description: "優しい光を放つ巨大な鎌。生きる希望を断ち切るよりも、死の繋がりを断ち切ることを望んでいる。",
-  strategy: "炎強攻編成ではスキル使用後に通常攻撃5段と通常長押しのシャドーアタックから通常長押しで派生する3種のチャージ攻撃の愛の狂想、虹色の波、輝光インパクトで火力を出す。\nチャージ攻撃は使用するたびに次の段階が解放される形式になっている。スキル使用後は武器3凸未満では通常5段×1回とチャージ攻撃3回、武器3凸からは通常5段×2回とチャージ攻撃2回で回しを構築することになる。\nスキル・通常攻撃は追尾性能が高めなので問題ないが、チャージ攻撃はそこまで追尾してくれない上に外すとチャージ時間ごとDPSが下がることになるので癖は強めかも。",
-  ratingScore: 4,
+  id: "w_65",
+  slug: "Pollux",
+  name: "ポラリス",
+  avatar: "ヘレンネ",
+  description: "ポルクスは武器でも、杖を突いた紳士なクマのぬいぐるみでもなく、ただ妹に尊敬される一人の兄なのだ。",
+  strategy: "戦闘開始時に基礎訓練の蓄積を100ポイント貯めたらスキルでポイントを消費して華麗なる共鳴を開放しよう。華麗なる共鳴を撃ったら通常5段で蓄積を100ポイントまで貯めてから他の武器の回しに移ろう。以降はスキル⇒華麗なる共鳴⇒通常5段だけでスキル回しをループできるので初動を如何に早く正確にこなすかに左右される。",
+  ratingScore: 3.5,
   ratingAttacker: 3.5,
-  ratingSupporter: 4.5,
-  ratingReroll: 2,
-  ratingExplore: 0,
-  ratingText: "限定で初の炎・恩恵武器。炎強攻編成ではメインアタッカーを努め、恩恵では編成に入れているだけで仕事をしてくれる。というより味方への回復・バフ効果が全てお供のコハルビに搭載されているので、ラクシスの武器本体で回復・バフを撒くことはできない。バフについては武器5凸とボリション4セットに効果が付いているので、恩恵で採用する場合にはそれなりにリソースをつぎ込む必要がある(ボリションは無凸でOK)。",
-  videoUrls: ["https://youtu.be/CWW446lx_UI"],
-  tags: ["限定","SSR","炎・物理","恩恵","アタッカー/サポーター"],
+  ratingSupporter: 3,
+  ratingReroll: 3,
+  ratingExplore: 2,
+  ratingText: "氷・強攻のアタッカー武器。メインというよりはサブアタッカーとして短時間で一気に火力を出すタイプ。感覚的には氷ノーラの儀式と同じような運用になるだろう。\n基礎訓練の蓄積は実際の戦闘コンテンツだと開始時にリセットされるので、サボテンのスキル回しは蓄積無しでの回しも練習しておこう。",
+  videoUrls: ["https://youtu.be/5j_pkaNxfaE"],
+  tags: ["限定","SSR","氷・雷","強攻","アタッカー"],
   skillIds: [
-    "s_6401",
-    "s_6402",
-    "s_6403",
-    "s_6404",
-    "s_6405",
-    "s_6406",
-    "s_6407",
-    "s_6408",
-    "s_6409",
-    "s_6410"
+    "s_6501",
+    "s_6502",
+    "s_6503",
+    "s_6504",
+    "s_6505",
+    "s_6506",
+    "s_6507",
+    "s_6508",
+    "s_6509",
+    "s_6510",
+    "s_6511"
   ],
   constellations: [
     {
       level: "1凸",
-      description: "最終ダメージ+9%。コハルビの攻撃光線がターゲットに現在の属性攻撃力×21%の炎ダメージを与える。武器-ホーリージャッジメントで通常攻撃を行う、もしくは回避が成功するたび、自身のHPが2%回復する。",
-      tags: ["最終ダメージUP","回復"]
+      description: "最終与ダメージ+7%、さらに通常攻撃-基礎訓練の蓄積の獲得量が倍になる。",
+      tags: ["最終ダメージUP"]
     },
     {
       level: "2凸",
@@ -45,8 +46,8 @@ const weapon = {
     },
     {
       level: "3凸",
-      description: "スキル-断ち切る！心の鎖発動中は、直接スキル-虹色の波を開放し、合計で2回特殊攻撃を発動できる。コハルビの回復でオーバーした分はシールドに転換される(最大HP×30%相当分まで)。",
-      tags: ["HPシールド"]
+      description: "スキルスキル-激怒の爪を発動するたび、自身の最大HPを20%回復する。さらにスキル-激怒の爪および通常攻撃-華麗なる共鳴の発動中、自身の被ダメージが60%軽減される。",
+      tags: ["回復","被ダメージDOWN"]
     },
     {
       level: "4凸",
@@ -55,48 +56,54 @@ const weapon = {
     },
     {
       level: "5凸",
-      description: "最終ダメージ+9%。コハルビの光線の発射間隔が3秒に短縮される。恩恵共鳴発動時、コハルビの光線に当たったターゲットは衆心激昂効果を付与される。全属性ダメージ+22%、5秒間持続(スタック不可)。",
-      tags: ["最終ダメージUP","全属性ダメージUP","チームバフ"]
+      description: "最終与ダメージ+7%。さらに自身が致死ダメージを受けた時、一度だけ死を免れ、短時間無敵になる(この効果は60秒に一回のみ発動可能)。装備すると常時有効。",
+      tags: ["最終ダメージUP","死亡回避"]
     },
     {
       level: "6凸",
-      description: "炎ダメージ+26%。恩恵共鳴発動時、スキル-リップ・ザ・シャドー、スキル-愛の狂想、スキル-虹色の波、スキル-輝光インパクトが、HPを16%未満のモンスターを瞬殺する。",
-      tags: ["炎ダメージUP","斬殺"]
+      description: "氷属性ダメージ+24%。スキル-激怒の爪の一回目のダメージ倍率が6000%に、二回目のダメージ倍率が9600%にUPする。",
+      tags: ["氷ダメージUP"]
     }
   ]
 };
 
 const matrix = {
-  id: "m_60",
-  name: "命のフーガ",
-  avatar: "ラクシス",
-  description: "ラクシスのボリション（テストサーバー）",
+  id: "m_61",
+  name: "尽きぬ夢うつつ",
+  avatar: "ヘレンネ",
+  description: "ヘレンネのボリション（テストサーバー）",
   effects: [
     {
       set: "2セット効果",
-      effect: "全属性の攻撃力+26%/28%/30%/32%。スキル-輝光インパクトのダメージ係数が19,075%までアップし、回復効果+25%。装備すると常時有効。複数セット装着している場合は★ランクが一番高いセットのみ有効。",
-      tags: ["全属性攻撃力UP","回復量UP","常時有効"]
+      effect: "氷攻撃力+26%/28%/30%/32%。通常攻撃-華麗なる共鳴のスキル倍率が36000%までUP。装備すると常時有効。複数セット装着している場合は★ランクが一番高いセットのみ有効。",
+      tags: ["氷攻撃力UP","常時有効"]
     },
     {
       set: "4セット効果",
-      effect: "武器-ホーリージャッジメント装備時、最終ダメージ+18%/22%/26%/30%。恩恵共鳴でない場合、追加で全属性のダメージ+16%。恩恵共鳴発動中は仲間にハートライト効果を付与する(仲間の攻撃力に、自身の一番強い属性の基礎攻撃力/200000を上乗せ。最終ダメージ×30%を上限とする)。",
-      tags: ["最終ダメージUP","全属性ダメージUP","チームバフ","常時有効"]
+      effect: "最終ダメージ+18%/22%/26%/30%。武器-ポルクスがセットされている時、氷ダメージ+14%。装備すると常時有効。複数セット装着している場合は★ランクが一番高いセットのみ有効。",
+      tags: ["最終ダメージUP","氷ダメージUP","常時有効"]
     }
   ],
-  ratingComment: "無条件で全属性攻撃力UPという中々の無法っぷり。4セット効果の味方へのバフは基礎攻撃力6万で最大になる。恩恵でラクシスを採用するのであれば無凸4セットで良いので確保したい。",
-  ratingStars: "4.5"
+  ratingComment: "メイン火力の倍率が1.5倍になり、史上最大のスキル倍率を叩き出す。ヘレンネは武器のバフ効果が凸数依存のモノだけなのでボリション4セットは揃えておきたい。",
+  ratingStars: "3.5"
 };
 
 const trait = {
-  id: "t_60",
-  name: "新生",
-  avatar: "ラクシス",
-  description: "最終ダメージ+18%。\n武器-ホーリージャッジメント装備時、炎ダメージ+7%。恩恵共鳴でない場合、自身の最終ダメージ+7%。恩恵共鳴発動中は自身の全属性の攻撃力+10,000。",
-  rating: "炎強攻はヴォイド特性よりこちらを優先して良さそう。恩恵はラクシスのボリション4セットやフィオナのリンクを強化できるので相性は良いが、他の味方にバフを配れる特性の方が効果量は大きいので優先度は低い。(ラクシス特性でUPするボリ4セットのバフ量は最終ダメージ+5%だが、ブレヴィ特性は最終ダメージ+6%、グレイフォックス特性は最終ダメージ+10%)",
-  tags: ["最終ダメージUP", "炎ダメージUP","全属性攻撃力UP"]
+  id: "t_61",
+  name: "氷山の薔薇と重騎士",
+  avatar: "ヘレンネ",
+  description: "最終ダメージ+18%。\n武器-ポルクスがセットされている時、氷ダメージ+20%。この人形に命中したターゲットを、後方へ大きく吹き飛ばす。",
+  rating: "ヴォイドよりもバフ量が多いのでこちらを優先しよう。他と少し書き方が違うが、ヘレンネ武器装備時の効果は武器が裏でもしっかり発動する。",
+  tags: ["最終ダメージUP", "氷ダメージUP"]
 };
 
 type TabType = "weapon" | "matrix" | "trait";
+
+// YouTube埋め込みURL変換関数
+const getEmbedUrl = (url: string): string => {
+  const match = url.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]+)/);
+  return match ? `https://www.youtube.com/embed/${match[1]}` : url;
+};
 
 export default function Ver52NewCharaPage() {
   const [tab, setTab] = useState<TabType>("weapon");
@@ -104,12 +111,12 @@ export default function Ver52NewCharaPage() {
   return (
     <>
       <Head>
-        <title>【幻塔攻略】Ver5.2新武器・ボリション・アバター特性まとめ | 幻塔攻略データベース</title>
-        <meta name="description" content="幻塔（Tower of Fantasy）Ver5.3新武器・ボリション・アバター特性のテストサーバー先行情報まとめページ。" />
+        <title>【幻塔攻略】Ver5.35新武器・ボリション・アバター特性まとめ | 幻塔攻略データベース</title>
+        <meta name="description" content="幻塔（Tower of Fantasy）Ver5.35新武器・ボリション・アバター特性のテストサーバー先行情報まとめページ。" />
       </Head>
       <SidebarLayout>
         <div className="max-w-3xl mx-auto space-y-8 px-2 sm:px-6 py-6">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-6">Ver5.2 新武器・ボリション・アバター特性まとめ</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6">Ver5.35 新武器・ボリション・アバター特性まとめ</h1>
           <div className="mb-4 flex gap-2">
             <button
               className={`px-4 py-2 rounded font-bold ${tab === "weapon" ? "bg-blue-500 text-white" : "bg-gray-100 text-gray-700"}`}
@@ -194,12 +201,12 @@ export default function Ver52NewCharaPage() {
               </div>
               {/* 評価コメント */}
               <div className="mb-4 text-sm whitespace-pre-wrap">{weapon.ratingText}</div>
-              {/* 解説動画 */}
+              {/* 解説動画（埋め込み） */}
               {Array.isArray(weapon.videoUrls) && weapon.videoUrls.length > 0 && weapon.videoUrls[0] && (
                 <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow mb-4">
                   <iframe
-                    src={`https://www.youtube.com/embed/CWW446lx_UI`}
-                    title="ホーリージャッジメント性能解説動画"
+                    src={getEmbedUrl(weapon.videoUrls[0])}
+                    title="ポラリス性能解説動画"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
