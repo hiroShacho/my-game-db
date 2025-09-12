@@ -398,6 +398,34 @@ export default function TriviaPage() {
           />
         </div>
 
+        {/* ■チャットスタンプの開放 */}
+        <SectionTitle icon="chat">チャットスタンプの開放</SectionTitle>
+        <div className="mb-4 text-base text-gray-800">
+          チャットで使えるスタンプはゲーム内通貨を使って購入することで開放できる。<br />
+          要求量は多いが無課金でも手に入るので余裕があれば集めていこう！
+        </div>
+        <div className="w-full max-w-2xl aspect-video rounded-xl overflow-hidden shadow border border-blue-200 bg-black mb-2 mx-auto">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/DXjvqnHv7kM?list=PLKua5tWzOdfVQEJsWjMY2GOhTlXzF643d"
+            title="チャットスタンプの開放"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              width: "100%",
+              height: "100%",
+              border: "none",
+              borderRadius: "12px",
+              background: "#000",
+              minHeight: "220px",
+            }}
+          />
+        </div>
+        <div className="text-xs text-blue-700 text-center mb-6">
+          動画解説：チャットスタンプの開放方法（クリックで再生）
+        </div>
+
         {/* ワールドボスの突破モジュール選択箱 */}
         <SectionTitle icon="box">ワールドボスの突破モジュール選択箱は毎週20個獲得できる</SectionTitle>
         <div className="mb-4">
