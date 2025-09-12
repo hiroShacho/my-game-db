@@ -61,7 +61,7 @@ export default function Header({
         <nav className="hidden lg:flex space-x-3 text-xs ml-6">
           <Link href="/" className="hover:text-blue-400">トップ</Link>
           <Link href="/tag-search" className="hover:text-blue-400">タグ検索</Link>
-          <Link href="/map/kailo_OreZero_EXpoint" className="hover:text-blue-400">探索マップ</Link>
+          <Link href="/map" className="hover:text-blue-400">探索マップ</Link>
           <Link href="/weapons" className="hover:text-blue-400">武器一覧</Link>
           <Link href="/matrices" className="hover:text-blue-400">ボリション一覧</Link>
           <Link href="/trait" className="hover:text-blue-400">アバター特性一覧</Link>

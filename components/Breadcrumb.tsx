@@ -40,7 +40,7 @@ const labelMap: Record<string, string> = {
 };
 
 // パンくずから除外したいパス
-const excludePaths = ["event", "ver5-1","ver5-2","ver5-3","map", "newbie"];
+const excludePaths = ["event", "ver5-1","ver5-2","ver5-3", "newbie"];
 
 // 「search」ページではパンくずリストのリンクを非表示にしたい
 const noLinkPaths = ["/search"];

@@ -10,7 +10,7 @@ import { Menu } from "lucide-react";
 const basicNavLinks = [
   { href: "/", label: "トップ" },
   { href: "/tag-search", label: "タグ検索" },
-  { href: "/map/kailo_OreZero_EXpoint", label: "探索マップ" },
+  { href: "/map", label: "探索マップ" },
   { href: "/weapons", label: "武器一覧" },
   { href: "/matrices", label: "ボリション一覧" },
   { href: "/trait", label: "アバター特性一覧" },
