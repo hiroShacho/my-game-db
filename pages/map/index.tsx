@@ -16,7 +16,7 @@ function SectionTitle({ icon, children }: { icon?: string; children: React.React
   );
 }
 
-// 区切り（＜人工島＞＜ヴェラ＞）のみ New_ver_info.tsx風
+// 区切りのみ
 const AreaDivider = ({ icon, children }: { icon?: React.ReactNode; children: React.ReactNode }) => (
   <div
     className="flex items-center gap-2 mb-2 mt-8 pl-4"
@@ -196,10 +196,10 @@ function MapIndexPage() {
         </div>
 
         {/* ＜人工島＞区切りのみNew_ver_info.tsx風 */}
-        <AreaDivider icon={<span>🏝️</span>}>{`＜人工島＞`}</AreaDivider>
+        <AreaDivider icon={<span>🏝️</span>}>{`人工島　`}</AreaDivider>
 
         {/* トラック内その1：■項目のみNew_ver_info.tsx風 */}
-        <SectionDivider icon="■">トラック内その①</SectionDivider>
+        <SectionDivider icon="■">トラック内その①　</SectionDivider>
         <ImageRow
           images={[
             {
@@ -238,7 +238,7 @@ function MapIndexPage() {
         />
 
         {/* トラック内その2：■項目のみNew_ver_info.tsx風 */}
-        <SectionDivider icon="■">トラック内その②</SectionDivider>
+        <SectionDivider icon="■">トラック内その②　</SectionDivider>
         <ImageRow
           images={[
             { src: "/map/ArtificialIsland_redcore2_1.PNG", alt: "トラックその2", caption: "トラックその2" }
@@ -257,16 +257,16 @@ function MapIndexPage() {
         />
 
         {/* 日照り島：■項目のみNew_ver_info.tsx風 */}
-        <SectionDivider icon="■">日照り島（バリアに覆われた島）</SectionDivider>
+        <SectionDivider icon="■">日照り島（バリアに覆われた島）　</SectionDivider>
         <div className="text-gray-600 text-base mb-4">
           非常に長い手順が必要なので画像を含めた解説を別ページで作成中
         </div>
 
         {/* ＜ヴェラ＞区切りのみNew_ver_info.tsx風 */}
-        <AreaDivider icon={<span>🏜️</span>}>{`＜ヴェラ＞`}</AreaDivider>
+        <AreaDivider icon={<span>🏜️</span>}>{`ヴェラ　`}</AreaDivider>
 
         {/* スレーター渓谷北部：■項目のみNew_ver_info.tsx風 */}
-        <SectionDivider icon="■">「スレーター渓谷」北部</SectionDivider>
+        <SectionDivider icon="■">「スレーター渓谷」北部　</SectionDivider>
         <div className="mb-2 text-lg text-gray-800">壁の裏にある補給庫</div>
         <ImageRow
           images={[
@@ -276,7 +276,7 @@ function MapIndexPage() {
         />
 
         {/* こだまの滝付近：■項目のみNew_ver_info.tsx風 */}
-        <SectionDivider icon="■">瘴気の沼：「こだまの滝」付近</SectionDivider>
+        <SectionDivider icon="■">瘴気の沼：「こだまの滝」付近　</SectionDivider>
         <div className="mb-2 text-lg text-gray-800">滝付近の崖の中腹にある補給庫</div>
         <ImageRow
           images={[
@@ -286,7 +286,7 @@ function MapIndexPage() {
         />
 
         {/* 転送ゲート・こだまの滝付近：■項目のみNew_ver_info.tsx風 */}
-        <SectionDivider icon="■">瘴気の沼：「転送ゲート・こだまの滝」付近</SectionDivider>
+        <SectionDivider icon="■">瘴気の沼：「転送ゲート・こだまの滝」付近　</SectionDivider>
         <ImageRow
           images={[
             { src: "/map/Vera_redcore3_1.PNG", alt: "転送ゲートからすぐそこにある", caption: "転送ゲートからすぐそこにある" }
@@ -305,7 +305,7 @@ function MapIndexPage() {
         />
 
         {/* 海底トンネル上空の樹周辺の足場：■項目のみNew_ver_info.tsx風 */}
-        <SectionDivider icon="■">瘴気の沼：「海底トンネル」上空の樹周辺の足場</SectionDivider>
+        <SectionDivider icon="■">瘴気の沼：「海底トンネル」上空の樹周辺の足場　</SectionDivider>
         <div className="mb-2 text-lg text-gray-800">
           下から登るのではなく周囲の崖からジェットパックを使って渡ろう
         </div>
@@ -317,7 +317,7 @@ function MapIndexPage() {
         />
 
         {/* 廃棄された海底トンネル付近：■項目のみNew_ver_info.tsx風 */}
-        <SectionDivider icon="■">瘴気の沼：「廃棄された海底トンネル」付近</SectionDivider>
+        <SectionDivider icon="■">瘴気の沼：「廃棄された海底トンネル」付近　</SectionDivider>
         <ImageRow
           images={[
             { src: "/map/Vera_redcore5_1.PNG", alt: "転送ゲートから徒歩で行ける範囲", caption: "転送ゲートから徒歩で行ける範囲" }
@@ -335,7 +335,7 @@ function MapIndexPage() {
         />
 
         {/* 第2基地付近の崖上：■項目のみNew_ver_info.tsx風 */}
-        <SectionDivider icon="■">瘴気の沼：「第2基地」付近の崖上</SectionDivider>
+        <SectionDivider icon="■">瘴気の沼：「第2基地」付近の崖上　</SectionDivider>
         <ImageRow
           images={[
             { src: "/map/Vera_redcore6_1.PNG", alt: "ギミックは崖の上にある", caption: "ギミックは崖の上にある" }
@@ -368,6 +368,149 @@ function MapIndexPage() {
         {/* Vera_redcore6_5.mp4 のサイズを大きく */}
         <CaptionedVideo src="/map/Vera_redcore6_5.mp4" caption="何回かに分けて挑戦すればラフレシアを閉じなくても攻略可能" width={640} height={360} />
       </div>
+
+        {/* ＜ミラポリス＞区切りのみNew_ver_info.tsx風 */}
+        <AreaDivider icon={<span>🏙️</span>}>{`ミラポリス　`}</AreaDivider>
+
+        {/* ■「アミューズランド」北の上空 */}
+        <SectionDivider icon="■">「アミューズランド」北の上空　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          「アミューズランド」北のビルの上にある<br />
+          ジェットパックで届く高さにある
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore1_1.PNG", alt: "アミューズランド北ビル屋上", caption: "「アミューズランド」の北側にあるビル屋上" },
+            { src: "/map/Mirroria_redcore1_2.PNG", alt: "ジェットパックで届く", caption: "地上からジェットパック使用で届くぞ！" }
+          ]}
+        />
+
+        {/* ■「クールランド」の観覧車の頂上 */}
+        <SectionDivider icon="■">「クールランド」の観覧車の頂上　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          観覧車に乗って頂上まで待っているとレッドコアが見える<br />
+          観覧車の中で待つより観覧車の上で待った方が取りやすい
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore2_1.PNG", alt: "観覧車頂上", caption: "「クールランド」にある観覧車の頂上付近" },
+            { src: "/map/Mirroria_redcore2_2.PNG", alt: "観覧車の中からだと少し上に飛ぶ必要", caption: "観覧車の中からだと少し上に飛ぶ必要がある" }
+          ]}
+        />
+
+        {/* ■「星の海アパート」南の上空 */}
+        <SectionDivider icon="■">「星の海アパート」南の上空　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          「星の海アパート」南の上空にあるレッドコア<br />
+          かなり高い位置にあるので、近くの一番高いビルの屋上から飛んで近づこう！<br />
+          飛ぶ前にマップにピンを打っておくと位置が調整しやすいかも？（探索ポイント自体は近づけば表示される）
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore3_1.PNG", alt: "星の海アパート南の上空", caption: "「星の海アパート」南の上空" },
+            { src: "/map/Mirroria_redcore3_2.PNG", alt: "近くのビルから飛ぶ", caption: "かなり高い位置にあるので近くのビルから飛んでいこう" }
+          ]}
+        />
+        <div className="flex justify-center my-3">
+          <CaptionedVideo src="/map/Mirroria_redcore3_3.mp4" caption="高いビルの屋上から飛んでいこう！" width={640} height={360} />
+        </div>
+
+        {/* ■「環状ビル・西サーキット」屋上の上空 */}
+        <SectionDivider icon="■">「環状ビル・西サーキット」屋上の上空　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          「環状ビル・西サーキット」屋上の上空にあるレッドコア<br />
+          ジェットパックで飛んでからジェットパックを使用したまま1回ジャンプすれば届く高さにある<br />
+          オムニアム砲の柱を立ててそこから飛ぶのもあり
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore4_1.PNG", alt: "西サーキット屋上の上空その1", caption: "「環状ビル・西サーキット」屋上の上空" },
+            { src: "/map/Mirroria_redcore4_1.PNG", alt: "見た目は少し高いがジャンプで届く", caption: "見た目は少し高いがジェットパック+ジャンプで十分届く" }
+          ]}
+        />
+
+        {/* ■「ミラリア通り」の巨大壁画 */}
+        <SectionDivider icon="■">「ミラリア通り」の巨大壁画　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          「ミラリア通り」の巨大壁画にあるレッドコア<br />
+          近くの建物の屋根から壁画に飛ぶと近くに見える
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore5_1.PNG", alt: "巨大壁画", caption: "「ミラリア通り」の巨大壁画" },
+            { src: "/map/Mirroria_redcore5_2.PNG", alt: "壁画前に浮いている", caption: "壁画の前に浮いている" }
+          ]}
+        />
+
+        {/* ■「ミラリア通り」の橋の上空その① */}
+        <SectionDivider icon="■">「ミラリア通り」の橋の上空その①　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          「ミラリア通り」の橋の上空にあるレッドコア<br />
+          少し高い位置にあり、ジェットパックで飛んでからジェットパック使用中に1回ジャンプして、ジェットパックを解除したら再びジャンプすれば届く<br />
+          操作が分からない場合はオムニアム砲で柱を立てよう
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore6_1.PNG", alt: "橋の上空その1", caption: "「ミラリア通り」の橋の上空" },
+            { src: "/map/Mirroria_redcore6_2.PNG", alt: "オムニアム砲で柱を立てる", caption: "少し高いのでオムニアム砲で柱を立てるのが楽" }
+          ]}
+        />
+
+        {/* ■「ミラリア通り」の橋の上空その② */}
+        <SectionDivider icon="■">「ミラリア通り」の橋の上空その②　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          「ミラリア通り」の橋の上空にあるレッドコア<br />
+          かなり高い位置にあるので橋左の建物の屋上から飛んでいこう
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore7_1.PNG", alt: "橋の上空その2", caption: "「ミラリア通り」の橋の上空" },
+            { src: "/map/Mirroria_redcore7_2.PNG", alt: "橋の左の建物屋上から飛ぶ", caption: "橋の左にある建物の屋上から飛ぼう（右の建物からもオムニアム砲があればいけるかも）" }
+          ]}
+        />
+
+        {/* ■「のびのび広場」南にある上空のレールの真下 */}
+        <SectionDivider icon="■">「のびのび広場」南にある上空のレールの真下　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          「のびのび広場」南にある上空のレールの真下にあるレッドコア<br />
+          近くの建物を登ってレールまで飛んで、レールの上からジェットパックで取りに行こう
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore8_1.PNG", alt: "南のレール", caption: "「のびのび広場」南にある上空のレール" },
+            { src: "/map/Mirroria_redcore8_2.PNG", alt: "レールは2つあるので下のレールへ", caption: "レールは2つあるので下のレールに飛び移ろう" }
+          ]}
+        />
+
+        {/* ■「水鏡台」の月のオブジェクト頂上 */}
+        <SectionDivider icon="■">「水鏡台」の月のオブジェクト頂上　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          「水鏡台」の月のオブジェクト頂上にあるレッドコア<br />
+          登りさえすれば簡単に取れる
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore9_1.PNG", alt: "月のオブジェクト頂上", caption: "「水鏡台」の月のオブジェクト頂上" },
+            { src: "/map/Mirroria_redcore9_2.PNG", alt: "月の頂上", caption: "月の頂上" },
+            { src: "/map/Mirroria_redcore9_3.PNG", alt: "登れば簡単", caption: "登れさえすれば簡単に取れる" }
+          ]}
+        />
+
+        {/* ■「危険物質実験室」の上空 */}
+        <SectionDivider icon="■">「危険物質実験室」の上空　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          「危険物質実験室」屋上の上空にあるレッドコア<br />
+          かなり高い位置にあり、ビル屋上にオムニアム砲で柱を立ててジェットパックを使っても届かない<br />
+          そのため昔はヴェラオベリスクからここまで飛んで来るというのが一般的なやり方だったが、ビル屋上の「M-sec」の看板にオムニアム砲で柱を立てたら行けてしまったのでそちらの方法を推奨する<br />
+          なお、「M-sec」の看板は表側からじゃないとしがみついたりオムニアム砲で柱を立てられないので注意
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Mirroria_redcore10_1.PNG", alt: "危険物質実験室屋上の上空", caption: "「危険物質実験室」屋上の上空" },
+            { src: "/map/Mirroria_redcore10_2.PNG", alt: "普通では届かない高さ", caption: "普通では届かない高さにある" },
+            { src: "/map/Mirroria_redcore10_3.PNG", alt: "M-secの看板表側から柱", caption: "「M-sec」の看板の表側にオムニアム砲で柱を立ててそこから飛ぼう！" }
+          ]}
+        />
     </>
   );
 }
