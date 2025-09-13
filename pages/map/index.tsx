@@ -491,10 +491,18 @@ function MapIndexPage() {
         <ImageRow
           images={[
             { src: "/map/Mirroria_redcore9_1.PNG", alt: "月のオブジェクト頂上", caption: "「水鏡台」の月のオブジェクト頂上" },
-            { src: "/map/Mirroria_redcore9_2.PNG", alt: "月の頂上", caption: "月の頂上" },
-            { src: "/map/Mirroria_redcore9_3.PNG", alt: "登れば簡単", caption: "登れさえすれば簡単に取れる" }
+            { src: "/map/Mirroria_redcore9_2.PNG", alt: "登れば簡単", caption: "登れさえすれば簡単に取れる" }
           ]}
         />
+        <div className="flex justify-center my-3">
+          <CaptionedImage
+            src="/map/Mirroria_redcore9_3.PNG"
+            alt="月の頂上"
+            caption="月の頂上"
+            width={640}
+            height={360}
+          />
+        </div>
 
         {/* ■「危険物質実験室」の上空 */}
         <SectionDivider icon="■">「危険物質実験室」の上空　</SectionDivider>
@@ -507,10 +515,18 @@ function MapIndexPage() {
         <ImageRow
           images={[
             { src: "/map/Mirroria_redcore10_1.PNG", alt: "危険物質実験室屋上の上空", caption: "「危険物質実験室」屋上の上空" },
-            { src: "/map/Mirroria_redcore10_2.PNG", alt: "普通では届かない高さ", caption: "普通では届かない高さにある" },
-            { src: "/map/Mirroria_redcore10_3.PNG", alt: "M-secの看板表側から柱", caption: "「M-sec」の看板の表側にオムニアム砲で柱を立ててそこから飛ぼう！" }
+            { src: "/map/Mirroria_redcore10_2.PNG", alt: "普通では届かない高さ", caption: "普通では届かない高さにある" }
           ]}
         />
+        <div className="flex justify-center my-3">
+          <CaptionedImage
+            src="/map/Mirroria_redcore10_3.PNG"
+            alt="M-secの看板表側から柱"
+            caption="「M-sec」の看板の表側にオムニアム砲で柱を立ててそこから飛ぼう！"
+            width={640}
+            height={360}
+          />
+        </div>
     </>
   );
 }
