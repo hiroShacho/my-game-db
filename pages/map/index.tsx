@@ -425,7 +425,7 @@ function MapIndexPage() {
         <ImageRow
           images={[
             { src: "/map/Mirroria_redcore4_1.PNG", alt: "西サーキット屋上の上空その1", caption: "「環状ビル・西サーキット」屋上の上空" },
-            { src: "/map/Mirroria_redcore4_1.PNG", alt: "見た目は少し高いがジャンプで届く", caption: "見た目は少し高いがジェットパック+ジャンプで十分届く" }
+            { src: "/map/Mirroria_redcore4_2.PNG", alt: "見た目は少し高いがジャンプで届く", caption: "見た目は少し高いがジェットパック+ジャンプで十分届く" }
           ]}
         />
 
