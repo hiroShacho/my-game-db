@@ -460,12 +460,12 @@ function MapIndexPage() {
         <SectionDivider icon="■">「ミラリア通り」の橋の上空その②　</SectionDivider>
         <div className="mb-2 text-lg text-gray-800">
           「ミラリア通り」の橋の上空にあるレッドコア<br />
-          かなり高い位置にあるので橋左の建物の屋上から飛んでいこう
+          かなり高い位置にあるので橋の西にある建物の屋上から飛んでいこう
         </div>
         <ImageRow
           images={[
             { src: "/map/Mirroria_redcore7_1.PNG", alt: "橋の上空その2", caption: "「ミラリア通り」の橋の上空" },
-            { src: "/map/Mirroria_redcore7_2.PNG", alt: "橋の左の建物屋上から飛ぶ", caption: "橋の左にある建物の屋上から飛ぼう（右の建物からもオムニアム砲があればいけるかも）" }
+            { src: "/map/Mirroria_redcore7_2.PNG", alt: "橋の西にある建物屋上から飛ぶ", caption: "橋の西にある建物の屋上から飛ぼう（東の建物からもオムニアム砲があればいけるかも）" }
           ]}
         />
 
