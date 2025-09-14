@@ -20,6 +20,7 @@ const basicNavLinks = [
 
 const soloMultiPveLinks = [
   { href: "/jointoperation", label: "連合作戦" },
+  { href: "/fce", label: "辺境進化" },
   { href: "/voidabyss", label: "虚空のアビス" },
   { href: "/raid", label: "討伐作戦" }
 ];

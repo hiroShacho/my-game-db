@@ -139,8 +139,8 @@ export default function Home() {
             <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
           </h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/09/15 「ソロ・マルチPVE」に「辺境進化」を作成。</li>
             <li>・2025/09/14 一部武器スキルの記述を追加。</li>
-            <li>・2025/09/13 探索マップのレッドコア探索まとめに「ミラポリス」を追加。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
