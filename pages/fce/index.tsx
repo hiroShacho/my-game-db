@@ -171,7 +171,7 @@ function FceIndexPage() {
   return (
     <>
       <Head>
-        <title>辺境進化 | 幻塔攻略データベース</title>
+        <title>進化辺境 | 幻塔攻略データベース</title>
         {/* Material Symbols Outlined を必ず読み込み */}
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </Head>
@@ -180,15 +180,15 @@ function FceIndexPage() {
         <div className="relative w-full h-40 sm:h-64 overflow-hidden rounded-lg shadow mb-6 flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-400">
           <Image
             src="/fce/fce_top.PNG"
-            alt="辺境進化トップ"
+            alt="進化辺境トップ"
             fill
             style={{ objectFit: "cover", opacity: 0.5 }}
             className="pointer-events-none select-none"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-            <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow mb-2">辺境進化</h1>
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow mb-2">進化辺境</h1>
             <p className="text-white text-sm sm:text-base font-semibold bg-cyan-700/60 px-4 py-1 rounded">
-              辺境進化の解説とボス一覧
+              進化辺境の解説とボス一覧
             </p>
           </div>
         </div>
