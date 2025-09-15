@@ -92,7 +92,7 @@
       },
       {
         "step": "3",
-        "gimmick": "調査中",
+        "gimmick": "カルトンは30秒ごとに周囲のプレイヤーを混乱させ、進行方向と逆方向に移動させる。15秒間持続",
         "danger": false
       },
       {
@@ -546,22 +546,22 @@
     "steps": [
       {
         "step": "2",
-        "gimmick": "調査中",
+        "gimmick": "孤臣のすべての攻撃は追加でHPに基づく割合ダメージを与える。クールダウン3秒",
         "danger": false
       },
       {
         "step": "3",
-        "gimmick": "調査中",
+        "gimmick": "孤臣が一定時間ごとに少しの無敵時間に入る",
         "danger": false
       },
       {
         "step": "4",
-        "gimmick": "調査中",
+        "gimmick": "孤臣のすべての行動速度が上昇する。",
         "danger": false
       },
       {
         "step": "5",
-        "gimmick": "調査中",
+        "gimmick": "孤臣のシールドがほぼ破られることがなくなる。",
         "danger": false
       }
     ]
