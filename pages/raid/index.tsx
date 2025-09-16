@@ -18,11 +18,11 @@ type RaidCard = {
 
 const raidCards: RaidCard[] = [
   {
-    key: "PrisonofExecution",
-    title: "刑辟牢獄",
-    href: "/raid/PrisonofExecution",
+    key: "PittingPredators",
+    title: "駆虎呑狼の計",
+    href: "/raid/PittingPredators",
     status: "開催中",
-    img: "/raid/PrisonofExecution.PNG",
+    img: "/raid/PittingPredators.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
@@ -45,6 +45,7 @@ const archiveRaids = [
   { key: "ElementAlart", title: "元素警戒", href: "/raid/ElementAlart", img: "/raid/ElementAlart.PNG" },
   { key: "MatrixHacking", title: "マトリックスハッキング", href: "/raid/MatrixHacking", img: "/raid/MatrixHacking.PNG" },
   { key: "RealmofPhantasm", title: "イリュージョンシフト", href: "/raid/RealmofPhantasm", img: "/raid/RealmofPhantasm.PNG" },
+  { key: "PittingPredators", title: "駆虎呑狼の計", href: "/raid/PittingPredators", img: "/raid/PittingPredators.PNG" },
   { key: "ScorchingNightmare", title: "燃え上がるナイトメア", href: "/raid/ScorchingNightmare", img: "/raid/ScorchingNightmare.PNG" },
   { key: "TrafficControl", title: "交通管制", href: "/raid/TrafficControl", img: "/raid/TrafficControl.PNG" },
   { key: "SwarmGuard", title: "ガードバグ陣", href: "/raid/SwarmGuard", img: "/raid/SwarmGuard.PNG" },
@@ -78,13 +79,13 @@ export default function RaidIndexPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           {/* 開催中だけ表示 */}
           <Link
-            key="PrisonofExecution"
-            href="/raid/PrisonofExecution"
+            key="PittingPredators"
+            href="/raid/PittingPredators"
             className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-emerald-400"
           >
-            <Image src="/raid/PrisonofExecution.PNG" alt="刑辟牢獄" width={200} height={112} className="rounded mb-2" />
+            <Image src="/raid/PittingPredators.PNG" alt="駆虎呑狼の計" width={200} height={112} className="rounded mb-2" />
             <span className="text-lg font-bold text-emerald-800 group-hover:text-emerald-600">
-              刑辟牢獄
+              駆虎呑狼の計
             </span>
             <span className="text-xs text-emerald-700 mt-2 bg-emerald-100 rounded px-2 py-1">開催中</span>
           </Link>

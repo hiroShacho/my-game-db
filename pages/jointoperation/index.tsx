@@ -6,6 +6,7 @@ import Image from "next/image";
 
 // 仮の9つの連合作戦データ
 const jointOps = [
+  { key: "Jo1", title: "深海基地", img: "/JointOperation/jo_DeepseaStronghold.PNG", link: "/jointoperation/DeepseaStronghold" },
   { key: "Jo2", title: "深海訓練所", img: "/JointOperation/jo_DeepseaProvingGround.PNG", link: "/jointoperation/DeepseaProvingGround" },
   { key: "Jo3", title: "隔離区域", img: "/JointOperation/jo_QuarantineZone.PNG", link: "/jointoperation/QuarantineZone" },
   { key: "Jo4", title: "ハイエナアリーナ", img: "/JointOperation/jo_HyenaArena.PNG", link: "/jointoperation/HyenaArena" },

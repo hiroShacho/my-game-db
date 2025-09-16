@@ -284,9 +284,38 @@ export default function TheWildBloom() {
 
         {/* 夢と現実の狭間 */}
         <section className="rounded-xl px-2 sm:px-6 py-4 mb-2 shadow bg-[#fff8f4]">
-          <SectionTitle icon="🫧">夢と現実の狭間（未開放）</SectionTitle>
-          <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800">
-            Mi-aになってバブルガンを撃ちあう神イベント
+          <SectionTitle icon="🫧">夢と現実の狭間</SectionTitle>
+          <div className="flex flex-col items-center gap-4">
+            <div className="relative w-full max-w-xl h-44 sm:h-56 rounded-lg overflow-hidden shadow bg-white cursor-pointer"
+              onClick={() => openModal("/ver_event/New_Event_1_4_1.PNG", "夢と現実の狭間")}>
+              <Image
+                src="/ver_event/New_Event_1_4_1.PNG"
+                alt="夢と現実の狭間"
+                fill
+                className="object-contain w-full h-full"
+                sizes="(max-width: 900px) 95vw, 600px"
+              />
+              <span className="absolute bottom-2 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded z-10 pointer-events-none">
+                クリックで拡大
+              </span>
+            </div>
+            <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 text-sm text-gray-800 w-full max-w-xl">
+              Mi-aになってバブルガンを撃ちあう神イベント<br />
+              Mi-aの衣装ごとに個別のスキルを持っており、バブルガンの種類も色で分かれている。
+            </div>
+            <div className="relative w-full max-w-xl h-44 sm:h-56 rounded-lg overflow-hidden shadow bg-white cursor-pointer"
+              onClick={() => openModal("/ver_event/New_Event_1_4_2.PNG", "夢と現実の狭間2")}>
+              <Image
+                src="/ver_event/New_Event_1_4_2.PNG"
+                alt="夢と現実の狭間2"
+                fill
+                className="object-contain w-full h-full"
+                sizes="(max-width: 900px) 95vw, 600px"
+              />
+              <span className="absolute bottom-2 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded z-10 pointer-events-none">
+                クリックで拡大
+              </span>
+            </div>
           </div>
         </section>
 

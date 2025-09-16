@@ -426,6 +426,18 @@ export default function TriviaPage() {
           動画解説：チャットスタンプの開放方法（クリックで再生）
         </div>
 
+        <SectionTitle icon="key">暗号BOXの鍵はヴェラで使おう！</SectionTitle>
+        <div className="mb-4 text-base text-gray-800">
+          暗号BOXを開けるための鍵は時空ごとに種類が分かれているが、アーシャとヴェラだけは共通のモノになっている。<br />
+          アーシャに比べてヴェラの暗号BOXからはミランが出てくるため、アーシャでは鍵を使わずにヴェラで箱を開けるようにしよう！
+        </div>
+        <CaptionedImage
+          src="/Newbie/trivia/trivia_key.PNG"
+          alt="アーシャ・ヴェラ共通の鍵はヴェラで使おう！"
+          caption="アーシャ・ヴェラ共通の鍵はヴェラで使おう！"
+          onClick={() => openModal("/Newbie/trivia/trivia_key.PNG", "アーシャ・ヴェラ共通の鍵はヴェラで使おう！")}
+        />
+
         {/* ワールドボスの突破モジュール選択箱 */}
         <SectionTitle icon="box">ワールドボスの突破モジュール選択箱は毎週20個獲得できる</SectionTitle>
         <div className="mb-4">
