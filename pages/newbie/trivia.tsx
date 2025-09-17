@@ -426,6 +426,78 @@ export default function TriviaPage() {
           動画解説：チャットスタンプの開放方法（クリックで再生）
         </div>
 
+        {/* ■フリーズ回避を覚えておこう！ */}
+        <SectionTitle icon="snowing">フリーズ回避を覚えておこう！</SectionTitle>
+        <div className="mb-4 text-base text-gray-800">
+          このゲームはマップによってはロードの負荷が重かったりしてNPCが表示されなかったりすることがある。<br />
+          そんな時は設定の「フリーズ回避」をすることでマップの読み込み状況をリセットできる。<br />
+          特にマップが重いキルオだとNPCが床に埋まっていることが多いので、探索やクエストで目標のNPCが見当たらない時は一度フリーズ回避を試すようにしよう。
+        </div>
+        <CaptionedImage
+          src="/Newbie/trivia/trivia_Unstuck.PNG"
+          alt="困ったらフリーズ回避を試そう！"
+          caption="困ったらフリーズ回避を試そう！"
+          onClick={() => openModal("/Newbie/trivia/trivia_Unstuck.PNG", "困ったらフリーズ回避を試そう！")}
+        />
+
+        {/* 活躍値・ギルドクエスト「在りし日の幻に参加」は出入りするだけで良い */}
+        <SectionTitle icon="exit_to_app">活躍値ミッションとギルドクエストの「在りし日の幻に参加」は出入りするだけで良い</SectionTitle>
+        <div className="mb-4">
+          毎週の活躍値のミッションとギルドクエストで出現する「在りし日の幻に参加する」は在りし日の幻に入ったら即抜けてしまっても達成になる。<br />
+          敵と戦うどころか戦闘開始をする必要すらないのでこの手の挑戦の中では一番楽と言える。
+        </div>
+        <CaptionedImage
+          src="/Newbie/trivia/trivia_bygone.PNG"
+          alt="コンテンツに入ったら即抜けでOK！（ステージ中央に行って戦闘開始する必要すらない）"
+          caption="コンテンツに入ったら即抜けでOK！（ステージ中央に行って戦闘開始する必要すらない）"
+          onClick={() => openModal("/Newbie/trivia/trivia_bygone.PNG", "コンテンツに入ったら即抜けでOK！（ステージ中央に行って戦闘開始する必要すらない）")}
+        />
+
+        {/* ■乗り物のレベルを上げて煙水晶を稼ごう！ */}
+        <SectionTitle icon="directions_car">乗り物のレベルを上げて煙水晶を稼ごう！</SectionTitle>
+        <div className="mb-4 text-base text-gray-800">
+          乗り物は整備でアイテムを消費してレベルを上げることが可能。<br />
+          特に性能が変化したりはしないが、レベルを5上げるごとに煙水晶が貰える。<br />
+          レベル5～20までは20煙水晶ずつ、25～40までは30煙水晶ずつ、45からは40煙水晶ずつに固定となる。<br />
+          1つの乗り物をレベル100まで上げると合計で680煙水晶が貰えるので、普段から意識して乗り物素材を集めているといざという時に役に立つことがあるかも？
+        </div>
+        <CaptionedImage
+          src="/Newbie/trivia/trivia_vehiclesDC.PNG"
+          alt="乗り物レベルを上げて煙水晶をゲットしよう！"
+          caption="乗り物レベルを上げて煙水晶をゲットしよう！"
+          onClick={() => openModal("/Newbie/trivia/trivia_vehiclesDC.PNG", "乗り物レベルを上げて煙水晶をゲットしよう！")}
+        />
+
+        {/* PVPコンテンツ */}
+        <SectionTitle icon="sports_martial_arts">PVPコンテンツは毎月1回参加しておくとお得</SectionTitle>
+        <div className="mb-4">
+          PVPコンテンツの運命の包囲網は毎月1回参加しておくと月が変わるタイミングでシーズン報酬が貰える。<br />
+          戦績によって上がるランクごとに報酬が貰えるのだが、PVPは特殊な仕様が多く初見殺しが多いので初心者が育つ土壌は出来ていない。<br />
+          月が替わったら1回参加して報酬だけ貰うのが精神衛生上良いとされている。<br /><br />
+          トップリーグについてもランクで報酬が貰えるが、こちらは一度参加したら以降の月は放置でもOK。<br />
+          放置だとランクは下がっていくが、士官～指揮官を維持していればそこまで報酬は変わらない上にランクも一気に下がりはしない。<br />
+          知識と武器の所持状況は影響するが、いずれトップリーグに関する記事も作成するのでとりあえず1回参加だけはしておこう。<br /><br />
+          臨界の淵はトップリーグとランキングおよび報酬が連動しているのでトップリーグをやっていれば報酬は貰える。<br />
+          というかPVPで16人集めること自体が非常にハードルが高いので基本はスルーでOK。
+        </div>
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/trivia/trivia_PVP1.PNG",
+              alt: "運命の包囲網のランク報酬",
+              caption: "運命の包囲網のランク報酬",
+            },
+            {
+              src: "/Newbie/trivia/trivia_PVP2.PNG",
+              alt: "トップリーグ&臨界の淵のランク報酬",
+              caption: "トップリーグ&臨界の淵のランク報酬",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
+        />
+
         <SectionTitle icon="key">暗号BOXの鍵はヴェラで使おう！</SectionTitle>
         <div className="mb-4 text-base text-gray-800">
           暗号BOXを開けるための鍵は時空ごとに種類が分かれているが、アーシャとヴェラだけは共通のモノになっている。<br />
@@ -464,36 +536,6 @@ export default function TriviaPage() {
           onClick={openModal}
         />
 
-        {/* PVPコンテンツ */}
-        <SectionTitle icon="sports_martial_arts">PVPコンテンツは毎月1回参加しておくとお得</SectionTitle>
-        <div className="mb-4">
-          PVPコンテンツの運命の包囲網は毎月1回参加しておくと月が変わるタイミングでシーズン報酬が貰える。<br />
-          戦績によって上がるランクごとに報酬が貰えるのだが、PVPは特殊な仕様が多く初見殺しが多いので初心者が育つ土壌は出来ていない。<br />
-          月が替わったら1回参加して報酬だけ貰うのが精神衛生上良いとされている。<br /><br />
-          トップリーグについてもランクで報酬が貰えるが、こちらは一度参加したら以降の月は放置でもOK。<br />
-          放置だとランクは下がっていくが、士官～指揮官を維持していればそこまで報酬は変わらない上にランクも一気に下がりはしない。<br />
-          知識と武器の所持状況は影響するが、いずれトップリーグに関する記事も作成するのでとりあえず1回参加だけはしておこう。<br /><br />
-          臨界の淵はトップリーグとランキングおよび報酬が連動しているのでトップリーグをやっていれば報酬は貰える。<br />
-          というかPVPで16人集めること自体が非常にハードルが高いので基本はスルーでOK。
-        </div>
-        <RowImages
-          images={[
-            {
-              src: "/Newbie/trivia/trivia_PVP1.PNG",
-              alt: "運命の包囲網のランク報酬",
-              caption: "運命の包囲網のランク報酬",
-            },
-            {
-              src: "/Newbie/trivia/trivia_PVP2.PNG",
-              alt: "トップリーグ&臨界の淵のランク報酬",
-              caption: "トップリーグ&臨界の淵のランク報酬",
-            },
-          ]}
-          w={350}
-          h={200}
-          onClick={openModal}
-        />
-
         {/* 灰蝕値（グレイバイト）に気を付けよう！ */}
         <SectionTitle icon="warning">灰蝕値（グレイバイト）に気を付けよう！</SectionTitle>
         <div className="mb-4">
@@ -521,17 +563,46 @@ export default function TriviaPage() {
           onClick={openModal}
         />
 
-        {/* 活躍値・ギルドクエスト「在りし日の幻に参加」は出入りするだけで良い */}
-        <SectionTitle icon="exit_to_app">活躍値ミッションとギルドクエストの「在りし日の幻に参加」は出入りするだけで良い</SectionTitle>
-        <div className="mb-4">
-          毎週の活躍値のミッションとギルドクエストで出現する「在りし日の幻に参加する」は在りし日の幻に入ったら即抜けてしまっても達成になる。<br />
-          敵と戦うどころか戦闘開始をする必要すらないのでこの手の挑戦の中では一番楽と言える。
+        {/* ■ミラポリスのカーレースではFPSを下げると有利？ */}
+        <SectionTitle icon="sports_motorsports">ミラポリスのカーレースではFPSを下げると有利？</SectionTitle>
+        <div className="mb-4 text-base text-gray-800">
+          ミラポリスではミランを使って購入したレーシングカーを使ってレースゲームが遊べる。<br />
+          このレーシングカーが曲者で、FPSを最大の120で遊んでいるとカーブを曲がるのが非常に難しい。<br />
+          そこでFPS下げていくと何故か車の旋回能力が向上して取り回しが良くなる。<br />
+          理屈は不明だが確実に有利になれるので使えるものは使っていこう。
         </div>
         <CaptionedImage
-          src="/Newbie/trivia/trivia_bygone.PNG"
-          alt="コンテンツに入ったら即抜けでOK！（ステージ中央に行って戦闘開始する必要すらない）"
-          caption="コンテンツに入ったら即抜けでOK！（ステージ中央に行って戦闘開始する必要すらない）"
-          onClick={() => openModal("/Newbie/trivia/trivia_bygone.PNG", "コンテンツに入ったら即抜けでOK！（ステージ中央に行って戦闘開始する必要すらない）")}
+          src="/Newbie/trivia/trivia_race.mp4"
+          alt="FPSを下げると制御しやすくなる"
+          caption="FPSを下げると制御しやすくなる"
+          onClick={() => openModal("/Newbie/trivia/trivia_race.mp4", "FPSを下げると制御しやすくなる")}
+        />
+
+        {/* ■秩序無きアビスの第3層（第3都市）への行き方 */}
+        <SectionTitle icon="layers">秩序無きアビスの第3層（第3都市）への行き方</SectionTitle>
+        <div className="mb-4 text-base text-gray-800">
+          秩序無きアビスの第3層へはワールドボスのアブサント・ヘラを討伐することで入ることが出来る。<br />
+          ヘラを倒すと足場が抜けてそのまま落ちていくと第3層に着く。<br />
+          ヘラ自体はワールドレベルが低ければ特に苦戦することなく倒せるが、第3層にあるワールドボスの箱を誰かが目視で確認しないとヘラが湧かないという特殊な仕様が存在する。<br />
+          そのため、新規プレイヤーが自力で第3層に行くのは難しいので、ワールドチャットやギルド、フレンドに頼って誰かにヘラの箱を確認しに行ってもらおう。<br />
+          一応、マップから確認できるワールドボス一覧でヘラが転生中になっていないかも確認しておこう。（転生中だった場合は待機するかライン移動しよう）
+        </div>
+        <RowImages
+          images={[
+            {
+              src: "/Newbie/trivia/trivia_harrah.PNG",
+              alt: "誰かがボス箱を確認しないとヘラは湧かない",
+              caption: "誰かがボス箱を確認しないとヘラは湧かない",
+            },
+            {
+              src: "/Newbie/trivia/trivia_harrahresporn.PNG",
+              alt: "今いるラインのヘラが転生中になっていないか確認しよう",
+              caption: "今いるラインのヘラが転生中になっていないか確認しよう",
+            },
+          ]}
+          w={350}
+          h={200}
+          onClick={openModal}
         />
 
         <Modal
