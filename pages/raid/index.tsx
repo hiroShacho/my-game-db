@@ -18,11 +18,11 @@ type RaidCard = {
 
 const raidCards: RaidCard[] = [
   {
-    key: "PittingPredators",
-    title: "駆虎呑狼の計",
-    href: "/raid/PittingPredators",
+    key: "MechaSimulation",
+    title: "機兵演習",
+    href: "/raid/MechaSimulation",
     status: "開催中",
-    img: "/raid/PittingPredators.PNG",
+    img: "/raid/MechaSimulation.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
@@ -42,6 +42,7 @@ const raidCards: RaidCard[] = [
 const archiveRaids = [
   { key: "GluttonousFeast", title: "暴食の饗宴", href: "/raid/GluttonousFeast", img: "/raid/GluttonousFeast.PNG" },
   { key: "PrisonofExecution", title: "刑辟牢獄", href: "/raid/PrisonofExecution", img: "/raid/PrisonofExecution.PNG" },
+  { key: "MechaSimulation", title: "機兵演習", href: "/raid/MechaSimulation", img: "/raid/MechaSimulation.PNG" },
   { key: "ElementAlart", title: "元素警戒", href: "/raid/ElementAlart", img: "/raid/ElementAlart.PNG" },
   { key: "MatrixHacking", title: "マトリックスハッキング", href: "/raid/MatrixHacking", img: "/raid/MatrixHacking.PNG" },
   { key: "RealmofPhantasm", title: "イリュージョンシフト", href: "/raid/RealmofPhantasm", img: "/raid/RealmofPhantasm.PNG" },
@@ -79,13 +80,13 @@ export default function RaidIndexPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           {/* 開催中だけ表示 */}
           <Link
-            key="PittingPredators"
-            href="/raid/PittingPredators"
+            key="MechaSimulation"
+            href="/raid/MechaSimulation"
             className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-emerald-400"
           >
-            <Image src="/raid/PittingPredators.PNG" alt="駆虎呑狼の計" width={200} height={112} className="rounded mb-2" />
+            <Image src="/raid/MechaSimulation.PNG" alt="機兵演習" width={200} height={112} className="rounded mb-2" />
             <span className="text-lg font-bold text-emerald-800 group-hover:text-emerald-600">
-              駆虎呑狼の計
+              機兵演習
             </span>
             <span className="text-xs text-emerald-700 mt-2 bg-emerald-100 rounded px-2 py-1">開催中</span>
           </Link>
