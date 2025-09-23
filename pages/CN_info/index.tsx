@@ -7,6 +7,7 @@ import Image from "next/image";
 const cnCharacters = [
   { id: "hipper", name: "シードル", subName: "Hipper" },
   { id: "helen", name: "ヘレンネ", subName: "Helen" },
+  { id: "nanto", name: "ナント", subName: "Nanto" },
   // 今後追加キャラもここに
 ];
 

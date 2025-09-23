@@ -139,8 +139,8 @@ export default function Home() {
             <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
           </h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/09/23 大陸版の新キャラクターの情報を追加。</li>
             <li>・2025/09/22 討伐作戦「機兵演習」のページを作成。</li>
-            <li>・2025/09/18 豆知識と一部武器スキル説明文を追加。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
