@@ -26,7 +26,7 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/weapons/Pollux", label: "ラクシス武器：ポルクス" },
+  { href: "/weapons/Pollux", label: "ヘレンネ武器：ポルクス" },
   { href: "/matrices/m_61", label: "ヘレンネボリション" },
   { href: "/trait/t_61", label: "ヘレンネ特性" },
 ];
