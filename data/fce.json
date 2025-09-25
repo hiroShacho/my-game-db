@@ -700,5 +700,32 @@
         "danger": false
       }
     ]
+  },
+  {
+    "bossName": "朱厭",
+    "bossSlug": "Zhuyan",
+    "bossLevel": "100",
+    "steps": [
+      {
+        "step": "2",
+        "gimmick": "朱厭の攻撃に強力なグレイバイト効果が付与される。。",
+        "danger": false
+      },
+      {
+        "step": "3",
+        "gimmick": "朱厭の攻撃を受けると、「ランペイジ」が付与され、5スタック溜まると爆発が発生し、自身と周囲に大ダメージを与える。",
+        "danger": false
+      },
+      {
+        "step": "4",
+        "gimmick": "朱厭を処刑できるようになる。",
+        "danger": false
+      },
+      {
+        "step": "5",
+        "gimmick": "朱厭の周囲では5秒ごとに地爆が発生し致命的なダメージを与える。さらに地爆跡に溶岩が残る。",
+        "danger": true
+      }
+    ]
   }
 ]
