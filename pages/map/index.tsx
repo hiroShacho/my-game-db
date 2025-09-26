@@ -195,8 +195,31 @@ function MapIndexPage() {
           基本的にマップ上に補給庫のアイコンは表示されないので注意しよう。
         </div>
 
+        {/* レッドコア探索まとめ目次 */}
+        <div className="flex justify-center mb-5">
+          <div className="bg-white/80 border-2 border-cyan-300 rounded-xl shadow px-6 py-4 max-w-md w-full">
+            <div className="text-lg font-bold text-cyan-900 mb-2 text-center">地域別レッドコア探索まとめ目次</div>
+            <ul className="list-disc ml-6 text-base">
+              <li>
+                <a href="#redcore-artificialisland" className="text-blue-700 hover:underline">人工島</a>
+              </li>
+              <li>
+                <a href="#redcore-vera" className="text-blue-700 hover:underline">ヴェラ</a>
+              </li>
+              <li>
+                <a href="#redcore-mirroria" className="text-blue-700 hover:underline">ミラポリス</a>
+              </li>
+              <li>
+                <a href="#redcore-abyss" className="text-blue-700 hover:underline">秩序無きアビス</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         {/* ＜人工島＞区切りのみNew_ver_info.tsx風 */}
-        <AreaDivider icon={<span>🏝️</span>}>{`人工島　`}</AreaDivider>
+        <div id="redcore-artificialisland">
+          <AreaDivider icon={<span>🏝️</span>}>{`人工島　`}</AreaDivider>
+        </div>
 
         {/* トラック内その1：■項目のみNew_ver_info.tsx風 */}
         <SectionDivider icon="■">トラック内その①　</SectionDivider>
@@ -263,7 +286,9 @@ function MapIndexPage() {
         </div>
 
         {/* ＜ヴェラ＞区切りのみNew_ver_info.tsx風 */}
-        <AreaDivider icon={<span>🏜️</span>}>{`ヴェラ　`}</AreaDivider>
+        <div id="redcore-vera">
+          <AreaDivider icon={<span>🏜️</span>}>{`ヴェラ　`}</AreaDivider>
+        </div>
 
         {/* スレーター渓谷北部：■項目のみNew_ver_info.tsx風 */}
         <SectionDivider icon="■">「スレーター渓谷」北部　</SectionDivider>
@@ -370,7 +395,9 @@ function MapIndexPage() {
       </div>
 
         {/* ＜ミラポリス＞区切りのみNew_ver_info.tsx風 */}
-        <AreaDivider icon={<span>🏙️</span>}>{`ミラポリス　`}</AreaDivider>
+        <div id="redcore-mirroria">
+          <AreaDivider icon={<span>🏙️</span>}>{`ミラポリス　`}</AreaDivider>
+        </div>
 
         {/* ■「アミューズランド」北の上空 */}
         <SectionDivider icon="■">「アミューズランド」北の上空　</SectionDivider>
@@ -527,6 +554,192 @@ function MapIndexPage() {
             height={360}
           />
         </div>
+
+        {/* ＜秩序無きアビス＞区切りのみNew_ver_info.tsx風 */}
+        <div id="redcore-abyss">
+          <AreaDivider icon={<span>🌑</span>}>{`秩序無きアビス　`}</AreaDivider>
+        </div>
+
+        {/* ■ワールドボス：ヘラの後ろ */}
+        <SectionDivider icon="■">ワールドボス：ヘラの後ろ　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          ワールドボスのヘラがいる場所の後ろの目のような模様にレッドコアがある<br />
+          ジェットパックなどで飛んでいくことで簡単に取得できるぞ！
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore1_1.PNG", alt: "ヘラの後ろ", caption: "ヘラの後ろ" },
+            { src: "/map/Abyss_redcore1_2.PNG", alt: "道が繋がって無いので飛んでいこう", caption: "道が繋がって無いので飛んでいこう" }
+          ]}
+        />
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore1_3.PNG", alt: "目の模様の下の方に落ちている", caption: "目の模様の下の方に落ちている" }
+          ]}
+        />
+
+        {/* ■三稜石の柱の最上階（アブサント・ガイア戦） */}
+        <SectionDivider icon="■">三稜石の柱の最上階（アブサント・ガイア戦）　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          黒岩の祭壇の北にある三稜石の柱の最上階にあるレッドコア
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore2_1.PNG", alt: "三稜石の柱の最上階", caption: "三稜石の柱の最上階" },
+            { src: "/map/Abyss_redcore2_2.PNG", alt: "アブサント・ガイアの部屋前にあるレッドコア", caption: "アブサント・ガイアの部屋前にあるレッドコア" }
+          ]}
+        />
+        <div className="mb-2 text-lg text-gray-800">
+          三稜石の柱は結界が張られているので秩序無きアビスのマップ上にある4つの装置で結界を解除する必要がある。<br />
+          結界は装置を調べるだけで解除可能なので、下記の画像の場所を探索しよう。
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore2_3.PNG", alt: "解除装置の場所", caption: "解除装置の場所" },
+            { src: "/map/Abyss_redcore2_4.PNG", alt: "装置を調べるだけでOK", caption: "装置を調べるだけでOK" }
+          ]}
+        />
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore2_5.PNG", alt: "解除装置3", caption: "" },
+            { src: "/map/Abyss_redcore2_6.PNG", alt: "解除装置4", caption: "" }
+          ]}
+        />
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore2_7.PNG", alt: "解除装置5", caption: "" },
+            { src: "/map/Abyss_redcore2_8.PNG", alt: "解除装置6", caption: "" }
+          ]}
+        />
+        <div className="mb-2 text-lg text-gray-800">
+          全ての結界を解除したら三稜石の柱の中に入ってひたすら上に登ろう。<br />
+          最上階前にあるギミックは柱が光った順に柱の下の床に触れればOK。<br />
+          ギミックを解いた先ではアブサント・ガイアが待ち受けているので、これを倒してレッドコアをゲットしよう！
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore2_9.PNG", alt: "柱は画像の順に床に触れよう", caption: "柱は画像の順に床に触れよう" },
+            { src: "/map/Abyss_redcore2_10.PNG", alt: "アブサント・ガイアを倒すとレッドコアが出現！", caption: "アブサント・ガイアを倒すとレッドコアが出現！" }
+          ]}
+        />
+
+        {/* ■黒岩塔の最上階 */}
+        <SectionDivider icon="■">黒岩塔の最上階　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          黒岩の祭壇の南にある黒岩塔の最上階にあるレッドコア
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore3_1.PNG", alt: "黒岩塔の最上階", caption: "黒岩塔の最上階" },
+            { src: "/map/Abyss_redcore3_2.PNG", alt: "最上階にあるレッドコア", caption: "最上階にあるレッドコア" }
+          ]}
+        />
+        <div className="mb-2 text-lg text-gray-800">
+          黒岩塔も三稜石の柱と同じように結界が張られているので4つの装置を調べて結界を解除しよう。
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore3_3.PNG", alt: "解除装置の場所", caption: "解除装置の場所" },
+            { src: "/map/Abyss_redcore3_4.PNG", alt: "装置を調べるだけでOK", caption: "装置を調べるだけでOK" }
+          ]}
+        />
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore3_5.PNG", alt: "解除装置3", caption: "" },
+            { src: "/map/Abyss_redcore3_6.PNG", alt: "解除装置4", caption: "" }
+          ]}
+        />
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore3_7.PNG", alt: "解除装置5", caption: "" },
+            { src: "/map/Abyss_redcore3_8.PNG", alt: "解除装置6", caption: "" }
+          ]}
+        />
+        <div className="mb-2 text-lg text-gray-800">
+          黒岩塔の最上階にはレッドコアがあり、その奥にある大睡蓮は塔の中の「洞窟のキノコ」のギミックを全てこなすことで解放・戦闘可能になる。
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore3_9.PNG", alt: "全てのキノコギミックをこなすと大睡蓮が解放できる", caption: "全てのキノコギミックをこなすと大睡蓮が解放できる" },
+            { src: "/map/Abyss_redcore3_10.PNG", alt: "大睡蓮を倒して開花させるとレッドコアが出現！", caption: "大睡蓮を倒して開花させるとレッドコアが出現！" }
+          ]}
+        />
+        {/* ■第3都市：科学研究所のレッドコア（サブクエスト関連） */}
+        <SectionDivider icon="■">第3都市：科学研究所のレッドコア（サブクエスト関連）　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          第3都市の科学研究所にあるレッドコア
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore4_1.PNG", alt: "第3都市の科学研究所でサブクエストをこなすことで入手できる", caption: "第3都市の科学研究所でサブクエストをこなすことで入手できる" },
+            { src: "/map/Abyss_redcore4_2.PNG", alt: "サブクエストをこなすことで入れる部屋のレッドコア", caption: "サブクエストをこなすことで入れる部屋のレッドコア" }
+          ]}
+        />
+        <div className="mb-2 text-lg text-gray-800">
+          科学研究所にいる作業用ドロイドからクエストを受けて設計図サンプルを5つ回収しよう。<br />
+          サンプルの場所はクエストの案内がマップに表示されるのでそちらに従ってサンプルを回収していこう。
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore4_3.PNG", alt: "案内に従って最初のサンプルを回収しよう", caption: "案内に従って最初のサンプルを回収しよう" },
+            { src: "/map/Abyss_redcore4_4.PNG", alt: "装置を調べるだけでOK", caption: "装置を調べるだけでOK" }
+          ]}
+        />
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore4_5.PNG", alt: "最初のサンプル回収後に残りのサンプルの場所も表示される", caption: "最初のサンプル回収後に残りのサンプルの場所も表示される" }
+          ]}
+        />
+        <div className="mb-2 text-lg text-gray-800">
+          全てのサンプルを回収したら科学研究所に戻って権限取得の装置を調べよう。<br />
+          全ての装置を調べて権限を獲得すると転送装置が起動可能になり、レッドコアのある部屋に入れるようになる。
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore4_6.PNG", alt: "部屋にある丸いオブジェがついた5つの装置から権限を取得しよう", caption: "部屋にある丸いオブジェがついた5つの装置から権限を取得しよう" },
+            { src: "/map/Abyss_redcore4_7.PNG", alt: "レッドコアがある部屋への転送ゲートが起動する", caption: "レッドコアがある部屋への転送ゲートが起動する" }
+          ]}
+        />
+        <div className="mb-2 text-lg text-gray-800">
+          部屋に入ったらすぐにレッドコアがあるのでゲットしよう。<br />
+          また、奥の装置を起動することで第3都市の煌々鉱を採掘可能になるので必ず装置を起動しよう。
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore4_8.PNG", alt: "奥の装置を起動しよう", caption: "奥の装置を起動しよう" },
+            { src: "/map/Abyss_redcore4_9.PNG", alt: "煌々鉱を対応した属性攻撃で破壊可能になるぞ！", caption: "煌々鉱を対応した属性攻撃で破壊可能になるぞ！" }
+          ]}
+        />
+
+        {/* ■第3都市：調査センターのレッドコア（探索：フレンドリーな光キツネ関連） */}
+        <SectionDivider icon="■">第3都市：調査センターのレッドコア（探索：フレンドリーな光キツネ関連）　</SectionDivider>
+        <div className="mb-2 text-lg text-gray-800">
+          第3都市の調査センターで貰えるレッドコア<br />
+          探索のフレンドリーな光キツネのギミックをこなすことで獲得できる
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore5_1.PNG", alt: "第3都市でキツネのギミックをこなすと調査センターでレッドコアを入手できる", caption: "第3都市でキツネのギミックをこなすと調査センターでレッドコアを入手できる" },
+            { src: "/map/Abyss_redcore5_2.PNG", alt: "全ての行程をこなすとレッドコアを入手可能", caption: "全ての行程をこなすとレッドコアを入手可能" }
+          ]}
+        />
+        <div className="mb-2 text-lg text-gray-800">
+          第3都市の各所に存在するフレンドリーな光キツネに「バラの花びら」や「シーベリー」をあげる探索を進めると調査センターにキツネが増えていく。<br />
+          15体ほどキツネの探索を終わらせると調査センターに計6体のキツネが出現し、このうちの喧嘩をしている2体に話しかけることで起動モジュールを獲得できる。<br />
+          この起動モジュールを使って制御台を起動し、近くのドロイドに話しかけることでレッドコアを入手できる。
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore5_3.PNG", alt: "マップ①（画像のマップピンを立てている所にキツネがいる）", caption: "マップ①（画像のマップピンを立てている所にキツネがいる）" },
+            { src: "/map/Abyss_redcore5_4.PNG", alt: "マップ②（18体中15体ほどのキツネの探索を済ませよう）", caption: "マップ②（18体中15体ほどのキツネの探索を済ませよう）" }
+          ]}
+        />
+        <ImageRow
+          images={[
+            { src: "/map/Abyss_redcore5_5.PNG", alt: "喧嘩しているキツネから起動モジュールを回収しよう", caption: "喧嘩しているキツネから起動モジュールを回収しよう" },
+            { src: "/map/Abyss_redcore5_6.PNG", alt: "制御台を起動して近くのドロイドに話しかけよう", caption: "制御台を起動して近くのドロイドに話しかけよう" }
+          ]}
+        />
     </>
   );
 }
