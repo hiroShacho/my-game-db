@@ -18,11 +18,11 @@ type RaidCard = {
 
 const raidCards: RaidCard[] = [
   {
-    key: "MechaSimulation",
-    title: "機兵演習",
-    href: "/raid/MechaSimulation",
+    key: "ScorchingNightmare",
+    title: "燃え上がるナイトメア",
+    href: "/raid/ScorchingNightmare",
     status: "開催中",
-    img: "/raid/MechaSimulation.PNG",
+    img: "/raid/ScorchingNightmare.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
@@ -80,18 +80,19 @@ export default function RaidIndexPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           {/* 開催中だけ表示 */}
           <Link
-            key="MechaSimulation"
-            href="/raid/MechaSimulation"
+            key="ScorchingNightmare"
+            href="/raid/ScorchingNightmare"
             className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-emerald-400"
           >
-            <Image src="/raid/MechaSimulation.PNG" alt="機兵演習" width={200} height={112} className="rounded mb-2" />
+            <Image src="/raid/ScorchingNightmare.PNG" alt="燃え上がるナイトメア" width={200} height={112} className="rounded mb-2" />
             <span className="text-lg font-bold text-emerald-800 group-hover:text-emerald-600">
-              機兵演習
+              燃え上がるナイトメア
             </span>
             <span className="text-xs text-emerald-700 mt-2 bg-emerald-100 rounded px-2 py-1">開催中</span>
           </Link>
           {/* ガードバグ陣は未開催ラベルのみ表示 */}
           <div className="flex flex-col items-center justify-center bg-gray-50 border-2 border-yellow-400 rounded-lg shadow-lg h-[184px]">
+            <span className="text-sm font-bold text-yellow-900 mb-2">限定討伐</span>
             <span className="text-sm font-bold text-yellow-900 mb-2">未開催</span>
           </div>
         </div>
