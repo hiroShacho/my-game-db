@@ -210,7 +210,7 @@ export default function ScorchingNightmarePage() {
         {/* ▼追加：チャレンジソロ攻略項目 */}
         <SectionTitle icon="sports_martial_arts">チャレンジでもソロ攻略可能</SectionTitle>
         <div>
-          <span className="font-bold text-emerald-700">チャレンジ</span>でも恩恵共鳴で異能ノーラを使えばソロ攻略も可能です。<br /><br />
+          <span className="font-bold text-emerald-700">チャレンジ</span>でも恩恵共鳴でギミックをこなせばソロ攻略も可能です。<br /><br />
           <span className="font-bold text-orange-700">ポイント</span><br />
           ■ギミックの正確な処理と回復タイミングの把握が重要<br />
           ■たき火の栗拾いギミックでは回復手段を惜しみなく使おう<br />
@@ -221,8 +221,21 @@ export default function ScorchingNightmarePage() {
           <iframe
             width="560"
             height="315"
+            src="https://www.youtube.com/embed/n8Wd343weKk"
+            title="チャレンジでソロ攻略動画1"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded shadow border border-emerald-200"
+            style={{ maxWidth: "100%", aspectRatio: "16/9" }}
+          />
+        </div>
+        <div className="w-full flex justify-center my-4">
+          <iframe
+            width="560"
+            height="315"
             src="https://www.youtube.com/embed/-xfHQO-Jd7k"
-            title="チャレンジでソロ攻略動画"
+            title="チャレンジでソロ攻略動画2"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
