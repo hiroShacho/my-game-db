@@ -130,8 +130,8 @@ export default function Home() {
             <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
           </h2>
           <ul className="space-y-1 text-sm sm:text-base text-gray-700">
+            <li>・2025/10/02 新規・初心者向けのページにゲーム開始前に見る「はじめに」を追加。</li>
             <li>・2025/09/30 討伐作戦「燃え上がるナイトメア」に純恩恵編成での攻略動画を追加。</li>
-            <li>・2025/09/26 探索マップのレッドコア探索まとめに「秩序無きアビス」を追加。</li>
             <li>･･･</li>
             <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
           </ul>
