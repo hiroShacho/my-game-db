@@ -300,6 +300,21 @@ export default function TutorialPage() {
         <SectionTitle icon="arrow_forward">ここまでゲームを進めたら次はどうすれば良い？</SectionTitle>
         <div className="mb-4">
           ⇒少しずつ育成要素に触れていくのがおススメ！<br />
+          初心者向けのイベント「良縁の出会い」のミッションを進めながら育成を進めよう！<br />
+          良縁の出会いは1週間ごとにミッションが開放され、ミッションをクリアするごとにスクラッチくじを1マス解放できる。<br />
+          シロのアイコンが一定数出るたびに報酬が開放され、3週間分のミッションをこなすと無料分だけでイベント画面に表示されている物理属性のキャラクター3体（グノノ、明景、煙渺）が貰えるぞ！<br />
+          イベント期間は3週間以上あるが、期間が過ぎたらキャラクターを受け取れないので忘れずにミッションをこなすようにしよう！
+        </div>
+        <CaptionedImage
+          src="/Newbie/tutorial/tutorial_DistributionWeapons.PNG"
+          alt="配布武器"
+          caption="配布の武器はどれも探索・戦闘で役立つ能力を持っているぞ！"
+          w={480}
+          h={260}
+          onClick={() => openModal("/Newbie/tutorial/tutorial_DistributionWeapons.PNG", "配布武器")}
+        />
+        <div className="mb-4">
+          上記ミッションを進めながら育成要素にも徐々に触れていこう！<br />
           <Link href="/newbie/levelup" className="text-green-600 underline">
             育成要素のまとめ
           </Link>

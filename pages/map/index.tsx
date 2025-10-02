@@ -217,7 +217,7 @@ function MapIndexPage() {
         </div>
 
         {/* ＜人工島＞区切りのみNew_ver_info.tsx風 */}
-        <div id="redcore-artificialisland">
+        <div id="redcore-artificialisland" style={{ scrollMarginTop: "80px" }}>
           <AreaDivider icon={<span>🏝️</span>}>{`人工島　`}</AreaDivider>
         </div>
 
@@ -286,7 +286,7 @@ function MapIndexPage() {
         </div>
 
         {/* ＜ヴェラ＞区切りのみNew_ver_info.tsx風 */}
-        <div id="redcore-vera">
+        <div id="redcore-vera" style={{ scrollMarginTop: "80px" }}>
           <AreaDivider icon={<span>🏜️</span>}>{`ヴェラ　`}</AreaDivider>
         </div>
 
@@ -392,10 +392,10 @@ function MapIndexPage() {
         </div>
         {/* Vera_redcore6_5.mp4 のサイズを大きく */}
         <CaptionedVideo src="/map/Vera_redcore6_5.mp4" caption="何回かに分けて挑戦すればラフレシアを閉じなくても攻略可能" width={640} height={360} />
-      </div>
+        </div>
 
         {/* ＜ミラポリス＞区切りのみNew_ver_info.tsx風 */}
-        <div id="redcore-mirroria">
+        <div id="redcore-mirroria" style={{ scrollMarginTop: "80px" }}>
           <AreaDivider icon={<span>🏙️</span>}>{`ミラポリス　`}</AreaDivider>
         </div>
 
@@ -556,7 +556,7 @@ function MapIndexPage() {
         </div>
 
         {/* ＜秩序無きアビス＞区切りのみNew_ver_info.tsx風 */}
-        <div id="redcore-abyss">
+        <div id="redcore-abyss" style={{ scrollMarginTop: "80px" }}>
           <AreaDivider icon={<span>🌑</span>}>{`秩序無きアビス　`}</AreaDivider>
         </div>
 

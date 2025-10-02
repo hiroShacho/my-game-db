@@ -293,7 +293,7 @@ function getBreadcrumbLabel(part: string, parentPath: string[]): string {
 
 export default function Breadcrumb() {
   const router = useRouter();
-  const pathParts = router.asPath.split("?")[0].split("/").filter(Boolean);
+  const pathParts = router.pathname.split("/").filter(Boolean);
 
   // トップページ（"/"）なら何も表示しない
   if (pathParts.length === 0) {
