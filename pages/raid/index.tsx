@@ -3,56 +3,26 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-
-// レイド情報の型
-type RaidCard = {
-  key: string;
-  title: string;
-  href: string;
-  status: "開催中" | "限定討伐" | "未開催";
-  img: string;
-  borderColor?: string;
-  badgeColor?: string;
-  badgeTextColor?: string;
-};
-
-const raidCards: RaidCard[] = [
-  {
-    key: "TrafficControl",
-    title: "交通管制",
-    href: "/raid/TrafficControl",
-    status: "開催中",
-    img: "/raid/TrafficControl.PNG",
-    borderColor: "border-emerald-400",
-    badgeColor: "bg-emerald-100",
-    badgeTextColor: "text-emerald-700",
-  },
-  {
-    key: "SwarmGuard",
-    title: "ガードバグ陣",
-    href: "/raid/SwarmGuard",
-    status: "未開催",
-    img: "/raid/SwarmGuard.PNG",
-    borderColor: "border-yellow-400",
-    badgeColor: "bg-yellow-200",
-    badgeTextColor: "text-yellow-900",
-  },
-];
-
-const archiveRaids = [
-  { key: "GluttonousFeast", title: "暴食の饗宴", href: "/raid/GluttonousFeast", img: "/raid/GluttonousFeast.PNG" },
-  { key: "PrisonofExecution", title: "刑辟牢獄", href: "/raid/PrisonofExecution", img: "/raid/PrisonofExecution.PNG" },
-  { key: "MechaSimulation", title: "機兵演習", href: "/raid/MechaSimulation", img: "/raid/MechaSimulation.PNG" },
-  { key: "ElementAlart", title: "元素警戒", href: "/raid/ElementAlart", img: "/raid/ElementAlart.PNG" },
-  { key: "MatrixHacking", title: "マトリックスハッキング", href: "/raid/MatrixHacking", img: "/raid/MatrixHacking.PNG" },
-  { key: "RealmofPhantasm", title: "イリュージョンシフト", href: "/raid/RealmofPhantasm", img: "/raid/RealmofPhantasm.PNG" },
-  { key: "PittingPredators", title: "駆虎呑狼の計", href: "/raid/PittingPredators", img: "/raid/PittingPredators.PNG" },
-  { key: "ScorchingNightmare", title: "燃え上がるナイトメア", href: "/raid/ScorchingNightmare", img: "/raid/ScorchingNightmare.PNG" },
-  { key: "TrafficControl", title: "交通管制", href: "/raid/TrafficControl", img: "/raid/TrafficControl.PNG" },
-  { key: "SwarmGuard", title: "ガードバグ陣", href: "/raid/SwarmGuard", img: "/raid/SwarmGuard.PNG" },
-];
+import { raidCards } from "../../data/raidCards";
 
 export default function RaidIndexPage() {
+  // raidCardsから区分ごとに1つずつ取得
+  const weeklyRaid = raidCards.find(r => r.category === "週討伐");
+  const limitedRaid = raidCards.find(r => r.category === "限定討伐");
+
+  const archiveRaids = [
+    { key: "GluttonousFeast", title: "暴食の饗宴", href: "/raid/GluttonousFeast", img: "/raid/GluttonousFeast.PNG" },
+    { key: "PrisonofExecution", title: "刑辟牢獄", href: "/raid/PrisonofExecution", img: "/raid/PrisonofExecution.PNG" },
+    { key: "MechaSimulation", title: "機兵演習", href: "/raid/MechaSimulation", img: "/raid/MechaSimulation.PNG" },
+    { key: "ElementAlart", title: "元素警戒", href: "/raid/ElementAlart", img: "/raid/ElementAlart.PNG" },
+    { key: "MatrixHacking", title: "マトリックスハッキング", href: "/raid/MatrixHacking", img: "/raid/MatrixHacking.PNG" },
+    { key: "RealmofPhantasm", title: "イリュージョンシフト", href: "/raid/RealmofPhantasm", img: "/raid/RealmofPhantasm.PNG" },
+    { key: "PittingPredators", title: "駆虎呑狼の計", href: "/raid/PittingPredators", img: "/raid/PittingPredators.PNG" },
+    { key: "ScorchingNightmare", title: "燃え上がるナイトメア", href: "/raid/ScorchingNightmare", img: "/raid/ScorchingNightmare.PNG" },
+    { key: "TrafficControl", title: "交通管制", href: "/raid/TrafficControl", img: "/raid/TrafficControl.PNG" },
+    { key: "SwarmGuard", title: "ガードバグ陣", href: "/raid/SwarmGuard", img: "/raid/SwarmGuard.PNG" },
+  ];
+
   return (
     <>
       <Head>
@@ -78,23 +48,41 @@ export default function RaidIndexPage() {
       <div className="mx-auto max-w-2xl px-4 py-6">
         {/* ▼ナビゲーションカード */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-          {/* 開催中だけ表示 */}
+          {/* 週討伐 */}
           <Link
-            key="TrafficControl"
-            href="/raid/TrafficControl"
+            key={weeklyRaid?.key}
+            href={weeklyRaid?.href ?? "/raid/TrafficControl"}
             className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-emerald-400"
           >
-            <Image src="/raid/TrafficControl.PNG" alt="交通管制" width={200} height={112} className="rounded mb-2" />
+            <Image src={weeklyRaid?.img ?? "/raid/TrafficControl.PNG"} alt={weeklyRaid?.title ?? "交通管制"} width={200} height={112} className="rounded mb-2" />
             <span className="text-lg font-bold text-emerald-800 group-hover:text-emerald-600">
-              交通管制
+              {weeklyRaid?.title ?? "交通管制"}
             </span>
-            <span className="text-xs text-emerald-700 mt-2 bg-emerald-100 rounded px-2 py-1">開催中</span>
+            <span className="text-xs text-emerald-700 mt-2 bg-emerald-100 rounded px-2 py-1">{weeklyRaid?.status ?? "未開催"}</span>
           </Link>
-          {/* ガードバグ陣は未開催ラベルのみ表示 */}
-          <div className="flex flex-col items-center justify-center bg-gray-50 border-2 border-yellow-400 rounded-lg shadow-lg h-[184px]">
-            <span className="text-sm font-bold text-yellow-900 mb-2">限定討伐</span>
-            <span className="text-sm font-bold text-yellow-900 mb-2">未開催</span>
-          </div>
+          {/* 限定討伐 */}
+          {limitedRaid?.status === "開催中" ? (
+            <Link
+              key={limitedRaid.key}
+              href={limitedRaid.href}
+              className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-yellow-400"
+            >
+              <Image src={limitedRaid.img} alt={limitedRaid.title} width={200} height={112} className="rounded mb-2" />
+              <span className="text-lg font-bold text-yellow-900 group-hover:text-yellow-700">
+                {limitedRaid.title}
+              </span>
+              <span className="text-xs text-yellow-900 mt-2 bg-yellow-200 rounded px-2 py-1">{limitedRaid.status}</span>
+            </Link>
+          ) : (
+            <div className="flex flex-col items-center justify-center bg-gray-50 border-2 border-yellow-400 rounded-lg shadow-lg h-[184px]">
+              <span className="text-sm font-bold text-yellow-900 mb-2">
+                限定討伐
+              </span>
+              <span className="text-sm font-bold text-yellow-900 mb-2">
+                {limitedRaid?.status ?? "未開催"}
+              </span>
+            </div>
+          )}
         </div>
 
         {/* ▼アーカイブ/過去の討伐作戦 */}

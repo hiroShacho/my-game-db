@@ -6,6 +6,33 @@ import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
 import { Menu } from "lucide-react";
+import Link from "next/link";
+
+// NEWSデータ
+const sidebarNewsItems = [
+  {
+    text: [
+      "イベント「",
+      { label: "星間指名手配", href: "/event/ver5-3-5/GalacticBounty" },
+      "」のページを作成。トップページのレイアウトを変更。",
+    ],
+    date: "2025/10/06",
+  },
+  {
+    text: [
+      "新規・初心者向けのページにゲーム開始前に見る「",
+      { label: "はじめに", href: "/newbie/beginning" },
+      "」を追加。"
+    ],
+    date: "2025/10/02",
+  },
+  {
+    text: [
+      "試験的にサイトを公開しました。（まだテストバージョン㌥）"
+    ],
+    date: "2025/06/20",
+  },
+];
 
 const basicNavLinks = [
   { href: "/", label: "トップ" },
@@ -29,6 +56,7 @@ const latestContentsLinks = [
   { href: "/weapons/Pollux", label: "ヘレンネ武器：ポルクス" },
   { href: "/matrices/m_61", label: "ヘレンネボリション" },
   { href: "/trait/t_61", label: "ヘレンネ特性" },
+  { href: "/event/ver5-3-5/GalacticBounty", label: "星間指名手配" },
 ];
 
 // 追加: 新規・初心者向け項目
@@ -40,6 +68,42 @@ const newbieLinks = [
   { href: "/newbie/basicknowledge", label: "基礎知識" },
   { href: "/newbie/trivia", label: "豆知識" }
 ];
+
+
+// NEWSセクション（モバイル・PC共通表示、黒枠＋タイトル黒背景＋内容白背景）
+function SidebarNewsBlock({ isMobile = false }: { isMobile?: boolean }) {
+  return (
+    <div className="mb-4" style={{ border: "2px solid #222", borderRadius: "0.75rem", overflow: "hidden" }}>
+      <div className="font-bold text-gray-100 mb-0 px-3 py-2 rounded-t-lg" style={{ background: "#222" }}>
+        NEWS
+      </div>
+      <div className="bg-white px-3 py-2 rounded-b-lg">
+        <ul className="space-y-2 text-sm">
+          {sidebarNewsItems.map((item, idx) => (
+            <li key={idx} className="flex flex-col">
+              <span>
+                {item.text.map((chunk, i) =>
+                  typeof chunk === "string"
+                    ? chunk
+                    : (
+                      <Link
+                        href={chunk.href}
+                        className="text-blue-700 hover:underline font-semibold"
+                        style={{ margin: "0 2px" }}
+                      >
+                        {chunk.label}
+                      </Link>
+                    )
+                )}
+              </span>
+              <span className="text-xs text-gray-500">{item.date}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
 
 function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
   return (
@@ -205,8 +269,6 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
     </ul>
   );
 
-  // ヘッダーの高さを正確に指定（py-3 = 24px, plus border/shadow等、56pxが多いが64px=pt-16も可）
-  // ここではpt-[56px]で指定（必要に応じて調整してください）
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
       <Header
@@ -235,6 +297,7 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             </button>
           </div>
           <div className="p-4">
+            {/* サイト内検索 */}
             <input
               type="text"
               placeholder="サイト内検索"
@@ -248,6 +311,10 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
             >
               検索
             </button>
+            {/* サイト内検索とNEWSの間に余白追加 */}
+            <div className="my-5" />
+            {/* ★ NEWSをここに追加 ★ */}
+            <SidebarNewsBlock isMobile />
           </div>
           <nav className="pb-4">
             <button
@@ -396,7 +463,11 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
           <Breadcrumb />
           {children}
         </main>
+        {/* PC表示の右側サイドバー上部にNEWSを追加 */}
         <aside className="hidden xl:block w-64 bg-gray-50 p-0 border-l pt-16">
+          <div className="px-4 pt-2 pb-3">
+            <SidebarNewsBlock />
+          </div>
           <SidebarLinksAndAdBlock />
         </aside>
       </div>

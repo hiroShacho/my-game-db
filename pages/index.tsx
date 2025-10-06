@@ -6,57 +6,37 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import { GanttCalendar, GanttEvent } from "@/components/GanttCalendar";
 import { GiftCodeList } from "@/components/GiftCodeList";
 import Head from "next/head";
+import { raidCards } from "../data/raidCards";
+import weapons from "../data/weapons.json";
 
-// Ganttイベント定義
-const GANTT_EVENTS: GanttEvent[] = [
-  {
-    label: "良辰祈願",
-    color: "#9cccf5",
-    labelColor: "#8ee2f8",
-    labelFontColor: "#200",
-    start: 1,
-    end: 28,
-  },
-  {
-    label: "新プレアバ：ヘレンネ",
-    color: "#8ffff0",
-    labelColor: "#e3a3f8",
-    labelFontColor: "#200",
-    start: 1,
-    end: 28,
-  },
-  {
-    label: "復刻プレアバ：メリル・アムド",
-    color: "#ff4141",
-    labelColor: "#e3a3f8",
-    labelFontColor: "#200",
-    start: 1,
-    end: 10,
-  },
-  {
-    label: "復刻プレアバ：グレイフォックス",
-    color: "#e3a3f8",
-    labelColor: "#e3a3f8",
-    labelFontColor: "#200",
-    start: 1,
-    end: 10,
-  },
-  {
-    label: "復刻プレアバ：ロズリン",
-    color: "#8e80f8",
-    labelColor: "#e3a3f8",
-    labelFontColor: "#200",
-    start: 10,
-    end: 28,
-  },
-  {
-    label: "復刻プレアバ：リンゼイ",
-    color: "#4e80f8",
-    labelColor: "#e3a3f8",
-    labelFontColor: "#200",
-    start: 10,
-    end: 28,
+const pickupWeaponIds = [
+  "w_65","w_61","w_56","w_54","w_51","w_47",
+];
+
+function getWeaponDataById(id: string) {
+  return weapons.find((w: any) => w.id === id);
+}
+
+// 武器名を5文字ごとに改行する関数
+function formatWeaponName(name: string, chunkSize = 5) {
+  const arr = [];
+  for (let i = 0; i < name.length; i += chunkSize) {
+    arr.push(name.slice(i, i + chunkSize));
   }
+  return arr.join("<br/>");
+}
+
+// 高さ指定（pxで数値調整可能）
+const raidframeMinHeightPx = 100;
+const weaponsframeMinHeightPx = 120;
+
+const GANTT_EVENTS: GanttEvent[] = [
+  { label: "良辰祈願", color: "#9cccf5", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 28, },
+  { label: "新プレアバ：ヘレンネ", color: "#8ffff0", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 28, },
+  { label: "復刻プレアバ：メリル・アムド", color: "#ff4141", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 10, },
+  { label: "復刻プレアバ：グレイフォックス", color: "#e3a3f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 10, },
+  { label: "復刻プレアバ：ロズリン", color: "#8e80f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 10, end: 28, },
+  { label: "復刻プレアバ：リンゼイ", color: "#4e80f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 10, end: 28, }
 ];
 
 const GANTT_MONTH = 10;
@@ -73,19 +53,17 @@ const eventImages: (string | null)[] = [
 ];
 
 const GIFT_CODES = [
-  {
-    code: "TOF500601",
-    desc: "Discord配布コード",
-    expire: "2025/12/30",
-  },
-  {
-    code: "923fates",
-    desc: "Ver5.35バージョン引き換えコード",
-    expire: "2025/10/28",
-  }
+  { code: "TOF500601", desc: "Discord配布コード", expire: "2025/12/30", },
+  { code: "923fates", desc: "Ver5.35バージョン引き換えコード", expire: "2025/10/28", }
 ];
 
 export default function Home() {
+  // 討伐はカテゴリ「週討伐」のものを表示
+  const weeklyRaid = raidCards.find(r => r.category === "週討伐");
+  const pickupWeapons = pickupWeaponIds
+    .map(id => getWeaponDataById(id))
+    .filter(w => !!w);
+
   return (
     <>
       <Head>
@@ -124,18 +102,72 @@ export default function Home() {
             各種コンテンツの情報は徐々に更新していきます。
           </p>
         </section>
-        {/* NEWS */}
+        {/* 今週の討伐作戦・ピックアップ中の武器を横並べ */}
         <section>
-          <h2 className="text-lg sm:text-xl font-semibold mb-2 relative">NEWS
-            <span className="absolute left-0 -bottom-1 h-1 w-12 bg-gradient-to-r from-sky-400 to-pink-400 rounded-full"></span>
-          </h2>
-          <ul className="space-y-1 text-sm sm:text-base text-gray-700">
-            <li>・2025/10/02 新規・初心者向けのページにゲーム開始前に見る「はじめに」を追加。</li>
-            <li>・2025/09/30 討伐作戦「燃え上がるナイトメア」に純恩恵編成での攻略動画を追加。</li>
-            <li>･･･</li>
-            <li>・2025/06/20 試験的にサイトを公開しました。（まだテストバージョン㌥）</li>
-          </ul>
+          <div className="flex flex-col sm:flex-row gap-6">
+            {/* 今週の討伐作戦 */}
+            <div className="flex-1 min-w-[220px] flex flex-col">
+              <div className="font-bold text-white px-3 py-2 rounded-t-lg" style={{ background: "#222" }}>
+                今週の討伐作戦
+              </div>
+              <div
+                className="bg-white rounded-b-lg px-3 py-3 border-2 border-black flex flex-col items-center justify-center"
+                style={{ minHeight: `${raidframeMinHeightPx}px` }}
+              >
+                {weeklyRaid ? (
+                  <Link href={weeklyRaid.href} key={weeklyRaid.key}>
+                    <div className={`rounded-xl shadow hover:scale-105 transition border-2 ${weeklyRaid.borderColor} cursor-pointer flex flex-col items-center bg-white`} style={{ width: 150 }}>
+                      <Image
+                        src={weeklyRaid.img.startsWith("/") ? weeklyRaid.img : `/raid/${weeklyRaid.key}.PNG`}
+                        alt={weeklyRaid.title}
+                        width={140}
+                        height={90}
+                        className="object-cover rounded-t-xl"
+                      />
+                      <div className="font-bold text-xs sm:text-sm py-2 text-center">{weeklyRaid.title}</div>
+                    </div>
+                  </Link>
+                ) : (
+                  <div className="text-gray-500 py-4">現在表示する週討伐はありません。</div>
+                )}
+              </div>
+            </div>
+            {/* ピックアップ中の武器 */}
+            <div className="flex-1 min-w-[220px] flex flex-col">
+              <div className="font-bold text-white px-3 py-2 rounded-t-lg" style={{ background: "#222" }}>
+                ピックアップ中の武器
+              </div>
+              <div
+                className="bg-white rounded-b-lg px-3 py-3 border-2 border-black flex flex-row flex-wrap items-start justify-start"
+                style={{ minHeight: `${weaponsframeMinHeightPx}px` }}
+              >
+                {pickupWeapons.length > 0 ? (
+                  pickupWeapons.map((w: any) => (
+                    <Link href={`/weapons/${w.slug}`} key={w.id}>
+                      <div className="flex flex-col items-center cursor-pointer" style={{ width: 54 }}>
+                        <Image
+                          src={`/images/${w.id}_img.PNG`}
+                          alt={w.name}
+                          width={48}
+                          height={48}
+                          className="object-contain rounded shadow border border-gray-300 bg-white"
+                        />
+                        <span
+                          className="text-xs mt-1 text-black text-center leading-tight"
+                          style={{ width: "48px", wordBreak: "break-all" }}
+                          dangerouslySetInnerHTML={{ __html: formatWeaponName(w.name, 5) }}
+                        />
+                      </div>
+                    </Link>
+                  ))
+                ) : (
+                  <div className="text-gray-500 py-4">現在ピックアップ中の武器はありません。</div>
+                )}
+              </div>
+            </div>
+          </div>
         </section>
+
         {/* 注目コンテンツ */}
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.35の注目コンテンツ</h2>
@@ -212,31 +244,34 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* 星間指名手配 イベント（準備中に変更） */}
-            <div className="block sm:col-span-1">
+            {/* 星間指名手配 イベント（リンク有効化） */}
+            <Link href="/event/ver5-3-5/GalacticBounty" className="block sm:col-span-1">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  cursor-default
+                  hover:scale-105
+                  hover:shadow-2xl
+                  hover:ring-2 hover:ring-pink-400
+                  cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_1.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-all" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     星間指名手配
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    準備中
+                    討伐作戦の詳細を見る
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
             {/* Ver5.4テストサーバー（準備中に変更） */}
             <div className="block sm:col-span-1">
               <div
