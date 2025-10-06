@@ -18,11 +18,11 @@ type RaidCard = {
 
 const raidCards: RaidCard[] = [
   {
-    key: "ScorchingNightmare",
-    title: "燃え上がるナイトメア",
-    href: "/raid/ScorchingNightmare",
+    key: "TrafficControl",
+    title: "交通管制",
+    href: "/raid/TrafficControl",
     status: "開催中",
-    img: "/raid/ScorchingNightmare.PNG",
+    img: "/raid/TrafficControl.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
@@ -80,13 +80,13 @@ export default function RaidIndexPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           {/* 開催中だけ表示 */}
           <Link
-            key="ScorchingNightmare"
-            href="/raid/ScorchingNightmare"
+            key="TrafficControl"
+            href="/raid/TrafficControl"
             className="group bg-white rounded-lg shadow-lg p-4 hover:-translate-y-1 hover:shadow-2xl transition flex flex-col items-center border-2 border-emerald-400"
           >
-            <Image src="/raid/ScorchingNightmare.PNG" alt="燃え上がるナイトメア" width={200} height={112} className="rounded mb-2" />
+            <Image src="/raid/TrafficControl.PNG" alt="交通管制" width={200} height={112} className="rounded mb-2" />
             <span className="text-lg font-bold text-emerald-800 group-hover:text-emerald-600">
-              燃え上がるナイトメア
+              交通管制
             </span>
             <span className="text-xs text-emerald-700 mt-2 bg-emerald-100 rounded px-2 py-1">開催中</span>
           </Link>
