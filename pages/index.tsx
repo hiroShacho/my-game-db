@@ -17,7 +17,6 @@ function getWeaponDataById(id: string) {
   return weapons.find((w: any) => w.id === id);
 }
 
-// 武器名を5文字ごとに改行する関数
 function formatWeaponName(name: string, chunkSize = 5) {
   const arr = [];
   for (let i = 0; i < name.length; i += chunkSize) {
@@ -27,8 +26,8 @@ function formatWeaponName(name: string, chunkSize = 5) {
 }
 
 // 高さ指定（pxで数値調整可能）
-const raidframeMinHeightPx = 100;
-const weaponsframeMinHeightPx = 120;
+const raidframeMinHeightPx = 150;
+const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
   { label: "良辰祈願", color: "#9cccf5", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 28, },
@@ -272,31 +271,34 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-            {/* Ver5.4テストサーバー（準備中に変更） */}
-            <div className="block sm:col-span-1">
+            {/* Ver5.4テストサーバー（リンク有効化） */}
+            <Link href="/event/ver5-3-5/ver5-4_testserver" className="block sm:col-span-1">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  cursor-default
+                  hover:scale-105
+                  hover:shadow-2xl
+                  hover:ring-2 hover:ring-blue-400
+                  cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_2.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-blue-900/30" />
+                <div className="absolute inset-0 bg-blue-900/30 group-hover:bg-blue-900/50 transition-all" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     Ver5.4テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    準備中
+                    サーバー情報・参加案内はこちら
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
             {/* その他のイベント（準備中） */}
             <div className="block sm:col-span-1">
               <div

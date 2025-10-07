@@ -12,19 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "Ver5.4テストサーバー", href: "/event/ver5-3-5/ver5-4_testserver" },
+      "」のページを作成。",
+    ],
+    date: "2025/10/07",
+  },
+  {
+    text: [
       "イベント「",
       { label: "星間指名手配", href: "/event/ver5-3-5/GalacticBounty" },
       "」のページを作成。トップページのレイアウトを変更。",
     ],
     date: "2025/10/06",
-  },
-  {
-    text: [
-      "新規・初心者向けのページにゲーム開始前に見る「",
-      { label: "はじめに", href: "/newbie/beginning" },
-      "」を追加。"
-    ],
-    date: "2025/10/02",
   },
   {
     text: [
@@ -57,6 +57,7 @@ const latestContentsLinks = [
   { href: "/matrices/m_61", label: "ヘレンネボリション" },
   { href: "/trait/t_61", label: "ヘレンネ特性" },
   { href: "/event/ver5-3-5/GalacticBounty", label: "星間指名手配" },
+  { href: "/event/ver5-3-5/ver5-4_testserver", label: "Ver5.4テストサーバー" },
 ];
 
 // 追加: 新規・初心者向け項目
