@@ -79,7 +79,7 @@ function SimpleWeaponTable() {
     <div className="mb-8">
       <div className="border-2 border-blue-400 bg-blue-50 rounded-xl p-4 shadow-md">
         <div className="text-lg font-bold mb-4 text-blue-700 text-center">簡易表示</div>
-        <div className="space-y-4">
+        <div className="space-y-2"> {/* ← ここを space-y-2 に変更して隙間を小さく */}
           {tableGroups.map((group) => {
             // 8個ずつ分割
             const rows: Array<typeof weapons[0][]> = [];
@@ -91,9 +91,9 @@ function SimpleWeaponTable() {
             const versionParts = extractVersionParts(group.label);
 
             return (
-              <div key={group.label}>
+              <div key={group.label} className="mb-2"> {/* ← 各バージョン間の余白を小さく */}
                 {rows.map((row, idx) => (
-                  <div className="flex items-center mb-1" key={idx}>
+                  <div className="flex items-center mb-0.5" key={idx}> {/* ← 各行の余白も小さく */}
                     {/* 最初の行の左端に枠付きバージョン表記 */}
                     {idx === 0 ? (
                       <div className="flex flex-col items-center justify-center mr-2">
