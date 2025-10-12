@@ -266,7 +266,7 @@ export default function Home() {
                     星間指名手配
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    討伐作戦の詳細を見る
+                    イベントの詳細を見る
                   </p>
                 </div>
               </div>

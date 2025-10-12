@@ -261,21 +261,130 @@ export default function GalacticBounty() {
         {/* 変身ミラージュ */}
         <section className="rounded-xl px-2 sm:px-6 py-4 mb-2 shadow bg-[#f0faff]">
           <SectionTitle icon="🪑">変身ミラージュ</SectionTitle>
+          <div className="flex justify-center mb-4">
+            <div className="relative w-full max-w-xl h-44 sm:h-60 rounded-lg overflow-hidden shadow bg-white">
+              <Image
+                src="/ver_event/New_Event_1_3.PNG"
+                alt="変身ミラージュ"
+                fill
+                className="object-contain w-full h-full"
+                sizes="100vw"
+              />
+            </div>
+          </div>
           <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800">
-            未開催<br />
-            置物に変身できる隠れん坊ゲーム。<br />
-            とりあえずフィールドの置物の配置を覚える所から始まる。
+            8人マッチの隠れん坊ゲーム。<br />
+            最初に逃亡役か警察役に投票して役割を決定し、2人が警察役になって他の6人を捕まえる。
+          </div>
+          <ImageRow
+            images={[
+              {
+                src: "/ver_event/New_Event_1_3_1.PNG",
+                alt: "変身ミラージュ投票",
+                caption: "全員が逃亡役を選ぶとランダムで警察役が決まる",
+              },
+            ]}
+            w={400}
+            h={220}
+            onClick={openModal}
+          />
+          <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800">
+            逃亡役は物に変身する「擬装術」と透明化する「隠遁術」を駆使して逃げ切ろう。<br />
+            警察役は「捜索検査」で周囲に逃亡役がいないかを検査でき、近くに逃亡役がいると自身の頭上にアラートが表示＆逃亡役の偽装・隠遁術を解除できる。<br />
+            逃亡役を見つけたら近づいて捕獲フィールドを当てることで逃亡役を逮捕できる。<br />
+            捕まった逃亡役は警察の援護をできる賞金ハンターか逃亡役を援護できるスパイ海賊を選択できる。<br />
+            賞金ハンターは警察と同様に捜索検査で逃亡役を発見できるが逮捕はできず、代わりに減速フィールド（時空の裂け目と同じエフェクト）で範囲内の逃亡役の移動速度を半減させつつ発動音とエフェクトで警察に位置を知らせることが出来る。<br />
+            スパイ海賊は周囲の逃亡役の速度をアップできる加速フィールドと警察を足止めできる遮断フィールドを使用できる。
+          </div>
+          <ImageRow
+            images={[
+              {
+                src: "/ver_event/New_Event_1_3_2.PNG",
+                alt: "変身ミラージュスキル説明",
+                caption: "イベント説明にスキルなどの説明は載っているぞ！",
+              },
+            ]}
+            w={400}
+            h={220}
+            onClick={openModal}
+          />
+          <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800">
+            逃亡役の「隠遁術」は再使用までのクールダウンが45秒と少し長いのはネックだが、警察の捜索検査を受けてもすぐに再使用することでかなり見つかりづらくなる。<br />
+            警察役の捜索検査はクールダウンが15秒なので隠遁術を再使用されてもその場で監視を続けていれば捜索検査を再使用することで逃亡役が透明化で逃げ切るのを防ぐことが出来る。<br />
+            逃亡役は如何に隠遁術を活かしながら警察の死角に隠れるかが重要であり、警察役は如何に無駄なく捜索検査を回して逃亡役を追い詰めるかが重要となってくる。<br />
+            今回のフィールドは上下に分かれた空間やコンテナの上などの死角が生まれやすい構造になっているため警察側が不利になりやすい。<br />
+            なお、物に変身する擬装術は警察が触れるとすり抜けるので即バレする上にフィールド上の物の配置は固定なのである程度遊んでいる相手には一瞬でバレてしまう。<br />
+            そのため、基本は透明化と位置取りで捜索をかく乱する立ち回りをしよう！
+          </div>
+          <ImageRow
+            images={[
+              {
+                src: "/ver_event/New_Event_1_3_3.PNG",
+                alt: "変身ミラージュ透明化死角",
+                caption: "死角を利用した透明化がとにかく強い",
+              },
+            ]}
+            w={400}
+            h={220}
+            onClick={openModal}
+          />
+          <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800">
+            ジャンプだけだと登れない背の高いコンテナはジャンプで高さを稼いだ後にコンテナに向かって回避でぶつかることで上に登れる。<br />
+            この登り方を使わないといけない箇所もあるのでこれだけは確実に出来るようになっておこう。<br />
+            また、スタート地点の上に見えるドクロのオブジェは上手くジャンプと回避を駆使すればオブジェの中に入れる。<br />
+            入るのに失敗するとピンチになるのでリスキーだが、警察役にもアクションの練度を求められるので分かっていても捕まえられないなんてことも。
+          </div>
+          <div className="flex justify-center mt-2 mb-2">
+            <video
+              src="/ver_event/New_Event_1_3_4.mp4"
+              controls
+              style={{
+                width: "400px",
+                maxWidth: "98vw",
+                borderRadius: "12px",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.13)",
+                background: "#222",
+              }}
+            />
+          </div>
+          <div className="bg-blue-50 px-4 py-1 text-xs text-blue-800 border-t border-blue-200 text-center w-full max-w-lg mx-auto mb-4">
+            ミニゲーム内で出来る動きだけでドクロの中に入れる（動画はワールドマップで練習している図）
           </div>
         </section>
 
         {/* 城塞バトル */}
         <section className="rounded-xl px-2 sm:px-6 py-4 mb-2 shadow bg-[#fff9ef]">
           <SectionTitle icon="🛡️">城塞バトル</SectionTitle>
-          <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800">
-            未開催<br />
-            モンスターを召喚して行うタワーディフェンスゲーム。<br />
-            とにかくボス級のモンスターが強く、如何にボスのカードを引けるかで勝敗が決まりやすい。
+          <div className="flex justify-center mb-4">
+            <div className="relative w-full max-w-xl h-44 sm:h-60 rounded-lg overflow-hidden shadow bg-white">
+              <Image
+                src="/ver_event/New_Event_1_4.PNG"
+                alt="城塞バトル"
+                fill
+                className="object-contain w-full h-full"
+                sizes="100vw"
+              />
+            </div>
           </div>
+          <div className="bg-white rounded-lg shadow border-l-4 border-green-400 p-4 mb-2 text-sm text-gray-800">
+            2人マッチングのタワーディフェンス。<br />
+            モンスターを召喚して自分のタワーを守り、相手のタワーを破壊することを目指す。<br />
+            モンスターは人型、獣、灰域種の3種が存在し、種族ごと・属性ごとの能力によって有利な状況を作って戦う必要がある。<br />
+            コストが高いボスモンスターは強力だが、種族ごとの有利不利や属性共鳴を最大まで高めた布陣が一度できてしまうと中々太刀打ちできない。<br />
+            そのため、如何に早く自分の種族・属性に特化した布陣を作って相手の布陣を崩せるかが鍵になる。
+          </div>
+          <ImageRow
+            images={[
+              {
+                src: "/ver_event/New_Event_1_4_1.PNG",
+                alt: "城塞バトル戦況",
+                caption: "一度戦況が傾くと立て直しは難しくなる",
+              },
+            ]}
+            w={400}
+            h={220}
+            onClick={openModal}
+          />
         </section>
 
         {/* 拡大モーダル */}
