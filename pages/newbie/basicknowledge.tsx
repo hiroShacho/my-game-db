@@ -153,6 +153,8 @@ export default function BasicKnowledgePage() {
                   <li><a href="#gacha-newest" className="text-blue-700 hover:underline">ガチャはメイン属性の最新キャラを引こう！</a></li>
                   <li><a href="#gacha-pity" className="text-blue-700 hover:underline">限定ガチャの天井は全て共有</a></li>
                   <li><a href="#gacha-orderelement" className="text-blue-700 hover:underline">新キャラクターの属性の実装順はほぼ固定</a></li>
+                  <li><a href="#gacha-period" className="text-blue-700 hover:underline">同属性のキャラは4～6ヵ月ごとに実装される</a></li>
+                  <li><a href="#gacha-metaout" className="text-blue-700 hover:underline">限定キャラは10か月程度で最適編成から外れる</a></li>
                 </ul>
               </li>
               <li>
@@ -215,7 +217,7 @@ export default function BasicKnowledgePage() {
             特に異能キャラが実装されるタイミングでは全キャラ復刻ガチャが同時に開催されることが多いので、そのタイミングで貯めていた専用レッドコアを使って異能キャラの天井カウントを一気に進めると復刻ガチャ分の逆火コインを無駄にせずガチャをお得に引けるぞ！<br/>
             なお、今のバージョンの限定ガチャの天井カウントが10/80の状態で次のバージョンに入った場合、次のバージョンの限定ガチャの天井カウントも10/80の状態になっている。
           </div>
-          <CaptionedImage src="/Newbie/basicknowledge/basicknowledge_pity.PNG" alt="限定ガチャの天井はバージョンをまたいで共有されるぞ！" caption="限定ガチャの天井はバージョンをまたいで共有されるぞ！" onClick={() => openModal("/Newbie/basicknowledge/basicknowledge_pity.PNG", "限定ガチャの天井はバージョンをまたいで共有される")}/>
+          <CaptionedImage src="/Newbie/basicknowledge/basicknowledge_pity.PNG" alt="限定ガチャの天井はバージョンをまたいで共有されるぞ！" caption="限定ガチャの天井はバージョンをまたいで共有されるぞ！" onClick={() => openModal("/Newbie/basicknowledge/basicknowledge_pity.PNG", "限定ガチャの天井はバージョンをまたいで共有され")}/>
 
           <SectionTitle id="gacha-orderelement" icon="timeline">新キャラクターの属性の実装順はほぼ固定</SectionTitle>
           <div className="mb-4">
@@ -225,6 +227,32 @@ export default function BasicKnowledgePage() {
             なお、武器共鳴については剛毅武器が5～7体ごとに実装され、恩恵武器が7～10体ごとに実装されている。
           </div>
           <CaptionedImage src="/Newbie/basicknowledge/basicknowledge_gachaelement.PNG" alt="実装は氷⇒物理⇒雷⇒炎⇒氷...とループする（時々異能が挟まる）" caption="実装は氷⇒物理⇒雷⇒炎⇒氷...とループする（時々異能が挟まる）" onClick={() => openModal("/Newbie/basicknowledge/basicknowledge_gachaelement.PNG", "実装は氷⇒物理⇒雷⇒炎⇒氷...とループする（時々異能が挟まる）")}/>
+
+          {/* ▼▼▼ ここから追加分 ▼▼▼ */}
+          <SectionTitle id="gacha-period" icon="event">同属性のキャラは4～6ヵ月ごとに実装される</SectionTitle>
+          <div className="mb-4">
+            同じ属性の限定キャラが実装される頻度は4～6か月ごと。<br/>
+            異能キャラの実装を挟むと間の期間が長くなる。<br/>
+            実際のガチャスケジュールを立てる際には異能キャラの実装も見越した計画にしよう。<br/><br/>
+            <b>実装期間の例：</b><br/>
+            2025年05月13日リンゼイ実装 ⇒ 2025年9月23日ヘレンネ実装（133日）<br/>
+            2025年04月08日キャロット実装 ⇒ 2025年8月28日ラクシス実装（142日）<br/>
+            2025年02月25日アントリア実装 ⇒ 2025年7月29日シードル実装（154日）<br/>
+            2024年12月24日クローディア・ストームアイ実装 ⇒ 2025年6月24日アストール実装（182日）
+          </div>
+          <SectionTitle id="gacha-metaout" icon="highlight_off">限定キャラは10か月程度で最適編成から外れる</SectionTitle>
+          <div className="mb-4">
+            限定キャラの新規実装～最適編成から外れるまでの期間は大体10か月程度となっている。<br/>
+            過去には「次の限定キャラが出たら今来ているキャラは産廃になる」等と言われていたこともあったが、当時でも新キャラが来ても少し前のキャラは最適編成で活躍していたのでシンプルに嘘をついていたかエアプの可能性が高い。<br/><br/>
+            <b>実装～最適編成から外れるまでの期間の例：</b><br/>
+            2024年11月26日グレイフォックス実装 ⇒ 2025年9月23日ヘレンネ実装で外れる（301日）<br/>
+            2024年10月29日アスラーダ実装 ⇒ 2025年8月28日ラクシス実装で外れる（303日）<br/>
+            2024年09月19日メリル・アムド実装 ⇒ 2025年7月29日シードル実装で外れる（313日）<br/>
+            2024年07月02日アンカー実装 ⇒ 2025年6月24日アストール実装で外れる（357日）
+            <br/><br/>
+            <span className="text-xs text-gray-500">　※エアプ：エアプレイの略。実際にはゲームをプレイしたことがないが、さも遊んだことがあるような調子でそのゲームを語る人のこと。</span>
+          </div>
+          {/* ▲▲▲ ここまで追加分 ▲▲▲ */}
         </BigCategoryArea>
 
         {/* 日常コンテンツ区間 */}
