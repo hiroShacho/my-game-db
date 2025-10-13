@@ -12,11 +12,11 @@ export type RaidCard = {
 
 export const raidCards: RaidCard[] = [
   {
-    key: "TrafficControl",
-    title: "交通管制",
-    href: "/raid/TrafficControl",
+    key: "ElementAlart",
+    title: "元素警戒",
+    href: "/raid/ElementAlart",
     status: "開催中",
-    img: "/raid/TrafficControl.PNG",
+    img: "/raid/ElementAlart.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
