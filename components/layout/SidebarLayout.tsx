@@ -13,18 +13,18 @@ const sidebarNewsItems = [
   {
     text: [
       "イベント「",
+      { label: "Ver5.4テストサーバー", href: "/event/ver5-3-5/ver5-4_testserver" },
+      "」のページに新キャラクターなどの情報を追加。",
+    ],
+    date: "2025/10/16",
+  },
+  {
+    text: [
+      "イベント「",
       { label: "星間指名手配", href: "/event/ver5-3-5/GalacticBounty" },
       "」のページに変身ミラージュと城塞バトルの内容を追記。",
     ],
     date: "2025/10/12",
-  },
-  {
-    text: [
-      "「",
-      { label: "Ver5.4テストサーバー", href: "/event/ver5-3-5/ver5-4_testserver" },
-      "」のページを作成。",
-    ],
-    date: "2025/10/07",
   },
   {
     text: [

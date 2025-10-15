@@ -136,7 +136,7 @@ export default function CarnivalPartyPage() {
           caption="リズムゲー終了で敵にダメージが入る"
         />
 
-        <SectionTitle icon="theater_comedy">ボス戦</SectionTitle>
+        <SectionTitle icon="theater_comedy">ボス戦：ノイズバンド（クルプス＆ヴェド）</SectionTitle>
         <div>
           最初は1体ずつ戦い、リズムゲーの後は2体同時に相手をする。<br />
           特にギミック等は無いが、不屈が無いと敵の攻撃で打ち上げられて時間を取られるので不屈効果を忘れずに。<br />

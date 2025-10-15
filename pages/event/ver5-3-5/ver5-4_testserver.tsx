@@ -5,8 +5,8 @@ import { ReactElement, useState } from "react";
 import Link from "next/link";
 
 export default function Ver535TestServer() {
-  // 初期状態は展開（表示）
-  const [showDetail, setShowDetail] = useState(true);
+  // 初期状態は折りたたみ（非表示）
+  const [showDetail, setShowDetail] = useState(false);
 
   // 画像の横並び表示（2枚まで、それ以降は改行）
   function ImageRow({ images }: { images: { src: string; alt: string }[] }) {
@@ -105,27 +105,25 @@ export default function Ver535TestServer() {
             )}
           </div>
           <hr className="my-6" />
-          {/* 「ここから下は…」以降はshowDetailがtrueでも非表示 */}
           <h2 className="text-lg sm:text-xl font-semibold mb-2">ここから下にテストサーバーの情報を記載していきます。</h2>
         </section>
 
         {/* ▼▼▼ 追加情報 ▼▼▼ */}
-        {/* 募集案内を開いた状態以外は下を非表示 */}
-        {false && (
+        {true && (
         <section className="space-y-8">
-          {/* ■新キャラクター・ヘレンネ！ */}
+          {/* ■新キャラクター・ナント！ */}
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="font-bold text-base sm:text-lg">■新キャラクター・ヘレンネ！</span>
-              <Link href="/event/ver5-3/NewChara" className="text-blue-700 hover:underline font-semibold text-sm">
+              <span className="font-bold text-base sm:text-lg">■新キャラクター・ナント！</span>
+              <Link href="/event/ver5-3-5/NewChara" className="text-blue-700 hover:underline font-semibold text-sm">
                 詳細ページはこちら
               </Link>
             </div>
             <div className="w-full flex gap-2 mb-2 justify-center">
-              <Link href="/event/ver5-3/NewChara" className="flex-shrink-0" style={{ maxWidth: 80 }}>
+              <Link href="/event/ver5-3-5/NewChara" className="flex-shrink-0" style={{ maxWidth: 80 }}>
                 <Image
-                  src="/images/w_65_img.PNG"
-                  alt="ヘレンネ武器画像"
+                  src="/images/w_66_img.PNG"
+                  alt="ナント武器画像"
                   width={80}
                   height={80}
                   className="rounded shadow object-contain w-full h-auto hover:opacity-75 transition"
@@ -135,7 +133,7 @@ export default function Ver535TestServer() {
               <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
                 <Image
                   src="/ver_event/New_Event_2_3.PNG"
-                  alt="ヘレンネイベント画像"
+                  alt="ナントイベント画像"
                   width={320}
                   height={200}
                   className="rounded shadow object-contain w-full h-auto"
@@ -145,19 +143,19 @@ export default function Ver535TestServer() {
             </div>
           </div>
 
-          {/* ■パロッティ恒常入り！ */}
+          {/* ■ヤノ恒常入り！ */}
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="font-bold text-base sm:text-lg">■パロッティ恒常入り！</span>
-              <Link href="/weapons/EP-7000Skyfire" className="text-blue-700 hover:underline font-semibold text-sm">
+              <span className="font-bold text-base sm:text-lg">■ヤノ恒常入り！</span>
+              <Link href="/weapons/Wicked" className="text-blue-700 hover:underline font-semibold text-sm">
                 武器詳細ページ
               </Link>
             </div>
             <div className="w-full flex gap-2 mb-2 justify-center">
-              <Link href="/weapons/EP-7000Skyfire" className="flex-shrink-0" style={{ maxWidth: 80 }}>
+              <Link href="/weapons/Wicked" className="flex-shrink-0" style={{ maxWidth: 80 }}>
                 <Image
-                  src="/images/w_46_img.PNG"
-                  alt="パロッティ武器画像"
+                  src="/images/w_47_img.PNG"
+                  alt="ヤノ武器画像"
                   width={80}
                   height={80}
                   className="rounded shadow object-contain w-full h-auto hover:opacity-75 transition"
@@ -167,7 +165,7 @@ export default function Ver535TestServer() {
               <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
                 <Image
                   src="/ver_event/New_Event_2_4.PNG"
-                  alt="パロッティイベント画像"
+                  alt="ヤノイベント画像"
                   width={320}
                   height={200}
                   className="rounded shadow object-contain w-full h-auto"
@@ -177,31 +175,40 @@ export default function Ver535TestServer() {
             </div>
           </div>
 
-          {/* ■各種コンテンツ追加 */}
+          {/* ■各種コンテンツ追加（内容変更） */}
           <div>
             <div className="font-bold text-base sm:text-lg mb-2">■各種コンテンツ追加</div>
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-              <li>在りし日の幻・超域74階</li>
-              <li>幻影の序列25階（異能は追加無し）</li>
-              <li>先鋒クラッシュ・南音</li>
-              <li>ヘレンネの宿舎！</li>
+              <li>新メインストーリー・新マップ「ブライトン区」・新ワールドボス「ヒョウ3-先鋒」追加</li>
+              <li>先鋒クラッシュ・アスラーダ追加</li>
+              <li>在りし日の幻・超域に75階追加</li>
+              <li>幻影の序列・超域の4属性に25階（要塞級ヴォイド体）追加</li>
+              <li>キルオのアバター宿舎に「プールパーティ」モードが追加</li>
             </ul>
             {/* 画像を2枚ずつ横並び、それ以降は改行 */}
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
-                  <Image src="/ver_event/New_Event_2_5.PNG" alt="新コンテンツ画像1" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_2_5.PNG" alt="新メインストーリー・新マップ・新ワールドボス" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
                 <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
-                  <Image src="/ver_event/New_Event_2_6.PNG" alt="新コンテンツ画像2" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_2_6.PNG" alt="新メインストーリー・新マップ・新ワールドボス" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
-                  <Image src="/ver_event/New_Event_2_7.PNG" alt="新コンテンツ画像3" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_2_7.PNG" alt="先鋒クラッシュ・アスラーダ追加" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
                 <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
-                  <Image src="/ver_event/New_Event_2_8.PNG" alt="新コンテンツ画像4" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_2_8.PNG" alt="在りし日の幻・超域75階追加" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                </div>
+              </div>
+              <div className="w-full flex gap-2 justify-center">
+                <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
+                  <Image src="/ver_event/New_Event_2_9.PNG" alt="幻影の序列・超域4属性25階追加" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                </div>
+                <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
+                  <Image src="/ver_event/New_Event_2_10.PNG" alt="キルオ宿舎プールパーティ追加" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
