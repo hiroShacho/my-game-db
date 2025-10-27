@@ -12,19 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "大陸版情報", href: "/CN_info" },
+      "」に新キャラクターの情報を追加。ネタバレ注意。",
+    ],
+    date: "2025/10/28",
+  },
+  {
+    text: [
       "イベント「",
       { label: "Ver5.4テストサーバー", href: "/event/ver5-3-5/ver5-4_testserver" },
       "」のページに新キャラクターなどの情報を追加。",
     ],
     date: "2025/10/16",
-  },
-  {
-    text: [
-      "イベント「",
-      { label: "星間指名手配", href: "/event/ver5-3-5/GalacticBounty" },
-      "」のページに変身ミラージュと城塞バトルの内容を追記。",
-    ],
-    date: "2025/10/12",
   },
   {
     text: [
@@ -53,11 +53,9 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/weapons/Pollux", label: "ヘレンネ武器：ポルクス" },
-  { href: "/matrices/m_61", label: "ヘレンネボリション" },
-  { href: "/trait/t_61", label: "ヘレンネ特性" },
-  { href: "/event/ver5-3-5/GalacticBounty", label: "星間指名手配" },
-  { href: "/event/ver5-3-5/ver5-4_testserver", label: "Ver5.4テストサーバー" },
+  { href: "/weapons/Frostfang", label: "ナント武器：青霜" },
+  { href: "/matrices/m_62", label: "ナントボリション" },
+  { href: "/trait/t_62", label: "ナント特性" },
 ];
 
 // 追加: 新規・初心者向け項目
