@@ -52,6 +52,8 @@ const excludePaths = [
   "ver5-2",
   "ver5-3",
   "ver5-3-5",
+  "ver5-4",
+  "ver5-5",
   "newbie",
 ];
 

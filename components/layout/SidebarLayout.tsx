@@ -13,18 +13,18 @@ const sidebarNewsItems = [
   {
     text: [
       "「",
-      { label: "大陸版情報", href: "/CN_info" },
-      "」に新キャラクターの情報を追加。ネタバレ注意。",
+      { label: "Ver5.4アップデート情報まとめ", href: "/event/ver5-4/New_ver_info" },
+      "」のページに新バージョンの情報を追加。",
     ],
     date: "2025/10/28",
   },
   {
     text: [
-      "イベント「",
-      { label: "Ver5.4テストサーバー", href: "/event/ver5-3-5/ver5-4_testserver" },
-      "」のページに新キャラクターなどの情報を追加。",
+      "「",
+      { label: "大陸版情報", href: "/CN_info" },
+      "」に新キャラクターの情報を追加。ネタバレ注意。",
     ],
-    date: "2025/10/16",
+    date: "2025/10/28",
   },
   {
     text: [
