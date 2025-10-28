@@ -351,7 +351,7 @@ export default function NewVerInfo() {
           </SectionTitle>
           <RowImages
             images={[
-              { src: "/ver_event/New_map.png", alt: "新マップ：ブライトン区" },
+              { src: "/ver_event/New_Map.png", alt: "新マップ：ブライトン区" },
             ]}
             height={192}
           />
