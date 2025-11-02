@@ -21,6 +21,7 @@ export default function RaidIndexPage() {
     { key: "ScorchingNightmare", title: "燃え上がるナイトメア", href: "/raid/ScorchingNightmare", img: "/raid/ScorchingNightmare.PNG" },
     { key: "TrafficControl", title: "交通管制", href: "/raid/TrafficControl", img: "/raid/TrafficControl.PNG" },
     { key: "SwarmGuard", title: "ガードバグ陣", href: "/raid/SwarmGuard", img: "/raid/SwarmGuard.PNG" },
+    { key: "StellarManhunt", title: "星間包囲", href: "/raid/StellarManhunt", img: "/raid/StellarManhunt.PNG" },
   ];
 
   return (

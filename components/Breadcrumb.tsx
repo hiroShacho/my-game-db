@@ -42,6 +42,7 @@ const labelMap: Record<string, string> = {
   "ScorchingNightmare": "燃え上がるナイトメア",
   "TrafficControl": "交通管制",
   "SwarmGuard": "ガードバグ陣",
+  "StellarManhunt":"星間包囲",
   // 必要に応じて追加
 };
 

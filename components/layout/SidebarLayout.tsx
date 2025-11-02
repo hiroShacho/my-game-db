@@ -12,17 +12,20 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "期間限定討伐「",
+      { label: "星間包囲", href: "/raid/StellarManhunt" },
+      "」のページを作成。",
       "「",
-      { label: "Ver5.4アップデート情報まとめ", href: "/event/ver5-4/New_ver_info" },
-      "」のページに新バージョンの情報を追加。",
+      { label: "進化辺境", href: "/fce" },
+      "」にハバカの情報を追加。",
     ],
-    date: "2025/10/28",
+    date: "2025/11/02",
   },
   {
     text: [
       "「",
-      { label: "大陸版情報", href: "/CN_info" },
-      "」に新キャラクターの情報を追加。ネタバレ注意。",
+      { label: "Ver5.4アップデート情報まとめ", href: "/event/ver5-4/New_ver_info" },
+      "」のページに新バージョンの情報を追加。",
     ],
     date: "2025/10/28",
   },
@@ -56,6 +59,7 @@ const latestContentsLinks = [
   { href: "/weapons/Frostfang", label: "ナント武器：青霜" },
   { href: "/matrices/m_62", label: "ナントボリション" },
   { href: "/trait/t_62", label: "ナント特性" },
+  { href: "/raid/StellarManhunt", label: "限定討伐「星間包囲」" },
 ];
 
 // 追加: 新規・初心者向け項目
