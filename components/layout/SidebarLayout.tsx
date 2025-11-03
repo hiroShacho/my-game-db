@@ -14,20 +14,20 @@ const sidebarNewsItems = [
     text: [
       "期間限定討伐「",
       { label: "星間包囲", href: "/raid/StellarManhunt" },
+      "」のページに解説動画を追加。",
+    ],
+    date: "2025/11/03",
+  },
+  {
+    text: [
+      "期間限定討伐「",
+      { label: "星間包囲", href: "/raid/StellarManhunt" },
       "」のページを作成。",
       "「",
       { label: "進化辺境", href: "/fce" },
       "」にハバカの情報を追加。",
     ],
     date: "2025/11/02",
-  },
-  {
-    text: [
-      "「",
-      { label: "Ver5.4アップデート情報まとめ", href: "/event/ver5-4/New_ver_info" },
-      "」のページに新バージョンの情報を追加。",
-    ],
-    date: "2025/10/28",
   },
   {
     text: [

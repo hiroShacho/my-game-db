@@ -212,6 +212,23 @@ export default function StellarManhuntPage() {
           どちらかというとギミック中のダメージを防いだりフィオナでヒット数を稼ぐために恩恵を多めに編成した方が安定するだろう。<br />
           電池を破壊するギミック担当としてグレイフォックスとラクシスを編成に入れていない恩恵が数人欲しいところ。
         </div>
+
+        <SectionTitle icon="movie">解説動画</SectionTitle>
+        <div className="w-full flex justify-center my-4">
+          <div className="relative w-full" style={{ maxWidth: 560 }}>
+            <div style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}>
+              <iframe
+                src="https://www.youtube.com/embed/7h9oH5E--1A"
+                title="討伐作戦「星間包囲」解説動画"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded shadow border border-orange-200"
+                style={{ maxWidth: "100%" }}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
