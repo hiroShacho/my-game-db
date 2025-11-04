@@ -14,6 +14,9 @@ const sidebarNewsItems = [
     text: [
       "連合作戦「",
       { label: "無想剣極意", href: "/jointoperation/ZenithBlade" },
+      "」のページを作成。\n",
+      "イベント「",
+      { label: "ブライトンの救済 & ゴーストツアー", href: "/event/ver5-4/Brighton'sSalvation" },
       "」のページを作成。",
     ],
     date: "2025/11/04",
@@ -57,6 +60,8 @@ const latestContentsLinks = [
   { href: "/matrices/m_62", label: "ナントボリション" },
   { href: "/trait/t_62", label: "ナント特性" },
   { href: "/raid/StellarManhunt", label: "限定討伐「星間包囲」" },
+  { href: "/event/ver5-4/Brighton'sSalvation", label: "イベント「ブライトンの救済」" },
+
 ];
 
 // 追加: 新規・初心者向け項目
@@ -81,7 +86,7 @@ function SidebarNewsBlock({ isMobile = false }: { isMobile?: boolean }) {
         <ul className="space-y-2 text-sm">
           {sidebarNewsItems.map((item, idx) => (
             <li key={idx} className="flex flex-col">
-              <span>
+              <span style={{ whiteSpace: "pre-line" }}>
                 {item.text.map((chunk, i) =>
                   typeof chunk === "string"
                     ? chunk

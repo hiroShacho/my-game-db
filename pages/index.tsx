@@ -250,30 +250,32 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* ブライトンの救済（準備中に変更） */}
+            {/* ブライトンの救済 */}
             <div className="block sm:col-span-1">
-              <div
-                className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
-                  transition-all duration-200
-                  cursor-default
-                "
-                style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center top"
-                }}
-              >
-                <div className="absolute inset-0 bg-black/20" />
-                <div className="relative z-10 p-4">
-                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    ブライトンの救済
-                  </h3>
-                  <p className="text-sm sm:text-base text-white drop-shadow">
-                    準備中
-                  </p>
+              <Link href="/event/ver5-4/Brighton'sSalvation" className="block">
+                <div
+                  className="
+                    relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
+                    transition-all duration-200
+                    cursor-default
+                  "
+                  style={{
+                    backgroundImage: "url('/ver_event/New_Event_TOP.PNG')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center top"
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black/20" />
+                  <div className="relative z-10 p-4">
+                    <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                      ブライトンの救済 & ゴーストツアー
+                    </h3>
+                    <p className="text-sm sm:text-base text-white drop-shadow">
+                      イベントミニゲームの詳細をチェック
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             {/* Ver5.5テストサーバー（準備中に変更） */}
