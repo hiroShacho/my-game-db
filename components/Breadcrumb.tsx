@@ -29,6 +29,7 @@ const labelMap: Record<string, string> = {
   "CarnivalParty": "パーティータイム",
   "PursuitofFate": "運命の追撃",
   "CoreflameDepths": "地核深焔",
+  "ZenithBlade":"無想剣極意",
   "fce": "進化辺境",
   "voidabyss": "虚空のアビス",
   "raid": "討伐作戦",

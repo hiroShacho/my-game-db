@@ -4,7 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 
-// 仮の9つの連合作戦データ
+// 仮の10つの連合作戦データ
 const jointOps = [
   { key: "Jo1", title: "深海基地", img: "/JointOperation/jo_DeepseaStronghold.PNG", link: "/jointoperation/DeepseaStronghold" },
   { key: "Jo2", title: "深海訓練所", img: "/JointOperation/jo_DeepseaProvingGround.PNG", link: "/jointoperation/DeepseaProvingGround" },
@@ -15,6 +15,7 @@ const jointOps = [
   { key: "Jo7", title: "パーティータイム", img: "/JointOperation/jo_CarnivalParty.PNG", link: "/jointoperation/CarnivalParty" },
   { key: "Jo8", title: "運命の追撃", img: "/JointOperation/jo_PursuitofFate.PNG", link: "/jointoperation/PursuitofFate" },
   { key: "Jo9", title: "地核深焔", img: "/JointOperation/jo_CoreflameDepths.PNG", link: "/jointoperation/CoreflameDepths" },
+  { key: "Jo10", title: "無想剣極意", img: "/JointOperation/jo_ZenithBlade.PNG", link: "/jointoperation/ZenithBlade" },
 ];
 
 // 武器リスト（簡略 ver.）

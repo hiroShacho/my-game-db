@@ -12,22 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "期間限定討伐「",
-      { label: "星間包囲", href: "/raid/StellarManhunt" },
-      "」のページに解説動画を追加。",
+      "連合作戦「",
+      { label: "無想剣極意", href: "/jointoperation/ZenithBlade" },
+      "」のページを作成。",
     ],
-    date: "2025/11/03",
+    date: "2025/11/04",
   },
   {
     text: [
       "期間限定討伐「",
       { label: "星間包囲", href: "/raid/StellarManhunt" },
-      "」のページを作成。",
-      "「",
-      { label: "進化辺境", href: "/fce" },
-      "」にハバカの情報を追加。",
+      "」のページに解説動画を追加。",
     ],
-    date: "2025/11/02",
+    date: "2025/11/03",
   },
   {
     text: [

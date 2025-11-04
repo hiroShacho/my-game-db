@@ -160,7 +160,7 @@ export default function GalacticBounty() {
   return (
     <>
       <Head>
-        <title>討伐作戦「星間指名手配」 | 幻塔攻略データベース</title>
+        <title>イベント「星間指名手配」 | 幻塔攻略データベース</title>
         <meta name="description" content="幻塔 討伐作戦「星間指名手配」のイベント解説・攻略情報" />
       </Head>
       <div className="w-full max-w-full min-h-screen space-y-8 px-2 sm:px-6 py-4">
