@@ -12,6 +12,14 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "探索マップ「",
+      { label: "キルオ：ブライトン区", href: "/map/kailo_BrightonZone_EXpoint" },
+      "」のページを作成。",
+    ],
+    date: "2025/11/05",
+  },
+  {
+    text: [
       "連合作戦「",
       { label: "無想剣極意", href: "/jointoperation/ZenithBlade" },
       "」のページを作成。\n",
@@ -20,14 +28,6 @@ const sidebarNewsItems = [
       "」のページを作成。",
     ],
     date: "2025/11/04",
-  },
-  {
-    text: [
-      "期間限定討伐「",
-      { label: "星間包囲", href: "/raid/StellarManhunt" },
-      "」のページに解説動画を追加。",
-    ],
-    date: "2025/11/03",
   },
   {
     text: [

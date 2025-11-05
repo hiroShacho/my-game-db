@@ -8,6 +8,7 @@ const labelMap: Record<string, string> = {
   "tag-search": "タグ検索",
   "map": "探索マップ",
   "kailo_OreZero_EXpoint": "キルオ：ゼロ鉱山区マップ",
+  "kailo_BrightonZone_EXpoint":"キルオ：ブライトン区",
   "weapons": "武器一覧",
   "matrices": "ボリション一覧",
   "trait": "アバター特性一覧",

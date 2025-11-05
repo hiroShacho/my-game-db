@@ -257,7 +257,8 @@ export default function Home() {
                   className="
                     relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                     transition-all duration-200
-                    cursor-default
+                    hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-pink-400
+                    cursor-pointer focus:outline-none focus:ring-4
                   "
                   style={{
                     backgroundImage: "url('/ver_event/New_Event_TOP.PNG')",

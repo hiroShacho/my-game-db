@@ -2,7 +2,6 @@ import { MapContainer, ImageOverlay, Marker, Popup, useMap, ZoomControl } from '
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { useEffect, useState, useMemo } from 'react';
-import Link from 'next/link';
 
 export type Point = {
   id: string;
@@ -32,6 +31,7 @@ const iconLabelMap: Record<string, string> = {
 
 const mapNameMap: Record<string, string> = {
   kailo_OreZero: 'キルオ：ゼロ鉱山区',
+  kailo_BrightonZone: 'キルオ：ブライトン区',
 };
 
 const mapVideoMap: Record<string, string> = {
@@ -115,17 +115,17 @@ export default function ExplorationMap({
     return result;
   }, [points, collected]);
 
+  // 動的マップタイトル（mapNameMap から取得、無ければ mapId を表示）
+  const mapTitle = mapNameMap[mapId] ?? mapId;
+
   return (
     <div className="max-w-4xl mx-auto w-full">
-      {/* ヘッダ部分 */}
+      {/* ヘッダ部分（他マップへのリンクは不要とのことで削除） */}
       <div className="p-3 bg-gray-100 border-b border-gray-300">
-        <div className="flex flex-wrap gap-4 mb-2">
-          <Link href="/map/kailo_OreZero_EXpoint" legacyBehavior>
-            <a className={`font-bold ${mapId === 'kailo_OreZero' ? 'text-blue-700 underline' : ''}`}>
-              キルオ：ゼロ鉱山区
-            </a>
-          </Link>
+        <div className="flex items-center justify-between flex-wrap gap-4 mb-2">
+          <div className="text-lg font-bold text-gray-800">{mapTitle}</div>
         </div>
+
         <div className="text-xs sm:text-sm text-gray-700 mb-2">
           マーカークリックで「取得済み／未取得」切替。<br />
           アイコン種別表示の切替も可能です。<br />

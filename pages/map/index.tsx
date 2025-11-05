@@ -183,9 +183,14 @@ function MapIndexPage() {
         {/* ↓この2項目は絶対に変更禁止 */}
         <SectionTitle icon="link">マップリンク（制作中）</SectionTitle>
         <ul className="list-disc ml-6 mb-6 text-lg">
-          <li>
+          <li className="mb-2">
             <Link href="/map/kailo_OreZero_EXpoint" className="text-blue-700 hover:underline font-semibold">
               キルオ：ゼロ鉱山区
+            </Link>
+          </li>
+          <li>
+            <Link href="/map/kailo_BrightonZone_EXpoint" className="text-blue-700 hover:underline font-semibold">
+              キルオ：ブライトン区
             </Link>
           </li>
         </ul>
