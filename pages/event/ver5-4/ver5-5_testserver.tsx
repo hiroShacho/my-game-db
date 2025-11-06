@@ -5,8 +5,8 @@ import { ReactElement, useState } from "react";
 import Link from "next/link";
 
 export default function Ver535TestServer() {
-  // 初期状態は折りたたみ（非表示）
-  const [showDetail, setShowDetail] = useState(false);
+  // 初期状態は展開（表示）
+  const [showDetail, setShowDetail] = useState(true);
 
   // 画像の横並び表示（2枚まで、それ以降は改行）
   function ImageRow({ images }: { images: { src: string; alt: string }[] }) {
@@ -35,8 +35,8 @@ export default function Ver535TestServer() {
   return (
     <>
       <Head>
-        <title>【幻塔攻略】Ver5.4先行テストサーバー | 幻塔攻略データベース</title>
-        <meta name="description" content="幻塔（Tower of Fantasy）のVer5.4先行テストサーバーの情報まとめページ。" />
+        <title>【幻塔攻略】Ver5.5先行テストサーバー | 幻塔攻略データベース</title>
+        <meta name="description" content="幻塔（Tower of Fantasy）のVer5.5先行テストサーバーの情報まとめページ。" />
       </Head>
       <div className="w-full max-w-2xl mx-auto px-2 sm:px-4 py-8 space-y-6">
         <section>
@@ -54,11 +54,11 @@ export default function Ver535TestServer() {
             {showDetail && (
               <div className="mt-3">
                 <p className="text-base sm:text-lg mb-3">
-                  公式DiscordサーバーにてVer5.4先行テストサーバーの募集がスタートしました！
+                  公式DiscordサーバーにてVer5.5先行テストサーバーの募集がスタートしました！
                 </p>
                 <div className="mb-3">
                   <Image
-                    src="/ver_event/New_Event_2_1.PNG"
+                    src="/ver_event/New_Event_6_1.PNG"
                     alt="応募フォーム"
                     width={800}
                     height={400}
@@ -70,7 +70,7 @@ export default function Ver535TestServer() {
                 </p>
                 <div className="mb-3">
                   <Image
-                    src="/ver_event/New_Event_2.PNG"
+                    src="/ver_event/New_Event_6.PNG"
                     alt="イベント画像"
                     width={800}
                     height={400}
@@ -84,7 +84,7 @@ export default function Ver535TestServer() {
                 </p>
                 <div className="mb-3">
                   <Image
-                    src="/ver_event/New_Event_2_2.PNG"
+                    src="/ver_event/New_Event_6_2.PNG"
                     alt="Discord案内"
                     width={800}
                     height={400}
@@ -92,8 +92,8 @@ export default function Ver535TestServer() {
                   />
                 </div>
                 <p className="mb-3">
-                  応募期間は9日(木)の13時までなので、早めに応募しておきましょう！<br />
-                  応募フォームに書いてある情報によると、テストの開始は15日(水)からとなっています。
+                  応募期間は募集開始から24時間後の7日(金)19時までなので、早めに応募しておきましょう！<br />
+                  応募フォームに書いてある情報によると、テストの開始は12日(水)からとなっています。
                 </p>
                 <div className="mb-4 text-red-800 font-bold">
                   ※注意<br />
@@ -109,7 +109,7 @@ export default function Ver535TestServer() {
         </section>
 
         {/* ▼▼▼ 追加情報 ▼▼▼ */}
-        {true && (
+        {false && (
         <section className="space-y-8">
           {/* ■新キャラクター・ナント！ */}
           <div>

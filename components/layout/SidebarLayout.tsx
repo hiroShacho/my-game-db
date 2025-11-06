@@ -12,22 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "ver5.5テストサーバー", href: "/event/ver5-4/ver5-5_testserver" },
+      "」のページを作成。",
+    ],
+    date: "2025/11/06",
+  },
+  {
+    text: [
       "探索マップ「",
       { label: "キルオ：ブライトン区", href: "/map/kailo_BrightonZone_EXpoint" },
       "」のページを作成。",
     ],
     date: "2025/11/05",
-  },
-  {
-    text: [
-      "連合作戦「",
-      { label: "無想剣極意", href: "/jointoperation/ZenithBlade" },
-      "」のページを作成。\n",
-      "イベント「",
-      { label: "ブライトンの救済 & ゴーストツアー", href: "/event/ver5-4/Brighton'sSalvation" },
-      "」のページを作成。",
-    ],
-    date: "2025/11/04",
   },
   {
     text: [

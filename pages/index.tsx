@@ -244,7 +244,7 @@ export default function Home() {
                     ナント武器：青霜
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    ナントの武器詳細をチェック
+                    ナントの武器詳細をチェック！
                   </p>
                 </div>
               </div>
@@ -272,40 +272,43 @@ export default function Home() {
                       ブライトンの救済 & ゴーストツアー
                     </h3>
                     <p className="text-sm sm:text-base text-white drop-shadow">
-                      イベントミニゲームの詳細をチェック
+                      イベントミニゲームの詳細をチェック！
                     </p>
                   </div>
                 </div>
               </Link>
             </div>
 
-            {/* Ver5.5テストサーバー（準備中に変更） */}
+            {/* Ver5.5テストサーバー（有効リンク・ホバー効果追加） */}
             <div className="block sm:col-span-1">
-              <div
-                className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
-                  transition-all duration-200
-                  cursor-default
-                "
-                style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center top"
-                }}
-              >
-                <div className="absolute inset-0 bg-blue-900/30" />
-                <div className="relative z-10 p-4">
-                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    Ver5.5テストサーバー
-                  </h3>
-                  <p className="text-sm sm:text-base text-white drop-shadow">
-                    準備中
-                  </p>
+              <Link href="/event/ver5-4/ver5-5_testserver" className="block">
+                <div
+                  className="
+                    relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
+                    transition-all duration-200
+                    hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-pink-400
+                    cursor-pointer focus:outline-none focus:ring-4
+                  "
+                  style={{
+                    backgroundImage: "url('/ver_event/New_Event_6.PNG')",
+                    backgroundSize: "cover",
+                    backgroundPosition: "center top"
+                  }}
+                >
+                  <div className="absolute inset-0 bg-blue-900/30" />
+                  <div className="relative z-10 p-4">
+                    <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                      Ver5.5テストサーバー
+                    </h3>
+                    <p className="text-sm sm:text-base text-white drop-shadow">
+                      テストサーバーの詳細をチェック！
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
-            {/* その他のイベント（準備中） */}
+            {/* その他のイベント（準備中） */} 
             <div className="block sm:col-span-1">
               <div
                 className="
