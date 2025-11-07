@@ -204,7 +204,7 @@ export default function BrightonsSalvationPage() {
 
         <SectionTitle icon="groups">生存同名（8人マッチ）</SectionTitle>
           <Image
-            src="/ver_event/New_Event_3.PNG"
+            src="/ver_event/New_Event_3.png"
             alt="生存同名 トップ"
             width={640}
             height={320}
