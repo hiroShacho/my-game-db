@@ -12,19 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "イベントミニゲーム「",
+      { label: "ブライトンの救済", href: "/event/ver5-4/Brighton'sSalvation" },
+      "」に「生存同名」の情報を追加。",
+    ],
+    date: "2025/11/07",
+  },
+  {
+    text: [
       "「",
       { label: "ver5.5テストサーバー", href: "/event/ver5-4/ver5-5_testserver" },
       "」のページを作成。",
     ],
     date: "2025/11/06",
-  },
-  {
-    text: [
-      "探索マップ「",
-      { label: "キルオ：ブライトン区", href: "/map/kailo_BrightonZone_EXpoint" },
-      "」のページを作成。",
-    ],
-    date: "2025/11/05",
   },
   {
     text: [

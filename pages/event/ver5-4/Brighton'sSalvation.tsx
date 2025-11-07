@@ -203,10 +203,32 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="groups">生存同名（8人マッチ）</SectionTitle>
+          <Image
+            src="/ver_event/New_Event_3.PNG"
+            alt="生存同名 トップ"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
         <div>
           Mi-aになって2人ペアでフルーツを集めるミニゲーム。<br />
-          2人はレーザーで繋がれており、他のプレイヤーをこのレーザーに当てるとそのペアを倒して持っていたフルーツの一部をドロップできる。
+          2人はレーザーで繋がれており、他のプレイヤーをこのレーザーに当てるとそのペアを倒して持っていたフルーツの一部をドロップできる。<br />
+          回避の加速を上手く使って敵をレーザーで倒して差をつけよう！
         </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_3_1.PNG",
+              alt: "2人1組で他3ペアと競う",
+              caption: "2人1組で他3ペアと競う",
+            },
+            {
+              src: "/ver_event/New_Event_3_2.PNG",
+              alt: "報酬はポイントのみ",
+              caption: "報酬はポイントのみ",
+            },
+          ]}
+        />
 
         <SectionTitle icon="help">霧に満ちた身分（4人マッチ）</SectionTitle>
         <div>

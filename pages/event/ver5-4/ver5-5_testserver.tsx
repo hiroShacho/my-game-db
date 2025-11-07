@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Ver535TestServer() {
   // 初期状態は展開（表示）
-  const [showDetail, setShowDetail] = useState(true);
+  const [showDetail, setShowDetail] = useState(false);
 
   // 画像の横並び表示（2枚まで、それ以降は改行）
   function ImageRow({ images }: { images: { src: string; alt: string }[] }) {

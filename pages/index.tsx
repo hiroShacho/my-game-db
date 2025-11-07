@@ -221,6 +221,7 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
             {/* ナントの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
             <Link href="/weapons/Frostfang" className="block">
               <div
@@ -308,30 +309,34 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* その他のイベント（準備中） */} 
+            {/* 探索マップ「キルオ：ブライトン区」 */} 
             <div className="block sm:col-span-1">
-              <div
-                className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
-                  transition-all duration-200
-                  cursor-default
-                "
-                style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center top"
-                }}
-              >
-                <div className="absolute inset-0 bg-black/20" />
-                <div className="relative z-10 p-4">
-                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    その他のイベント
-                  </h3>
-                  <p className="text-sm sm:text-base text-white drop-shadow">
-                    準備中
-                  </p>
+              <Link href="/map/kailo_BrightonZone_EXpoint" className="block">
+                <div
+                  className="
+                    relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
+                    transition-all duration-200
+                    hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-pink-400
+                    cursor-pointer focus:outline-none focus:ring-4
+                  "
+                  style={{
+                    backgroundImage: "url('/ver_event/New_Event_7.PNG')",
+                    backgroundSize: "cover",
+                    /* 表示したい画像の下の方まで映るように調整 */
+                    backgroundPosition: "center 60%"
+                  }}
+                >
+                  <div className="absolute inset-0 bg-blue-900/30" />
+                  <div className="relative z-10 p-4">
+                    <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                      探索マップ「キルオ：ブライトン区」
+                    </h3>
+                    <p className="text-sm sm:text-base text-white drop-shadow">
+                      ブライトン区のマップツールをチェック！
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
 
             <div className="sm:col-span-2">
