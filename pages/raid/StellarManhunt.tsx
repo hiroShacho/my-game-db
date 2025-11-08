@@ -229,6 +229,30 @@ export default function StellarManhuntPage() {
             </div>
           </div>
         </div>
+
+        {/* ▼追加：チャレンジソロ攻略項目 */}
+        <SectionTitle icon="sports_martial_arts">チャレンジでもソロ攻略可能</SectionTitle>
+        <div>
+          <span className="font-bold text-emerald-700">チャレンジ</span>でもノーラ恩恵でソロ攻略も可能です。<br /><br />
+          <span className="font-bold text-orange-700">ポイント</span><br />
+          ■追跡幻影は安定を取って物理ノーラのドットダメージで倒す<br />
+          ■熱核ミサイルが終わったら奥側（熱線掃射でローレンズがいる方向）で戦う<br />
+          ■熱線掃射では追跡幻影にラクシス・ブレヴィ・物理ノーラの裏ダメージを当てて回復し続ける<br /><br />
+          実際のソロクリア動画も参考にしてください。
+        </div>
+        <div className="w-full flex justify-center my-4">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/v8HmIbKzkHM"
+            title="チャレンジでソロ攻略動画"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded shadow border border-emerald-200"
+            style={{ maxWidth: "100%", aspectRatio: "16/9" }}
+          />
+        </div>
       </div>
     </>
   );

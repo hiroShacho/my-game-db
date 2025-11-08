@@ -12,19 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "限定討伐「",
+      { label: "星間包囲", href: "/raid/StellarManhunt" },
+      "」にソロ討伐の動画を追加。",
+    ],
+    date: "2025/11/08",
+  },
+  {
+    text: [
       "イベントミニゲーム「",
       { label: "ブライトンの救済", href: "/event/ver5-4/Brighton'sSalvation" },
       "」に「生存同名」の情報を追加。",
     ],
     date: "2025/11/07",
-  },
-  {
-    text: [
-      "「",
-      { label: "ver5.5テストサーバー", href: "/event/ver5-4/ver5-5_testserver" },
-      "」のページを作成。",
-    ],
-    date: "2025/11/06",
   },
   {
     text: [
