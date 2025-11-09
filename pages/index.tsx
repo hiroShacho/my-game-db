@@ -32,6 +32,7 @@ const weaponsframeMinHeightPx = 150;
 const GANTT_EVENTS: GanttEvent[] = [
   { label: "アイボリーの艦翼", color: "#9cccf5", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 25, },
   { label: "マカロンシティ", color: "#9cccf5", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 25, },
+  { label: "復刻瑠璃錦彩", color: "#ff4141", labelColor: "#8ee2f8", labelFontColor: "#200", start: 11, end: 25, },
   { label: "復刻ドキドキカーニバルナイト", color: "#f15a22", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 11, },
   { label: "復刻プレアバ：アントリア", color: "#fff400", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 11, },
   { label: "復刻プレアバ：キャロット", color: "#f15a22", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 11, },
@@ -48,6 +49,7 @@ const GANTT_DAYS = 30;
 const eventImages: (string | null)[] = [
   "/ver_event/Outfit_IvoryWing.PNG",
   "/ver_event/Outfit_MacaronTown.PNG",
+  "/ver_event/Outfit_SilkenAdornment.PNG",
   "/ver_event/Outfit_HeartbeatCarnivalNight.PNG",
   "/ver_event/Simulacrum_Antoria.PNG",
   "/ver_event/Simulacrum_Carrot.PNG",
