@@ -12,17 +12,18 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "衣装・プレアバスケジュールに瑠璃錦彩を追加。",
+      "探索マップ「",
+      { label: "キルオ：ブライトン区", href: "/map/kailo_BrightonZone_EXpoint" },
+      "」にオーディン酒場についての情報を追加。",
+      "衣装・プレアバスケジュールにパロッティ・ウーミー・榴火を追加。",
     ],
-    date: "2025/11/09",
+    date: "2025/11/10",
   },
   {
     text: [
-      "限定討伐「",
-      { label: "星間包囲", href: "/raid/StellarManhunt" },
-      "」にソロ討伐の動画を追加。",
+      "衣装・プレアバスケジュールに瑠璃錦彩を追加。",
     ],
-    date: "2025/11/08",
+    date: "2025/11/09",
   },
   {
     text: [

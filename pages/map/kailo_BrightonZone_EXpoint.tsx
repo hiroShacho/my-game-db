@@ -227,6 +227,24 @@ export default function KailoBrightonZoneEXpointPage() {
           onClick={openModal}
         />
 
+        <SectionTitle icon="terrain">オーディン酒場</SectionTitle>
+        <div>
+          1層のマップ南東にあるオーディン酒場では2種類のミニゲームが遊べる。<br />
+          AIのラナと同じダンスをタイミング良く踊るファントムビートと、カードの数値で陣取りをする表裏闘争で遊べるぞ！<br />
+          どちらのミニゲームも専用のポイントが貰えて、近くの交換所でレッドコアと交流アクションが購入できる。<br />
+          ポイントは1日に稼げる上限が1000ポイントとなっているので、全ての報酬を交換するのに最低でも14日かかるようになっている。<br />
+          ダンスは1人で出来る代わりに1000ポイント貰えるパーフェクトクリアが少し難しく、カードは談合が可能だが勝者しかポイントが貰えず一度に500ポイントなのでどうしてもダンスが出来ない場合に利用しよう。
+        </div>
+        <ImageRow
+          images={[
+            { src: "/map/BrightonZone_Odin_1.PNG", alt: "ブライトン区1層の南東にあるオーディン酒場で遊べる", caption: "ブライトン区1層の南東にあるオーディン酒場で遊べる" },
+            { src: "/map/BrightonZone_Odin_2.PNG", alt: "ラナのダンスを真似するファントムビート", caption: "ラナのダンスを真似するファントムビート" },
+            { src: "/map/BrightonZone_Odin_3.PNG", alt: "カードで陣取りをする表裏闘争", caption: "カードで陣取りをする表裏闘争" },
+            { src: "/map/BrightonZone_Odin_4.PNG", alt: "交換所ではレッドコアと交流アクションが貰えるぞ！", caption: "交換所ではレッドコアと交流アクションが貰えるぞ！" },
+          ]}
+          onClick={openModal}
+        />
+
         <SectionTitle icon="terrain">ケイジアビス</SectionTitle>
         <div>
           2層ではメカに乗って挑むソロコンテンツ「ケイジアビス」が遊べる。<br />

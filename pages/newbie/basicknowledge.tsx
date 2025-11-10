@@ -144,6 +144,7 @@ export default function BasicKnowledgePage() {
                 <a href="#category-combat" className="text-blue-700 hover:underline">戦闘</a>
                 <ul className="list-disc ml-5">
                   <li><a href="#combat-rolls" className="text-blue-700 hover:underline">各ロールの特殊効果について</a></li>
+                  <li><a href="#daily-cactus" className="text-blue-700 hover:underline">火力の測定はサボテンで！</a></li>
                 </ul>
               </li>
               <li>
@@ -162,7 +163,6 @@ export default function BasicKnowledgePage() {
                 <ul className="list-disc ml-5">
                   <li><a href="#daily-update" className="text-blue-700 hover:underline">デイリーなどの更新は午前5時</a></li>
                   <li><a href="#daily-guild" className="text-blue-700 hover:underline">ギルドは入り得</a></li>
-                  <li><a href="#daily-cactus" className="text-blue-700 hover:underline">火力の測定はサボテンで！</a></li>
                 </ul>
               </li>
             </ul>
@@ -186,6 +186,27 @@ export default function BasicKnowledgePage() {
             そのため、チームでの戦闘では余程のことが無い限り火力恩恵が強攻に勝つことは不可能となっている。
           </div>
           <CaptionedImage src="/Newbie/basicknowledge/basicknowledge_fionalink.PNG" alt="フィオナのリンクは強攻・均衡にしか攻撃力を渡せない" caption="フィオナのリンクは強攻・均衡にしか攻撃力を渡せない" onClick={() => openModal("/Newbie/basicknowledge/basicknowledge_fionalink.PNG", "フィオナのリンクは強攻・均衡にしか攻撃力を渡せない")}/>
+
+          <SectionTitle id="daily-cactus" icon="sports_score">火力の測定はサボテンで！</SectionTitle>
+          <div className="mb-4">
+            このゲームでDPS（秒間にどれだけ火力を出せるか）を測る時はサボテンのサンドバックを使用する。<br/>
+            メニューにある訓練センターの極限テストを選んで専用のエリアに入って計測するのが一般的。<br/>
+            計測時間は在りし日の幻等と同じ2分30秒で測るのが一般的となっている。
+          </div>
+          <RowImages images={[
+            { src: "/Newbie/basicknowledge/basicknowledge_cactus1.PNG", alt: "極限テストで計測しよう！", caption: "極限テストで計測しよう！" },
+            { src: "/Newbie/basicknowledge/basicknowledge_cactus2.PNG", alt: "サボテンは友達！ｺﾜｸﾅｲ!", caption: "サボテンは友達！ｺﾜｸﾅｲ!" },
+          ]} w={350} h={200} onClick={openModal}/>
+          <div className="mb-4">
+            Mi-aの食事バフ・食べ物のバフを使うか等の細かい条件は人によって変わってくるが、大体の人はバフの有無を併記してくれている。<br/>
+            このゲームは如何に一番火力が高くなるスキル回しを安定して回し続けられるかで火力が大きく変わってくる。<br/>
+            そのため、少しでも火力を出したい人はSNS上で最前線のプレイヤーが出しているスキル回しを参考にサボテンで練習してみよう！<br/>
+            ちなみにサボテン自体はミラポリスのHOTTAスタジオとのびのび広場、九域の浄化広場やギルドルームにもあるが、一番安定して計測できるのは訓練センターなのでソロで測るなら訓練センターにしよう。
+          </div>
+          <RowImages images={[
+            { src: "/Newbie/basicknowledge/basicknowledge_cactus3.PNG", alt: "ミラポリスにもサボテンはあるが少しゲームが重いことも", caption: "ミラポリスにもサボテンはあるが少しゲームが重いことも" },
+            { src: "/Newbie/basicknowledge/basicknowledge_cactus4.PNG", alt: "九域にもサボテンの代わりになる解き放たれし蓮の柱がある", caption: "九域にもサボテンの代わりになる解き放たれし蓮の柱がある" },
+          ]} w={350} h={200} onClick={openModal}/>
         </BigCategoryArea>
 
         {/* ガチャ区間 */}
@@ -276,27 +297,6 @@ export default function BasicKnowledgePage() {
           <RowImages images={[
             { src: "/Newbie/basicknowledge/basicknowledge_crewrewardsbox1.PNG", alt: "ギルド特典", caption: "ギルド特典" },
             { src: "/Newbie/basicknowledge/basicknowledge_crewrewardsbox2.PNG", alt: "ギルド特典の中身", caption: "ギルド特典の中身" },
-          ]} w={350} h={200} onClick={openModal}/>
-
-          <SectionTitle id="daily-cactus" icon="sports_score">火力の測定はサボテンで！</SectionTitle>
-          <div className="mb-4">
-            このゲームでDPS（秒間にどれだけ火力を出せるか）を測る時はサボテンのサンドバックを使用する。<br/>
-            メニューにある訓練センターの極限テストを選んで専用のエリアに入って計測するのが一般的。<br/>
-            計測時間は在りし日の幻等と同じ2分30秒で測るのが一般的となっている。
-          </div>
-          <RowImages images={[
-            { src: "/Newbie/basicknowledge/basicknowledge_cactus1.PNG", alt: "極限テストで計測しよう！", caption: "極限テストで計測しよう！" },
-            { src: "/Newbie/basicknowledge/basicknowledge_cactus2.PNG", alt: "サボテンは友達！ｺﾜｸﾅｲ!", caption: "サボテンは友達！ｺﾜｸﾅｲ!" },
-          ]} w={350} h={200} onClick={openModal}/>
-          <div className="mb-4">
-            Mi-aの食事バフ・食べ物のバフを使うか等の細かい条件は人によって変わってくるが、大体の人はバフの有無を併記してくれている。<br/>
-            このゲームは如何に一番火力が高くなるスキル回しを安定して回し続けられるかで火力が大きく変わってくる。<br/>
-            そのため、少しでも火力を出したい人はSNS上で最前線のプレイヤーが出しているスキル回しを参考にサボテンで練習してみよう！<br/>
-            ちなみにサボテン自体はミラポリスのHOTTAスタジオとのびのび広場、九域の浄化広場やギルドルームにもあるが、一番安定して計測できるのは訓練センターなのでソロで測るなら訓練センターにしよう。
-          </div>
-          <RowImages images={[
-            { src: "/Newbie/basicknowledge/basicknowledge_cactus3.PNG", alt: "ミラポリスにもサボテンはあるが少しゲームが重いことも", caption: "ミラポリスにもサボテンはあるが少しゲームが重いことも" },
-            { src: "/Newbie/basicknowledge/basicknowledge_cactus4.PNG", alt: "九域にもサボテンの代わりになる解き放たれし蓮の柱がある", caption: "九域にもサボテンの代わりになる解き放たれし蓮の柱がある" },
           ]} w={350} h={200} onClick={openModal}/>
         </BigCategoryArea>
 

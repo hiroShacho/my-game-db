@@ -234,8 +234,39 @@ export default function LevelUpPage() {
           onClick={() => openModal("/Newbie/levelup/levelup_DistributionArmor.PNG", "最初は配布防具を装備しよう")}
         />
 
-        {/* ②防具を突破・タイタン化しよう！ */}
-        <SectionTitle icon="auto_awesome">②防具を突破・タイタン化しよう！</SectionTitle>
+        {/* ②防具レベルアップ */}
+        <SectionTitle icon="star">②防具のレベルを上げよう！</SectionTitle>
+        <div className="mb-4">
+          防具は★ランクを上げる他にも強化モジュールとコインを使用してレベルを上げることができる。<br />
+          このレベルは同じ部位の別防具に変更する際に引き継げるので今装備している防具のレベルだけ上げていけば問題ない。
+          「いざ！チュートリアルから冒険の旅へ！」である程度は強化モジュール等のアイテムが貰えるのでそれらを使ってガンガンレベルを上げよう！<br /><br />
+          なお、ある程度までレベルを上げると希少な強化モジュールⅢを要求されるようになる。<br />
+          このアイテムは無・微課金だと毎週の討伐作戦やバージョンごとのイベント商店でしか手に入れる手段が無いので使い方には注意しよう。<br />
+          基本的には全体を均等に上げてボーナス効果の発動を目指すのが良いが、ガントレットは基本のステータスに攻撃と会心が付いているので最優先に強化しよう。
+        </div>
+        <CaptionedImage
+          src="/Newbie/levelup/levelup_bonus.PNG"
+          alt="基本の部位のレベルを一定まで上げると強化ボーナス！"
+          caption="基本の部位のレベルを一定まで上げると強化ボーナス！"
+          onClick={() => openModal("/Newbie/levelup/levelup_bonus.PNG", "基本の部位のレベルを一定まで上げると強化ボーナス！")}
+        />
+
+        {/* ③武器・ボリションレベル */}
+        <SectionTitle icon="military_tech">③武器とボリションのレベルを上げよう！</SectionTitle>
+        <div className="mb-4">
+          武器とボリションはそれぞれレベルを上げて基礎ステータスを強化できる。<br />
+          武器は最大でレベル200、ボリションはレベル100まで強化できる。<br />
+          装備している武器3つと各ボリションを最大まで強化すればそれだけでステータスを大きく伸ばせるので必ずレベル上げをしておこう。
+        </div>
+        <CaptionedImage
+          src="/Newbie/levelup/levelup_weapons.PNG"
+          alt="武器・ボリションのレベルを上げるとステータスが大きく伸びる"
+          caption="武器・ボリションのレベルを上げるとステータスが大きく伸びる（凸数によってステータスの伸びも上がる）"
+          onClick={() => openModal("/Newbie/levelup/levelup_weapons.PNG", "武器・ボリションのレベルを上げるとステータスが大きく伸びる")}
+        />
+
+        {/* ④防具を突破・タイタン化しよう！ */}
+        <SectionTitle icon="auto_awesome">④防具を突破・タイタン化しよう！</SectionTitle>
         <div className="mb-4">
           プレイヤーのレベルが90に到達すると解放される。<br />
           防具を最大までランクアップした後に突破を選択すると専用の画面が表示される。
@@ -312,37 +343,6 @@ export default function LevelUpPage() {
           alt="突破状況の引継ぎには煙水晶が必要なので注意！"
           caption="突破状況の引継ぎには煙水晶が必要なので注意！"
           onClick={() => openModal("/Newbie/levelup/levelup_titanHandover.PNG", "突破状況の引継ぎには煙水晶が必要なので注意！")}
-        />
-
-        {/* ③防具レベルアップ */}
-        <SectionTitle icon="star">③防具のレベルを上げよう！</SectionTitle>
-        <div className="mb-4">
-          防具は★ランクを上げる他にも強化モジュールとコインを使用してレベルを上げることができる。<br />
-          このレベルは同じ部位の別防具に変更する際に引き継げるので今装備している防具のレベルだけ上げていけば問題ない。
-          「いざ！チュートリアルから冒険の旅へ！」である程度は強化モジュール等のアイテムが貰えるのでそれらを使ってガンガンレベルを上げよう！<br /><br />
-          なお、ある程度までレベルを上げると希少な強化モジュールⅢを要求されるようになる。<br />
-          このアイテムは無・微課金だと毎週の討伐作戦やバージョンごとのイベント商店でしか手に入れる手段が無いので使い方には注意しよう。<br />
-          基本的には全体を均等に上げてボーナス効果の発動を目指すのが良いが、ガントレットは基本のステータスに攻撃と会心が付いているので最優先に強化しよう。
-        </div>
-        <CaptionedImage
-          src="/Newbie/levelup/levelup_bonus.PNG"
-          alt="基本の部位のレベルを一定まで上げると強化ボーナス！"
-          caption="基本の部位のレベルを一定まで上げると強化ボーナス！"
-          onClick={() => openModal("/Newbie/levelup/levelup_bonus.PNG", "基本の部位のレベルを一定まで上げると強化ボーナス！")}
-        />
-
-        {/* ④武器・ボリションレベル */}
-        <SectionTitle icon="military_tech">④武器とボリションのレベルを上げよう！</SectionTitle>
-        <div className="mb-4">
-          武器とボリションはそれぞれレベルを上げて基礎ステータスを強化できる。<br />
-          武器は最大でレベル200、ボリションはレベル100まで強化できる。<br />
-          装備している武器3つと各ボリションを最大まで強化すればそれだけでステータスを大きく伸ばせるので必ずレベル上げをしておこう。
-        </div>
-        <CaptionedImage
-          src="/Newbie/levelup/levelup_weapons.PNG"
-          alt="武器・ボリションのレベルを上げるとステータスが大きく伸びる"
-          caption="武器・ボリションのレベルを上げるとステータスが大きく伸びる（凸数によってステータスの伸びも上がる）"
-          onClick={() => openModal("/Newbie/levelup/levelup_weapons.PNG", "武器・ボリションのレベルを上げるとステータスが大きく伸びる")}
         />
 
         {/* ⑤超速演算 */}
