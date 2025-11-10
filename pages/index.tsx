@@ -36,7 +36,7 @@ const GANTT_EVENTS: GanttEvent[] = [
   { label: "復刻ドキドキカーニバルナイト", color: "#f15a22", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 11, },
   { label: "復刻プレアバ：パロッティ", color: "#e3a3f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 11, end: 25, },
   { label: "復刻プレアバ：ウーミー", color: "#8e80f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 11, end: 25, },
-  { label: "復刻プレアバ：榴火", color: "#ff4141", labelColor: "#e3a3f8", labelFontColor: "#200", start: 11, end: 25, }
+  { label: "復刻プレアバ：榴火", color: "#ff4141", labelColor: "#e3a3f8", labelFontColor: "#200", start: 11, end: 25, },
   { label: "復刻プレアバ：アントリア", color: "#fff400", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 11, },
   { label: "復刻プレアバ：キャロット", color: "#f15a22", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 11, },
   { label: "復刻プレアバ：南音", color: "#000000", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 11, },
