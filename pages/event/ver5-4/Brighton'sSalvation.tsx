@@ -232,7 +232,7 @@ export default function BrightonsSalvationPage() {
 
         <SectionTitle icon="help">霧に満ちた身分（4人マッチ）</SectionTitle>
           <Image
-            src="/ver_event/New_Event_4.png"
+            src="/ver_event/New_Event_4.PNG"
             alt="霧に満ちた身分 トップ"
             width={640}
             height={320}
