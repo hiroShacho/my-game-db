@@ -231,10 +231,37 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="help">霧に満ちた身分（4人マッチ）</SectionTitle>
+          <Image
+            src="/ver_event/New_Event_4.png"
+            alt="霧に満ちた身分 トップ"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
         <div>
           30体のドロイドの中に紛れて他のプレイヤーの擬態を見破るミニゲーム。<br />
-          26体のドロイドはランダムに行動しているのでその行動を真似することで他のプレイヤーにバレにくくなる。
+          26体のドロイドはランダムに行動しているのでその行動を真似することで他のプレイヤーにバレにくくなる。<br />
+          報酬は商店のポイントだけだが、あえてお互い相手を倒さないことで長時間生き残ることで一度に3000点以上稼ぐのも狙えるぞ！
         </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_4_1.PNG",
+              alt: "矢印が当たってるドロイドが自分",
+              caption: "矢印が当たってるドロイドが自分",
+            },
+            {
+              src: "/ver_event/New_Event_4_2.PNG",
+              alt: "落ちてくる貝を拾うとポイントが増える",
+              caption: "落ちてくる貝を拾うとポイントが増える",
+            },
+            {
+              src: "/ver_event/New_Event_4_3.PNG",
+              alt: "長く生き残る＆貝を拾うほど高得点",
+              caption: "長く生き残る＆貝を拾うほど高得点",
+            },
+          ]}
+        />
 
         <SectionTitle icon="tour">ゴーストツアー（8人マッチ）</SectionTitle>
         <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>

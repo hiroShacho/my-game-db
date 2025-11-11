@@ -12,18 +12,20 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "探索マップ「",
-      { label: "キルオ：ブライトン区", href: "/map/kailo_BrightonZone_EXpoint" },
-      "」にオーディン酒場についての情報を追加。",
-      "衣装・プレアバスケジュールにパロッティ・ウーミー・榴火を追加。",
+      "イベントミニゲーム「",
+      { label: "ブライトンの救済", href: "/event/ver5-4/Brighton'sSalvation" },
+      "に「霧に満ちた身分」の情報を追加。",
     ],
-    date: "2025/11/10",
+    date: "2025/11/11",
   },
   {
     text: [
-      "衣装・プレアバスケジュールに瑠璃錦彩を追加。",
+      "探索マップ「",
+      { label: "キルオ：ブライトン区", href: "/map/kailo_BrightonZone_EXpoint" },
+      "」にオーディン酒場についての情報を追加。\n",
+      "衣装・プレアバスケジュールにパロッティ・ウーミー・榴火を追加。",
     ],
-    date: "2025/11/09",
+    date: "2025/11/10",
   },
   {
     text: [
