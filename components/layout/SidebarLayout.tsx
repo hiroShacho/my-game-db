@@ -12,20 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "ver5.5テストサーバー", href: "/event/ver5-4/ver5-5_testserver" },
+      "」に新キャラクターなどの情報を追加。\n",
+    ],
+    date: "2025/11/12",
+  },
+  {
+    text: [
       "イベントミニゲーム「",
       { label: "ブライトンの救済", href: "/event/ver5-4/Brighton'sSalvation" },
       "に「霧に満ちた身分」の情報を追加。",
     ],
     date: "2025/11/11",
-  },
-  {
-    text: [
-      "探索マップ「",
-      { label: "キルオ：ブライトン区", href: "/map/kailo_BrightonZone_EXpoint" },
-      "」にオーディン酒場についての情報を追加。\n",
-      "衣装・プレアバスケジュールにパロッティ・ウーミー・榴火を追加。",
-    ],
-    date: "2025/11/10",
   },
   {
     text: [
@@ -59,7 +58,7 @@ const latestContentsLinks = [
   { href: "/trait/t_62", label: "ナント特性" },
   { href: "/raid/StellarManhunt", label: "限定討伐「星間包囲」" },
   { href: "/event/ver5-4/Brighton'sSalvation", label: "イベント「ブライトンの救済」" },
-
+  { href: "/event/ver5-4/ver5-5_testserver", label: "ver5.5テストサーバー" },
 ];
 
 // 追加: 新規・初心者向け項目
