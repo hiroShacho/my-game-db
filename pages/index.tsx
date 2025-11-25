@@ -55,7 +55,8 @@ const eventImages: (string | null)[] = [
 
 const GIFT_CODES = [
   { code: "TOF500601", desc: "Discord配布コード", expire: "2025/12/30", },
-//  { code: "", desc: "Ver5.5バージョン引き換えコード", expire: "2025/12/30", }
+  { code: "1125star", desc: "（正式サーバー）Ver5.5バージョン引き換えコード", expire: "2025/12/30", },
+  { code: "1125mmo", desc: "（Warpサーバー）Ver5.5バージョン引き換えコード", expire: "2025/12/30", }
 ];
 
 export default function Home() {
