@@ -12,19 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "「",
-      { label: "ver5.5テストサーバー", href: "/event/ver5-4/ver5-5_testserver" },
-      "」に新キャラクターなどの情報を追加。\n",
+      "ve5.5の注目コンテンツを更新。「",
+      { label: "ver5.5アップデート情報まとめ", href: "/event/ver5-5/New_ver_info" },
+      "」をご確認ください。",
     ],
-    date: "2025/11/12",
+    date: "2025/11/25",
   },
   {
     text: [
-      "イベントミニゲーム「",
-      { label: "ブライトンの救済", href: "/event/ver5-4/Brighton'sSalvation" },
-      "に「霧に満ちた身分」の情報を追加。",
+      "「ver5.5テストサーバー」に新キャラクターなどの情報を追加。",
     ],
-    date: "2025/11/11",
+    date: "2025/11/12",
   },
   {
     text: [
@@ -53,12 +51,8 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/weapons/Frostfang", label: "ナント武器：青霜" },
-  { href: "/matrices/m_62", label: "ナントボリション" },
-  { href: "/trait/t_62", label: "ナント特性" },
-  { href: "/raid/StellarManhunt", label: "限定討伐「星間包囲」" },
-  { href: "/event/ver5-4/Brighton'sSalvation", label: "イベント「ブライトンの救済」" },
-  { href: "/event/ver5-4/ver5-5_testserver", label: "ver5.5テストサーバー" },
+  { href: "/event/ver5-5/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/Visios", label: "ヴェロニカ武器：視界" },
 ];
 
 // 追加: 新規・初心者向け項目

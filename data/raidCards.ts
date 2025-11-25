@@ -26,7 +26,7 @@ export const raidCards: RaidCard[] = [
     key: "StellarManhunt",
     title: "星間包囲",
     href: "/raid/StellarManhunt",
-    status: "開催中",
+    status: "未開催",
     img: "/raid/StellarManhunt.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",
