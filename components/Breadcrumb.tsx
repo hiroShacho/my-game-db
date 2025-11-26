@@ -118,7 +118,7 @@ const weaponNameMap: Record<string, string> = {
   "CalmWaters": "ヴィントシュティレ",
   "PoppinStick": "パチキャン",
   "Rumble": "ノイズ",
-  "SiegeEdge": "破滅の刃",
+  "SiegeEdge": "破城の刃",
   "Hellfire": "業火",
   "TheWitch'sKey": "魔女の鍵",
   "ScarletGale": "レッドウィンド",
