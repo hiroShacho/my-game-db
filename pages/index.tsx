@@ -56,7 +56,8 @@ const eventImages: (string | null)[] = [
 const GIFT_CODES = [
   { code: "TOF500601", desc: "Discord配布コード", expire: "2025/12/30", },
   { code: "1125star", desc: "（正式サーバー）Ver5.5バージョン引き換えコード", expire: "2025/12/30", },
-  { code: "1125mmo", desc: "（Warpサーバー）Ver5.5バージョン引き換えコード", expire: "2025/12/30", }
+  { code: "1125mmo", desc: "（Warpサーバー）Ver5.5バージョン引き換えコード", expire: "2025/12/30", },
+  { code: "THANKU4WARP", desc: "（Warpサーバー）Warpサーバー特別報酬", expire: "2025/12/30", }
 ];
 
 export default function Home() {
@@ -248,23 +249,22 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* キルオナイトクレイジー (リンクを無効化) */}
-            <div className="block sm:col-span-1">
-              {/* 元: <Link href="/event/ver5-5/KailoNightFever"> */}
+            {/* キルオナイトクレイジー (ホバーあり、クリック有効) */}
+            <Link href="/event/ver5-5/KailoNightFever">
               <div
                 className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  cursor-default
+                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-pink-400
+                  cursor-pointer
                 "
-                aria-disabled="true"
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_TOP.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     キルオナイトクレイジー
@@ -274,26 +274,24 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              {/* /元 Link */}
-            </div>
+            </Link>
 
-            {/* Ver5.6テストサーバー (リンクを無効化) */}
-            <div className="block sm:col-span-1">
-              {/* 元: <Link href="/event/ver5-5/ver5-6_testserver"> */}
+            {/* Ver5.6テストサーバー (ホバーあり、クリック有効) */}
+            <Link href="/event/ver5-5/ver5-6_testserver">
               <div
                 className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  cursor-default
+                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-sky-400
+                  cursor-pointer
                 "
-                aria-disabled="true"
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_5.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-blue-900/30" />
+                <div className="absolute inset-0 bg-blue-900/30 group-hover:bg-blue-900/40 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     Ver5.6テストサーバー
@@ -303,8 +301,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              {/* /元 Link */}
-            </div>
+            </Link>
 
             {/* 準備中（仮置き） (リンクを無効化) */}
             <div className="block sm:col-span-1">

@@ -94,179 +94,32 @@ export default function BrightonsSalvationPage() {
   return (
     <>
       <Head>
-        <title>イベント「ブライトンの救済」＆「ゴーストツアー」 | 幻塔攻略データベース</title>
-        <meta name="description" content="イベント「ブライトンの救済」＆「ゴーストツアー」の紹介ページ" />
+        <title>イベント「キルオナイトクレイジー」 | 幻塔攻略データベース</title>
+        <meta name="description" content="イベント「キルオナイトクレイジー」の紹介ページ" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </Head>
       <div className="mx-auto max-w-3xl px-2 sm:px-4 py-6">
 
         <h1 className="text-3xl font-extrabold mb-4 text-pink-600 flex items-center gap-2">
           <span className="material-symbols-outlined text-pink-500">celebration</span>
-          イベント「ブライトンの救済」＆「ゴーストツアー」
+          イベント「キルオナイトクレイジー」
         </h1>
 
         {/* トップ画像 */}
         <div className="rounded-lg shadow mb-4 mx-auto w-fit flex justify-center" style={{ maxWidth: "100%" }}>
           <Image
             src="/ver_event/New_Event_TOP.PNG"
-            alt="ブライトンの救済＆ゴーストツアー トップ"
+            alt="キルオナイトクレイジー トップ"
             width={560}
             height={320}
             style={{ maxWidth: "100%", height: "auto", display: "block", marginLeft: "auto", marginRight: "auto" }}
           />
         </div>
-        <div>
-          今回のイベントは「ブライトンの救済」と「ゴーストツアー」で商店が別の内容になっているので注意。<br />
-          開催期間もゴーストツアーの方が短くなっているのでなるべく毎日上限までやっておくことをおススメする。<br />
-        </div>
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_shop.PNG",
-              alt: "ショップは別（通貨が違う）ので注意",
-              caption: "ショップは別（通貨が違う）ので注意",
-            },
-          ]}
-        />
 
-        <SectionTitle icon="account_tree">脳端末対抗（8人マッチ）</SectionTitle>
+        <SectionTitle icon="account_tree">ゴーストツアー（8人マッチ）</SectionTitle>
         <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
           <Image
             src="/ver_event/New_Event_1.PNG"
-            alt="脳端末対抗 トップ"
-            width={640}
-            height={320}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        </div>
-        <div>
-          8人マッチのサバイバル形式のミニゲーム。<br />
-          ガチャを回して武器を揃えて戦闘を有利に進めよう。<br />
-          ガチャで出る武器は上部に表示されているガチャレベルを上げることでより良いものになる。<br />
-          最大7回の戦闘を最速で勝ち抜くことで勝者となる。<br />
-          基本的には最速でガチャレベルを上げてVer5.0以降の武器を取れば1位になれる。
-        </div>
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_1_1.PNG",
-              alt: "ガチャで武器を集める",
-              caption: "ガチャで武器を集める",
-            },
-            {
-              src: "/ver_event/New_Event_1_2.PNG",
-              alt: "ガチャレベルを上げることでより良い武器が出てくる",
-              caption: "ガチャレベルを上げることでより良い武器が出てくる",
-            },
-            {
-              src: "/ver_event/New_Event_1_3.PNG",
-              alt: "最後の戦闘に最速で勝利すれば1位",
-              caption: "最後の戦闘に最速で勝利すれば1位",
-            },
-          ]}
-        />
-
-        <SectionTitle icon="directions_run">ネオントルネード（最大300人）</SectionTitle>
-        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
-          <Image
-            src="/ver_event/New_Event_2.PNG"
-            alt="ネオントルネード トップ"
-            width={640}
-            height={320}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        </div>
-        <div>
-          最大300人でマッチングするレースゲーム。<br />
-          ブライトン区内にある10カ所のチェックポイントを通ることでゴールになる。<br />
-          上下の移動が多いので移動性能がある武器を持っていると有利になれるぞ！<br />
-          報酬で貰える欠片を集めて手に入る箱からは猫マフラーのアクセ等が貰える。
-        </div>
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_2_1.PNG",
-              alt: "チェックポイントは全10カ所",
-              caption: "チェックポイントは全10カ所",
-            },
-            {
-              src: "/ver_event/New_Event_2_2.PNG",
-              alt: "アントリアやアストールがあると有利",
-              caption: "アントリアやアストールがあると有利",
-            },
-            {
-              src: "/ver_event/New_Event_2_3.PNG",
-              alt: "報酬の欠片を集めると可愛いアクセが貰えるぞ！",
-              caption: "報酬の欠片を集めると可愛いアクセが貰えるぞ！",
-            },
-          ]}
-        />
-
-        <SectionTitle icon="groups">生存同名（8人マッチ）</SectionTitle>
-          <Image
-            src="/ver_event/New_Event_3.png"
-            alt="生存同名 トップ"
-            width={640}
-            height={320}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        <div>
-          Mi-aになって2人ペアでフルーツを集めるミニゲーム。<br />
-          2人はレーザーで繋がれており、他のプレイヤーをこのレーザーに当てるとそのペアを倒して持っていたフルーツの一部をドロップできる。<br />
-          回避の加速を上手く使って敵をレーザーで倒して差をつけよう！
-        </div>
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_3_1.PNG",
-              alt: "2人1組で他3ペアと競う",
-              caption: "2人1組で他3ペアと競う",
-            },
-            {
-              src: "/ver_event/New_Event_3_2.PNG",
-              alt: "報酬はポイントのみ",
-              caption: "報酬はポイントのみ",
-            },
-          ]}
-        />
-
-        <SectionTitle icon="help">霧に満ちた身分（4人マッチ）</SectionTitle>
-          <Image
-            src="/ver_event/New_Event_4.PNG"
-            alt="霧に満ちた身分 トップ"
-            width={640}
-            height={320}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        <div>
-          30体のドロイドの中に紛れて他のプレイヤーの擬態を見破るミニゲーム。<br />
-          26体のドロイドはランダムに行動しているのでその行動を真似することで他のプレイヤーにバレにくくなる。<br />
-          報酬は商店のポイントだけだが、あえてお互い相手を倒さないことで長時間生き残ることで一度に3000点以上稼ぐのも狙えるぞ！
-        </div>
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_4_1.PNG",
-              alt: "矢印が当たってるドロイドが自分",
-              caption: "矢印が当たってるドロイドが自分",
-            },
-            {
-              src: "/ver_event/New_Event_4_2.PNG",
-              alt: "落ちてくる貝を拾うとポイントが増える",
-              caption: "落ちてくる貝を拾うとポイントが増える",
-            },
-            {
-              src: "/ver_event/New_Event_4_3.PNG",
-              alt: "長く生き残る＆貝を拾うほど高得点",
-              caption: "長く生き残る＆貝を拾うほど高得点",
-            },
-          ]}
-        />
-
-        <SectionTitle icon="tour">ゴーストツアー（8人マッチ）</SectionTitle>
-        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
-          <Image
-            src="/ver_event/New_Event_5.PNG"
             alt="ゴーストツアー トップ"
             width={640}
             height={320}
@@ -275,6 +128,7 @@ export default function BrightonsSalvationPage() {
         </div>
         <div>
           8人マッチのミニゲーム。<br />
+          内容は前のバージョンで開催されたものと同じ。<br />
           1人がオバケ役になって他の7人がそれを追いかける。<br />
           オバケが通ったマスを通るとポイントを獲得でき、それ以外のマスを踏むとポイントが減る。<br />
           時間経過で出現するカボチャを拾うと他のプレイヤーに凍結・減速効果を付与できる。<br />
@@ -284,12 +138,57 @@ export default function BrightonsSalvationPage() {
         <RowMedia
           items={[
             {
-              src: "/ver_event/New_Event_5_1.PNG",
+              src: "/ver_event/New_Event_1_1.PNG",
               alt: "オバケと戯れるMi-aが非常にキュート",
               caption: "オバケと戯れるMi-aが非常にキュート",
             },
           ]}
         />
+
+        <SectionTitle icon="directions_run">カボチャ頭を探せ（マッチング無し）</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_2.PNG"
+            alt="カボチャ頭を探せ トップ"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
+        <div>
+          ミラポリスで開催される箱開けイベント。<br />
+          毎日12時から2時間ごとに開催され、1回30分で22時の回がラストになる。<br />
+          カボチャの箱を開けるだけでポイントが貰えるので非常に簡単にポイントを稼げる。<br />
+          正直ポイントを稼ぐだけならこのイベントが一番効率が良いが、開催時間の指定があるので忘れないように注意。
+        </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_2_1.PNG",
+              alt: "イベントアイコンをクリックすれば転送してくれる",
+              caption: "イベントアイコンをクリックすれば転送してくれる",
+            },
+            {
+              src: "/ver_event/New_Event_2_2.PNG",
+              alt: "カボチャの箱を開けるだけで終わり",
+              caption: "カボチャの箱を開けるだけで終わり",
+            },
+          ]}
+        />
+
+        <SectionTitle icon="groups">魔物狩りの冒険隊（8人マッチ）</SectionTitle>
+        <div>
+          運命の包囲網形式のPVEミニゲーム。<br />
+          全員で協力してフィールドのボスを倒しながらバフを集めて最後のボスを倒そう。<br />
+          本鯖とWarp鯖で武器の調整を変えるかは不明。
+        </div>
+
+        <SectionTitle icon="groups">いざ、姿を現せ！（8人マッチ）</SectionTitle>
+        <div>
+          隠れん坊形式のミニゲーム。<br />
+          鬼2人・逃げる側6人に分かれ、逃げる側は変身や透明化を駆使して逃げ切ることを目指す。<br />
+          ステージによって有利不利が変わりやすく、後半になって環境が煮詰まると不利な方の陣営は9割勝てなくなる。なった。
+        </div>
       </div>
     </>
   );

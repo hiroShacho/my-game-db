@@ -5,8 +5,8 @@ import { ReactElement, useState } from "react";
 import Link from "next/link";
 
 export default function Ver535TestServer() {
-  // 初期状態は展開（表示）
-  const [showDetail, setShowDetail] = useState(false);
+  // 初期状態は展開（表示） — 初期を true に変更しました（開いた状態がデフォルト）
+  const [showDetail, setShowDetail] = useState(true);
 
   // 画像の横並び表示（2枚まで、それ以降は改行）
   function ImageRow({ images }: { images: { src: string; alt: string }[] }) {
@@ -35,8 +35,8 @@ export default function Ver535TestServer() {
   return (
     <>
       <Head>
-        <title>【幻塔攻略】Ver5.5先行テストサーバー | 幻塔攻略データベース</title>
-        <meta name="description" content="幻塔（Tower of Fantasy）のVer5.5先行テストサーバーの情報まとめページ。" />
+        <title>【幻塔攻略】Ver5.6先行テストサーバー | 幻塔攻略データベース</title>
+        <meta name="description" content="幻塔（Tower of Fantasy）のVer5.6先行テストサーバーの情報まとめページ。" />
       </Head>
       <div className="w-full max-w-2xl mx-auto px-2 sm:px-4 py-8 space-y-6">
         <section>
@@ -54,11 +54,11 @@ export default function Ver535TestServer() {
             {showDetail && (
               <div className="mt-3">
                 <p className="text-base sm:text-lg mb-3">
-                  公式DiscordサーバーにてVer5.5先行テストサーバーの募集がスタートしました！
+                  公式DiscordサーバーにてVer5.6先行テストサーバーの募集がスタートしました！
                 </p>
                 <div className="mb-3">
                   <Image
-                    src="/ver_event/New_Event_6_1.PNG"
+                    src="/ver_event/New_Event_5_1.PNG"
                     alt="応募フォーム"
                     width={800}
                     height={400}
@@ -70,7 +70,7 @@ export default function Ver535TestServer() {
                 </p>
                 <div className="mb-3">
                   <Image
-                    src="/ver_event/New_Event_6.PNG"
+                    src="/ver_event/New_Event_5.PNG"
                     alt="イベント画像"
                     width={800}
                     height={400}
@@ -80,11 +80,11 @@ export default function Ver535TestServer() {
                 <p className="mb-3">
                   公式Discordには公式ホームページから参加可能です！<br />
                   公式ホームページは本サイトの幻塔公式リンクから飛べます。<br />
-                  PC表示なら右のサイドバー、スマホならサイドバーメニューの中にあります。
+                  PC表示なら右のサイドバー、スマホならサイドバーメニューの中にあります。（画像は過去の公式ホームページです）
                 </p>
                 <div className="mb-3">
                   <Image
-                    src="/ver_event/New_Event_6_2.PNG"
+                    src="/ver_event/New_Event_5_2.PNG"
                     alt="Discord案内"
                     width={800}
                     height={400}
@@ -92,8 +92,8 @@ export default function Ver535TestServer() {
                   />
                 </div>
                 <p className="mb-3">
-                  応募期間は募集開始から24時間後の7日(金)19時までなので、早めに応募しておきましょう！<br />
-                  応募フォームに書いてある情報によると、テストの開始は12日(水)からとなっています。
+                  応募期間は10日(水)19時までなので、早めに応募しておきましょう！<br />
+                  応募フォームに書いてある情報によると、テストの開始は17日(水)からとなっています。
                 </p>
                 <div className="mb-4 text-red-800 font-bold">
                   ※注意<br />
@@ -109,7 +109,8 @@ export default function Ver535TestServer() {
         </section>
 
         {/* ▼▼▼ 追加情報 ▼▼▼ */}
-        {true && (
+        {/* 以下の追加情報セクションは非表示にしています。再表示するには false を true に戻してください。 */}
+        {false && (
         <section className="space-y-8">
           {/* ■新キャラクター・ヴェロニカ！ */}
           <div>

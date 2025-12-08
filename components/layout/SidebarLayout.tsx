@@ -12,17 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "ver5.6テストサーバー", href: "/event/ver5-5/ver5-6_testserver" },
+      "」のページを作成。",
+    ],
+    date: "2025/12/08",
+  },
+  {
+    text: [
       "ve5.5の注目コンテンツを更新。「",
       { label: "ver5.5アップデート情報まとめ", href: "/event/ver5-5/New_ver_info" },
       "」をご確認ください。",
     ],
     date: "2025/11/25",
-  },
-  {
-    text: [
-      "「ver5.5テストサーバー」に新キャラクターなどの情報を追加。",
-    ],
-    date: "2025/11/12",
   },
   {
     text: [
@@ -53,6 +55,8 @@ const soloMultiPveLinks = [
 const latestContentsLinks = [
   { href: "/event/ver5-5/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/Visios", label: "ヴェロニカ武器：視界" },
+  { href: "/event/ver5-5/KailoNightFever", label: "キルオナイトクレイジー" },
+  { href: "/event/ver5-5/ver5-6_testserver", label: "Ver5.6テストサーバー" },
 ];
 
 // 追加: 新規・初心者向け項目
