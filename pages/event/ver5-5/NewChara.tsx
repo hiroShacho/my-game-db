@@ -4,9 +4,9 @@ import SidebarLayout from "@/components/layout/SidebarLayout";
 import Image from "next/image";
 import Link from "next/link";
 
-// --- Ver5.4新武器・ボリション・アバター特性データ ---
+// --- Ver5.6新武器・ボリション・アバター特性データ ---
 const weapon = {
-  id: "w_67",
+  id: "w_68",
   slug: "Visios",
   name: "視界",
   avatar: "ヴェロニカ",

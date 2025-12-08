@@ -14,7 +14,8 @@ const sidebarNewsItems = [
     text: [
       "「",
       { label: "ver5.6テストサーバー", href: "/event/ver5-5/ver5-6_testserver" },
-      "」のページを作成。",
+      "」のページを作成。\n",
+      "「大陸版情報」を更新。ネタバレなので閲覧は自己責任でお願いします。",
     ],
     date: "2025/12/08",
   },
