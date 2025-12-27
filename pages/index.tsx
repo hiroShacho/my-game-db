@@ -57,7 +57,8 @@ const GIFT_CODES = [
   { code: "TOF500601", desc: "Discord配布コード", expire: "2025/12/30", },
   { code: "1125star", desc: "（正式サーバー）Ver5.5バージョン引き換えコード", expire: "2025/12/30", },
   { code: "1125mmo", desc: "（Warpサーバー）Ver5.5バージョン引き換えコード", expire: "2025/12/30", },
-  { code: "THANKU4WARP", desc: "（Warpサーバー）Warpサーバー特別報酬", expire: "2025/12/30", }
+  { code: "THANKU4WARP", desc: "（Warpサーバー）Warpサーバー特別報酬", expire: "2025/12/30", },
+  { code: "2025WINTERGIFT", desc: "冬のスペシャルギフト", expire: "2026/02/03", }
 ];
 
 export default function Home() {

@@ -14,18 +14,18 @@ const sidebarNewsItems = [
     text: [
       "「",
       { label: "ver5.6テストサーバー", href: "/event/ver5-5/ver5-6_testserver" },
+      "」のページを更新。\n",
+    ],
+    date: "2025/12/27",
+  },
+  {
+    text: [
+      "「",
+      { label: "ver5.6テストサーバー", href: "/event/ver5-5/ver5-6_testserver" },
       "」のページを作成。\n",
       "「大陸版情報」を更新。ネタバレなので閲覧は自己責任でお願いします。",
     ],
     date: "2025/12/08",
-  },
-  {
-    text: [
-      "ve5.5の注目コンテンツを更新。「",
-      { label: "ver5.5アップデート情報まとめ", href: "/event/ver5-5/New_ver_info" },
-      "」をご確認ください。",
-    ],
-    date: "2025/11/25",
   },
   {
     text: [
