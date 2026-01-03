@@ -12,20 +12,18 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "「",
-      { label: "ver5.6テストサーバー", href: "/event/ver5-5/ver5-6_testserver" },
-      "」のページを更新。\n",
+      "ver5.6のアップデート内容を反映。\n",
+      "あけましておめでとうございマシ",
     ],
-    date: "2025/12/27",
+    date: "2026/01/03",
   },
   {
     text: [
       "「",
       { label: "ver5.6テストサーバー", href: "/event/ver5-5/ver5-6_testserver" },
-      "」のページを作成。\n",
-      "「大陸版情報」を更新。ネタバレなので閲覧は自己責任でお願いします。",
+      "」のページを更新。\n",
     ],
-    date: "2025/12/08",
+    date: "2025/12/27",
   },
   {
     text: [
@@ -54,10 +52,8 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/event/ver5-5/New_ver_info", label: "アップデート情報まとめ" },
-  { href: "/weapons/Visios", label: "ヴェロニカ武器：視界" },
-  { href: "/event/ver5-5/KailoNightFever", label: "キルオナイトクレイジー" },
-  { href: "/event/ver5-5/ver5-6_testserver", label: "Ver5.6テストサーバー" },
+  { href: "/event/ver5-6/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/EvolutionCube", label: "ラナ武器：進化キューブ" },
 ];
 
 // 追加: 新規・初心者向け項目

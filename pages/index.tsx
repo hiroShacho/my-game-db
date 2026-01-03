@@ -10,7 +10,7 @@ import { raidCards } from "../data/raidCards";
 import weapons from "../data/weapons.json";
 
 const pickupWeaponIds = [
-  "w_67", "w_63", "w_59", "w_54",
+  "w_68", "w_66", "w_65", "w_64", "w_63", "w_62", "w_61", "w_60", "w_59", "w_58", "w_57", "w_56", "w_55", "w_54", "w_53", "w_43", "w_34", "w_25",
 ];
 
 function getWeaponDataById(id: string) {
@@ -30,34 +30,28 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "セクシーデビル", color: "#e3a3f8", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 30, },
-  { label: "復刻：海塩スターコーデ", color: "#9cccf5", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 13, },
-  { label: "復刻：創り上げる未来", color: "#000000", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 13, },
-  { label: "プレアバ：ヴェロニカ", color: "#e3a3f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 30, },
-  { label: "復刻プレアバ：シードル", color: "#8e80f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 13, },
-  { label: "復刻プレアバ：アントリア", color: "#ff4141", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 13, },
-  { label: "復刻プレアバ：メリル・アムド", color: "#9cccf5", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 13, }
+  { label: "醉蛾の恋", color: "#9cccf5", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 17, },
+  { label: "悠久の頌歌", color: "#000000", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
+  { label: "プレアバ：ラナ", color: "#e3a3f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 31, },
+  { label: "新年復刻プレミアムセット", color: "#8e80f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 17, },
+  { label: "異能復刻プレミアムセット", color: "#ff4141", labelColor: "#e3a3f8", labelFontColor: "#200", start: 17, end: 31, }
 ];
 
-const GANTT_MONTH = 12;
-const GANTT_YEAR = 2025;
+const GANTT_MONTH = 1;
+const GANTT_YEAR = 2026;
 const GANTT_DAYS = 31;
 
 const eventImages: (string | null)[] = [
-  "/ver_event/Outfit_VelvetSiren.PNG",
-  "/ver_event/Outfit_Cosmic Coast.PNG",
-  "/ver_event/Outfit_ReshapeTheFuture.PNG",
-  "/ver_event/Simulacrum_Veronica.PNG",
-  "/ver_event/Simulacrum_Hipper.PNG",
-  "/ver_event/Simulacrum_Antoria.PNG",
-  "/ver_event/Simulacrum_MerylIronheart.PNG",
+  "/ver_event/Outfit_TipsyLove.PNG",
+  "/ver_event/Outfit_SilkyOde.PNG",
+  "/ver_event/Simulacrum_Lana.PNG",
+  "/ver_event/Rerun.png",
+  "/ver_event/Simulacrum_Alter.PNG",
 ];
 
 const GIFT_CODES = [
-  { code: "TOF500601", desc: "Discord配布コード", expire: "2025/12/30", },
-  { code: "1125star", desc: "（正式サーバー）Ver5.5バージョン引き換えコード", expire: "2025/12/30", },
-  { code: "1125mmo", desc: "（Warpサーバー）Ver5.5バージョン引き換えコード", expire: "2025/12/30", },
-  { code: "THANKU4WARP", desc: "（Warpサーバー）Warpサーバー特別報酬", expire: "2025/12/30", },
+  { code: "1230evo", desc: "（正式サーバー）Ver5.6バージョン引き換えコード", expire: "2026/02/03", },
+  { code: "1230mmo", desc: "（Warpサーバー）Ver5.6バージョン引き換えコード", expire: "2026/02/03", },
   { code: "2025WINTERGIFT", desc: "冬のスペシャルギフト", expire: "2026/02/03", }
 ];
 
@@ -174,10 +168,10 @@ export default function Home() {
 
         {/* 注目コンテンツ */}
         <section>
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.5の注目コンテンツ</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver5.6の注目コンテンツ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* ver5.5アップデート情報まとめバナー */}
-            <Link href="/event/ver5-5/New_ver_info" className="block sm:col-span-2">
+            {/* ver5.6アップデート情報まとめバナー */}
+            <Link href="/event/ver5-6/New_ver_info" className="block sm:col-span-2">
               <div
                 className="
                   relative rounded-lg shadow-lg h-48 sm:h-64 flex items-center justify-center overflow-hidden group
@@ -193,7 +187,7 @@ export default function Home() {
               >
                 <Image
                   src="/ver_event/New_ver_top.png"
-                  alt="ver5.5アップデート情報まとめ"
+                  alt="ver5.6アップデート情報まとめ"
                   fill
                   sizes="100vw"
                   className="object-cover w-full h-full"
@@ -215,14 +209,14 @@ export default function Home() {
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-3xl sm:text-5xl font-bold text-white drop-shadow-lg bg-black/75 px-6 py-3 rounded-lg border border-pink-300">
-                    ver5.5アップデート情報まとめ
+                    ver5.6アップデート情報まとめ
                   </span>
                 </div>
               </div>
             </Link>
 
-            {/* ヴェロニカの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
-            <Link href="/weapons/Visios" className="block">
+            {/* ラナの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
+            <Link href="/weapons/EvolutionCube" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -241,68 +235,66 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    ヴェロニカ武器：視界
+                    ラナ武器：進化キューブ
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    ヴェロニカの武器詳細をチェック！
+                    ラナの武器詳細をチェック！
                   </p>
                 </div>
               </div>
             </Link>
 
-            {/* キルオナイトクレイジー (ホバーあり、クリック有効) */}
-            <Link href="/event/ver5-5/KailoNightFever">
+            {/* 色あせることのない楽園 */}
+            <div className="block sm:col-span-1">
               <div
                 className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
-                  transition-all duration-200
-                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-pink-400
-                  cursor-pointer
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
+                  transition-none
+                  cursor-default
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/New_Event_TOP.PNG')",
+                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-200" />
+                <div className="absolute inset-0 bg-black/20" />
                 <div className="relative z-10 p-4">
-                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    キルオナイトクレイジー
+                  <h3 className="font-semibold text-base sm:text-lg text-white">
+                    色あせることのない楽園
                   </h3>
-                  <p className="text-sm sm:text-base text-white drop-shadow">
+                  <p className="text-sm sm:text-base text-white">
                     イベントミニゲームの詳細をチェック！
                   </p>
                 </div>
               </div>
-            </Link>
+            </div>
 
-            {/* Ver5.6テストサーバー (ホバーあり、クリック有効) */}
-            <Link href="/event/ver5-5/ver5-6_testserver">
+            {/* Ver5.7テストサーバー */}
+            <div className="block sm:col-span-1">
               <div
                 className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
-                  transition-all duration-200
-                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-sky-400
-                  cursor-pointer
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
+                  transition-none
+                  cursor-default
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/New_Event_5.PNG')",
+                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-blue-900/30 group-hover:bg-blue-900/40 transition-all duration-200" />
+                <div className="absolute inset-0 bg-blue-900/30" />
                 <div className="relative z-10 p-4">
-                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    Ver5.6テストサーバー
+                  <h3 className="font-semibold text-base sm:text-lg text-white">
+                    Ver5.7テストサーバー
                   </h3>
-                  <p className="text-sm sm:text-base text-white drop-shadow">
+                  <p className="text-sm sm:text-base text-white">
                     テストサーバーの詳細をチェック！
                   </p>
                 </div>
               </div>
-            </Link>
+            </div>
 
             {/* 準備中（仮置き） (リンクを無効化) */}
             <div className="block sm:col-span-1">

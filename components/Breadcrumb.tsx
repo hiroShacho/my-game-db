@@ -57,6 +57,9 @@ const excludePaths = [
   "ver5-3-5",
   "ver5-4",
   "ver5-5",
+  "ver5-6",
+  "ver5-7",
+  "ver5-8",
   "newbie",
 ];
 
@@ -132,6 +135,7 @@ const weaponNameMap: Record<string, string> = {
   "Pollux": "ポルクス",
   "Frostfang":"青霜",
   "Visios":"視界",
+  "EvolutionCube":"進化キューブ",
   //仮でボリションと特性はパンくずだけ変える
   "m_1": "エコー",
   "t_1": "エコー",
@@ -259,6 +263,8 @@ const weaponNameMap: Record<string, string> = {
   "t_62": "ナント",
   "m_63": "ヴェロニカ",
   "t_63": "ヴェロニカ",
+  "m_64": "ラナ",
+  "t_64": "ラナ",
   "r_1": "フロスト砲",
   "r_2": "ジェットパック",
   "r_3": "溶岩爆弾",
