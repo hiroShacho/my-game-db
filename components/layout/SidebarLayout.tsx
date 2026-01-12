@@ -12,6 +12,7 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「大陸版情報」に新キャラクターの情報を掲載。\n確認は自己責任でお願いします。\n",
       "「",
       { label: "色あせることのない楽園", href: "/event/ver5-6/EternalWonderland" },
       "」のページを作成。\n",
