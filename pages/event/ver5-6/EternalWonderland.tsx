@@ -94,101 +94,110 @@ export default function BrightonsSalvationPage() {
   return (
     <>
       <Head>
-        <title>イベント「キルオナイトクレイジー」 | 幻塔攻略データベース</title>
-        <meta name="description" content="イベント「キルオナイトクレイジー」の紹介ページ" />
+        <title>イベント「色あせることのない楽園」 | 幻塔攻略データベース</title>
+        <meta name="description" content="イベント「色あせることのない楽園」の紹介ページ" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </Head>
       <div className="mx-auto max-w-3xl px-2 sm:px-4 py-6">
 
         <h1 className="text-3xl font-extrabold mb-4 text-pink-600 flex items-center gap-2">
           <span className="material-symbols-outlined text-pink-500">celebration</span>
-          イベント「キルオナイトクレイジー」
+          イベント「色あせることのない楽園」
         </h1>
 
         {/* トップ画像 */}
         <div className="rounded-lg shadow mb-4 mx-auto w-fit flex justify-center" style={{ maxWidth: "100%" }}>
           <Image
             src="/ver_event/New_Event_TOP.PNG"
-            alt="キルオナイトクレイジー トップ"
+            alt="色あせることのない楽園 トップ"
             width={560}
             height={320}
             style={{ maxWidth: "100%", height: "auto", display: "block", marginLeft: "auto", marginRight: "auto" }}
           />
         </div>
 
-        <SectionTitle icon="account_tree">ゴーストツアー（8人マッチ）</SectionTitle>
+        <SectionTitle icon="ac_unit">初雪の邂逅</SectionTitle>
         <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
           <Image
             src="/ver_event/New_Event_1.PNG"
-            alt="ゴーストツアー トップ"
+            alt="初雪の邂逅"
             width={640}
             height={320}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
         <div>
-          8人マッチのミニゲーム。<br />
-          内容は前のバージョンで開催されたものと同じ。<br />
-          1人がオバケ役になって他の7人がそれを追いかける。<br />
-          オバケが通ったマスを通るとポイントを獲得でき、それ以外のマスを踏むとポイントが減る。<br />
-          時間経過で出現するカボチャを拾うと他のプレイヤーに凍結・減速効果を付与できる。<br />
-          一度通ったマスは再びオバケが踏むまでマイナスマスになるが、オバケが通ったマスは踏むまでずっとプラスマスのままなので凍結などで距離を離されても大体の場合はオバケに向かって最短ルートを進んでしまって良い。<br />
-          オバケ役はかなり不利（というか勝てるように作られていない）ので出来る限り凍結などを使って距離を取るようにしよう。
+          ゴゾトスネットワークで遊べるソロ用のすごろく。<br />
+          ダイスを振って進めた駒に触れてイベントポイントを稼ぐのがメインになっている。<br />
+          ダイスはデイリーミッションを達成することで獲得でき、毎日連合作戦3回と料理1回で全ミッションをクリア可能。<br />
+          ソロで出来てポイント効率も良いので基本はこれで稼ごう。
         </div>
         <RowMedia
           items={[
             {
               src: "/ver_event/New_Event_1_1.PNG",
-              alt: "オバケと戯れるMi-aが非常にキュート",
-              caption: "オバケと戯れるMi-aが非常にキュート",
+              alt: "すごろくはゴゾトスネットワークで遊べる",
+              caption: "すごろくはゴゾトスネットワークで遊べる",
             },
           ]}
         />
 
-        <SectionTitle icon="directions_run">カボチャ頭を探せ（マッチング無し）</SectionTitle>
+        <SectionTitle icon="casino">ラッキーフリップ（1～4人）</SectionTitle>
         <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
           <Image
             src="/ver_event/New_Event_2.PNG"
-            alt="カボチャ頭を探せ トップ"
+            alt="ラッキーフリップ トップ"
             width={640}
             height={320}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
         <div>
-          ミラポリスで開催される箱開けイベント。<br />
-          毎日12時から2時間ごとに開催され、1回30分で22時の回がラストになる。<br />
-          カボチャの箱を開けるだけでポイントが貰えるので非常に簡単にポイントを稼げる。<br />
-          正直ポイントを稼ぐだけならこのイベントが一番効率が良いが、開催時間の指定があるので忘れないように注意。
+          カードをめくって敵を倒してイベントポイントを稼ぐイベント。<br />
+          挑戦前に全員でクーポンを使ってバフを獲得し、その後カードをめくって戦闘を進める。<br />
+          基本は4人マッチで遊ぶがマッチングしない場合は1人で挑戦も可能。
         </div>
         <RowMedia
           items={[
             {
               src: "/ver_event/New_Event_2_1.PNG",
-              alt: "イベントアイコンをクリックすれば転送してくれる",
-              caption: "イベントアイコンをクリックすれば転送してくれる",
-            },
-            {
-              src: "/ver_event/New_Event_2_2.PNG",
-              alt: "カボチャの箱を開けるだけで終わり",
-              caption: "カボチャの箱を開けるだけで終わり",
+              alt: "クーポンはデイリー懸賞とキルオの箱から獲得",
+              caption: "クーポンはデイリー懸賞とキルオの箱から獲得",
             },
           ]}
         />
 
-        <SectionTitle icon="groups">魔物狩りの冒険隊（8人マッチ）</SectionTitle>
-        <div>
-          運命の包囲網形式のPVEミニゲーム。<br />
-          全員で協力してフィールドのボスを倒しながらバフを集めて最後のボスを倒そう。<br />
-          本鯖はラクシスを取れば楽勝だが、Warp鯖は調整されてるのでちゃんと武器を選ぼう。
+        <SectionTitle icon="attractions">遊園地のお楽しみ巡り</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_3.PNG"
+            alt="遊園地のお楽しみ巡り トップ"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
         </div>
-
-        <SectionTitle icon="groups">いざ、姿を現せ！（8人マッチ）</SectionTitle>
         <div>
-          隠れん坊形式のミニゲーム。<br />
-          鬼2人・逃げる側6人に分かれ、逃げる側は変身や透明化を駆使して逃げ切ることを目指す。<br />
-          ステージによって有利不利が変わりやすく、後半になって環境が煮詰まると不利な方の陣営は9割勝てなくなる。<br />
-          今回はオブジェクトをすべて覚えれば楽なので鬼側有利っぽい。
+          ミッション達成＆スロット形式のイベント。<br />
+          ミッションを達成すると報酬進捗が進み、さらにスロットを回せるようになる。<br />
+          ミッション形式なので多少面倒くさいが狙って欠片を集められるのでコスチュームなどが欲しい場合はやっておきたい。
+        </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_3_1.PNG",
+              alt: "スロットからもポイント等を稼げる",
+              caption: "スロットからもポイント等を稼げる",
+            },
+          ]}
+        />
+
+        <SectionTitle icon="directions_car">カート大冒険（8人マッチ）</SectionTitle>
+        <div>
+          4vs4の対戦イベント。<br />
+          自陣のカート内に味方が1人でもいればカートが進むが、敵が1人でも自陣内にいるとカートが止まる。<br />
+          敵陣のカートも同様の挙動なので、自陣のカートを進めつつ敵陣の進行を妨害しよう。<br />
+          一度距離が離れると挽回が多少難しいので初動が重要になる。
         </div>
       </div>
     </>

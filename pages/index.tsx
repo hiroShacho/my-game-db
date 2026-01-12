@@ -245,56 +245,58 @@ export default function Home() {
             </Link>
 
             {/* 色あせることのない楽園 */}
-            <div className="block sm:col-span-1">
+            <Link href="/event/ver5-6/EternalWonderland" className="block">
               <div
                 className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
-                  transition-none
-                  cursor-default
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
+                  transition-all duration-200
+                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-pink-400
+                  cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_TOP.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-200" />
                 <div className="relative z-10 p-4">
-                  <h3 className="font-semibold text-base sm:text-lg text-white">
+                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     色あせることのない楽園
                   </h3>
-                  <p className="text-sm sm:text-base text-white">
+                  <p className="text-sm sm:text-base text-white drop-shadow">
                     イベントミニゲームの詳細をチェック！
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
 
-            {/* Ver5.7テストサーバー */}
-            <div className="block sm:col-span-1">
+            {/* Ver5.65テストサーバー */}
+            <Link href="/event/ver5-6/ver5-65_testserver" className="block">
               <div
                 className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
-                  transition-none
-                  cursor-default
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
+                  transition-all duration-200
+                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-sky-400
+                  cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_5.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-blue-900/30" />
+                <div className="absolute inset-0 bg-blue-900/30 group-hover:bg-blue-900/40 transition-all duration-200" />
                 <div className="relative z-10 p-4">
-                  <h3 className="font-semibold text-base sm:text-lg text-white">
-                    Ver5.7テストサーバー
+                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                    Ver5.65テストサーバー
                   </h3>
-                  <p className="text-sm sm:text-base text-white">
+                  <p className="text-sm sm:text-base text-white drop-shadow">
                     テストサーバーの詳細をチェック！
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* 準備中（仮置き） (リンクを無効化) */}
             <div className="block sm:col-span-1">

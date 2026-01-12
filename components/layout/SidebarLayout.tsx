@@ -12,18 +12,22 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "色あせることのない楽園", href: "/event/ver5-6/EternalWonderland" },
+      "」のページを作成。\n",
+
+      "「",
+      { label: "ver5.65テストサーバー", href: "/event/ver5-6/ver5-65_testserver" },
+      "」のページを作成。\n",
+    ],
+    date: "2026/01/12",
+  },
+  {
+    text: [
       "ver5.6のアップデート内容を反映。\n",
       "あけましておめでとうございマシ",
     ],
     date: "2026/01/03",
-  },
-  {
-    text: [
-      "「",
-      { label: "ver5.6テストサーバー", href: "/event/ver5-5/ver5-6_testserver" },
-      "」のページを更新。\n",
-    ],
-    date: "2025/12/27",
   },
   {
     text: [
@@ -54,6 +58,7 @@ const soloMultiPveLinks = [
 const latestContentsLinks = [
   { href: "/event/ver5-6/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/EvolutionCube", label: "ラナ武器：進化キューブ" },
+  { href: "/event/ver5-6/EternalWonderland", label: "色あせることのない楽園" },
 ];
 
 // 追加: 新規・初心者向け項目
