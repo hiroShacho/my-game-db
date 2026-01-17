@@ -10,7 +10,7 @@ import { raidCards } from "../data/raidCards";
 import weapons from "../data/weapons.json";
 
 const pickupWeaponIds = [
-  "w_68", "w_66", "w_65", "w_64", "w_63", "w_62", "w_61", "w_60", "w_59", "w_58", "w_57", "w_56", "w_55", "w_54", "w_53", "w_43", "w_34", "w_25",
+  "w_68", "w_58", "w_53", "w_43", "w_34", "w_25",
 ];
 
 function getWeaponDataById(id: string) {
