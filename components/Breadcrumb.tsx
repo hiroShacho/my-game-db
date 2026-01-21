@@ -137,6 +137,7 @@ const weaponNameMap: Record<string, string> = {
   "Frostfang":"青霜",
   "Visios":"視界",
   "EvolutionCube":"進化キューブ",
+  "Bloodfin":"ブラッディ・シャーク",
   //仮でボリションと特性はパンくずだけ変える
   "m_1": "エコー",
   "t_1": "エコー",
@@ -266,6 +267,8 @@ const weaponNameMap: Record<string, string> = {
   "t_63": "ヴェロニカ",
   "m_64": "ラナ",
   "t_64": "ラナ",
+  "m_65": "サリディ",
+  "t_65": "サリディ",
   "r_1": "フロスト砲",
   "r_2": "ジェットパック",
   "r_3": "溶岩爆弾",

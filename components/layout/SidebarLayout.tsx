@@ -12,6 +12,14 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "ver5.65テストサーバー", href: "/event/ver5-6/ver5-65_testserver" },
+      "」のページを更新。\n",
+    ],
+    date: "2026/01/21",
+  },
+  {
+    text: [
       "「大陸版情報」に新キャラクターの情報を掲載。\n確認は自己責任でお願いします。\n",
       "「",
       { label: "色あせることのない楽園", href: "/event/ver5-6/EternalWonderland" },
@@ -22,13 +30,6 @@ const sidebarNewsItems = [
       "」のページを作成。\n",
     ],
     date: "2026/01/12",
-  },
-  {
-    text: [
-      "ver5.6のアップデート内容を反映。\n",
-      "あけましておめでとうございマシ",
-    ],
-    date: "2026/01/03",
   },
   {
     text: [
@@ -60,6 +61,7 @@ const latestContentsLinks = [
   { href: "/event/ver5-6/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/EvolutionCube", label: "ラナ武器：進化キューブ" },
   { href: "/event/ver5-6/EternalWonderland", label: "色あせることのない楽園" },
+  { href: "/event/ver5-6/ver5-65_testserver", label: "ver5.65テストサーバー" },
 ];
 
 // 追加: 新規・初心者向け項目
