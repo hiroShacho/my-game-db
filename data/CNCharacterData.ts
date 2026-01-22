@@ -411,7 +411,7 @@ export const cnCharacterData: Record<string, CNCharacter> = {
   },
   salidy: {
     id: "salidy",
-    name: "サラディ(仮)",
+    name: "サリディ",
     subName: "Salidy",
     rarity: "SSR",
     resonance: "強攻",

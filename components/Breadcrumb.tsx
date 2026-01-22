@@ -45,6 +45,7 @@ const labelMap: Record<string, string> = {
   "TrafficControl": "交通管制",
   "SwarmGuard": "ガードバグ陣",
   "StellarManhunt":"星間包囲",
+  "CalamityNo5":"厄災5号",
   // 必要に応じて追加
 };
 

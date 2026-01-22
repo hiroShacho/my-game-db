@@ -23,11 +23,11 @@ export const raidCards: RaidCard[] = [
     category: "週討伐", // ★
   },
   {
-    key: "StellarManhunt",
-    title: "星間包囲",
-    href: "/raid/StellarManhunt",
-    status: "未開催",
-    img: "/raid/StellarManhunt.PNG",
+    key: "CalamityNo5",
+    title: "厄災5号",
+    href: "/raid/CalamityNo5",
+    status: "開催中",
+    img: "/raid/CalamityNo5.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",
     badgeTextColor: "text-yellow-900",
@@ -60,5 +60,7 @@ export const raidCards: RaidCard[] = [
 //SwarmGuard
 //星間包囲
 //StellarManhunt
+//厄災5号
+//CalamityNo5
 // ------------------------------------------------------------
 // 必要に応じてここに追加・編集してコピペで使ってください

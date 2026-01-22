@@ -12,24 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "限定討伐「",
+      { label: "厄災5号", href: "/raid/CalamityNo5" },
+      "」のページを作成。\n",
+    ],
+    date: "2026/01/22",
+  },
+  {
+    text: [
       "「",
       { label: "ver5.65テストサーバー", href: "/event/ver5-6/ver5-65_testserver" },
       "」のページを更新。\n",
     ],
     date: "2026/01/21",
-  },
-  {
-    text: [
-      "「大陸版情報」に新キャラクターの情報を掲載。\n確認は自己責任でお願いします。\n",
-      "「",
-      { label: "色あせることのない楽園", href: "/event/ver5-6/EternalWonderland" },
-      "」のページを作成。\n",
-
-      "「",
-      { label: "ver5.65テストサーバー", href: "/event/ver5-6/ver5-65_testserver" },
-      "」のページを作成。\n",
-    ],
-    date: "2026/01/12",
   },
   {
     text: [
@@ -62,6 +57,7 @@ const latestContentsLinks = [
   { href: "/weapons/EvolutionCube", label: "ラナ武器：進化キューブ" },
   { href: "/event/ver5-6/EternalWonderland", label: "色あせることのない楽園" },
   { href: "/event/ver5-6/ver5-65_testserver", label: "ver5.65テストサーバー" },
+  { href: "/raid/CalamityNo5", label: "限定討伐「厄災5号」" },
 ];
 
 // 追加: 新規・初心者向け項目
