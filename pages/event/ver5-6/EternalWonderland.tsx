@@ -193,12 +193,49 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="directions_car">カート大冒険（8人マッチ）</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_4.PNG"
+            alt="カート大冒険 トップ"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           4vs4の対戦イベント。<br />
-          自陣のカート内に味方が1人でもいればカートが進むが、敵が1人でも自陣内にいるとカートが止まる。<br />
-          敵陣のカートも同様の挙動なので、自陣のカートを進めつつ敵陣の進行を妨害しよう。<br />
-          一度距離が離れると挽回が多少難しいので初動が重要になる。
+          カート内に味方が1人でもいればカートが進むが、敵が1人でもいるとカートが止まる。<br />
+          どちらの陣営もひたすら敵を蹴散らしながら、攻撃側はカートを進めて防衛側はカートを止めよう。
         </div>
+
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_4_1.PNG",
+              alt: "カート内に防衛側がいると進行が止まる",
+              caption: "カート内に防衛側がいると進行が止まる",
+            },
+          ]}
+        />
+        <div>
+          対単体ではエスター・シロあたりが強いが、遠距離武器や剛毅武器が絡んでくると1人で対処するのは難しい。<br />
+          フィールド上の黄色や紫のオブジェクトは様々なバフが獲得できるので積極的に触れていきたい。
+        </div>
+
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_4_2.PNG",
+              alt: "エスターは1人はいた方が良いかも",
+              caption: "エスターは1人はいた方が良いかも",
+            },
+            {
+              src: "/ver_event/New_Event_4_3.PNG",
+              alt: "バフを活用しよう",
+              caption: "バフを活用しよう",
+            },
+          ]}
+        />
       </div>
     </>
   );
