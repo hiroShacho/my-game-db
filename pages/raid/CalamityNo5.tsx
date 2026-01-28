@@ -265,6 +265,21 @@ export default function CalamityNo5Page() {
             style={{ maxWidth: "100%", aspectRatio: "16/9" }}
           />
         </div>
+
+        <SectionTitle icon="ondemand_video">あまりにもあんまりな攻略方法</SectionTitle>
+        <div className="w-full flex justify-center my-4">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Irf-aYl1xAk"
+            title="厄災5号 バグらせ方"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded shadow border border-emerald-200"
+            style={{ maxWidth: "100%", aspectRatio: "16/9" }}
+          />
+        </div>
       </div>
     </>
   );
