@@ -30,16 +30,14 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "醉蛾の恋", color: "#9cccf5", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 17, },
-  { label: "悠久の頌歌", color: "#000000", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "プレアバ：ラナ", color: "#e3a3f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "新年復刻プレミアムセット", color: "#8e80f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 17, },
-  { label: "異能復刻プレミアムセット", color: "#ff4141", labelColor: "#e3a3f8", labelFontColor: "#200", start: 17, end: 31, }
+  { label: "悠久の頌歌", color: "#000000", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 3, },
+  { label: "プレアバ：ラナ", color: "#e3a3f8", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 3, },
+  { label: "異能復刻プレミアムセット", color: "#ff4141", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 3, }
 ];
 
-const GANTT_MONTH = 1;
+const GANTT_MONTH = 2;
 const GANTT_YEAR = 2026;
-const GANTT_DAYS = 31;
+const GANTT_DAYS = 28;
 
 const eventImages: (string | null)[] = [
   "/ver_event/Outfit_TipsyLove.PNG",

@@ -34,6 +34,7 @@ const labelMap: Record<string, string> = {
   "fce": "進化辺境",
   "voidabyss": "虚空のアビス",
   "raid": "討伐作戦",
+  "BlackJadeWarrior":"玄玉凶兵",
   "GluttonousFeast": "暴食の饗宴",
   "PrisonofExecution": "刑辟牢獄",
   "MechaSimulation": "機兵演習",

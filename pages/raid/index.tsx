@@ -11,6 +11,7 @@ export default function RaidIndexPage() {
   const limitedRaid = raidCards.find(r => r.category === "限定討伐");
 
   const archiveRaids = [
+    { key: "BlackJadeWarrior", title: "玄玉凶兵", href: "/raid/BlackJadeWarrior", img: "/raid/BlackJadeWarrior.PNG" },
     { key: "GluttonousFeast", title: "暴食の饗宴", href: "/raid/GluttonousFeast", img: "/raid/GluttonousFeast.PNG" },
     { key: "PrisonofExecution", title: "刑辟牢獄", href: "/raid/PrisonofExecution", img: "/raid/PrisonofExecution.PNG" },
     { key: "MechaSimulation", title: "機兵演習", href: "/raid/MechaSimulation", img: "/raid/MechaSimulation.PNG" },

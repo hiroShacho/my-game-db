@@ -12,19 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "討伐作戦「",
+      { label: "玄玉凶兵", href: "/raid/BlackJadeWarrior" },
+      "」のページを作成。\n",
+    ],
+    date: "2026/02/02",
+  },
+  {
+    text: [
       "限定討伐「",
       { label: "厄災5号", href: "/raid/CalamityNo5" },
       "」のページを作成。\n",
     ],
     date: "2026/01/22",
-  },
-  {
-    text: [
-      "「",
-      { label: "ver5.65テストサーバー", href: "/event/ver5-6/ver5-65_testserver" },
-      "」のページを更新。\n",
-    ],
-    date: "2026/01/21",
   },
   {
     text: [
