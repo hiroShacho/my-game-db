@@ -12,19 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "ver5.65アップデート情報", href: "/event/ver5-6-5/New_ver_info" },
+      "」を更新。\n",
+    ],
+    date: "2026/02/03",
+  },
+  {
+    text: [
       "討伐作戦「",
       { label: "玄玉凶兵", href: "/raid/BlackJadeWarrior" },
       "」のページを作成。\n",
     ],
     date: "2026/02/02",
-  },
-  {
-    text: [
-      "限定討伐「",
-      { label: "厄災5号", href: "/raid/CalamityNo5" },
-      "」のページを作成。\n",
-    ],
-    date: "2026/01/22",
   },
   {
     text: [
@@ -53,11 +53,8 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/event/ver5-6/New_ver_info", label: "アップデート情報まとめ" },
-  { href: "/weapons/EvolutionCube", label: "ラナ武器：進化キューブ" },
-  { href: "/event/ver5-6/EternalWonderland", label: "色あせることのない楽園" },
-  { href: "/event/ver5-6/ver5-65_testserver", label: "ver5.65テストサーバー" },
-  { href: "/raid/CalamityNo5", label: "限定討伐「厄災5号」" },
+  { href: "/event/ver5-6-5/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/Bloodfin", label: "サリディ武器：ブラッディ・シャーク" },
 ];
 
 // 追加: 新規・初心者向け項目
