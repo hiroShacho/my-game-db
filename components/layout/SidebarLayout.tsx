@@ -12,19 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "イベント「",
+      { label: "終巡の冬", href: "/event/ver5-6-5/FinalWinter" },
+      "」のページを作成。\n",
+    ],
+    date: "2026/02/06",
+  },
+  {
+    text: [
       "「",
       { label: "ver5.65アップデート情報", href: "/event/ver5-6-5/New_ver_info" },
       "」を更新。\n",
     ],
     date: "2026/02/03",
-  },
-  {
-    text: [
-      "討伐作戦「",
-      { label: "玄玉凶兵", href: "/raid/BlackJadeWarrior" },
-      "」のページを作成。\n",
-    ],
-    date: "2026/02/02",
   },
   {
     text: [
@@ -55,6 +55,7 @@ const soloMultiPveLinks = [
 const latestContentsLinks = [
   { href: "/event/ver5-6-5/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/Bloodfin", label: "サリディ武器：ブラッディ・シャーク" },
+  { href: "/event/ver5-6-5/FinalWinter", label: "イベント：終巡の冬" },
 ];
 
 // 追加: 新規・初心者向け項目

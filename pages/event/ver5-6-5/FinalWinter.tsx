@@ -94,148 +94,98 @@ export default function BrightonsSalvationPage() {
   return (
     <>
       <Head>
-        <title>イベント「色あせることのない楽園」 | 幻塔攻略データベース</title>
-        <meta name="description" content="イベント「色あせることのない楽園」の紹介ページ" />
+        <title>イベント「終巡の冬」 | 幻塔攻略データベース</title>
+        <meta name="description" content="イベント「終巡の冬」の紹介ページ" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </Head>
       <div className="mx-auto max-w-3xl px-2 sm:px-4 py-6">
 
         <h1 className="text-3xl font-extrabold mb-4 text-pink-600 flex items-center gap-2">
           <span className="material-symbols-outlined text-pink-500">celebration</span>
-          イベント「色あせることのない楽園」
+          イベント「終巡の冬」
         </h1>
 
         {/* トップ画像 */}
         <div className="rounded-lg shadow mb-4 mx-auto w-fit flex justify-center" style={{ maxWidth: "100%" }}>
           <Image
             src="/ver_event/New_Event_TOP.PNG"
-            alt="色あせることのない楽園 トップ"
+            alt="終巡の冬 トップ"
             width={560}
             height={320}
             style={{ maxWidth: "100%", height: "auto", display: "block", marginLeft: "auto", marginRight: "auto" }}
           />
         </div>
 
-        <SectionTitle icon="ac_unit">初雪の邂逅</SectionTitle>
+        <SectionTitle icon="ac_unit">極寒生態</SectionTitle>
         <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
           <Image
             src="/ver_event/New_Event_1.PNG"
-            alt="初雪の邂逅"
+            alt="極寒生態"
             width={640}
             height={320}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
         <div>
-          ゴゾトスネットワークで遊べるソロ用のすごろく。<br />
-          ダイスを振って進めた駒に触れてイベントポイントを稼ぐのがメインになっている。<br />
-          ダイスはデイリーミッションを達成することで獲得でき、毎日連合作戦3回と料理1回で全ミッションをクリア可能。<br />
-          ソロで出来てポイント効率も良いので基本はこれで稼ごう。
+          ノア星で集めたアイテムを納品するイベント。<br />
+          アイテムはノア星の雑魚敵を倒すことでドロップし、敵によって落とすアイテムが変化する。<br />
+          ドロップしたアイテムは地面に落ちることが多いので倒した後で回収するのを忘れずに。<br />
+          納品回数はどんどん溜まっていくので後でまとめて納品するのもあり。
         </div>
         <RowMedia
           items={[
             {
               src: "/ver_event/New_Event_1_1.PNG",
-              alt: "すごろくはゴゾトスネットワークで遊べる",
-              caption: "すごろくはゴゾトスネットワークで遊べる",
+              alt: "アイテムは地面に落ちてるので回収しよう",
+              caption: "アイテムは地面に落ちてるので回収しよう",
             },
           ]}
         />
 
-        <SectionTitle icon="casino">ラッキーフリップ（1～4人）</SectionTitle>
+        <SectionTitle icon="casino">幸運の連続（4人）</SectionTitle>
         <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
           <Image
             src="/ver_event/New_Event_2.PNG"
-            alt="ラッキーフリップ トップ"
+            alt="幸運の連続 トップ"
             width={640}
             height={320}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
         <div>
-          カードをめくって敵を倒してイベントポイントを稼ぐイベント。<br />
-          挑戦前に全員でクーポンを使ってバフを獲得し、その後カードをめくって戦闘を進める。<br />
-          基本は4人マッチで遊ぶがマッチングしない場合は1人で挑戦も可能。
+          弓を使う落ちものパズル。<br />
+          ある程度同じ色のパネルが並んでいる所を撃ち抜くとポイントが入る。<br />
+          フィールド中央付近に置いてある爆弾を投げつければ一気にポイントを稼げるので爆弾がリポップしているかにも意識を向けよう。<br />
+          何故か他人のパネルを撃って援護できるので2vs2で遊べたりする。
         </div>
         <RowMedia
           items={[
             {
               src: "/ver_event/New_Event_2_1.PNG",
-              alt: "クーポンはデイリー懸賞とキルオの箱から獲得",
-              caption: "クーポンはデイリー懸賞とキルオの箱から獲得",
+              alt: "どこを撃てばいいかを即座に判断する能力が求められる",
+              caption: "どこを撃てばいいかを即座に判断する能力が求められる",
             },
           ]}
         />
 
-        <SectionTitle icon="attractions">遊園地のお楽しみ巡り</SectionTitle>
-        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
-          <Image
-            src="/ver_event/New_Event_3.PNG"
-            alt="遊園地のお楽しみ巡り トップ"
-            width={640}
-            height={320}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        </div>
+        <SectionTitle icon="attractions">氷と火の戦舞（8人マッチ）</SectionTitle>
         <div>
-          ミッション達成＆スロット形式のイベント。<br />
-          ミッションを達成すると報酬進捗が進み、さらにスロットを回せるようになる。<br />
-          ミッション形式なので多少面倒くさいが狙って欠片を集められるのでコスチュームなどが欲しい場合はやっておきたい。
+          4vs4の拠点防衛ゲーム。<br />
+          拠点に対してモンスターが進行してくるのでこれを撃破して防衛しよう。<br />
+          モンスターを倒すと相手側にモンスターを送り込めるので、ひたすらモンスターを倒して相手側にプレッシャーをかけ続けるのが重要。<br />
+          モンスターはどんどん強くなるので一度劣勢になるとそのまま押し込まれやすい。<br />
+          従来通りなら両チームのフィールドは見えない壁で区切られているが、変身銃などで邪魔もできたはずなので思わぬ横やりには注意㌥。
         </div>
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_3_1.PNG",
-              alt: "スロットからもポイント等を稼げる",
-              caption: "スロットからもポイント等を稼げる",
-            },
-          ]}
-        />
 
-        <SectionTitle icon="directions_car">カート大冒険（8人マッチ）</SectionTitle>
-        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
-          <Image
-            src="/ver_event/New_Event_4.PNG"
-            alt="カート大冒険 トップ"
-            width={640}
-            height={320}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        </div>
+
+        <SectionTitle icon="directions_car">トナカイラッシュ（8人マッチ）</SectionTitle>
         <div>
-          4vs4の対戦イベント。<br />
-          カート内に味方が1人でもいればカートが進むが、敵が1人でもいるとカートが止まる。<br />
-          どちらの陣営もひたすら敵を蹴散らしながら、攻撃側はカートを進めて防衛側はカートを止めよう。
+          ペアでプレゼントをどれだけ多く持ち帰れるか競うミニゲーム。<br />
+          ペアの1人はプレゼントを持ち帰る役、もう1人は車を動かして他プレイヤーを妨害する役に分かれる。<br />
+          妨害側は相当よく狙わないと車を当てられず、そもそも道路の白線上に立たれると車が当たらないので初心者狩りくらいしかできない。<br />
+          プレゼントを持ち帰る時は多く持つほど歩行速度が遅くなるので帰り道はご安全に㌥。
         </div>
 
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_4_1.PNG",
-              alt: "カート内に防衛側がいると進行が止まる",
-              caption: "カート内に防衛側がいると進行が止まる",
-            },
-          ]}
-        />
-        <div>
-          対単体ではエスター・シロあたりが強いが、遠距離武器や剛毅武器が絡んでくると1人で対処するのは難しい。<br />
-          フィールド上の黄色や紫のオブジェクトは様々なバフが獲得できるので積極的に触れていきたい。
-        </div>
-
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_4_2.PNG",
-              alt: "エスターは1人はいた方が良いかも",
-              caption: "エスターは1人はいた方が良いかも",
-            },
-            {
-              src: "/ver_event/New_Event_4_3.PNG",
-              alt: "バフを活用しよう",
-              caption: "バフを活用しよう",
-            },
-          ]}
-        />
       </div>
     </>
   );
