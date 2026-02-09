@@ -12,19 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「大陸版情報」を更新。\nネタバレなので自己責任でご確認ください。",
+    ],
+    date: "2026/02/09",
+  },
+  {
+    text: [
       "イベント「",
       { label: "終巡の冬", href: "/event/ver5-6-5/FinalWinter" },
       "」のページを作成。\n",
     ],
     date: "2026/02/06",
-  },
-  {
-    text: [
-      "「",
-      { label: "ver5.65アップデート情報", href: "/event/ver5-6-5/New_ver_info" },
-      "」を更新。\n",
-    ],
-    date: "2026/02/03",
   },
   {
     text: [
