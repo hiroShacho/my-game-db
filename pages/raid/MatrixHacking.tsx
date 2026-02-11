@@ -261,9 +261,9 @@ export default function MatrixHackingPage() {
           />
         </div>
 
-        {/* ギミック⑥ */}
+        {/* ギミック⑤ */}
         <div className="border-l-4 border-cyan-400 pl-4 mb-6">
-          <GimmickLabel color="cyan">ギミック⑥：ルーター過負荷</GimmickLabel>
+          <GimmickLabel color="cyan">ギミック⑤：ルーター過負荷</GimmickLabel>
           <div>
             一定時間経過後、ボスは中央にワープして周囲に強力な衝撃波を連発してくる。<br />
             こうなったらボスの四方を取り囲む装置に対して装置と反対の電荷を持つプレイヤーが触れることで、ボスに対してシールドを破壊する攻撃が放たれ、ダメージとともにボスのシールドが1つ破壊される。<br />
