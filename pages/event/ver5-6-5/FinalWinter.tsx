@@ -169,6 +169,15 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="attractions">氷と火の戦舞（8人マッチ）</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_3.PNG"
+            alt="氷と火の戦舞 トップ"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           4vs4の拠点防衛ゲーム。<br />
           拠点に対してモンスターが進行してくるのでこれを撃破して防衛しよう。<br />
@@ -176,7 +185,20 @@ export default function BrightonsSalvationPage() {
           モンスターはどんどん強くなるので一度劣勢になるとそのまま押し込まれやすい。<br />
           従来通りなら両チームのフィールドは見えない壁で区切られているが、変身銃などで邪魔もできたはずなので思わぬ横やりには注意㌥。
         </div>
-
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_3_1.PNG",
+              alt: "雑魚敵を倒すとバフをドロップする",
+              caption: "雑魚敵を倒すとバフをドロップする",
+            },
+            {
+              src: "/ver_event/New_Event_3_2.PNG",
+              alt: "ボスは時々強い個体が出てくるので注意（普通に即死する）",
+              caption: "ボスは時々強い個体が出てくるので注意（普通に即死する）",
+            },
+          ]}
+        />
 
         <SectionTitle icon="directions_car">トナカイラッシュ（8人マッチ）</SectionTitle>
         <div>
