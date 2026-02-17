@@ -269,21 +269,21 @@ export default function Home() {
             </Link>
  
 {/* --- replace the "Ver5.7テストサーバー" Link block with a non-clickable placeholder --- */}
-            <div className="block sm:col-span-1">
+            <Link href="/event/ver5-6-5/ver5-7_testserver" className="block">
               <div
                 className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  cursor-default
+                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-sky-400
+                  cursor-pointer
                 "
-                aria-disabled="true"
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_5.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-blue-900/30" />
+                <div className="absolute inset-0 bg-blue-900/30 group-hover:bg-blue-900/40 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
                     Ver5.7テストサーバー
@@ -293,7 +293,7 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* 準備中（仮置き） (リンクを無効化) */}
             <div className="block sm:col-span-1">

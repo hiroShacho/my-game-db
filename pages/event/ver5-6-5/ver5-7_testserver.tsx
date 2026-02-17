@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Ver535TestServer() {
   // 募集案内の初期状態は true/false で変更可能
-  const [showDetail, setShowDetail] = useState(false);
+  const [showDetail, setShowDetail] = useState(true);
 
   // 画像の横並び表示（2枚まで、それ以降は改行）
   function ImageRow({ images }: { images: { src: string; alt: string }[] }) {
@@ -35,8 +35,8 @@ export default function Ver535TestServer() {
   return (
     <>
       <Head>
-        <title>【幻塔攻略】Ver5.65先行テストサーバー | 幻塔攻略データベース</title>
-        <meta name="description" content="幻塔（Tower of Fantasy）のVer5.65先行テストサーバーの情報まとめページ。" />
+        <title>【幻塔攻略】Ver5.7先行テストサーバー | 幻塔攻略データベース</title>
+        <meta name="description" content="幻塔（Tower of Fantasy）のVer5.7先行テストサーバーの情報まとめページ。" />
       </Head>
       <div className="w-full max-w-2xl mx-auto px-2 sm:px-4 py-8 space-y-6">
         <section>
@@ -54,7 +54,7 @@ export default function Ver535TestServer() {
             {showDetail && (
               <div className="mt-3">
                 <p className="text-base sm:text-lg mb-3">
-                  公式DiscordサーバーにてVer5.65先行テストサーバーの募集がスタートしました！
+                  公式DiscordサーバーにてVer5.7先行テストサーバーの募集がスタートしました！
                 </p>
                 <div className="mb-3">
                   <Image
@@ -92,8 +92,8 @@ export default function Ver535TestServer() {
                   />
                 </div>
                 <p className="mb-3">
-                  応募期間は14日(水)19時までなので、早めに応募しておきましょう！<br />
-                  応募フォームに書いてある情報によると、テストの開始は21日(水)からとなっています。
+                  応募期間は20日(金)19時までなので、早めに応募しておきましょう！<br />
+                  応募フォームに書いてある情報によると、テストの開始は26日(木)からとなっています。
                 </p>
                 <div className="mb-4 text-red-800 font-bold">
                   ※注意<br />
@@ -110,7 +110,7 @@ export default function Ver535TestServer() {
 
         {/* ▼▼▼ 追加情報 ▼▼▼ */}
         {/* 以下の追加情報セクションは非表示にしています。再表示するには false を true に戻してください。 */}
-        {true && (
+        {false && (
         <section className="space-y-8">
           {/* ■新キャラクター・サリディ！ */}
           <div>
