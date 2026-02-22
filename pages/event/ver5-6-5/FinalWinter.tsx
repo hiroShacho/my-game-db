@@ -201,6 +201,15 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="directions_car">トナカイラッシュ（8人マッチ）</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_4.PNG"
+            alt="トナカイラッシュ トップ"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           ペアでプレゼントをどれだけ多く持ち帰れるか競うミニゲーム。<br />
           ペアの1人はプレゼントを持ち帰る役、もう1人は車を動かして他プレイヤーを妨害する役に分かれる。<br />
