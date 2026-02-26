@@ -14,17 +14,17 @@ const sidebarNewsItems = [
     text: [
       "「",
       { label: "ver5.7テストサーバー", href: "/event/ver5-6-5/ver5-7_testserver" },
-      "」のページを作成。\n",
+      "」のページを更新。\n",
     ],
-    date: "2026/02/17",
+    date: "2026/02/26",
   },
   {
     text: [
-      "イベント「",
-      { label: "終巡の冬", href: "/event/ver5-6-5/FinalWinter" },
-      "」のページを更新。\n",
+      "「",
+      { label: "ver5.7テストサーバー", href: "/event/ver5-6-5/ver5-7_testserver" },
+      "」のページを作成。\n",
     ],
-    date: "2026/02/14",
+    date: "2026/02/17",
   },
   {
     text: [
