@@ -30,15 +30,15 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "華麗なる新春", color: "#ee7800", labelColor: "#8ee2f8", labelFontColor: "#200", start: 3, end: 21, },
-  { label: "薔薇の礼賛", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 3, end: 21, },
-  { label: "復刻プレアバ：炎限定キャラ", color: "#ed2f2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 3, end: 28, },
-  { label: "復刻プレアバ", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 3, end: 21, }
+  { label: "華麗なる新春", color: "#ee7800", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 1, },
+  { label: "薔薇の礼賛", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 1, },
+  { label: "復刻プレアバ：炎限定キャラ", color: "#ed2f2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 10, },
+  { label: "復刻プレアバ", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 1, }
 ];
 
-const GANTT_MONTH = 2;
+const GANTT_MONTH = 3;
 const GANTT_YEAR = 2026;
-const GANTT_DAYS = 28;
+const GANTT_DAYS = 31;
 
 const eventImages: (string | null)[] = [
   "/ver_event/Outfit_SpringSplendorAttireReissue.PNG",
