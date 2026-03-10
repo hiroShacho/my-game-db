@@ -140,7 +140,7 @@ export default function BrightonsSalvationPage() {
             {
               src: "/ver_event/New_Event_1_2.PNG",
               alt: "ボス箱から欠片を集めよう",
-              caption: "ボス箱から欠片を集めよう",
+              caption: "ボス箱か  欠片を集めよう",
             },
           ]}
         />
@@ -149,7 +149,7 @@ export default function BrightonsSalvationPage() {
         <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
           <Image
             src="/ver_event/New_Event_2.PNG"
-            alt="新春の炎火
+            alt="新春の炎火"
             width={640}
             height={320}
             style={{ width: "100%", height: "auto", display: "block" }}
