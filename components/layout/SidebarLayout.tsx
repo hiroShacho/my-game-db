@@ -13,18 +13,10 @@ const sidebarNewsItems = [
   {
     text: [
       "「",
-      { label: "ver5.7テストサーバー", href: "/event/ver5-6-5/ver5-7_testserver" },
-      "」のページを更新。\n",
-    ],
-    date: "2026/02/26",
-  },
-  {
-    text: [
-      "「",
-      { label: "ver5.7テストサーバー", href: "/event/ver5-6-5/ver5-7_testserver" },
+      { label: "ver5.7アップデート情報", href: "/event/ver5-7/New_ver_info" },
       "」のページを作成。\n",
     ],
-    date: "2026/02/17",
+    date: "2026/03/10",
   },
   {
     text: [
@@ -53,9 +45,9 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/event/ver5-6-5/New_ver_info", label: "アップデート情報まとめ" },
-  { href: "/weapons/Bloodfin", label: "サリディ武器：ブラッディ・シャーク" },
-  { href: "/event/ver5-6-5/FinalWinter", label: "イベント：終巡の冬" },
+  { href: "/event/ver5-7/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/ChronoHeart", label: "アグレア武器：時の心" },
+  { href: "/event/ver5-7/FortuneGallop", label: "イベント：駿馬踏福" },
 ];
 
 // 追加: 新規・初心者向け項目

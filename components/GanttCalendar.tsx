@@ -177,8 +177,8 @@ export const GanttCalendar: React.FC<GanttCalendarProps> = (props) => {
                     alt={ev.label.replace(/\n.*/, "")}
                     style={{
                       width: "100%",
-                      maxWidth: 30,
-                      height: "auto",
+                      maxWidth: 144,
+                      height: "88",
                       objectFit: "contain",
                       borderRadius: 4,
                       boxShadow: "0 1px 3px #0002",
@@ -406,8 +406,8 @@ export const GanttCalendar: React.FC<GanttCalendarProps> = (props) => {
                     src={images[idx]!}
                     alt={ev.label.replace(/\n.*/, "")}
                     style={{
-                      width: 64,
-                      height: 64,
+                      width: 144,
+                      height: 84,
                       objectFit: "contain",
                       borderRadius: 8,
                       boxShadow: "0 1px 3px #0002"
