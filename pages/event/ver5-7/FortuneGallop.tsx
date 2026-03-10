@@ -146,10 +146,33 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="🎡">新春の炎火【3/10～4/14】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_2.PNG"
+            alt="新春の炎火
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           一定時間ごとに開催される花火イベント。<br />
           いくつかのマップに用意された花火会場ではプレゼントボックスを開封でき、基本的にはこの箱を毎日開封しているだけでイベント通貨は溜まるようになっている。<br />
         </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_2_1.PNG",
+              alt: "各地のイベントポイントに箱が出現",
+              caption: "各地のイベントポイントに箱が出現",
+            },
+            {
+              src: "/ver_event/New_Event_2_2.PNG",
+              alt: "イベント通貨はこのイベントだけでも十分に集まる",
+              caption: "イベント通貨はこのイベントだけでも十分に集まる",
+            },
+          ]}
+        />
 
         <SectionTitle icon="sports_motorsports">喜楽カーニバル【3/13～4/14】</SectionTitle>
         <div>
