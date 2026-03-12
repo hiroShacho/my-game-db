@@ -12,6 +12,14 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "限定討伐【",
+      { label: "作戦コード：「抜錨」", href: "/raid/OperationCodenameAnchorLift" },
+      "】のページを作成。\n",
+    ],
+    date: "2026/03/12",
+  },
+  {
+    text: [
       "「",
       { label: "ver5.7アップデート情報", href: "/event/ver5-7/New_ver_info" },
       "」のページを作成。\n",
@@ -48,6 +56,7 @@ const latestContentsLinks = [
   { href: "/event/ver5-7/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/ChronoHeart", label: "アグレア武器：時の心" },
   { href: "/event/ver5-7/FortuneGallop", label: "イベント：駿馬踏福" },
+  { href: "/raid/OperationCodenameAnchorLift", label: "限定討伐【作戦コード：「抜錨」】" },
 ];
 
 // 追加: 新規・初心者向け項目

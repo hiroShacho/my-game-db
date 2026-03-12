@@ -23,11 +23,11 @@ export const raidCards: RaidCard[] = [
     category: "週討伐", // ★
   },
   {
-    key: "CalamityNo5",
-    title: "厄災5号",
-    href: "/raid/CalamityNo5",
-    status: "未開催",
-    img: "/raid/CalamityNo5.PNG",
+    key: "OperationCodenameAnchorLift",
+    title: "作戦コード：「抜錨」",
+    href: "/raid/OperationCodenameAnchorLift",
+    status: "開催中",
+    img: "/raid/OperationCodenameAnchorLift.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",
     badgeTextColor: "text-yellow-900",
@@ -64,5 +64,7 @@ export const raidCards: RaidCard[] = [
 //StellarManhunt
 //厄災5号
 //CalamityNo5
+//作戦コード：「抜錨」
+//OperationCodenameAnchorLift
 // ------------------------------------------------------------
 // 必要に応じてここに追加・編集してコピペで使ってください

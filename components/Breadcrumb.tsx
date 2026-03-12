@@ -47,6 +47,7 @@ const labelMap: Record<string, string> = {
   "SwarmGuard": "ガードバグ陣",
   "StellarManhunt":"星間包囲",
   "CalamityNo5":"厄災5号",
+  "OperationCodenameAnchorLift":"作戦コード：「抜錨」",
   // 必要に応じて追加
 };
 
