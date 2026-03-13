@@ -118,7 +118,7 @@ export default function OperationCodenameAnchorLiftPage() {
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
 フィールド上に存在する4本の柱オブジェクトは<span className="font-bold text-orange-600">1分経過する度</span>に1本ずつ周囲の床が燃え上がる。<br />
-この燃えている床の上に立つとダメージを受け続けるので炎の上では戦わないようにしよう。<br />
+この燃えている床の上に立つとダメージを受け続けるので炎の上では戦わないようにしよう。（約0.4秒ごとに最大HP30%のダメージ）<br />
 柱は入り口から見て右手前にある柱が最初に燃え上がり、その後は反時計回りの順で他の柱周辺も炎上する。
 
         </pre>
@@ -155,7 +155,7 @@ export default function OperationCodenameAnchorLiftPage() {
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
 ナントは<span className="font-bold text-orange-600">約40秒ごと</span>に数人のプレイヤーの足元にダメージが発生する範囲円を発生させる。<br />
-範囲円は出現してからすぐに爆発が発生して円上にいるとダメージを受ける。<br />
+範囲円は出現してからすぐに爆発が発生して円上にいるとダメージを受ける。（最大HP40%のダメージ）<br />
 範囲円は合計6回、少し間を開けてプレイヤーの足元に発生する。
 
         </pre>
@@ -171,7 +171,7 @@ export default function OperationCodenameAnchorLiftPage() {
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
 一度でも円の爆発ダメージを受けるとそのプレイヤーを中心に白い波が発生する。
-この波に他のプレイヤーが触れるとダメージを受けるので、波が見えたらジャンプで躱すようにしよう。
+この波に他のプレイヤーが触れるとダメージを受けるので、波が見えたらジャンプで躱すようにしよう。（波は最大HP104%のダメージ＆HPシールドを無視）
 
         </pre>
 
@@ -190,11 +190,11 @@ export default function OperationCodenameAnchorLiftPage() {
 
         </pre>
 
-        <SectionTitle icon="link_off">ギミック③：軌道粛清（HP減少&CD経過で発動・敵から離れると大ダメージ）</SectionTitle>
+        <SectionTitle icon="link_off">ギミック③：軌道粛清（HP10%減少&CD50秒経過で発動・敵から離れると大ダメージ）</SectionTitle>
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
 ナントは<span className="font-bold text-orange-600">最初のHPバーが半分を切る</span>と数人のプレイヤーにリンクを付与してくる。<br />
-このリンクはナントから距離が離れると色が白から赤っぽい色に変わり、リンクされているプレイヤーに持続ダメージを付与する。
+このリンクはナントから距離が離れると色が白から赤っぽい色に変わり、リンクされているプレイヤーに持続ダメージを付与する。（ダメージはナントから離れるほど増加する割合ダメージ、最大HP6%～40%?）
 この持続ダメージがかなり痛く、数秒ナントから離れているだけでやられてしまう。
 
         </pre>
@@ -208,9 +208,8 @@ export default function OperationCodenameAnchorLiftPage() {
 
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
-最初のリンク発動以降はギミックの<span className="font-bold text-orange-600">クールタイムである約50秒が経過</span>＆<span className="font-bold text-orange-600">HPが5%（1ゲージの4分の1）減少するたび</span>に同様のリンクギミックが発動する。<br />
-厄介なことにこのギミックは基本HP依存で発動するので、時間経過で発動する他ギミックとタイミングが被ると一気に各ギミッククリアの難易度が上がる。
-特に後述のギミック4と被ると最悪なので、このギミックのクールタイム中にギミック4が発動するように調整しよう。
+最初のリンク発動以降はギミックの<span className="font-bold text-orange-600">クールタイムである約50秒</span>が経過するたびに同様のリンクギミックが発動する。<br />
+時間経過で発動する他ギミックとタイミングが被ると一気に各ギミッククリアの難易度が上がるため、なるべくこのギミックのクールタイム中に他ギミックが発動するように調整しよう。
 
         </pre>
 
@@ -229,10 +228,10 @@ export default function OperationCodenameAnchorLiftPage() {
 
         </pre>
 
-        <SectionTitle icon="flight_takeoff">ギミック④：ソフトランディング（HP減少&CD経過で発動・失敗すると1名が確定で脱落）</SectionTitle>
+        <SectionTitle icon="flight_takeoff">ギミック④：ソフトランディング（HP20%減少&CD1分経過で発動・失敗すると1名が確定で脱落）</SectionTitle>
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
-ナントのHPが<span className="font-bold text-orange-600">1ゲージ減少するたびに</span>プレイヤー1名を拘束し、同時に他のプレイヤー数名（おそらく3名）を対象にしたレーザーを放ってくる。<br />
+ナントのHPが<span className="font-bold text-orange-600">1ゲージ減少すると</span>プレイヤー1名を拘束し、同時に他のプレイヤー数名（おそらく3名）を対象にしたレーザーを放ってくる。<br />
 拘束されたプレイヤーは一切行動できず、恩恵の行動不能解除などでも助けられない。<br />
 <span className="font-bold text-orange-600">約10秒経過でギミック失敗</span>となり敵のナントにダメージアップ効果が付与され、拘束されたプレイヤーに即死級の持続ダメージが付与される。
 
@@ -283,8 +282,8 @@ export default function OperationCodenameAnchorLiftPage() {
         <SectionTitle icon="shield">拘束ギミックはあらゆる死亡回避を貫通してくる</SectionTitle>
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
-ギミック4の拘束解除に失敗した際のダメージはデスコンとロールを含むあらゆる死亡回避効果を貫通してくる。<br />
-他のギミックはデスコントロールで防げるので、他のギミックと被ってしまった時は拘束された人に重なるように集合しながらデスコントロールを展開しよう。
+ギミック4の拘束解除に失敗した際のダメージはデスコントロールを含むあらゆる死亡回避効果を貫通してくる。<br />
+他のギミックはデスコントロールで防げるので、ギミック発動が被ってしまった時は拘束された人に重なるように集合しながらデスコントロールを展開しよう。
         </pre>
 
         <SectionTitle icon="group">チーム編成</SectionTitle>

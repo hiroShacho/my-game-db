@@ -175,11 +175,34 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="sports_motorsports">喜楽カーニバル【3/13～4/14】</SectionTitle>
-        <div>
-          カーニバルとカーレースのイベント。<br />
-          福楽カーニバルは一定のルートを進むカーニバルが特定の地点に近づくたびにプレゼントボックスが配置される形式だと思われる。<br />
-          カーレースはミラポリスで参加可能なレースにイベント通貨がついてくるようになる。<br />
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_3.PNG"
+            alt="喜楽カーニバル"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
         </div>
+        <div>
+          ミラポリスで遊べる各種ミニゲームに報酬がつくイベント。<br />
+          アミューズランドで遊べるミニゲームの中だとサッカーの森が一番効率よく稼げる。（一度ゴールを決めたら後は負ければよい）<br />
+          何故かWarpサーバーではポイントを稼げないので他のイベントを優先しよう。<br />
+        </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_3_1.PNG",
+              alt: "慣れればサッカーの森が早い",
+              caption: "慣れればサッカーの森が早い",
+            },
+            {
+              src: "/ver_event/New_Event_3_2.PNG",
+              alt: "Warpサーバーでは麻雀とポーカーが遊べない",
+              caption: "Warpサーバーでは麻雀とポーカーが遊べない",
+            },
+          ]}
+        />
 
         <SectionTitle icon="🎣">福釣り【3/25～4/14】</SectionTitle>
         <div>
