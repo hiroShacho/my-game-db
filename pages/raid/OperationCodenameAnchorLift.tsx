@@ -80,16 +80,6 @@ function RowMedia({ items }: { items: { src: string; alt?: string; caption?: str
   );
 }
 
-/**
- * ページ本体
- *
- * 注意：
- * - 「項目名以外の本文部分」は原文どおり <本文>...</本文> を表示します（タグ文字列をそのまま出力）。
- * - 指示に従い、連続している画像群のみ RowMedia で横並び（最大2枚）にします。
- * - 埋め込みの動画（mp4）は単独表示（横並べしない）。
- * - 画像は public/raid 配下のファイルを使用しています（src は /raid/xxx）。
- */
-
 export default function OperationCodenameAnchorLiftPage() {
   return (
     <>
@@ -242,7 +232,7 @@ export default function OperationCodenameAnchorLiftPage() {
         <SectionTitle icon="flight_takeoff">ギミック④：ソフトランディング（HP減少&CD経過で発動・失敗すると1名が確定で脱落）</SectionTitle>
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
-ナントのHPが<span className="font-bold text-orange-600">1ゲージ減少するたびに</span>プレイヤー1名を拘束し、同時に他のプレイヤーを対象にしたレーザーを放ってくる。<br />
+ナントのHPが<span className="font-bold text-orange-600">1ゲージ減少するたびに</span>プレイヤー1名を拘束し、同時に他のプレイヤー数名（おそらく3名）を対象にしたレーザーを放ってくる。<br />
 拘束されたプレイヤーは一切行動できず、恩恵の行動不能解除などでも助けられない。<br />
 <span className="font-bold text-orange-600">約10秒経過でギミック失敗</span>となり敵のナントにダメージアップ効果が付与され、拘束されたプレイヤーに即死級の持続ダメージが付与される。
 
@@ -259,7 +249,7 @@ export default function OperationCodenameAnchorLiftPage() {
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
 拘束を解除するためには他のプレイヤーを狙って撃ってくるレーザーを拘束されたプレイヤーに当てる必要がる。
-生存している全員のレーザーを当てないと拘束は解除できないので、プレイヤー数が多いほど救出の難易度は上がる。<br />
+狙われている全員のレーザーを当てないと拘束は解除できず、誰が狙われるかはランダムなのでプレイヤー数が多いほど救出の難易度は上がる。<br />
 拘束の解除に成功するとナントが所持している9スタックのダメージ軽減効果が1スタック減少する。<br />
 レーザーは砲台となるドラゴンから地面に赤い予告線が出ているが、攻撃のエフェクトと被って非常に見づらい。
 
@@ -275,7 +265,7 @@ export default function OperationCodenameAnchorLiftPage() {
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
 レーザーは拘束されたプレイヤーに重なるように立っていれば勝手に当たってくれる。
-ただし、レーザーを当てるまでの猶予が短いので、誰かが拘束されたら全員速攻でそのプレイヤーの元に駆け付けよう。<br />
+ただし、レーザーを当てるまでの猶予が短いので、誰かが拘束されたら全員速攻でそのプレイヤーに重なって動かないようにしよう。<br />
 また、このギミックも一度発動すると次回発動までに<span className="font-bold text-orange-600">約1分のクールタイム</span>がある。
 そのため、1回ギミックが発動したらその後は一気にHPを削ることで発動回数を減らせる。
 
@@ -288,6 +278,13 @@ export default function OperationCodenameAnchorLiftPage() {
 そのため、基本的な強攻を剛毅・恩恵でバフする編成で挑めば多少ギミック4で人数が減っても時間をかけすぎなければクリアは可能。<br />
 ただし、4分の実質的なタイムリミットがあるのとギミックごとのクールタイムをある程度は管理しないと厳しい戦いになるので注意しよう。
 
+        </pre>
+
+        <SectionTitle icon="shield">拘束ギミックはあらゆる死亡回避を貫通してくる</SectionTitle>
+        <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
+
+ギミック4の拘束解除に失敗した際のダメージはデスコンとロールを含むあらゆる死亡回避効果を貫通してくる。<br />
+他のギミックはデスコントロールで防げるので、他のギミックと被ってしまった時は拘束された人に重なるように集合しながらデスコントロールを展開しよう。
         </pre>
 
         <SectionTitle icon="group">チーム編成</SectionTitle>
