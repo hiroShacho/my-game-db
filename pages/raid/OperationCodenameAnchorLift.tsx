@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { useEffect, useRef } from "react";
 import SidebarLayout from "@/components/layout/SidebarLayout";
 import Head from "next/head";
 import Image from "next/image";
@@ -32,6 +33,20 @@ function CaptionedMedia({
   maxWidth?: number;
 }) {
   const isVideo = src.endsWith(".mp4");
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    // クライアント側マウント時に動画の初期音量を設定（30%）
+    if (isVideo && videoRef.current) {
+      try {
+        videoRef.current.volume = 0.3; // 0.0 - 1.0
+      } catch (e) {
+        // セキュリティやブラウザポリシーで設定できない場合もあるので安全に無視
+        // console.warn("Unable to set video volume", e);
+      }
+    }
+  }, [isVideo, src]);
+
   return (
     <div className="flex flex-col items-center my-3 mx-auto" style={{ width: "100%", maxWidth }}>
       <div className="rounded-lg shadow border-2 border-emerald-300 overflow-hidden bg-black mx-auto" style={{ width: "100%" }}>
@@ -297,6 +312,24 @@ export default function OperationCodenameAnchorLiftPage() {
         <SectionTitle icon="ondemand_video">解説動画</SectionTitle>
         <div className="mb-6">
           ・準備中
+        </div>
+
+        <SectionTitle icon="ondemand_video">バグ解説</SectionTitle>
+        <div className="mb-6">
+          この討伐は何故か敵のHPがリセットされないバグがあるのでギミックを全て無視してクリアも可能（今後のアプデで修正される可能性大）
+        </div>
+        <div className="w-full flex justify-center my-4">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/FIE_OwtTNH4"
+            title="バグ解説動画"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded shadow border border-emerald-200"
+            style={{ maxWidth: "100%", aspectRatio: "16/9" }}
+          />
         </div>
       </div>
     </>
