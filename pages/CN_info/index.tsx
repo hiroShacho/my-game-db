@@ -12,6 +12,7 @@ const cnCharacters = [
   { id: "lana", name: "ラナ", subName: "Lana" },
   { id: "salidy", name: "サリディ", subName: "Salidy" },
   { id: "agleia", name: "アグレア", subName: "Agleia" },
+  { id: "berry", name: "ベリー", subName: "Berry" },
   // 今後追加キャラもここに
 ];
 

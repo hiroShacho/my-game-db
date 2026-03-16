@@ -12,19 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「大陸版情報」にテスト中の新キャラクターのページを作成。いつも通りネタバレなので自己責任で閲覧してください。",
+    ],
+    date: "2026/03/16",
+  },
+  {
+    text: [
       "限定討伐【",
       { label: "作戦コード：「抜錨」", href: "/raid/OperationCodenameAnchorLift" },
       "】のページを作成。\n",
     ],
     date: "2026/03/12",
-  },
-  {
-    text: [
-      "「",
-      { label: "ver5.7アップデート情報", href: "/event/ver5-7/New_ver_info" },
-      "」のページを作成。\n",
-    ],
-    date: "2026/03/10",
   },
   {
     text: [
