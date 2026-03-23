@@ -12,11 +12,11 @@ export type RaidCard = {
 
 export const raidCards: RaidCard[] = [
   {
-    key: "ScorchingNightmare",
-    title: "燃え上がるナイトメア",
-    href: "/raid/ScorchingNightmare",
+    key: "MechaSimulation",
+    title: "機兵演習",
+    href: "/raid/MechaSimulation",
     status: "開催中",
-    img: "/raid/ScorchingNightmare.PNG",
+    img: "/raid/MechaSimulation.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
