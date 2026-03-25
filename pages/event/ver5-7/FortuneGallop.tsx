@@ -205,10 +205,29 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="🎣">福釣り【3/25～4/14】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_4.PNG"
+            alt="福釣り"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           特定の時間に釣りエリアに錦鯉が出現するようになる。<br />
-          前回開催時はこの錦鯉を通貨とする交換所もあったので、アイテムを集めたいなら参加は必須になりそう。<br />          
+          釣った錦鯉は専用の商店でアイテムと交換するための通貨として使用できる。<br />
+          エントリー時間が短めなので忘れずにエントリーするようにしよう。
         </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_4_1.PNG",
+              alt: "専用の商店がある",
+              caption: "専用の商店がある",
+            },
+          ]}
+        />
 
         <SectionTitle icon="⚔️">構築バトル（8人マッチ）【3/31～4/14】</SectionTitle>
         <div>

@@ -279,59 +279,31 @@ export default function Home() {
             </Link>
  
 {/* --- replace the "Ver5.8テストサーバー" Link block with a non-clickable placeholder --- */}
-{/*             <Link href="/event/ver5-7/ver5-8_testserver" className="block">*/}
-{/*              <div*/}
-{/*                className="*/}
-{/*                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group*/}
-{/*                  transition-all duration-200*/}
-{/*                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-sky-400*/}
-{/*                  cursor-pointer*/}
-{/*                "*/}
-{/*                style={{*/}
-{/*                  backgroundImage: "url('/ver_event/Event_pre_img.png')",*/}
-{/*                  backgroundSize: "cover",*/}
-{/*                  backgroundPosition: "center top"*/}
-{/*                }}*/}
-{/*              >*/}
-{/*                <div className="absolute inset-0 bg-blue-900/30 group-hover:bg-blue-900/40 transition-all duration-200" />*/}
-{/*                <div className="relative z-10 p-4">*/}
-{/*                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">*/}
-{/*                    Ver5.8テストサーバー*/}
-{/*                  </h3>*/}
-{/*                  <p className="text-sm sm:text-base text-white drop-shadow">*/}
-{/*                    テストサーバーの詳細をチェック！*/}
-{/*                  </p>*/}
-{/*                </div>*/}
-{/*              </div>*/}
-{/*             </Link>*/}
-            <div className="block sm:col-span-1">
-            {/* <Link href="/event/ver5-7/ver5-8_testserver" className="block">*/}
-              <div
-                className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
-                  transition-all duration-200
-                  cursor-default
-                "
-                aria-disabled="true"
-                style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
-                  backgroundSize: "cover",
-                  /* 表示したい画像の下の方まで映るように調整 */
-                  backgroundPosition: "center 60%"
-                }}
-              >
-                <div className="absolute inset-0 bg-blue-900/30" />
-                <div className="relative z-10 p-4">
-                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    Ver5.8/6.0テストサーバー
-                  </h3>
-                  <p className="text-sm sm:text-base text-white drop-shadow">
-                    開催され次第追加予定
-                  </p>
-                </div>
-              </div>
-            {/* /元 Link */}
-            </div>
+            <Link href="/event/ver5-7/ver5-8_testserver" className="block">
+             <div
+               className="
+                 relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
+                 transition-all duration-200
+                 hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-sky-400
+                 cursor-pointer
+               "
+               style={{
+                 backgroundImage: "url('/ver_event/New_Event_6.PNG')",
+                 backgroundSize: "cover",
+                 backgroundPosition: "center top"
+               }}
+             >
+               <div className="absolute inset-0 bg-blue-900/30 group-hover:bg-blue-900/40 transition-all duration-200" />
+               <div className="relative z-10 p-4">
+                 <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                   Ver5.8テストサーバー
+                 </h3>
+                 <p className="text-sm sm:text-base text-white drop-shadow">
+                   テストサーバーの詳細をチェック！
+                 </p>
+               </div>
+             </div>
+            </Link>
 
             {/* 準備中（仮置き） (リンクを無効化) */}
             <div className="block sm:col-span-1">

@@ -310,9 +310,20 @@ export default function OperationCodenameAnchorLiftPage() {
         </pre>
 
         <SectionTitle icon="ondemand_video">解説動画</SectionTitle>
-        <div className="mb-6">
-          ・準備中
+        <div className="w-full flex justify-center my-4">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/wiK41i0nxqo"
+            title="解説動画"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded shadow border border-emerald-200"
+            style={{ maxWidth: "100%", aspectRatio: "16/9" }}
+          />
         </div>
+
 
         <SectionTitle icon="ondemand_video">バグ解説</SectionTitle>
         <div className="mb-6">
