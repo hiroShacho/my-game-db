@@ -38,7 +38,7 @@ const GANTT_EVENTS: GanttEvent[] = [
   { label: "ライドガチャ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 10, end: 28, },
   { label: "プレアバ：アグレア「純白の誓約」", color: "#ed2f2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 10, end: 31, },
   { label: "復刻プレアバ：全属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 10, end: 28, },
-  { label: "復刻プレアバ：氷属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 10, end: 31, }
+  { label: "復刻プレアバ：氷属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 28, end: 31, }
 ];
 
 const GANTT_MONTH = 3;
