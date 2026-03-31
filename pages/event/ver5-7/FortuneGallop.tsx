@@ -230,12 +230,45 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="⚔️">構築バトル（8人マッチ）【3/31～4/14】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_5.PNG"
+            alt="構築バトル"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           ミニゲーム内の通貨を使って武器とアルケーを購入して戦うPVEコンテンツ。<br />
-          通貨は武器・アルケーの購入の他に、出てくる武器をより良いものにするアップグレードにも使用する。<br />
+          通貨は武器・アルケーの購入の他に、ショップに出てくる武器をより良いものにできるアップグレードにも使用する。<br />
           基本的には序盤は適当な武器で戦って、最速で最高ランクの武器を手に入れるのが強い。<br />
-          今回は天賦カードという新システムもある模様。
+          今回は天賦カードという新システムでバフが獲得できる。<br />
+          天賦カードは獲得通貨が増えるバフを序盤に取って最速でショップをアップグレードするのが良さそう。
         </div>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_5_1.PNG"
+            alt="構築バトル"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_5_2.PNG",
+              alt: "今回は戦闘後に天賦カードでバフを獲得できる",
+              caption: "今回は戦闘後に天賦カードでバフを獲得できる",
+            },
+            {
+              src: "/ver_event/New_Event_5_3.mp4",
+              alt: "最後は速度勝負になるのでヘレンネをアルケーでバフして一瞬で終わらせよう",
+              caption: "最後は速度勝負になるのでヘレンネをアルケーでバフして一瞬で終わらせよう",
+            },
+          ]}
+        />
       </div>
     </>
   );
