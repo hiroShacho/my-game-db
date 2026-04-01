@@ -30,30 +30,22 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "金躍紅梅", color: "#ee7800", labelColor: "#8ee2f8", labelFontColor: "#200", start: 10, end: 31, },
-  { label: "復刻：新春華", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 10, end: 28, },
-  { label: "復刻：山水の緑", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 28, end: 31, },
-  { label: "復刻：明け星遊覧", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 28, end: 31, },
-  { label: "復刻：威風堂々", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 28, end: 31, },
-  { label: "ライドガチャ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 10, end: 28, },
-  { label: "プレアバ：アグレア「純白の誓約」", color: "#ed2f2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 10, end: 31, },
-  { label: "復刻プレアバ：全属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 10, end: 28, },
-  { label: "復刻プレアバ：氷属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 28, end: 31, }
+  { label: "復刻：山水の緑", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 14, },
+  { label: "復刻：明け星遊覧", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 14, },
+  { label: "復刻：威風堂々", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 14, },
+  { label: "プレアバ：アグレア「純白の誓約」", color: "#ed2f2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 14, },
+  { label: "復刻プレアバ：氷属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 14, }
 ];
 
-const GANTT_MONTH = 3;
+const GANTT_MONTH = 4;
 const GANTT_YEAR = 2026;
-const GANTT_DAYS = 31;
+const GANTT_DAYS = 30;
 
 const eventImages: (string | null)[] = [
-  "/ver_event/Outfit_AuspiceBlossom.PNG",
-  "/ver_event/Outfit_TimelessRadiance.PNG",
   "/ver_event/Outfit_JadeElegance.PNG",
   "/ver_event/Outfit_StarryCruise.PNG",
   "/ver_event/Outfit_EliteGrandeur.PNG",
-  "/ver_event/Outfit_RideGcha.PNG",
   "/ver_event/Simulacrum_Agleia.PNG",
-  "/ver_event/Simulacrum_ALL.PNG",
   "/ver_event/Simulacrum_FROST.PNG",
 ];
 
@@ -341,7 +333,7 @@ export default function Home() {
           </div>
           <div className="mt-8 space-y-6">
             <div>
-              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年3月 衣装・プレアバ ガチャスケジュール</h3>
+              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年4月 衣装・プレアバ ガチャスケジュール</h3>
               <GanttCalendar
                 events={GANTT_EVENTS}
                 images={eventImages}

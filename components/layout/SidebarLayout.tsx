@@ -12,17 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "ver5.8テストサーバー", href: "/event/ver5-7/ver5-8_testserver" },
+      "」に新キャラクターの情報を掲載。\n",
+    ],
+    date: "2026/04/01",
+  },
+  {
+    text: [
       "イベント「",
       { label: "駿馬踏福", href: "/event/ver5-7/FortuneGallop" },
       "」に「構築バトル」の内容を掲載。\n",
     ],
     date: "2026/03/31",
-  },
-  {
-    text: [
-      "「大陸版情報」にテスト中の新キャラクターのページを作成。いつも通りネタバレなので自己責任で閲覧してください。",
-    ],
-    date: "2026/03/16",
   },
   {
     text: [
