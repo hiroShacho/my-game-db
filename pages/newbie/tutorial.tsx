@@ -225,6 +225,12 @@ export default function TutorialPage() {
           ]}
           onClick={openModal}
         />
+        <div className="mb-4">
+          この記事で事前に知らずに序盤のストーリーがいきなりスキップされたらさぞ驚くことでしょう。<br />
+          これが幻塔です。<br />
+          そしてこの先、一般的な感覚だと「何で？」となるような仕様(?)にまみれたゲームなので慣れてください。
+        </div>
+
 
         {/* ②デイリー・連合作戦解放 */}
         <SectionTitle icon="event_note">②デイリー懸賞をクリア＆連合作戦を解放しよう！</SectionTitle>

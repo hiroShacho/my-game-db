@@ -30,7 +30,8 @@ const weapon = {
     "s_7107",
     "s_7108",
     "s_7109",
-    "s_7110"
+    "s_7110",
+    "s_7111"
   ],
   constellations: [
     {

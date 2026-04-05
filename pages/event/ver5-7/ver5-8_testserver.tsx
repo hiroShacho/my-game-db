@@ -15,14 +15,13 @@ export default function Ver535TestServer() {
         {images.map((img, i) => (
           <div
             key={i}
-            className="flex-1 min-w-0 max-w-[calc(50%-0.5rem)] sm:max-w-[320px]"
-            style={{ width: "100%" }}
+            className="flex-1 min-w-0 max-w-[calc(50%-0.5rem)] sm:max-w-[480px]"
           >
             <Image
               src={img.src}
               alt={img.alt}
-              width={320}
-              height={200}
+              width={480}
+              height={300}
               className="rounded shadow object-contain w-full h-auto"
               style={{ maxWidth: "100%", height: "auto" }}
             />
@@ -38,7 +37,7 @@ export default function Ver535TestServer() {
         <title>【幻塔攻略】Ver5.8先行テストサーバー | 幻塔攻略データベース</title>
         <meta name="description" content="幻塔（Tower of Fantasy）のVer5.8先行テストサーバーの情報まとめページ。" />
       </Head>
-      <div className="w-full max-w-2xl mx-auto px-2 sm:px-4 py-8 space-y-6">
+      <div className="mx-auto max-w-3xl px-2 sm:px-4 py-8 space-y-6">
         <section>
           <div className="mb-3">
             <button
@@ -120,27 +119,17 @@ export default function Ver535TestServer() {
                 詳細ページはこちら
               </Link>
             </div>
-            <div className="w-full flex gap-2 mb-2 justify-center">
+              <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
               <Link href="/event/ver5-7/NewChara" className="flex-shrink-0" style={{ maxWidth: 80 }}>
-                <Image
-                  src="/images/t_67_img.PNG"
-                  alt="ベリー武器画像"
-                  width={80}
-                  height={80}
-                  className="rounded shadow object-contain w-full h-auto hover:opacity-75 transition"
-                  style={{ maxWidth: "100%", height: "auto" }}
-                />
-              </Link>
-              <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
                 <Image
                   src="/ver_event/New_Event_6_3.PNG"
                   alt="ベリーイベント画像"
-                  width={320}
-                  height={200}
+                  width={640}
+                  height={360}
                   className="rounded shadow object-contain w-full h-auto"
                   style={{ maxWidth: "100%", height: "auto" }}
                 />
-              </div>
+              </Link>
             </div>
           </div>
 
@@ -150,35 +139,100 @@ export default function Ver535TestServer() {
             <div className="font-bold text-base sm:text-lg mb-2">■各種コンテンツ追加</div>
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
               <li>メインストーリー29章追加</li>
-              <li>ロズリン恒常入り（アンカーは次バージョンになりそう）</li>
-              <li>連合作戦「虫の群れの母」追加</li>
-              <li>先鋒クラッシュ・駐屯スフィアα追加</li>
-              <li>在りし日の幻・超域に80階追加</li>
-              <li>幻影の序列・超域の4属性に31階（ローレンズ）/異能に19階（アスラーダ）追加</li>
-              <li>ベンジスの墓場に宣伝大使追加</li>
-              <li>鉱山区に新PVP防具・啓示防具が追加（ハッカー防具より少し強い）</li>
             </ul>
-            {/* 画像を2枚ずつ横並び、それ以降は改行 */}
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
-                <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
-                  <Image src="/ver_event/New_Event_6_4.PNG" alt="ロズリン" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_4.PNG" alt="メインストーリー" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                </div>
+              </div>
+            </div>
+
+            <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+              <li>ロズリン恒常入り（アンカーは次バージョンになりそう）</li>
+            </ul>
+            <div className="space-y-2">
+              <div className="w-full flex gap-2 justify-center">
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_5.PNG" alt="ロズリン" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                </div>
+              </div>
+            </div>
+
+            <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+              <li>連合作戦「虫の群れの母」追加</li>
+            </ul>
+            <div className="space-y-2">
+              <div className="w-full flex gap-2 justify-center">
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_6.PNG" alt="新連合" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                </div>
+              </div>
+            </div>
+
+            <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+              <li>先鋒クラッシュ・駐屯スフィアα追加</li>
+            </ul>
+            <div className="space-y-2">
+              <div className="w-full flex gap-2 justify-center">
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_7.PNG" alt="駐屯スフィア" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                </div>
+              </div>
+            </div>
+
+            <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+              <li>在りし日の幻・超域に80階追加</li>
+            </ul>
+            <div className="space-y-2">
+              <div className="w-full flex gap-2 justify-center">
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_8.PNG" alt="超域80階" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                </div>
+              </div>
+            </div>
+
+            <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+              <li>幻影の序列・超域の4属性に31階（ローレンズ）/異能に19階（アスラーダ）追加</li>
+            </ul>
+            <div className="space-y-2">
+              <div className="w-full flex gap-2 justify-center">
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_9.PNG" alt="ローレンズ" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
               <div className="w-full flex gap-2 justify-center">
-                <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
-                  <Image src="/ver_event/New_Event_6_5.PNG" alt="新連合" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
-                </div>
-                <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
-                  <Image src="/ver_event/New_Event_6_6.PNG" alt="ローレンズ" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_10.PNG" alt="アスラーダ" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
+            </div>
+
+            <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+              <li>ベンジスの墓場に宣伝大使追加</li>
+            </ul>
+            <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
-                <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
-                  <Image src="/ver_event/New_Event_6_7.PNG" alt="宣伝大使" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_11.PNG" alt="宣伝大使" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
-                <div className="flex-1 min-w-0" style={{ maxWidth: 320 }}>
-                  <Image src="/ver_event/New_Event_6_8.PNG" alt="啓示防具" width={320} height={200} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+              </div>
+            </div>
+
+            <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+              <li>鉱山区に新PVP防具・啓示防具が追加（ハッカー防具より少し強い）</li>
+            </ul>
+            <div className="space-y-2">
+              <div className="w-full flex gap-2 justify-center">
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_12.PNG" alt="啓示防具1" width={640} height={360}className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                </div>
+              </div>
+            </div>
+            <div className="space-y-2">
+              <div className="w-full flex gap-2 justify-center">
+                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
+                  <Image src="/ver_event/New_Event_6_13.PNG" alt="啓示防具2" width={640} height={360}className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
