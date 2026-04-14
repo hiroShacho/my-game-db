@@ -13,18 +13,10 @@ const sidebarNewsItems = [
   {
     text: [
       "「",
-      { label: "ver5.8テストサーバー", href: "/event/ver5-7/ver5-8_testserver" },
-      "」に新キャラクターの情報を掲載。\n",
+      { label: "ver5.8アップデート情報まとめ", href: "/event/ver5-8/New_ver_info" },
+      "」を作成。\n",
     ],
-    date: "2026/04/01",
-  },
-  {
-    text: [
-      "イベント「",
-      { label: "駿馬踏福", href: "/event/ver5-7/FortuneGallop" },
-      "」に「構築バトル」の内容を掲載。\n",
-    ],
-    date: "2026/03/31",
+    date: "2026/04/14",
   },
   {
     text: [
@@ -53,10 +45,8 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/event/ver5-7/New_ver_info", label: "アップデート情報まとめ" },
-  { href: "/weapons/ChronoHeart", label: "アグレア武器：時の心" },
-  { href: "/event/ver5-7/FortuneGallop", label: "イベント：駿馬踏福" },
-  { href: "/raid/OperationCodenameAnchorLift", label: "限定討伐【作戦コード：「抜錨」】" },
+  { href: "/event/ver5-8/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/Charon", label: "ベリー武器：カロン" },
 ];
 
 // 追加: 新規・初心者向け項目

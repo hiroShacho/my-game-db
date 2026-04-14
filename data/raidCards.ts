@@ -26,7 +26,7 @@ export const raidCards: RaidCard[] = [
     key: "OperationCodenameAnchorLift",
     title: "作戦コード：「抜錨」",
     href: "/raid/OperationCodenameAnchorLift",
-    status: "開催中",
+    status: "未開催",
     img: "/raid/OperationCodenameAnchorLift.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",
