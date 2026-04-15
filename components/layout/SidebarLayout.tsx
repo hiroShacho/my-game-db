@@ -12,9 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "イベントミニゲーム「",
+      { label: "春の駆け馬", href: "/event/ver5-8/NovaGallop" },
+      "」のページを作成。\n",
+    ],
+    date: "2026/04/15",
+  },
+  {
+    text: [
       "「",
       { label: "ver5.8アップデート情報まとめ", href: "/event/ver5-8/New_ver_info" },
-      "」を作成。\n",
+      "」のページを作成。\n",
     ],
     date: "2026/04/14",
   },
@@ -47,6 +55,7 @@ const soloMultiPveLinks = [
 const latestContentsLinks = [
   { href: "/event/ver5-8/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/Charon", label: "ベリー武器：カロン" },
+  { href: "/event/ver5-8/NovaGallop", label: "ミニゲーム：春の駆け馬" },
 ];
 
 // 追加: 新規・初心者向け項目

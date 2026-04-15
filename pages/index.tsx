@@ -246,34 +246,33 @@ export default function Home() {
             </Link>
 
 
-            {/* 準備中（仮置き） (リンクを無効化) */}
-            <div className="block sm:col-span-1">
+{/* --- replace the "春の駆け馬" Link block with a non-clickable placeholder --- */}
+            <Link href="/event/ver5-8/NovaGallop" className="block">
               <div
                 className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  cursor-default
+                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-pink-400
+                  cursor-pointer
                 "
-                aria-disabled="true"
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_TOP.PNG')",
                   backgroundSize: "cover",
-                  /* 表示したい画像の下の方まで映るように調整 */
-                  backgroundPosition: "center 60%"
+                  backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-blue-900/30" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    準備中
+                    春の駆け馬
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    新イベントミニゲームの情報を追加予定
+                    イベントミニゲームの詳細をチェック！
                   </p>
                 </div>
               </div>
-              {/* /元 Link */}
-            </div>
+            </Link>
+
             {/* 準備中（仮置き） (リンクを無効化) */}
             <div className="block sm:col-span-1">
               <div
