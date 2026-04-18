@@ -12,19 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「大陸版情報」に新キャラクターの情報を掲載。ネタバレなので閲覧は自己責任でお願いします。",
+    ],
+    date: "2026/04/18",
+  },
+  {
+    text: [
       "イベントミニゲーム「",
       { label: "春の駆け馬", href: "/event/ver5-8/NovaGallop" },
       "」のページを作成。\n",
     ],
     date: "2026/04/15",
-  },
-  {
-    text: [
-      "「",
-      { label: "ver5.8アップデート情報まとめ", href: "/event/ver5-8/New_ver_info" },
-      "」のページを作成。\n",
-    ],
-    date: "2026/04/14",
   },
   {
     text: [
