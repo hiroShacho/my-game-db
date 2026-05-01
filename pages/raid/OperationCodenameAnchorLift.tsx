@@ -325,9 +325,9 @@ export default function OperationCodenameAnchorLiftPage() {
         </div>
 
 
-        <SectionTitle icon="ondemand_video">バグ解説</SectionTitle>
+        <SectionTitle icon="ondemand_video">バグ解説（Ver5.8で修正済み）</SectionTitle>
         <div className="mb-6">
-          この討伐は何故か敵のHPがリセットされないバグがあるのでギミックを全て無視してクリアも可能（今後のアプデで修正される可能性大）
+          Ver5.7の討伐は何故か敵のHPがリセットされないバグがあったのでギミックを全て無視してクリアできた（Ver5.8で修正済み）
         </div>
         <div className="w-full flex justify-center my-4">
           <iframe

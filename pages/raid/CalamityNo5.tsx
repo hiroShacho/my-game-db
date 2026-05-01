@@ -266,7 +266,7 @@ export default function CalamityNo5Page() {
           />
         </div>
 
-        <SectionTitle icon="ondemand_video">あまりにもあんまりな攻略方法</SectionTitle>
+        <SectionTitle icon="ondemand_video">あまりにもあんまりな攻略方法（Ver5.8で修正済み）</SectionTitle>
         <div className="w-full flex justify-center my-4">
           <iframe
             width="560"

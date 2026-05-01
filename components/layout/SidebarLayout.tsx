@@ -12,17 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "「大陸版情報」に新キャラクターの情報を掲載。ネタバレなので閲覧は自己責任でお願いします。",
+      "「",
+      { label: "Ver6.0テストサーバー", href: "/event/ver5-8/ver6-0_testserver" },
+      "」のページを作成。\n",
     ],
-    date: "2026/04/18",
+    date: "2026/05/01",
   },
   {
     text: [
-      "イベントミニゲーム「",
-      { label: "春の駆け馬", href: "/event/ver5-8/NovaGallop" },
-      "」のページを作成。\n",
+      "「大陸版情報」に新キャラクターの情報を掲載。ネタバレなので閲覧は自己責任でお願いします。",
     ],
-    date: "2026/04/15",
+    date: "2026/04/18",
   },
   {
     text: [
@@ -54,6 +54,7 @@ const latestContentsLinks = [
   { href: "/event/ver5-8/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/Charon", label: "ベリー武器：カロン" },
   { href: "/event/ver5-8/NovaGallop", label: "ミニゲーム：春の駆け馬" },
+  { href: "/event/ver5-8/ver6-0_testserver", label: "Ver6.0テストサーバー" },
 ];
 
 // 追加: 新規・初心者向け項目
