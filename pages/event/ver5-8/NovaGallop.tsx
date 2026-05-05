@@ -142,6 +142,15 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="🃏">神算鬼謀（2人マッチ）【4/21～5/19】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_2.PNG"
+            alt="神算鬼謀"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           ランダムに選んだ5体のモンスターを戦わせる1対1のバトル。<br />
           ランダム性が強く、強いカードを多く引けた方が勝ちやすいので運ゲーではある。<br />
@@ -149,20 +158,47 @@ export default function BrightonsSalvationPage() {
         </div>
 
         <SectionTitle icon="🔫">弾雨激闘（8人マッチ）【4/28～5/19】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_3.PNG"
+            alt="弾雨激闘"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           4体4の銃撃オンリーのPVP。<br />
           アナベラの狙撃やフレイムリボルバーの空中狙撃連打が非常に強く、金武器を拾えたら相手によっては無双できる。<br />
           基本的には数が多い方が勝つので集団行動を心掛けるようにしよう。<br />
           前回と同じなら強力な金武器の出現位置は固定になっている。<br />
-          プレイヤースキルが出やすい上に銅貨を賭けた戦いになるので始まってすぐの情報把握を忘れずに。<br />
+          プレイヤースキルと事前情報による差が出やすいので始まってすぐの情報把握を忘れずに。<br />
         </div>
 
         <SectionTitle icon="🔽">床ドンバトル（2人マッチ）【5/5～5/19】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_4.PNG"
+            alt="床ドンバトル"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           Mi-aになって光ったスイッチを踏みまくるゲーム。<br />
           スイッチを踏むと対戦相手のエリアにレーザーが発生するので連続してスイッチを踏んで相手を倒そう。<br />
           相手から飛んできたレーザーはジャンプで避けられるので、どちらが先にライフを失うかのデスマッチになる。
         </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_4_1.PNG",
+              alt: "可愛いMi-aによる容赦ないデスマッチ",
+              caption: "可愛いMi-aによる容赦ないデスマッチ",
+            },
+          ]}
+        />
       </div>
     </>
   );
