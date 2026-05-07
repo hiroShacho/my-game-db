@@ -94,7 +94,7 @@ export default function ScorchingNightmarePage() {
           ボスには
           <span className="text-red-700 font-bold">強力なダメージ軽減効果</span>
           が付与されており、ギミックをクリアしないとダメージをほとんど与えられない。<br />
-          3つのギミックを理解して、クリアを目指そう！
+          3つのギミックを理解してクリアを目指そう！
         </div>
 
         <SectionTitle icon="error">キーワード「弱点攻撃」について</SectionTitle>
@@ -165,8 +165,8 @@ export default function ScorchingNightmarePage() {
             caption="分身は本体を回復するために進行する"
           />
           分身は攻撃を当てることで進行を妨害でき、一定時間経過で臨時メンテのギミック終了と共に分身も消滅する。<br />
-          さらに、改造スタックが0の状態で臨時メンテによる修復を防ぐと地馳は自身のHPを消費してスタックを回復する。<br />
-          基本的にはこのギミックによるHP消費と弱点攻撃によって地馳のHPを削っていくことになる。
+          改造スタックが0の状態で臨時メンテによる修復を防ぐと、地馳は自身のHPを消費して無理矢理スタックを回復する。<br />
+          この討伐では基本的に弱点攻撃とこの臨時メンテのHP消費によって地馳のHPを削っていくことになる。
           <CaptionedImage
             src="/raid/TrafficControl_6.PNG"
             alt="臨時メンテ：スタック回復"
