@@ -143,6 +143,7 @@ const weaponNameMap: Record<string, string> = {
   "Bloodfin":"ブラッディ・シャーク",
   "ChronoHeart":"時の心",
   "Charon":"カロン",
+  "Neverrest":"絶えざる調べ",
   //仮でボリションと特性はパンくずだけ変える
   "m_1": "エコー",
   "t_1": "エコー",
@@ -278,6 +279,8 @@ const weaponNameMap: Record<string, string> = {
   "t_66": "アグレア",
   "m_67": "ベリー",
   "t_67": "ベリー",
+  "m_68": "ハルモフェウス",
+  "t_68": "ハルモフェウス",
   "r_1": "フロスト砲",
   "r_2": "ジェットパック",
   "r_3": "溶岩爆弾",
@@ -312,6 +315,7 @@ const weaponNameMap: Record<string, string> = {
   "r_32": "MarkⅡ戦闘眼",
   "r_33": "遮断装置",
   "r_34": "神経パルスチューニング装置",
+  "r_35":"脱出専門家",
 };
 
 // ルート配列を受け取り、ラベルを返す関数

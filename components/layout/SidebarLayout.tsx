@@ -14,15 +14,17 @@ const sidebarNewsItems = [
     text: [
       "「",
       { label: "Ver6.0テストサーバー", href: "/event/ver5-8/ver6-0_testserver" },
-      "」のページを作成。\n",
+      "」に新キャラクターの情報などを掲載。\n",
     ],
-    date: "2026/05/01",
+    date: "2026/05/08",
   },
   {
     text: [
-      "「大陸版情報」に新キャラクターの情報を掲載。ネタバレなので閲覧は自己責任でお願いします。",
+      "「",
+      { label: "Ver6.0テストサーバー", href: "/event/ver5-8/ver6-0_testserver" },
+      "」のページを作成。\n",
     ],
-    date: "2026/04/18",
+    date: "2026/05/01",
   },
   {
     text: [

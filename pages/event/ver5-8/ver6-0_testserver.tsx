@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Ver535TestServer() {
   // 募集案内の初期状態は true/false で変更可能
-  const [showDetail, setShowDetail] = useState(true);
+  const [showDetail, setShowDetail] = useState(false);
 
   // 画像の横並び表示（2枚まで、それ以降は改行）
   function ImageRow({ images }: { images: { src: string; alt: string }[] }) {
@@ -109,21 +109,21 @@ export default function Ver535TestServer() {
 
         {/* ▼▼▼ 追加情報 ▼▼▼ */}
         {/* 以下の追加情報セクションは非表示にしています。再表示するには false を true に戻してください。 */}
-        {false && (
+        {true && (
         <section className="space-y-8">
-          {/* ■新キャラクター・ベリー！ */}
+          {/* ■新キャラクター・ハルモフェウス！ */}
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <span className="font-bold text-base sm:text-lg">■新キャラクター・ベリー！</span>
-              <Link href="/event/ver5-7/NewChara" className="text-blue-700 hover:underline font-semibold text-sm">
-                詳細ページはこちら
+              <span className="font-bold text-base sm:text-lg">■新キャラクター・ハルモフェウス！</span>
+              <Link href="/event/ver5-8/NewChara" className="text-blue-700 hover:underline font-semibold text-sm">
+                キャラ詳細ページはこちら
               </Link>
             </div>
               <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-              <Link href="/event/ver5-7/NewChara" className="flex-shrink-0" style={{ maxWidth: 80 }}>
+              <Link href="/event/ver5-8/NewChara" className="flex-shrink-0" style={{ maxWidth: 80 }}>
                 <Image
                   src="/ver_event/New_Event_6_3.PNG"
-                  alt="ベリーイベント画像"
+                  alt="ハルモフェウスイベント画像"
                   width={640}
                   height={360}
                   className="rounded shadow object-contain w-full h-auto"
@@ -138,101 +138,100 @@ export default function Ver535TestServer() {
           <div>
             <div className="font-bold text-base sm:text-lg mb-2">■各種コンテンツ追加</div>
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-              <li>メインストーリー29章追加</li>
+              <li>新時空「ロックハート」追加！</li>
             </ul>
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_4.PNG" alt="メインストーリー" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_6_4.PNG" alt="ロックハート" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
 
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-              <li>ロズリン恒常入り（アンカーは次バージョンになりそう）</li>
+              <li>メインストーリー30章追加</li>
             </ul>
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_5.PNG" alt="ロズリン" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_6_5.PNG" alt="メインストーリー" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
 
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-              <li>連合作戦「虫の群れの母」追加</li>
+              <li>アンカー恒常入り（メリル・アムドは次バージョンになりそう）</li>
             </ul>
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_6.PNG" alt="新連合" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_6_6.PNG" alt="アンカー" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
 
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-              <li>先鋒クラッシュ・駐屯スフィアα追加</li>
+              <li>新ワールドボス「グラティア・ガーディアン」追加</li>
             </ul>
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_7.PNG" alt="駐屯スフィア" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_6_7.PNG" alt="ワールドボス" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
 
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-              <li>在りし日の幻・超域に80階追加</li>
+              <li>先鋒クラッシュ・変異フランケン追加</li>
             </ul>
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_8.PNG" alt="超域80階" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_6_8.PNG" alt="変異フランケン" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
 
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-              <li>幻影の序列・超域の4属性に31階（ローレンズ）/異能に19階（アスラーダ）追加</li>
+              <li>在りし日の幻・超域に81階追加</li>
             </ul>
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_9.PNG" alt="ローレンズ" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
-                </div>
-              </div>
-              <div className="w-full flex gap-2 justify-center">
-                <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_10.PNG" alt="アスラーダ" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_6_9.PNG" alt="超域81階" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
 
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-              <li>ベンジスの墓場に宣伝大使追加</li>
+              <li>幻影の序列・超域の4属性に32階（ディザスターⅤ）追加</li>
             </ul>
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_11.PNG" alt="宣伝大使" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_6_10.PNG" alt="ディザスターⅤ" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
 
             <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-              <li>鉱山区に新PVP防具・啓示防具が追加（ハッカー防具より少し強い）</li>
+              <li>新アルケー「脱出専門家」追加</li>
             </ul>
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_12.PNG" alt="啓示防具1" width={640} height={360}className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_6_11.PNG" alt="脱出専門家" width={640} height={360} className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
+
+            <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+              <li>キルオのアバター漫遊追加</li>
+            </ul>
             <div className="space-y-2">
               <div className="w-full flex gap-2 justify-center">
                 <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
-                  <Image src="/ver_event/New_Event_6_13.PNG" alt="啓示防具2" width={640} height={360}className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
+                  <Image src="/ver_event/New_Event_6_12.PNG" alt="キルオ漫遊" width={640} height={360}className="rounded shadow object-contain w-full h-auto" style={{ maxWidth: "100%", height: "auto" }} />
                 </div>
               </div>
             </div>
