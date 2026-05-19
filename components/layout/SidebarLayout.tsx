@@ -13,18 +13,10 @@ const sidebarNewsItems = [
   {
     text: [
       "「",
-      { label: "Ver6.0テストサーバー", href: "/event/ver5-8/ver6-0_testserver" },
-      "」に新キャラクターの情報などを掲載。\n",
-    ],
-    date: "2026/05/08",
-  },
-  {
-    text: [
-      "「",
-      { label: "Ver6.0テストサーバー", href: "/event/ver5-8/ver6-0_testserver" },
+      { label: "Ver6.0アップデート情報まとめ", href: "/event/ver6-0/New_ver_info" },
       "」のページを作成。\n",
     ],
-    date: "2026/05/01",
+    date: "2026/05/19",
   },
   {
     text: [
@@ -53,10 +45,8 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/event/ver5-8/New_ver_info", label: "アップデート情報まとめ" },
-  { href: "/weapons/Charon", label: "ベリー武器：カロン" },
-  { href: "/event/ver5-8/NovaGallop", label: "ミニゲーム：春の駆け馬" },
-  { href: "/event/ver5-8/ver6-0_testserver", label: "Ver6.0テストサーバー" },
+  { href: "/event/ver6-0/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/Neverrest", label: "ハルモフェウス武器：絶えざる調べ" },
 ];
 
 // 追加: 新規・初心者向け項目
