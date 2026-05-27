@@ -12,6 +12,12 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「大陸版情報」に新キャラクターの情報を掲載。ネタバレなので閲覧は自己責任でお願いします。",
+    ],
+    date: "2026/05/27",
+  },
+  {
+    text: [
       "「",
       { label: "Ver6.0アップデート情報まとめ", href: "/event/ver6-0/New_ver_info" },
       "」のページを作成。\n",
