@@ -341,7 +341,7 @@ export default function Home() {
           </div>
           <div className="mt-8 space-y-6">
             <div>
-              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年5月 衣装・プレアバ ガチャスケジュール</h3>
+              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年6月 衣装・プレアバ ガチャスケジュール</h3>
               <GanttCalendar
                 events={GANTT_EVENTS}
                 images={eventImages}
