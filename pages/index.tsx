@@ -30,19 +30,19 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "完全網羅データ：氷結の秩序", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 19, end: 31, },
-  { label: "復刻：ナビゲーター", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 19, end: 31, },
-  { label: "復刻：ドリームキャッチャー", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 19, end: 31, },
-  { label: "復刻：きらめきインニス（6月9日から）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "復刻：コスチュームガチャ（6月9日から）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "プレアバ：ハルモフェウス「スウィート・フォーカス」", color: "#ed2f2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 19, end: 31, },
-  { label: "復刻プレアバセット：雷（6月9日から）", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "復刻プレアバセット：他属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 19, end: 31, }
+  { label: "完全網羅データ：氷結の秩序", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 9, },
+  { label: "復刻：ナビゲーター", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 9, },
+  { label: "復刻：ドリームキャッチャー", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 9, },
+  { label: "復刻：きらめきインニス（6月9日から）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 9, end: 30, },
+  { label: "復刻：コスチュームガチャ（6月9日から）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 9, end: 30, },
+  { label: "プレアバ：ハルモフェウス「スウィート・フォーカス」", color: "#ed2f2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 30, },
+  { label: "復刻プレアバセット：雷（6月9日から）", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 9, end: 30, },
+  { label: "復刻プレアバセット：他属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 9, }
 ];
 
-const GANTT_MONTH = 5;
+const GANTT_MONTH = 6;
 const GANTT_YEAR = 2026;
-const GANTT_DAYS = 31;
+const GANTT_DAYS = 30;
 
 const eventImages: (string | null)[] = [
   "/ver_event/Outfit_FrostyOrder.PNG",
