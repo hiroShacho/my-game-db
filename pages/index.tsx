@@ -33,10 +33,10 @@ const GANTT_EVENTS: GanttEvent[] = [
   { label: "完全網羅データ：氷結の秩序", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 9, },
   { label: "復刻：ナビゲーター", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 9, },
   { label: "復刻：ドリームキャッチャー", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 9, },
-  { label: "復刻：きらめきインニス（6月9日から）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 9, end: 30, },
-  { label: "復刻：コスチュームガチャ（6月9日から）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 9, end: 30, },
+  { label: "復刻：きらめきインニス", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 9, end: 30, },
+  { label: "復刻：コスチュームガチャ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 9, end: 30, },
   { label: "プレアバ：ハルモフェウス「スウィート・フォーカス」", color: "#ed2f2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 30, },
-  { label: "復刻プレアバセット：雷（6月9日から）", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 9, end: 30, },
+  { label: "復刻プレアバセット：雷", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 9, end: 30, },
   { label: "復刻プレアバセット：他属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 9, }
 ];
 
@@ -276,34 +276,32 @@ export default function Home() {
               </div>
             </Link>
 
-            {/* 準備中（仮置き） (リンクを無効化) */}
-            <div className="block sm:col-span-1">
+{/* --- replace the "探索攻略　ロックハート：ベルナ島" Link block with a non-clickable placeholder --- */}
+            <Link href="/map/Lockhart_EverspringIsland" className="block">
               <div
                 className="
-                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  cursor-default
+                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-pink-400
+                  cursor-pointer
                 "
-                aria-disabled="true"
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Map.PNG')",
                   backgroundSize: "cover",
-                  /* 表示したい画像の下の方まで映るように調整 */
-                  backgroundPosition: "center 60%"
+                  backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-blue-900/30" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    準備中
+                    ロックハート：ベルナ島
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    新イベントが開催次第追加予定
+                    探索攻略の詳細をチェック！
                   </p>
                 </div>
               </div>
-              {/* /元 Link */}
-            </div>
+            </Link>
 
             {/* 準備中（仮置き） (リンクを無効化) */}
             <div className="block sm:col-span-1">

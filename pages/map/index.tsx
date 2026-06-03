@@ -164,24 +164,24 @@ function MapIndexPage() {
   return (
     <>
       <Head>
-        <title>探索マップ | 幻塔攻略データベース</title>
+        <title>探索攻略 | 幻塔攻略データベース</title>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </Head>
       <div className="relative w-full h-40 sm:h-64 overflow-hidden rounded-lg shadow mb-6 flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-400">
         <Image
           src="/map/map_top.PNG"
-          alt="探索マップ"
+          alt="探索攻略"
           fill
           style={{ objectFit: "cover", opacity: 0.5 }}
           className="pointer-events-none select-none"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-          <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow mb-2">探索マップ</h1>
+          <h1 className="text-2xl sm:text-4xl font-extrabold text-white drop-shadow mb-2">探索攻略</h1>
         </div>
       </div>
       <div className="mx-auto max-w-3xl px-2 sm:px-4 py-6 w-full">
         {/* ↓この2項目は絶対に変更禁止 */}
-        <SectionTitle icon="link">マップリンク（制作中）</SectionTitle>
+        <SectionTitle icon="link">探索攻略リンク（制作中）</SectionTitle>
         <ul className="list-disc ml-6 mb-6 text-lg">
           <li className="mb-2">
             <Link href="/map/kailo_OreZero_EXpoint" className="text-blue-700 hover:underline font-semibold">
@@ -193,8 +193,13 @@ function MapIndexPage() {
               キルオ：ブライトン区
             </Link>
           </li>
+          <li>
+            <Link href="/map/Lockhart_EverspringIsland" className="text-blue-700 hover:underline font-semibold">
+              ロックハート：ベルナ島
+            </Link>
+          </li>
         </ul>
-        <SectionTitle icon="star">レッドコア探索まとめ（制作中）</SectionTitle>
+        <SectionTitle icon="star">レッドコア探索（制作中）</SectionTitle>
         <div className="mb-3 text-lg text-gray-800">
           レッドコアが手に入る探索ポイントについて以下にまとめておく。<br />
           基本的にマップ上に補給庫のアイコンは表示されないので注意しよう。
