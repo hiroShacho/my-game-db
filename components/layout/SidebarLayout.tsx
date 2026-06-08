@@ -12,19 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "討伐作戦「",
+      { label: "超越進化", href: "/raid/EvolutionBeyond" },
+      "」のページを作成。\n",
+    ],
+    date: "2026/06/08",
+  },
+  {
+    text: [
       "探索攻略「",
       { label: "ロックハート：ベルナ島", href: "/map/Lockhart_EverspringIsland" },
       "」のページを作成。（マップツールは未実装）\n",
     ],
     date: "2026/06/03",
-  },
-  {
-    text: [
-      "イベントミニゲーム「",
-      { label: "永生の潮", href: "/event/ver6-0/EternalTides" },
-      "」のページを作成。\n",
-    ],
-    date: "2026/05/31",
   },
   {
     text: [

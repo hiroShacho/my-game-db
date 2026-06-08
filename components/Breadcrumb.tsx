@@ -49,6 +49,7 @@ const labelMap: Record<string, string> = {
   "StellarManhunt":"星間包囲",
   "CalamityNo5":"厄災5号",
   "OperationCodenameAnchorLift":"作戦コード：「抜錨」",
+  "EvolutionBeyond":"超越進化",
   // 必要に応じて追加
 };
 

@@ -12,22 +12,22 @@ export type RaidCard = {
 
 export const raidCards: RaidCard[] = [
   {
-    key: "GluttonousFeast",
-    title: "暴食の饗宴",
-    href: "/raid/GluttonousFeast",
+    key: "TrafficControl",
+    title: "交通管制",
+    href: "/raid/TrafficControl",
     status: "開催中",
-    img: "/raid/GluttonousFeast.PNG",
+    img: "/raid/TrafficControl.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
     category: "週討伐", // ★
   },
   {
-    key: "OperationCodenameAnchorLift",
-    title: "作戦コード：「抜錨」",
-    href: "/raid/OperationCodenameAnchorLift",
-    status: "未開催",
-    img: "/raid/OperationCodenameAnchorLift.PNG",
+    key: "EvolutionBeyond",
+    title: "超越進化",
+    href: "/raid/EvolutionBeyond",
+    status: "開催中",
+    img: "/raid/EvolutionBeyond.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",
     badgeTextColor: "text-yellow-900",
@@ -66,5 +66,7 @@ export const raidCards: RaidCard[] = [
 //CalamityNo5
 //作戦コード：「抜錨」
 //OperationCodenameAnchorLift
+//超越進化
+//EvolutionBeyond
 // ------------------------------------------------------------
 // 必要に応じてここに追加・編集してコピペで使ってください

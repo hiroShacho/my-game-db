@@ -184,11 +184,29 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="📦">古機解析（フィールド、アイテム提出）【6/5～6/30】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_4.PNG"
+            alt="古機解析"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           アイテム提出イベント。<br />
-          提出するアイテムはおそらくアップデート後から雑魚がドロップしている使い道のないアイテム群が対象になるだろう。<br />
-          前回と同じならサーバー全体の進捗によってマルチコンテンツに特殊なバフが適用されるので普段と違う遊びができて楽しいぞ！<br />
+          提出するアイテムは各地で雑魚がドロップしているアイテムなので集めること自体は苦労しないはず。<br />
+          サーバー全体の進捗によってマルチコンテンツに特殊なバフが適用されるので普段と違う遊びができて楽しいぞ！<br />
         </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_4_1.PNG",
+              alt: "特にこだわりが無ければアイテムを持っている所でどんどん提出すればOK",
+              caption: "特にこだわりが無ければアイテムを持っている所でどんどん提出すればOK",
+            },
+          ]}
+        />
 
         <SectionTitle icon="🏰">城塞バトル（2人マッチ、タワーディフェンス）【6/13～6/30】</SectionTitle>
         <div>

@@ -25,6 +25,7 @@ export default function RaidIndexPage() {
     { key: "StellarManhunt", title: "星間包囲", href: "/raid/StellarManhunt", img: "/raid/StellarManhunt.PNG" },
     { key: "CalamityNo5", title: "厄災5号", href: "/raid/CalamityNo5", img: "/raid/CalamityNo5.PNG" },
     { key: "OperationCodenameAnchorLift", title: "作戦コード：「抜錨」", href: "/raid/OperationCodenameAnchorLift", img: "/raid/OperationCodenameAnchorLift.PNG" },
+    { key: "EvolutionBeyond", title: "超越進化", href: "/raid/EvolutionBeyond", img: "/raid/EvolutionBeyond.PNG" },
   ];
 
   return (
