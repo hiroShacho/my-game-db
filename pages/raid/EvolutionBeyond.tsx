@@ -277,7 +277,7 @@ export default function EvolutionBeyondPage() {
         <SectionTitle icon="group">攻めのタイミングはギミック対応の後</SectionTitle>
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
-この討伐では<span className="font-bold text-orange-600">1分ごと</span>に連続ギミックが飛んでくる。<br/ >
+この討伐では<span className="font-bold text-orange-600">1分ごと</span>に連続ギミックが飛んでくる。<br />
 この連続ギミックさえ超えれば次のギミックが来るまでの間は落ち着いて攻撃できる時間になるので、ギミック発動時は攻撃の手を止めてしっかり<span className="font-bold text-orange-600">ギミック対応に集中</span>しよう。勿論、戦闘開始直後はギミックが発動するまで普通に攻撃していて大丈夫だが、画面の表示を見てギミックが発動しているかどうかはしっかり確認するようにしよう。（2回目以降は説明が表示されないことも多いので最初のギミックが来た時間も覚えよう）
         </pre>
 
@@ -290,11 +290,19 @@ export default function EvolutionBeyondPage() {
         </pre>
 
         <SectionTitle icon="ondemand_video">解説動画</SectionTitle>
-        <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
-
-・準備中
-
-        </pre>
+        <div className="w-full flex justify-center my-4">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/neOxlWXf9rs"
+            title="解説動画"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded shadow border border-emerald-200"
+            style={{ maxWidth: "100%", aspectRatio: "16/9" }}
+          />
+        </div>
       </div>
     </>
   );

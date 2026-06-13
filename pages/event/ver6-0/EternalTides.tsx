@@ -209,12 +209,35 @@ export default function BrightonsSalvationPage() {
         />
 
         <SectionTitle icon="🏰">城塞バトル（2人マッチ、タワーディフェンス）【6/13～6/30】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_5.PNG"
+            alt="城塞バトル"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           1対1のタワーディフェンス。<br />
           カードからモンスターを召喚して戦わせ、相手のタワーを破壊したら勝ち。<br />
           前半はゆっくり目の進行だが、時間が半分を切ると召喚に使うエナジーの溜まりが加速する。<br />
           一度形成が傾くと中々逆転が難しいので攻めの姿勢を忘れずに。<br />
         </div>
+        <RowMedia
+          items={[
+            {
+              src: "/ver_event/New_Event_5_1.PNG",
+              alt: "カードからモンスターを召喚して戦う",
+              caption: "カードからモンスターを召喚して戦う",
+            },
+            {
+              src: "/ver_event/New_Event_5_2.PNG",
+              alt: "今回は事前のバフ要素も",
+              caption: "今回は事前のバフ要素も",
+            },
+          ]}
+        />
       </div>
     </>
   );

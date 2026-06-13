@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Ver535TestServer() {
   // 募集案内の初期状態は true/false で変更可能
-  const [showDetail, setShowDetail] = useState(false);
+  const [showDetail, setShowDetail] = useState(true);
 
   // 画像の横並び表示（2枚まで、それ以降は改行）
   function ImageRow({ images }: { images: { src: string; alt: string }[] }) {
@@ -34,8 +34,8 @@ export default function Ver535TestServer() {
   return (
     <>
       <Head>
-        <title>【幻塔攻略】Ver6.0先行テストサーバー | 幻塔攻略データベース</title>
-        <meta name="description" content="幻塔（Tower of Fantasy）のVer6.0先行テストサーバーの情報まとめページ。" />
+        <title>【幻塔攻略】Ver6.1先行テストサーバー | 幻塔攻略データベース</title>
+        <meta name="description" content="幻塔（Tower of Fantasy）のVer6.1先行テストサーバーの情報まとめページ。" />
       </Head>
       <div className="mx-auto max-w-3xl px-2 sm:px-4 py-8 space-y-6">
         <section>
@@ -53,7 +53,7 @@ export default function Ver535TestServer() {
             {showDetail && (
               <div className="mt-3">
                 <p className="text-base sm:text-lg mb-3">
-                  公式DiscordサーバーにてVer6.0先行テストサーバーの募集がスタートしました！
+                  公式DiscordサーバーにてVer6.1先行テストサーバーの募集がスタートしました！
                 </p>
                 <div className="mb-3">
                   <Image
@@ -91,8 +91,8 @@ export default function Ver535TestServer() {
                   />
                 </div>
                 <p className="mb-3">
-                  応募期間は2日(土)19時までなので、早めに応募しておきましょう！<br />
-                  応募フォームに書いてある情報によると、テストの開始は5月8日(金)からとなっています。
+                  応募期間は12日(金)19時までなので、早めに応募しておきましょう！<br />
+                  応募フォームに書いてある情報によると、テストの開始は6月17日(水)からとなっています。
                 </p>
                 <div className="mb-4 text-red-800 font-bold">
                   ※注意<br />
@@ -109,7 +109,7 @@ export default function Ver535TestServer() {
 
         {/* ▼▼▼ 追加情報 ▼▼▼ */}
         {/* 以下の追加情報セクションは非表示にしています。再表示するには false を true に戻してください。 */}
-        {true && (
+        {false && (
         <section className="space-y-8">
           {/* ■新キャラクター・ハルモフェウス！ */}
           <div>

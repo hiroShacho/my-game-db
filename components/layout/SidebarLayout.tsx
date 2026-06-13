@@ -12,19 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "一部武器説明やミニゲームなどの更新",
+    ],
+    date: "2026/06/13",
+  },
+  {
+    text: [
       "討伐作戦「",
       { label: "超越進化", href: "/raid/EvolutionBeyond" },
       "」のページを作成。\n",
     ],
     date: "2026/06/08",
-  },
-  {
-    text: [
-      "探索攻略「",
-      { label: "ロックハート：ベルナ島", href: "/map/Lockhart_EverspringIsland" },
-      "」のページを作成。（マップツールは未実装）\n",
-    ],
-    date: "2026/06/03",
   },
   {
     text: [
@@ -57,6 +55,7 @@ const latestContentsLinks = [
   { href: "/weapons/Neverrest", label: "ハルモフェウス武器：絶えざる調べ" },
   { href: "/event/ver6-0/EternalTides", label: "イベントミニゲーム：永生の潮" },
   { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート：ベルナ島" },
+  { href: "/raid/EvolutionBeyond", label: "限定討伐：超越進化" },
 ];
 
 // 追加: 新規・初心者向け項目
