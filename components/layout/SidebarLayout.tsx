@@ -12,17 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "一部武器説明やミニゲームなどの更新",
+      "「",
+      { label: "Ver6.1テストサーバー", href: "/event/ver6-0/ver6-1_testserver" },
+      "」の内容を更新。\n",
     ],
-    date: "2026/06/13",
+    date: "2026/06/18",
   },
   {
     text: [
-      "討伐作戦「",
-      { label: "超越進化", href: "/raid/EvolutionBeyond" },
-      "」のページを作成。\n",
+      "一部武器説明やミニゲームなどの更新",
     ],
-    date: "2026/06/08",
+    date: "2026/06/13",
   },
   {
     text: [
