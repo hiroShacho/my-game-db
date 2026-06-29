@@ -12,17 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「大陸版情報」を更新。ネタバレなので閲覧は自己責任でお願いします。",
+    ],
+    date: "2026/06/29",
+  },
+  {
+    text: [
       "「",
       { label: "Ver6.1テストサーバー", href: "/event/ver6-0/ver6-1_testserver" },
       "」の内容を更新。\n",
     ],
     date: "2026/06/18",
-  },
-  {
-    text: [
-      "一部武器説明やミニゲームなどの更新",
-    ],
-    date: "2026/06/13",
   },
   {
     text: [
