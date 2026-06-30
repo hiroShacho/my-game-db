@@ -167,7 +167,7 @@ export default function Home() {
         <section>
           <h2 className="text-lg sm:text-xl font-semibold mb-2">ver6.1の注目コンテンツ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* ver6.0アップデート情報まとめバナー */}
+            {/* ver6.1アップデート情報まとめバナー */}
             <Link href="/event/ver6-1/New_ver_info" className="block sm:col-span-2">
               <div
                 className="
@@ -277,7 +277,7 @@ export default function Home() {
                   transition-all duration-200
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.PNG')",
+                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
