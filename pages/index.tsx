@@ -10,7 +10,7 @@ import { raidCards } from "../data/raidCards";
 import weapons from "../data/weapons.json";
 
 const pickupWeaponIds = [
-  "w_72", "w_67", "w_63", "w_59", "w_54", "w_68", "w_58", "w_70", "w_65", "w_69", "w_64", "w_66", "w_62",
+  "w_73", "w_69", "w_64", "w_60", "w_55",
 ];
 
 function getWeaponDataById(id: string) {
@@ -30,34 +30,26 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "完全網羅データ：氷結の秩序", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 9, },
-  { label: "復刻：ナビゲーター", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 9, },
-  { label: "復刻：ドリームキャッチャー", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 9, },
-  { label: "復刻：きらめきインニス", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 9, end: 30, },
-  { label: "復刻：コスチュームガチャ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 9, end: 30, },
-  { label: "プレアバ：ハルモフェウス「スウィート・フォーカス」", color: "#ed2f2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 30, },
-  { label: "復刻プレアバセット：雷", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 9, end: 30, },
-  { label: "復刻プレアバセット：他属性", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 9, }
+  { label: "復刻：海風のささやき", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 18, },
+  { label: "復刻：海風の輪", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 18, },
+  { label: "ライドガチャ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
+  { label: "復刻プレアバセット：炎", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 31, },
 ];
 
-const GANTT_MONTH = 6;
+const GANTT_MONTH = 7;
 const GANTT_YEAR = 2026;
-const GANTT_DAYS = 30;
+const GANTT_DAYS = 31;
 
 const eventImages: (string | null)[] = [
-  "/ver_event/Outfit_FrostyOrder.PNG",
-  "/ver_event/Outfit_CosmosAvigator.PNG",
-  "/ver_event/Outfit_Dreamcatcher.PNG",
-  "/ver_event/Outfit_InnarsianFashion.PNG",
-  "/ver_event/Outfit_ALL.PNG",
-  "/ver_event/Simulacrum_Harmopheus.PNG",
-  "/ver_event/Simulacrum_Volt.PNG",
-  "/ver_event/Simulacrum_ALL.PNG",
+  "/ver_event/Outfit_SeabreezeWhispers.PNG",
+  "/ver_event/Outfit_SummerSeabreeze.PNG",
+  "/ver_event/Outfit_RideGcha.PNG",
+  "/ver_event/Simulacrum_Flame.PNG",
 ];
 
 const GIFT_CODES = [
-  { code: "519lockhart", desc: "（正式サーバー）Ver6.0バージョン引き換えコード", expire: "2026/06/30", },
-  { code: "519mmo", desc: "（Warpサーバー）Ver6.0バージョン引き換えコード", expire: "2026/06/30", },
+  { code: "準備中", desc: "（正式サーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
+  { code: "準備中", desc: "（Warpサーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
 ];
 
 export default function Home() {
@@ -173,10 +165,10 @@ export default function Home() {
 
         {/* 注目コンテンツ */}
         <section>
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver6.0の注目コンテンツ</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver6.1の注目コンテンツ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* ver6.0アップデート情報まとめバナー */}
-            <Link href="/event/ver6-0/New_ver_info" className="block sm:col-span-2">
+            <Link href="/event/ver6-1/New_ver_info" className="block sm:col-span-2">
               <div
                 className="
                   relative rounded-lg shadow-lg h-48 sm:h-64 flex items-center justify-center overflow-hidden group
@@ -192,7 +184,7 @@ export default function Home() {
               >
                 <Image
                   src="/ver_event/New_ver_top.png"
-                  alt="ver6.0アップデート情報まとめ"
+                  alt="ver6.1アップデート情報まとめ"
                   fill
                   sizes="100vw"
                   className="object-cover w-full h-full"
@@ -214,14 +206,14 @@ export default function Home() {
                 </div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-3xl sm:text-5xl font-bold text-white drop-shadow-lg bg-black/75 px-6 py-3 rounded-lg border border-pink-300">
-                    ver6.0アップデート情報まとめ
+                    ver6.1アップデート情報まとめ
                   </span>
                 </div>
               </div>
             </Link>
 
-            {/* ハルモフェウスの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
-            <Link href="/weapons/Neverrest" className="block">
+            {/* ボーンクラッシャーの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
+            <Link href="/weapons/Silverfang" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -240,22 +232,24 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    ハルモフェウス武器：絶えざる調べ
+                    ボーンクラッシャー武器：銀牙石
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    ハルモフェウスの武器詳細をチェック！
+                    ボーンクラッシャーの武器詳細をチェック！
                   </p>
                 </div>
               </div>
             </Link>
 
-{/* --- replace the "永生の潮" Link block with a non-clickable placeholder --- */}
-            <Link href="/event/ver6-0/EternalTides" className="block">
+{/* --- replace the "月影の秘城" Link block with a non-clickable placeholder --- */}
+            <Link href="/event/ver6-1/MoonshadowCitadel" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
-                  hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-pink-400
+                  hover:scale-105
+                  hover:shadow-2xl
+                  hover:ring-2 hover:ring-sky-400
                   cursor-pointer
                 "
                 style={{
@@ -264,10 +258,10 @@ export default function Home() {
                   backgroundPosition: "center top"
                 }}
               >
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-200" />
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    永生の潮
+                    月影の秘城
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
                     イベントミニゲームの詳細をチェック！
@@ -275,6 +269,29 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
+{/* --- replace the "Ver6.2テストサーバー" Link block with a non-clickable placeholder --- */}
+              <div
+                className="
+                  relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
+                  transition-all duration-200
+                "
+                style={{
+                  backgroundImage: "url('/ver_event/Event_pre_img.PNG')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center top"
+                }}
+              >
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
+                <div className="relative z-10 p-4">
+                  <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
+                    Ver6.2テストサーバー
+                  </h3>
+                  <p className="text-sm sm:text-base text-white drop-shadow">
+                    開催され次第更新
+                  </p>
+                </div>
+              </div>
 
 {/* --- replace the "探索攻略　ロックハート：ベルナ島" Link block with a non-clickable placeholder --- */}
             <Link href="/map/Lockhart_EverspringIsland" className="block">
@@ -303,32 +320,6 @@ export default function Home() {
               </div>
             </Link>
 
-{/* --- replace the "Ver6.1テストサーバー" Link block with a non-clickable placeholder --- */}
-            <Link href="/event/ver6-0/ver6-1_testserver" className="block">
-             <div
-               className="
-                 relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
-                 transition-all duration-200
-                 hover:scale-105 hover:shadow-2xl hover:ring-4 hover:ring-sky-400
-                 cursor-pointer
-               "
-               style={{
-                 backgroundImage: "url('/ver_event/New_Event_6.PNG')",
-                 backgroundSize: "cover",
-                 backgroundPosition: "center top"
-               }}
-             >
-               <div className="absolute inset-0 bg-blue-900/30 group-hover:bg-blue-900/40 transition-all duration-200" />
-               <div className="relative z-10 p-4">
-                 <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                   Ver6.1テストサーバー
-                 </h3>
-                 <p className="text-sm sm:text-base text-white drop-shadow">
-                   テストサーバーの詳細をチェック！
-                 </p>
-               </div>
-             </div>
-            </Link>
 
             <div className="sm:col-span-2">
               <GiftCodeList codes={GIFT_CODES} />
@@ -336,7 +327,7 @@ export default function Home() {
           </div>
           <div className="mt-8 space-y-6">
             <div>
-              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年6月 衣装・プレアバ ガチャスケジュール</h3>
+              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年7月 衣装・プレアバ ガチャスケジュール</h3>
               <GanttCalendar
                 events={GANTT_EVENTS}
                 images={eventImages}

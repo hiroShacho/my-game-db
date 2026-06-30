@@ -20,7 +20,7 @@ const PERIOD_LABELS = [
   { from: 37, to: 50, label: "Ver3.0～3.8（九域編）" },
   { from: 51, to: 60, label: "Ver4.0～4.8（ゴゾトス編）" },
   { from: 61, to: 71, label: "Ver5.0～5.8（キルオ編）" },
-  { from: 72, to: 72, label: "Ver6.0（ロックハート編）" },
+  { from: 72, to: 73, label: "Ver6.0～6.1（ロックハート編）" },
 ];
 
 function getPeriodLabel(idNum: number) {
