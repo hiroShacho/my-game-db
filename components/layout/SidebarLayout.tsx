@@ -12,17 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "「大陸版情報」を更新。ネタバレなので閲覧は自己責任でお願いします。",
+      "「",
+      { label: "Ver6.1アップデート情報まとめ", href: "/event/ver6-1/New_ver_info" },
+      "」の内容を更新。\nサイト全体の情報もVer6.1に合わせて更新。\n",
     ],
-    date: "2026/06/29",
+    date: "2026/06/30",
   },
   {
     text: [
-      "「",
-      { label: "Ver6.1テストサーバー", href: "/event/ver6-0/ver6-1_testserver" },
-      "」の内容を更新。\n",
+      "「大陸版情報」を更新。ネタバレなので閲覧は自己責任でお願いします。",
     ],
-    date: "2026/06/18",
+    date: "2026/06/29",
   },
   {
     text: [
@@ -51,11 +51,10 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/event/ver6-0/New_ver_info", label: "アップデート情報まとめ" },
-  { href: "/weapons/Neverrest", label: "ハルモフェウス武器：絶えざる調べ" },
-  { href: "/event/ver6-0/EternalTides", label: "イベントミニゲーム：永生の潮" },
+  { href: "/event/ver6-1/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/Silverfang", label: "ボーンクラッシャー武器：銀牙石" },
+  { href: "/event/ver6-1/MoonshadowCitadel", label: "イベントミニゲーム：月影の秘城" },
   { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート：ベルナ島" },
-  { href: "/raid/EvolutionBeyond", label: "限定討伐：超越進化" },
 ];
 
 // 追加: 新規・初心者向け項目

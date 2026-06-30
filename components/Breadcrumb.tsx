@@ -68,6 +68,9 @@ const excludePaths = [
   "ver5-8",
   "ver6-0",
   "ver6-1",
+  "ver6-2",
+  "ver6-3",
+  "ver6-4",
   "newbie",
 ];
 
@@ -148,6 +151,7 @@ const weaponNameMap: Record<string, string> = {
   "ChronoHeart":"時の心",
   "Charon":"カロン",
   "Neverrest":"絶えざる調べ",
+  "Silverfang":"銀牙石",
   //仮でボリションと特性はパンくずだけ変える
   "m_1": "エコー",
   "t_1": "エコー",

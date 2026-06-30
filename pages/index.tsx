@@ -48,8 +48,8 @@ const eventImages: (string | null)[] = [
 ];
 
 const GIFT_CODES = [
-  { code: "準備中", desc: "（正式サーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
-  { code: "準備中", desc: "（Warpサーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
+  { code: "630vigil", desc: "（正式サーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
+  { code: "630mmo", desc: "（Warpサーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
 ];
 
 export default function Home() {

@@ -26,7 +26,7 @@ export const raidCards: RaidCard[] = [
     key: "EvolutionBeyond",
     title: "超越進化",
     href: "/raid/EvolutionBeyond",
-    status: "開催中",
+    status: "未開催",
     img: "/raid/EvolutionBeyond.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",
