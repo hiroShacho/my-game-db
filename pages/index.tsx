@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ReactElement } from "react";
@@ -8,6 +8,7 @@ import { GiftCodeList } from "@/components/GiftCodeList";
 import Head from "next/head";
 import { raidCards } from "../data/raidCards";
 import weapons from "../data/weapons.json";
+import { FeaturedCarousel, FeaturedCarouselSlide } from "@/components/FeaturedCarousel";
 
 const pickupWeaponIds = [
   "w_73", "w_69", "w_64", "w_60", "w_55",
@@ -51,6 +52,34 @@ const GIFT_CODES = [
   { code: "630vigil", desc: "（正式サーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
   { code: "630mmo", desc: "（Warpサーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
 ];
+
+const FEATURED_SLIDES: FeaturedCarouselSlide[] = [
+  {
+    href: "/event/ver6-1/New_ver_info",
+    image: "/ver_event/New_ver_top.png",
+    title: "ver6.1アップデート情報まとめ",
+    description: "新要素・イベント・追加内容をまとめてチェック！",
+  },
+  {
+    href: "/weapons/Silverfang",
+    image: "/ver_event/New_Character.png",
+    title: "ボーンクラッシャー武器：銀牙石",
+    description: "武器性能・特徴をチェック！",
+  },
+  {
+    href: "/event/ver6-1/MoonshadowCitadel",
+    image: "/ver_event/New_Event_TOP.PNG",
+    title: "月影の秘城",
+    description: "イベントミニゲームの詳細をチェック！",
+  },
+  {
+    href: "/map/Lockhart_EverspringIsland",
+    image: "/ver_event/New_Map.PNG",
+    title: "ロックハート：ベルナ島",
+    description: "探索攻略の詳細をチェック！",
+  },
+];
+
 
 export default function Home() {
   // 討伐はカテゴリ「週討伐」のものを表示
@@ -168,49 +197,7 @@ export default function Home() {
           <h2 className="text-lg sm:text-xl font-semibold mb-2">ver6.1の注目コンテンツ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* ver6.1アップデート情報まとめバナー */}
-            <Link href="/event/ver6-1/New_ver_info" className="block sm:col-span-2">
-              <div
-                className="
-                  relative rounded-lg shadow-lg h-48 sm:h-64 flex items-center justify-center overflow-hidden group
-                  transition-all duration-200
-                  hover:scale-105 hover:shadow-2xl
-                  hover:ring-4 hover:ring-pink-400
-                  border-4 border-cyan-400
-                  cursor-pointer
-                "
-                style={{
-                  background: "linear-gradient(90deg, #4eeef8 0%, #f8b64e 100%)"
-                }}
-              >
-                <Image
-                  src="/ver_event/New_ver_top.png"
-                  alt="ver6.1アップデート情報まとめ"
-                  fill
-                  sizes="100vw"
-                  className="object-cover w-full h-full"
-                  style={{ objectPosition: "center" }}
-                  priority
-                />
-                <div className="absolute inset-0 bg-black/30 pointer-events-none" />
-                {/* 横線デザイン */}
-                <div className="absolute inset-0 pointer-events-none">
-                  {[...Array(32)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="absolute left-0 w-full h-[2px] bg-white/30"
-                      style={{
-                        top: `${(100 / 33) * (i + 1)}%`
-                      }}
-                    />
-                  ))}
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-3xl sm:text-5xl font-bold text-white drop-shadow-lg bg-black/75 px-6 py-3 rounded-lg border border-pink-300">
-                    ver6.1アップデート情報まとめ
-                  </span>
-                </div>
-              </div>
-            </Link>
+            <FeaturedCarousel slides={FEATURED_SLIDES} autoPlayMs={5000} />
 
             {/* ボーンクラッシャーの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
             <Link href="/weapons/Silverfang" className="block">

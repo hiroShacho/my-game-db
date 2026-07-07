@@ -12,17 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "注目コンテンツのレイアウトを試験的に変更。表示コンテンツは今後変更します。",
+    ],
+    date: "2026/07/07",
+  },
+  {
+    text: [
       "「",
       { label: "Ver6.1アップデート情報まとめ", href: "/event/ver6-1/New_ver_info" },
       "」の内容を更新。\nサイト全体の情報もVer6.1に合わせて更新。\n",
     ],
     date: "2026/06/30",
-  },
-  {
-    text: [
-      "「大陸版情報」を更新。ネタバレなので閲覧は自己責任でお願いします。",
-    ],
-    date: "2026/06/29",
   },
   {
     text: [

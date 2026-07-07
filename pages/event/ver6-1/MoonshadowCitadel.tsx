@@ -133,6 +133,15 @@ export default function BrightonsSalvationPage() {
         </div>
 
         <SectionTitle icon="🏁">スターロードレース（競馬、8人マッチ）【7/7～8/4】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_2.PNG"
+            alt="スターロードレース"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           8人マッチの競馬ゲーム。<br />
           マッチした内の4人が走る役としてレースに参加して、残りの4人は誰が勝つかを予想する。<br />
