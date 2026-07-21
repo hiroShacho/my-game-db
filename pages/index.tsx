@@ -258,13 +258,14 @@ export default function Home() {
             </Link>
 
 {/* --- replace the "Ver6.2テストサーバー" Link block with a non-clickable placeholder --- */}
+            <Link href="/event/ver6-1/ver6-2_testserver" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_6.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
@@ -275,10 +276,12 @@ export default function Home() {
                     Ver6.2テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    開催され次第更新
+                    テストサーバーの詳細をチェック！（開催前）
                   </p>
                 </div>
               </div>
+            </Link>
+
 
 {/* --- replace the "探索攻略　ロックハート：ベルナ島" Link block with a non-clickable placeholder --- */}
             <Link href="/map/Lockhart_EverspringIsland" className="block">

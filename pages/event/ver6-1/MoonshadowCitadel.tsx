@@ -149,13 +149,32 @@ export default function BrightonsSalvationPage() {
         </div>
 
         <SectionTitle icon="🎮">プロゲーマー（群衆擬態かくれんぼ、4人マッチ）【7/14～8/4】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_3.PNG"
+            alt="プロゲーマー"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           4人マッチの群衆に紛れるかくれんぼ。<br />
           周りのNPCと同じ動きをして隠れつつ、他の参加者の擬態を見破って撃破しよう。<br />
+          開始時にランダムで色違いのNPCが出現し、これを倒すと一気に1000ポイント稼げるので探してみよう。<br />
           ポイントのことだけを考えると4人で戦わずに落ちてくる貝殻を拾い続けるのが一番だったりする。<br />
         </div>
 
         <SectionTitle icon="🐺">狩獣の法則（戦闘、2人マッチ）【7/21～8/4】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_4.PNG"
+            alt="狩獣の法則"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           2人マッチの脱出ゲーム。<br />
           周囲から襲い来るモンスターを倒しながらボーンクラッシャーの脱出を手助けしよう。<br />
