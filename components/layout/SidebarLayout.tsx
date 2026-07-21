@@ -12,17 +12,20 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "注目コンテンツのレイアウトを試験的に変更。表示コンテンツは今後変更します。",
+      "「",
+      { label: "Ver6.2テストサーバー", href: "/event/ver6-1/ver6-2_testserver" },
+      "」の内容を更新。\n",
+      "イベントミニゲーム「",
+      { label: "月影の秘城", href: "/event/ver6-1/MoonshadowCitadel" },
+      "」の内容を更新。\n",
     ],
-    date: "2026/07/07",
+    date: "2026/07/21",
   },
   {
     text: [
-      "「",
-      { label: "Ver6.1アップデート情報まとめ", href: "/event/ver6-1/New_ver_info" },
-      "」の内容を更新。\nサイト全体の情報もVer6.1に合わせて更新。\n",
+      "注目コンテンツのレイアウトを試験的に変更。表示コンテンツは今後変更します。",
     ],
-    date: "2026/06/30",
+    date: "2026/07/07",
   },
   {
     text: [
