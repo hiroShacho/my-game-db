@@ -288,6 +288,13 @@ export default function Ver535TestServer() {
                 <XEmbed url="https://x.com/hiro28298793/status/2079839699833893374?s=20" />
               </div>
 
+              <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+                <li>原鉱・清品の追加（既存の原鉱の上位互換）</li>
+              </ul>
+              <div className="mb-3">
+                <XEmbed url="https://x.com/hiro28298793/status/2080207359138574439?s=20" />
+              </div>
+
             </div>
           </section>
         )}
