@@ -61,22 +61,16 @@ const FEATURED_SLIDES: FeaturedCarouselSlide[] = [
     description: "新要素・イベント・追加内容をまとめてチェック！",
   },
   {
-    href: "/weapons/Silverfang",
-    image: "/ver_event/New_Character.png",
-    title: "ボーンクラッシャー武器：銀牙石",
-    description: "武器性能・特徴をチェック！",
-  },
-  {
     href: "/event/ver6-1/MoonshadowCitadel",
     image: "/ver_event/New_Event_TOP.PNG",
     title: "月影の秘城",
     description: "イベントミニゲームの詳細をチェック！",
   },
   {
-    href: "/map/Lockhart_EverspringIsland",
-    image: "/ver_event/New_Map.PNG",
-    title: "ロックハート：ベルナ島",
-    description: "探索攻略の詳細をチェック！",
+    href: "/event/ver6-1/ver6-2_testserver",
+    image: "/ver_event/New_Event_6.PNG",
+    title: "Ver6.2テストサーバー",
+    description: "テストサーバーの詳細をチェック！",
   },
 ];
 

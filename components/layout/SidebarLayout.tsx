@@ -12,6 +12,16 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+
+      "「",
+      { label: "Ver6.2テストサーバー", href: "/event/ver6-1/ver6-2_testserver" },
+      "」の内容を更新。\n",
+    ],
+    date: "2026/07/23",
+  },
+  {
+    text: [
+
       "「",
       { label: "Ver6.2テストサーバー", href: "/event/ver6-1/ver6-2_testserver" },
       "」の内容を更新。\n",
@@ -20,12 +30,6 @@ const sidebarNewsItems = [
       "」の内容を更新。\n",
     ],
     date: "2026/07/21",
-  },
-  {
-    text: [
-      "注目コンテンツのレイアウトを試験的に変更。表示コンテンツは今後変更します。",
-    ],
-    date: "2026/07/07",
   },
   {
     text: [
@@ -58,6 +62,7 @@ const latestContentsLinks = [
   { href: "/weapons/Silverfang", label: "ボーンクラッシャー武器：銀牙石" },
   { href: "/event/ver6-1/MoonshadowCitadel", label: "イベントミニゲーム：月影の秘城" },
   { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート：ベルナ島" },
+  { href: "/event/ver6-1/ver6-2_testserver", label: "Ver6.2テストサーバー" },
 ];
 
 // 追加: 新規・初心者向け項目

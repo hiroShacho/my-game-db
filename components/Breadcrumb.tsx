@@ -152,6 +152,7 @@ const weaponNameMap: Record<string, string> = {
   "Charon":"カロン",
   "Neverrest":"絶えざる調べ",
   "Silverfang":"銀牙石",
+  "FairyWreath":"フェアリーリング",
   //仮でボリションと特性はパンくずだけ変える
   "m_1": "エコー",
   "t_1": "エコー",
@@ -291,6 +292,8 @@ const weaponNameMap: Record<string, string> = {
   "t_68": "ハルモフェウス",
   "m_69": "ボーンクラッシャー",
   "t_69": "ボーンクラッシャー",
+  "m_70": "ゲルフィン",
+  "t_70": "ゲルフィン",
   "r_1": "フロスト砲",
   "r_2": "ジェットパック",
   "r_3": "溶岩爆弾",
