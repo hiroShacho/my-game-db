@@ -197,8 +197,8 @@ export default function KailoBrightonZoneEXpointPage() {
           onClick={openModal}
         />
         <div>
-          武器についても<span className="font-bold text-orange-600">ヴェラ時空の武器が強い</span>ように調整がされており、
-          <span className="font-bold text-orange-600">PVPの武器バランスに近い</span>仕様となっている。（九域は微妙なものが多い）
+          Ver6.1以前は<span className="font-bold text-orange-600">ヴェラ時空の武器が強い</span>ように調整がされていたが、Ver6.1からは
+          <span className="font-bold text-orange-600">最新武器でもダメージを出せる</span>ようになっている。
           <br />
           アルケーが使用できない代わりにロックハート専用のシステム「
           <span className="font-bold text-orange-600">マキナ・ベスティアリア</span>」が使用可能だぞ！
@@ -208,8 +208,8 @@ export default function KailoBrightonZoneEXpointPage() {
           images={[
             {
               src: "/map/Lockhart_EverspringIsland_3.mp4",
-              alt: "最近の武器だけでなくヴェラ時空の武器も強めだぞ！",
-              caption: "最近の武器だけでなくヴェラ時空の武器も強めだぞ！",
+              alt: "Ver6.1より前はヴェラ武器が強かった",
+              caption: "Ver6.1より前はヴェラ武器が強かった",
             },
             {
               src: "/map/Lockhart_EverspringIsland_4.mp4",
