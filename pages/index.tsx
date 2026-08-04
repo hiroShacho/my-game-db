@@ -51,7 +51,7 @@ const eventImages: (string | null)[] = [
   "/ver_event/Outfit_ALL.PNG",
   "/ver_event/Simulacrum_Gefion.PNG",
   "/ver_event/Simulacrum_ALL.PNG",
-  "/ver_event/Simulacrum_Frost.PNG",
+  "/ver_event/Simulacrum_FROST.PNG",
 ];
 
 const GIFT_CODES = [
