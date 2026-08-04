@@ -12,24 +12,11 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-
       "「",
-      { label: "Ver6.2テストサーバー", href: "/event/ver6-1/ver6-2_testserver" },
+      { label: "Ver6.2アップデート情報まとめ", href: "/event/ver6-2/New_ver_info" },
       "」の内容を更新。\n",
     ],
-    date: "2026/07/23",
-  },
-  {
-    text: [
-
-      "「",
-      { label: "Ver6.2テストサーバー", href: "/event/ver6-1/ver6-2_testserver" },
-      "」の内容を更新。\n",
-      "イベントミニゲーム「",
-      { label: "月影の秘城", href: "/event/ver6-1/MoonshadowCitadel" },
-      "」の内容を更新。\n",
-    ],
-    date: "2026/07/21",
+    date: "2026/08/04",
   },
   {
     text: [
@@ -58,11 +45,10 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/event/ver6-1/New_ver_info", label: "アップデート情報まとめ" },
-  { href: "/weapons/Silverfang", label: "ボーンクラッシャー武器：銀牙石" },
-  { href: "/event/ver6-1/MoonshadowCitadel", label: "イベントミニゲーム：月影の秘城" },
+  { href: "/event/ver6-2/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/FairyWreath", label: "ゲルフィン武器：フェアリーリング" },
+  { href: "/event/ver6-2/SummerFest", label: "イベントミニゲーム：夏夢遊園" },
   { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート：ベルナ島" },
-  { href: "/event/ver6-1/ver6-2_testserver", label: "Ver6.2テストサーバー" },
 ];
 
 // 追加: 新規・初心者向け項目

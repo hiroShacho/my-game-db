@@ -11,7 +11,7 @@ import weapons from "../data/weapons.json";
 import { FeaturedCarousel, FeaturedCarouselSlide } from "@/components/FeaturedCarousel";
 
 const pickupWeaponIds = [
-  "w_73", "w_69", "w_64", "w_60", "w_55",
+  "w_74", "w_70", "w_65", "w_61","w_56", "w_68", "w_72", "w_67", "w_63", "w_71", "w_66", "w_62", "w_69", "w_64",
 ];
 
 function getWeaponDataById(id: string) {
@@ -31,46 +31,46 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "復刻：海風のささやき", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 18, },
-  { label: "復刻：海風の輪", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 18, },
-  { label: "ライドガチャ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "復刻プレアバセット：炎", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 31, },
+  { label: "完全網羅データ：「夏のときめき」", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 4, end: 25, },
+  { label: "復刻：オリジナル・サマー", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 4, end: 25, },
+  { label: "復刻：海塩スターコーデ（8/25～9/15開催）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
+  { label: "復刻コスチュームガチャセット（8/25～9/15開催）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
+  { label: "プレアバ：ゲルフィン", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 4, end: 31, },
+  { label: "復刻プレアバセット：すべて", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 4, end: 25, },
+  { label: "復刻プレアバセット：氷（8/25～9/15開催）", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 31, },
 ];
 
-const GANTT_MONTH = 7;
+const GANTT_MONTH = 8;
 const GANTT_YEAR = 2026;
 const GANTT_DAYS = 31;
 
 const eventImages: (string | null)[] = [
-  "/ver_event/Outfit_SeabreezeWhispers.PNG",
-  "/ver_event/Outfit_SummerSeabreeze.PNG",
-  "/ver_event/Outfit_RideGcha.PNG",
-  "/ver_event/Simulacrum_Flame.PNG",
+  "/ver_event/Outfit_SummerEncounter.PNG",
+  "/ver_event/Outfit_SummerSpecial.PNG",
+  "/ver_event/Outfit_CosmicCoast.PNG",
+  "/ver_event/Outfit_ALL.PNG",
+  "/ver_event/Simulacrum_Gefion.PNG",
+  "/ver_event/Simulacrum_ALL.PNG",
+  "/ver_event/Simulacrum_Frost.PNG",
 ];
 
 const GIFT_CODES = [
-  { code: "630vigil", desc: "（正式サーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
-  { code: "630mmo", desc: "（Warpサーバー）Ver6.1バージョン引き換えコード", expire: "2026/08/04", },
+  { code: "", desc: "（正式サーバー）Ver6.2バージョン引き換えコード", expire: "2026/08/25", },
+  { code: "", desc: "（Warpサーバー）Ver6.2バージョン引き換えコード", expire: "2026/08/25", },
 ];
 
 const FEATURED_SLIDES: FeaturedCarouselSlide[] = [
   {
-    href: "/event/ver6-1/New_ver_info",
+    href: "/event/ver6-2/New_ver_info",
     image: "/ver_event/New_ver_top.png",
-    title: "ver6.1アップデート情報まとめ",
+    title: "ver6.2アップデート情報まとめ",
     description: "新要素・イベント・追加内容をまとめてチェック！",
   },
   {
-    href: "/event/ver6-1/MoonshadowCitadel",
+    href: "/event/ver6-2/SummerFest",
     image: "/ver_event/New_Event_TOP.PNG",
-    title: "月影の秘城",
+    title: "夏夢遊園",
     description: "イベントミニゲームの詳細をチェック！",
-  },
-  {
-    href: "/event/ver6-1/ver6-2_testserver",
-    image: "/ver_event/New_Event_6.PNG",
-    title: "Ver6.2テストサーバー",
-    description: "テストサーバーの詳細をチェック！",
   },
 ];
 
@@ -188,13 +188,13 @@ export default function Home() {
 
         {/* 注目コンテンツ */}
         <section>
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver6.1の注目コンテンツ</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver6.2の注目コンテンツ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {/* ver6.1アップデート情報まとめバナー */}
+            {/* ver6.2アップデート情報まとめバナー */}
             <FeaturedCarousel slides={FEATURED_SLIDES} autoPlayMs={5000} />
 
-            {/* ボーンクラッシャーの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
-            <Link href="/weapons/Silverfang" className="block">
+            {/* ゲルフィンの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
+            <Link href="/weapons/FairyWreath" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -213,17 +213,17 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    ボーンクラッシャー武器：銀牙石
+                    ゲルフィン武器：フェアリーリング
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    ボーンクラッシャーの武器詳細をチェック！
+                    ゲルフィンの武器詳細をチェック！
                   </p>
                 </div>
               </div>
             </Link>
 
-{/* --- replace the "月影の秘城" Link block with a non-clickable placeholder --- */}
-            <Link href="/event/ver6-1/MoonshadowCitadel" className="block">
+{/* --- replace the "夏夢遊園" Link block with a non-clickable placeholder --- */}
+            <Link href="/event/ver6-2/SummerFest" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -242,7 +242,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    月影の秘城
+                    夏夢遊園
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
                     イベントミニゲームの詳細をチェック！
@@ -251,15 +251,15 @@ export default function Home() {
               </div>
             </Link>
 
-{/* --- replace the "Ver6.2テストサーバー" Link block with a non-clickable placeholder --- */}
-            <Link href="/event/ver6-1/ver6-2_testserver" className="block">
+{/* --- replace the "Ver6.3テストサーバー" Link block with a non-clickable placeholder --- */}
+
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/New_Event_6.PNG')",
+                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
@@ -267,14 +267,13 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    Ver6.2テストサーバー
+                    Ver6.3テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
                     テストサーバーの詳細をチェック！（開催前）
                   </p>
                 </div>
               </div>
-            </Link>
 
 
 {/* --- replace the "探索攻略　ロックハート：ベルナ島" Link block with a non-clickable placeholder --- */}
