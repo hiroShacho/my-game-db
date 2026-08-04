@@ -55,8 +55,8 @@ const eventImages: (string | null)[] = [
 ];
 
 const GIFT_CODES = [
-  { code: "", desc: "（正式サーバー）Ver6.2バージョン引き換えコード", expire: "2026/08/25", },
-  { code: "", desc: "（Warpサーバー）Ver6.2バージョン引き換えコード", expire: "2026/08/25", },
+  { code: "804anniversary", desc: "（正式サーバー）Ver6.2バージョン引き換えコード", expire: "2026/09/15", },
+  { code: "804mmo", desc: "（Warpサーバー）Ver6.2バージョン引き換えコード", expire: "2026/09/15", },
 ];
 
 const FEATURED_SLIDES: FeaturedCarouselSlide[] = [
@@ -310,7 +310,7 @@ export default function Home() {
           </div>
           <div className="mt-8 space-y-6">
             <div>
-              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年7月 衣装・プレアバ ガチャスケジュール</h3>
+              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年8月 衣装・プレアバ ガチャスケジュール</h3>
               <GanttCalendar
                 events={GANTT_EVENTS}
                 images={eventImages}
