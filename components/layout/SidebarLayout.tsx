@@ -12,6 +12,12 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「大陸版情報」を更新。ネタバレなので自己責任で閲覧してください。",
+    ],
+    date: "2026/08/09",
+  },
+  {
+    text: [
       "「",
       { label: "Ver6.2アップデート情報まとめ", href: "/event/ver6-2/New_ver_info" },
       "」の内容を更新。\n",
