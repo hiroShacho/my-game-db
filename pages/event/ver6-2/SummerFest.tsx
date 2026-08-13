@@ -136,9 +136,18 @@ export default function BrightonsSalvationPage() {
         </div>
 
         <SectionTitle icon="💧">爽快インパクト（水弾PVP、8人マッチ）【8/13～9/15】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_2.PNG"
+            alt="爽快インパクト"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           8人マッチの水弾PVP。<br />
-          Mi-aになって水弾とスキルを駆使して他プレイヤーを全員撃破しよう。<br />
+          Mi-a等になって水弾とスキルを駆使して他プレイヤーを全員撃破しよう。<br />
           ジャンプしながらの射撃で相手をかく乱しながら戦おう。<br />
         </div>
 
