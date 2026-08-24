@@ -152,6 +152,15 @@ export default function BrightonsSalvationPage() {
         </div>
 
         <SectionTitle icon="🍍">生存同名（フルーツ争奪戦、8人マッチ）【8/22～9/15】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_3.PNG"
+            alt="生存同名"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           8人マッチのフルーツ争奪戦。<br />
           2人で協力してフィールド上のフルーツを拾い集めながら他のプレイヤーを倒して1位を目指そう。<br />

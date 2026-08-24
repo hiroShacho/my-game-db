@@ -12,11 +12,11 @@ export type RaidCard = {
 
 export const raidCards: RaidCard[] = [
   {
-    key: "BlackJadeWarrior",
-    title: "玄玉凶兵",
-    href: "/raid/BlackJadeWarrior",
+    key: "OperationCodenameAnchorLift",
+    title: "作戦コード：「抜錨」",
+    href: "/raid/OperationCodenameAnchorLift",
     status: "開催中",
-    img: "/raid/BlackJadeWarrior.PNG",
+    img: "/raid/OperationCodenameAnchorLift.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
