@@ -23,11 +23,11 @@ export const raidCards: RaidCard[] = [
     category: "週討伐", // ★
   },
   {
-    key: "EvolutionBeyond",
-    title: "超越進化",
-    href: "/raid/EvolutionBeyond",
-    status: "未開催",
-    img: "/raid/EvolutionBeyond.PNG",
+    key: "ManicGodFavored",
+    title: "暴走する神眷",
+    href: "/raid/ManicGodFavored",
+    status: "開催中",
+    img: "/raid/ManicGodFavored.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",
     badgeTextColor: "text-yellow-900",
@@ -68,5 +68,7 @@ export const raidCards: RaidCard[] = [
 //OperationCodenameAnchorLift
 //超越進化
 //EvolutionBeyond
+//暴走する神眷
+//ManicGodFavored
 // ------------------------------------------------------------
 // 必要に応じてここに追加・編集してコピペで使ってください

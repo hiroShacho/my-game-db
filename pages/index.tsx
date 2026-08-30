@@ -72,6 +72,12 @@ const FEATURED_SLIDES: FeaturedCarouselSlide[] = [
     title: "夏夢遊園",
     description: "イベントミニゲームの詳細をチェック！",
   },
+  {
+    href: "/raid/ManicGodFavored",
+    image: "/raid/ManicGodFavored_img.PNG",
+    title: "暴走する神眷",
+    description: "限定討伐の詳細をチェック！",
+  },
 ];
 
 

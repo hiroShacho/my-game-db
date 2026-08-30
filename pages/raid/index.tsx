@@ -26,6 +26,7 @@ export default function RaidIndexPage() {
     { key: "CalamityNo5", title: "厄災5号", href: "/raid/CalamityNo5", img: "/raid/CalamityNo5.PNG" },
     { key: "OperationCodenameAnchorLift", title: "作戦コード：「抜錨」", href: "/raid/OperationCodenameAnchorLift", img: "/raid/OperationCodenameAnchorLift.PNG" },
     { key: "EvolutionBeyond", title: "超越進化", href: "/raid/EvolutionBeyond", img: "/raid/EvolutionBeyond.PNG" },
+    { key: "ManicGodFavored", title: "暴走する神眷", href: "/raid/ManicGodFavored", img: "/raid/ManicGodFavored.PNG" },
   ];
 
   return (

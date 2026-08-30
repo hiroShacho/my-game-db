@@ -50,6 +50,7 @@ const labelMap: Record<string, string> = {
   "CalamityNo5":"厄災5号",
   "OperationCodenameAnchorLift":"作戦コード：「抜錨」",
   "EvolutionBeyond":"超越進化",
+  "ManicGodFavored":"暴走する神眷",
   // 必要に応じて追加
 };
 

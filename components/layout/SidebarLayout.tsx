@@ -12,17 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "「大陸版情報」を更新。ネタバレなので自己責任で閲覧してください。",
+      "討伐作戦「",
+      { label: "暴走する神眷", href: "/raid/ManicGodFavored" },
+      "」のページを作成。\n",
     ],
-    date: "2026/08/09",
+    date: "2026/08/30",
   },
   {
     text: [
-      "「",
-      { label: "Ver6.2アップデート情報まとめ", href: "/event/ver6-2/New_ver_info" },
-      "」の内容を更新。\n",
+      "「大陸版情報」を更新。ネタバレなので自己責任で閲覧してください。",
     ],
-    date: "2026/08/04",
+    date: "2026/08/09",
   },
   {
     text: [
@@ -54,6 +54,7 @@ const latestContentsLinks = [
   { href: "/event/ver6-2/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/FairyWreath", label: "ゲルフィン武器：フェアリーリング" },
   { href: "/event/ver6-2/SummerFest", label: "イベントミニゲーム：夏夢遊園" },
+  { href: "/raid/ManicGodFavored", label: "限定討伐：暴走する神眷" },
   { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート：ベルナ島" },
 ];
 
