@@ -12,11 +12,11 @@ export type RaidCard = {
 
 export const raidCards: RaidCard[] = [
   {
-    key: "OperationCodenameAnchorLift",
-    title: "作戦コード：「抜錨」",
-    href: "/raid/OperationCodenameAnchorLift",
+    key: "SwarmGuard",
+    title: "ガードバグ陣",
+    href: "/raid/SwarmGuard",
     status: "開催中",
-    img: "/raid/OperationCodenameAnchorLift.PNG",
+    img: "/raid/SwarmGuard.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
