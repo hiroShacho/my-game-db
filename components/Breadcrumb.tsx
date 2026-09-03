@@ -154,6 +154,7 @@ const weaponNameMap: Record<string, string> = {
   "Neverrest":"絶えざる調べ",
   "Silverfang":"銀牙石",
   "FairyWreath":"フェアリーリング",
+  "Rosebud":"ジェンマローザ",
   //仮でボリションと特性はパンくずだけ変える
   "m_1": "エコー",
   "t_1": "エコー",

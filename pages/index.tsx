@@ -31,26 +31,20 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "完全網羅データ：「夏のときめき」", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 4, end: 25, },
-  { label: "復刻：オリジナル・サマー", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 4, end: 25, },
-  { label: "復刻：海塩スターコーデ（8/25～9/15開催）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "復刻コスチュームガチャセット（8/25～9/15開催）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "プレアバ：ゲルフィン", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 4, end: 31, },
-  { label: "復刻プレアバセット：すべて", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 4, end: 25, },
-  { label: "復刻プレアバセット：氷（8/25～9/15開催）", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 31, },
+  { label: "復刻：海塩スターコーデ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 15, },
+  { label: "復刻コスチュームガチャセット", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 15, },
+  { label: "プレアバ：ゲルフィン", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 15, },
+  { label: "復刻プレアバセット：氷（8/25～9/15開催）", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 15, },
 ];
 
-const GANTT_MONTH = 8;
+const GANTT_MONTH = 9;
 const GANTT_YEAR = 2026;
-const GANTT_DAYS = 31;
+const GANTT_DAYS = 30;
 
 const eventImages: (string | null)[] = [
-  "/ver_event/Outfit_SummerEncounter.PNG",
-  "/ver_event/Outfit_SummerSpecial.PNG",
   "/ver_event/Outfit_CosmicCoast.PNG",
   "/ver_event/Outfit_ALL.PNG",
   "/ver_event/Simulacrum_Gefion.PNG",
-  "/ver_event/Simulacrum_ALL.PNG",
   "/ver_event/Simulacrum_FROST.PNG",
 ];
 
@@ -258,14 +252,14 @@ export default function Home() {
             </Link>
 
 {/* --- replace the "Ver6.3テストサーバー" Link block with a non-clickable placeholder --- */}
-
+            <Link href="/event/ver6-2/ver6-3_testserver" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_6.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
@@ -276,11 +270,11 @@ export default function Home() {
                     Ver6.3テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    テストサーバーの詳細をチェック！（開催前）
+                    テストサーバーの詳細をチェック！
                   </p>
                 </div>
               </div>
-
+            </Link>
 
 {/* --- replace the "探索攻略　ロックハート：ベルナ島" Link block with a non-clickable placeholder --- */}
             <Link href="/map/Lockhart_EverspringIsland" className="block">

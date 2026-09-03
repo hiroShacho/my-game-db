@@ -94,10 +94,10 @@ export default function Ver535TestServer() {
   return (
     <>
       <Head>
-        <title>【幻塔攻略】Ver6.2先行テストサーバー | 幻塔攻略データベース</title>
+        <title>【幻塔攻略】Ver6.3先行テストサーバー | 幻塔攻略データベース</title>
         <meta
           name="description"
-          content="幻塔（Tower of Fantasy）のVer6.2先行テストサーバーの情報まとめページ。"
+          content="幻塔（Tower of Fantasy）のVer6.3先行テストサーバーの情報まとめページ。"
         />
       </Head>
 
@@ -118,7 +118,7 @@ export default function Ver535TestServer() {
             {showDetail && (
               <div className="mt-3">
                 <p className="text-base sm:text-lg mb-3">
-                  公式DiscordサーバーにてVer6.2先行テストサーバーの募集がスタートしました！
+                  公式DiscordサーバーにてVer6.3先行テストサーバーの募集がスタートしました！
                 </p>
 
                 <CaptionedMedia
@@ -149,9 +149,9 @@ export default function Ver535TestServer() {
                 />
 
                 <p className="mb-3">
-                  応募期間は17日(金)19時までなので、早めに応募しておきましょう！
+                  応募期間は27日(木)11時までなので、早めに応募しておきましょう！
                   <br />
-                  応募フォームに書いてある情報によると、テストの開始は7月22日(水)からとなっています。
+                  応募フォームに書いてある情報によると、テストの開始は9月2日(水)からとなっています。
                 </p>
 
                 <div className="mb-4 text-red-800 font-bold">
@@ -179,10 +179,10 @@ export default function Ver535TestServer() {
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <span className="font-bold text-base sm:text-lg">
-                  ■新キャラクター・ゲルフィン！
+                  ■新キャラクター・ゾーイ！
                 </span>
                 <Link
-                  href="/event/ver6-1/NewChara"
+                  href="/event/ver6-2/NewChara"
                   className="text-blue-700 hover:underline font-semibold text-sm"
                 >
                   キャラ詳細ページはこちら
@@ -191,12 +191,12 @@ export default function Ver535TestServer() {
 
               <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
                 <Link
-                  href="/event/ver6-1/NewChara"
+                  href="/event/ver6-2/NewChara"
                   className="flex-shrink-0 block"
                 >
                   <Image
                     src="/ver_event/New_Event_6_3.PNG"
-                    alt="ゲルフィンイベント画像"
+                    alt="ゾーイイベント画像"
                     width={640}
                     height={360}
                     className="rounded shadow object-contain w-full h-auto"
@@ -207,93 +207,108 @@ export default function Ver535TestServer() {
             </div>
 
             <div>
+              <div className="mb-3">
+                <span className="font-bold text-base sm:text-lg">
+                  ■各種モーション
+                </span>
+                <XEmbed url="https://x.com/hiro28298793/status/2095046948726473085?s=20" />
+              </div>
+            </div>
+
+            <div>
+              <div className="mb-3">
+                <span className="font-bold text-base sm:text-lg">
+                  ■ゾーイ：プレミアムアバター
+                </span>
+               <MediaRow
+                items={[
+                  { src: "/ver_event/New_Event_6_4.PNG", alt: "ゾーイプレアバ" },
+                ]}
+               />
+              </div>
+            </div>
+
+            <div>
               <div className="font-bold text-base sm:text-lg mb-2">
                 ■各種コンテンツ追加
               </div>
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>ロックハートに「アエテルナ島」追加！（ミニゲーム有り、探索はほぼ無し）</li>
+                <li>ストーリー32章追加</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_4.PNG", alt: "アエテルナ島" },
-                ]}
-              />
-              <MediaRow
-                items={[
-                  { src: "/ver_event/New_Event_6_14.PNG", alt: "交換所" },
+                  { src: "/ver_event/New_Event_6_5.PNG", alt: "ストーリー32章" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>ワールドボス「水槽の中の脳」追加</li>
+                <li>グレイフォックス恒常入り（クローディア・ストームアイは次バージョンになりそう）</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_5.PNG", alt: "水槽の中の脳" },
+                  { src: "/ver_event/New_Event_6_6.PNG", alt: "グレフォ" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>アスラーダ恒常入り（グレイフォックスは次バージョンになりそう）</li>
+                <li>グレイフォックスのプレアバ追加？（イベントミニゲームの商店で入手できるらしい）</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_6.PNG", alt: "アスラーダ" },
+                  { src: "/ver_event/New_Event_6_7.PNG", alt: "グレフォプレアバ" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>先鋒クラッシュ・朱厭追加</li>
+                <li>先鋒クラッシュ：ハバカ追加</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_7.PNG", alt: "朱厭" },
+                  { src: "/ver_event/New_Event_6_8.PNG", alt: "ハバカ" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>超速演算レベル上限解放（レベル16～20）</li>
+                <li>在りし日の幻・超域：84階追加</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_8.PNG", alt: "超速演算" },
+                  { src: "/ver_event/New_Event_6_9.PNG", alt: "在りし日" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>SS機能に様々なアップデートが追加</li>
+                <li>幻影の序列・四属性35階：バルバロッサ追加</li>
               </ul>
-              <div className="mb-3">
-                <XEmbed url="https://x.com/hiro28298793/status/2079832073867862291?s=20" />
-              </div>
+              <MediaRow
+                items={[
+                  { src: "/ver_event/New_Event_6_10.PNG", alt: "バルバロッサ" },
+                ]}
+              />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>宿舎「バニーガール・ドリームショー」追加</li>
+                <li>カメラモードにアルバム機能が追加</li>
               </ul>
-              <div className="mb-3">
-                <XEmbed url="https://x.com/hiro28298793/status/2079834855236599841?s=20" />
-              </div>
+              <MediaRow
+                items={[
+                  { src: "/ver_event/New_Event_6_11.PNG", alt: "アルバム機能1" },
+                ]}
+              />
+              <MediaRow
+                items={[
+                  { src: "/ver_event/New_Event_6_12.PNG", alt: "アルバム機能2" },
+                ]}
+              />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>ミニゲーム「ブレない相棒」「一発入魂」「トップハンター」等追加</li>
+                <li>アエテルナ島改装中？</li>
               </ul>
-              <div className="mb-3">
-                <XEmbed url="https://x.com/hiro28298793/status/2079826871962021933?s=20" />
-              </div>
-              <div className="mb-3">
-                <XEmbed url="https://x.com/hiro28298793/status/2079826875007000693?s=20" />
-              </div>
-              <div className="mb-3">
-                <XEmbed url="https://x.com/hiro28298793/status/2079839699833893374?s=20" />
-              </div>
-
-              <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>原鉱・清品の追加（既存の原鉱の上位互換）</li>
-              </ul>
-              <div className="mb-3">
-                <XEmbed url="https://x.com/hiro28298793/status/2080207359138574439?s=20" />
-              </div>
+              <MediaRow
+                items={[
+                  { src: "/ver_event/New_Event_6_13.PNG", alt: "アエテルナ島改装" },
+                ]}
+              />
 
             </div>
           </section>
