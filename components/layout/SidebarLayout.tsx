@@ -12,19 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「大陸版情報」にテスト中の新キャラクターの情報を掲載。ネタバレなので閲覧は自己責任でお願いします。\n",
+    ],
+    date: "2026/09/12",
+  },
+  {
+    text: [
       "「",
       { label: "Ver6.3テストサーバー", href: "/event/ver6-2/ver6-3_testserver" },
       "」のページを作成。\n",
     ],
     date: "2026/09/03",
-  },
-  {
-    text: [
-      "討伐作戦「",
-      { label: "暴走する神眷", href: "/raid/ManicGodFavored" },
-      "」のページを作成。\n",
-    ],
-    date: "2026/08/30",
   },
   {
     text: [
