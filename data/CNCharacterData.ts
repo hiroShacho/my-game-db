@@ -858,6 +858,9 @@ export const cnCharacterData: Record<string, CNCharacter> = {
     },
     avatarTrait: `最終ダメージ+18%\n連携スキルのフィールド内にいる味方は毎秒最大HP2.5%を回復する。`,
   },
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9232472e737a45628c961e6bbffc1e9f4c22b9c6
   // 他キャラもここに追加
 };
