@@ -12,17 +12,11 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "「大陸版情報」にテスト中の新キャラクターの情報を掲載。ネタバレなので閲覧は自己責任でお願いします。\n",
-    ],
-    date: "2026/09/12",
-  },
-  {
-    text: [
       "「",
-      { label: "Ver6.3テストサーバー", href: "/event/ver6-2/ver6-3_testserver" },
+      { label: "Ver6.3アップデート情報まとめ", href: "/event/ver6-3/New_ver_info" },
       "」のページを作成。\n",
     ],
-    date: "2026/09/03",
+    date: "2026/09/16",
   },
   {
     text: [
@@ -51,11 +45,9 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/event/ver6-2/New_ver_info", label: "アップデート情報まとめ" },
-  { href: "/weapons/FairyWreath", label: "ゲルフィン武器：フェアリーリング" },
-  { href: "/event/ver6-2/SummerFest", label: "イベントミニゲーム：夏夢遊園" },
-  { href: "/raid/ManicGodFavored", label: "限定討伐：暴走する神眷" },
-  { href: "/event/ver6-2/ver6-3_testserver", label: "Ver6.3テストサーバー" },
+  { href: "/event/ver6-3/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/Rosebud", label: "ゾーイ武器：ジェンマローザ" },
+  { href: "/event/ver6-3/SummerWonderland", label: "イベントミニゲーム：夏の叙事詩" },
   { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート：ベルナ島" },
 ];
 

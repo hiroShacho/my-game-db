@@ -26,7 +26,7 @@ export const raidCards: RaidCard[] = [
     key: "ManicGodFavored",
     title: "暴走する神眷",
     href: "/raid/ManicGodFavored",
-    status: "開催中",
+    status: "未開催",
     img: "/raid/ManicGodFavored.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",
