@@ -12,11 +12,11 @@ export type RaidCard = {
 
 export const raidCards: RaidCard[] = [
   {
-    key: "EvolutionBeyond",
-    title: "超越進化",
-    href: "/raid/EvolutionBeyond",
+    key: "TrafficControl",
+    title: "交通管制",
+    href: "/raid/TrafficControl",
     status: "開催中",
-    img: "/raid/EvolutionBeyond.PNG",
+    img: "/raid/TrafficControl.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
