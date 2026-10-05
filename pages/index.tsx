@@ -31,23 +31,21 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "恋の綺想曲", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 15, end: 30, },
-  { label: "復刻：良辰祈願（10/2～10/20開催）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 30, },
-  { label: "プレミアムガチャ（10/2～10/20開催）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 30, },
-  { label: "プレアバ：ゾーイ", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 15, end: 30, },
-  { label: "復刻プレアバ：ベリー", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 15, end: 30, },
+  { label: "恋の綺想曲", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 20, },
+  { label: "復刻：良辰祈願", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 2, end: 20, },
+  { label: "プレミアムガチャ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 2, end: 20, },
+  { label: "プレアバ：ゾーイ", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 20, },
 ];
 
-const GANTT_MONTH = 9;
+const GANTT_MONTH = 10;
 const GANTT_YEAR = 2026;
-const GANTT_DAYS = 30;
+const GANTT_DAYS = 31;
 
 const eventImages: (string | null)[] = [
   "/ver_event/Outfit_LoveReverie.PNG",
   "/ver_event/Outfit_AuspiciousWish.PNG",
   "/ver_event/Event_pre_img.png",
   "/ver_event/Simulacrum_Zoey.PNG",
-  "/ver_event/Simulacrum_Berry.PNG",
 ];
 
 const GIFT_CODES = [
@@ -305,7 +303,7 @@ export default function Home() {
           </div>
           <div className="mt-8 space-y-6">
             <div>
-              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年9月 衣装・プレアバ ガチャスケジュール</h3>
+              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年10月 衣装・プレアバ ガチャスケジュール</h3>
               <GanttCalendar
                 events={GANTT_EVENTS}
                 images={eventImages}
