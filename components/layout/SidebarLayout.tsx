@@ -13,6 +13,17 @@ const sidebarNewsItems = [
   {
     text: [
       "「",
+      { label: "Ver6.4テストサーバー", href: "/event/ver6-3/ver6-4_testserver" },
+      "」のページを作成。\n",
+      "「",
+      { label: "進化辺境", href: "/fce" },
+      "」のページを更新。\n",
+    ],
+    date: "2026/10/11",
+  },
+  {
+    text: [
+      "「",
       { label: "Ver6.3アップデート情報まとめ", href: "/event/ver6-3/New_ver_info" },
       "」のページを作成。\n",
     ],
@@ -48,6 +59,7 @@ const latestContentsLinks = [
   { href: "/event/ver6-3/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/Rosebud", label: "ゾーイ武器：ジェンマローザ" },
   { href: "/event/ver6-3/SummerWonderland", label: "イベントミニゲーム：夏の叙事詩" },
+  { href: "/event/ver6-3/ver6-4_testserver", label: "Ver6.4テストサーバー" },
   { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート：ベルナ島" },
 ];
 

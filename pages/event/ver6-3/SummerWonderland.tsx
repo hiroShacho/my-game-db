@@ -145,6 +145,15 @@ export default function BrightonsSalvationPage() {
         </div>
 
         <SectionTitle icon="💣">爆撃アリーナ（爆弾PVP、8人マッチ）【9/24～10/20】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_2.PNG"
+            alt="爆撃アリーナ"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           8人マッチの爆弾PVP。<br />
           溶岩爆弾などを相手の陣地に投げつけて足場を崩して落下を狙おう。<br />
@@ -152,7 +161,16 @@ export default function BrightonsSalvationPage() {
           やろうと思えば設置されている爆弾の周りを破壊して孤立させることも可能。（相手の攻撃手段が減る）<br />
         </div>
 
-        <SectionTitle icon="🧟">異化の危機（感染鬼ごっこ、8人マッチ）【10/2～10/20】</SectionTitle>
+        <SectionTitle icon="🧟">異化の危機（感染鬼ごっこ、16人マッチ）【10/2～10/20】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_3.PNG"
+            alt="異化の危機"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           8人マッチの増やし鬼。<br />
           ミュータントに攻撃されると感染して鬼になるのでひたすら逃げ続けよう。<br />
@@ -160,6 +178,15 @@ export default function BrightonsSalvationPage() {
         </div>
 
         <SectionTitle icon="🌟">星の砂リサイクル（収集PVP、8人マッチ）【10/9～10/20】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_4.PNG"
+            alt="星の砂リサイクル"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           8人マッチのアイテム収集速度を競うPVP。<br />
           Mi-a等に変身してマップ上に落ちている星の砂を拾い集めてマップ中央に放出するとポイントを獲得できる。<br />

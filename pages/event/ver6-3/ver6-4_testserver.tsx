@@ -94,10 +94,10 @@ export default function Ver535TestServer() {
   return (
     <>
       <Head>
-        <title>【幻塔攻略】Ver6.3先行テストサーバー | 幻塔攻略データベース</title>
+        <title>【幻塔攻略】Ver6.4先行テストサーバー | 幻塔攻略データベース</title>
         <meta
           name="description"
-          content="幻塔（Tower of Fantasy）のVer6.3先行テストサーバーの情報まとめページ。"
+          content="幻塔（Tower of Fantasy）のVer6.4先行テストサーバーの情報まとめページ。"
         />
       </Head>
 
@@ -118,7 +118,7 @@ export default function Ver535TestServer() {
             {showDetail && (
               <div className="mt-3">
                 <p className="text-base sm:text-lg mb-3">
-                  公式DiscordサーバーにてVer6.3先行テストサーバーの募集がスタートしました！
+                  公式DiscordサーバーにてVer6.4先行テストサーバーの募集がスタートしました！
                 </p>
 
                 <CaptionedMedia
@@ -149,9 +149,9 @@ export default function Ver535TestServer() {
                 />
 
                 <p className="mb-3">
-                  応募期間は27日(木)11時までなので、早めに応募しておきましょう！
+                  応募期間は28日(月)11時までなので、早めに応募しておきましょう！
                   <br />
-                  応募フォームに書いてある情報によると、テストの開始は9月2日(水)からとなっています。
+                  応募フォームに書いてある情報によると、テストの開始は10月9日(金)からとなっています。
                 </p>
 
                 <div className="mb-4 text-red-800 font-bold">
@@ -179,10 +179,10 @@ export default function Ver535TestServer() {
             <div>
               <div className="flex items-center gap-3 mb-2">
                 <span className="font-bold text-base sm:text-lg">
-                  ■新キャラクター・ゾーイ！
+                  ■新キャラクター・レイナ！
                 </span>
                 <Link
-                  href="/event/ver6-2/NewChara"
+                  href="/event/ver6-3/NewChara"
                   className="text-blue-700 hover:underline font-semibold text-sm"
                 >
                   キャラ詳細ページはこちら
@@ -191,12 +191,12 @@ export default function Ver535TestServer() {
 
               <div className="flex-1 min-w-0" style={{ maxWidth: 640 }}>
                 <Link
-                  href="/event/ver6-2/NewChara"
+                  href="/event/ver6-3/NewChara"
                   className="flex-shrink-0 block"
                 >
                   <Image
                     src="/ver_event/New_Event_6_3.PNG"
-                    alt="ゾーイイベント画像"
+                    alt="レイナイベント画像"
                     width={640}
                     height={360}
                     className="rounded shadow object-contain w-full h-auto"
@@ -211,18 +211,18 @@ export default function Ver535TestServer() {
                 <span className="font-bold text-base sm:text-lg">
                   ■各種モーション
                 </span>
-                <XEmbed url="https://x.com/hiro28298793/status/2095046948726473085?s=20" />
+                <XEmbed url="https://x.com/hiro28298793/status/2108453657864012004?s=20" />
               </div>
             </div>
 
             <div>
               <div className="mb-3">
                 <span className="font-bold text-base sm:text-lg">
-                  ■ゾーイ：プレミアムアバター
+                  ■レイナ：プレミアムアバター
                 </span>
                <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_4.PNG", alt: "ゾーイプレアバ" },
+                  { src: "/ver_event/New_Event_6_4.PNG", alt: "レイナプレアバ" },
                 ]}
                />
               </div>
@@ -234,79 +234,108 @@ export default function Ver535TestServer() {
               </div>
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>ストーリー32章追加</li>
+                <li>ストーリー33章追加</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_5.PNG", alt: "ストーリー32章" },
+                  { src: "/ver_event/New_Event_6_5.PNG", alt: "ストーリー33章" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>グレイフォックス恒常入り（クローディア・ストームアイは次バージョンになりそう）</li>
+                <li>クローディア・ストームアイ恒常入り（アントリアは次バージョンになりそう）</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_6.PNG", alt: "グレフォ" },
+                  { src: "/ver_event/New_Event_6_6.PNG", alt: "ディアX" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>グレイフォックスのプレアバ追加？（イベントミニゲームの商店で入手できるらしい）</li>
+                <li>新マップ「リヴィタ」追加</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_7.PNG", alt: "グレフォプレアバ" },
+                  { src: "/ver_event/New_Event_6_7.PNG", alt: "リヴィタ1" },
+                ]}
+              />
+              <MediaRow
+                items={[
+                  { src: "/ver_event/New_Event_6_8.PNG", alt: "リヴィタ2" },
+                ]}
+              />
+              <MediaRow
+                items={[
+                  { src: "/ver_event/New_Event_6_9.PNG", alt: "リヴィタ3" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>先鋒クラッシュ：ハバカ追加</li>
+                <li>新ワールドボス「ヴィリルド-γ」</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_8.PNG", alt: "ハバカ" },
+                  { src: "/ver_event/New_Event_6_10.PNG", alt: "ヴィリルド-γ" },
+                ]}
+              />
+              <div className="mb-3">
+                <XEmbed url="https://x.com/hiro28298793/status/2108429697206059506?s=20" />
+              </div>
+
+              <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+                <li>先鋒クラッシュ：飛廉追加</li>
+              </ul>
+              <MediaRow
+                items={[
+                  { src: "/ver_event/New_Event_6_11.PNG", alt: "飛廉" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>在りし日の幻・超域：84階追加</li>
+                <li>在りし日の幻・超域：85階追加</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_9.PNG", alt: "在りし日" },
+                  { src: "/ver_event/New_Event_6_12.PNG", alt: "在りし日" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>幻影の序列・四属性35階：バルバロッサ追加</li>
+                <li>幻影の序列・四属性36階：バッカス追加</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_10.PNG", alt: "バルバロッサ" },
+                  { src: "/ver_event/New_Event_6_13.PNG", alt: "バッカス" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>カメラモードにアルバム機能が追加</li>
+                <li>新マップに新しいトップハンターが追加（専用レッドコアあり）</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_11.PNG", alt: "アルバム機能1" },
-                ]}
-              />
-              <MediaRow
-                items={[
-                  { src: "/ver_event/New_Event_6_12.PNG", alt: "アルバム機能2" },
+                  { src: "/ver_event/New_Event_6_14.PNG", alt: "トップハンター" },
                 ]}
               />
 
               <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
-                <li>アエテルナ島改装中？</li>
+                <li>アエテルナ島に新ミニゲーム追加（レッドコアあり）</li>
+              </ul>
+              <div className="mb-3">
+                <XEmbed url="https://x.com/hiro28298793/status/2108446061337706791?s=20" />
+              </div>
+
+              <ul className="list-disc list-inside mb-3 text-sm sm:text-base">
+                <li>ストーリーに新キャラ登場？</li>
               </ul>
               <MediaRow
                 items={[
-                  { src: "/ver_event/New_Event_6_13.PNG", alt: "アエテルナ島改装" },
+                  { src: "/ver_event/New_Event_6_15.PNG", alt: "レイモンダ1" },
+                ]}
+              />
+              <MediaRow
+                items={[
+                  { src: "/ver_event/New_Event_6_16.PNG", alt: "レイモンダ2" },
                 ]}
               />
 

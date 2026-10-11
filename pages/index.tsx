@@ -44,7 +44,7 @@ const GANTT_DAYS = 31;
 const eventImages: (string | null)[] = [
   "/ver_event/Outfit_LoveReverie.PNG",
   "/ver_event/Outfit_AuspiciousWish.PNG",
-  "/ver_event/Event_pre_img.png",
+  "/ver_event/Simulacrum_CoutureMysteryBox.PNG",
   "/ver_event/Simulacrum_Zoey.PNG",
 ];
 
@@ -65,6 +65,12 @@ const FEATURED_SLIDES: FeaturedCarouselSlide[] = [
     image: "/ver_event/New_Event_TOP.PNG",
     title: "夏の叙事詩",
     description: "イベントミニゲームの詳細をチェック！",
+  },
+  {
+    href: "/event/ver6-3/ver6-4_testserver",
+    image: "/ver_event/New_Event_6_1.PNG",
+    title: "Ver6.4テストサーバー",
+    description: "Ver6.4テストサーバーの詳細をチェック！",
   },
 ];
 
@@ -245,15 +251,19 @@ export default function Home() {
               </div>
             </Link>
 
-{/* --- replace the "Ver6.3テストサーバー" Link block with a non-clickable placeholder --- */}
-
+{/* --- replace the "Ver6.4テストサーバー" Link block with a non-clickable placeholder --- */}
+            <Link href="/event/ver6-3/ver6-4_testserver" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
                   transition-all duration-200
+                  hover:scale-105
+                  hover:shadow-2xl
+                  hover:ring-2 hover:ring-sky-400
+                  cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_6_1.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
@@ -264,10 +274,11 @@ export default function Home() {
                     Ver6.4テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    テストサーバーの詳細をチェック！（未開催）
+                    テストサーバーの詳細をチェック！
                   </p>
                 </div>
               </div>
+            </Link>
 
 {/* --- replace the "探索攻略　ロックハート：ベルナ島" Link block with a non-clickable placeholder --- */}
             <Link href="/map/Lockhart_EverspringIsland" className="block">
