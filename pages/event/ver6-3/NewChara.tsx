@@ -10,7 +10,7 @@ const weapon = {
   slug: "Skybreaker",
   name: "フェイズピアサー",
   avatar: "レイナ",
-  description: "",
+  description: "空間を切り裂いた場所には、すべて信念の痕跡が残る。次に空間を移動する時、その信念の裂け目が彼女に帰路を示してくれる。",
   strategy: "雷のアタッカー。スキル回しは連携⇒通常攻撃5回⇒スキルという非常にシンプルな流れになっている。",
   ratingScore: 4,
   ratingAttacker: 4,

@@ -16,7 +16,7 @@ const cnCharacters = [
   { id: "skull", name: "ボーンクラッシャー", subName: "Skull" },
   { id: "gefion", name: "ゲルフィン", subName: "Gefion" },
   { id: "zoye", name: "ゾーイ", subName: "Zoye" },
-  { id: "reina", name: "レイナ", subName: "Reina" },
+  { id: "wrenna", name: "レイナ", subName: "Wrenna" },
 
   // 今後追加キャラもここに
 ];

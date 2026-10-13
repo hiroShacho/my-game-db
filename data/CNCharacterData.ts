@@ -812,10 +812,10 @@ export const cnCharacterData: Record<string, CNCharacter> = {
     },
     avatarTrait: `最終ダメージ+18%\nゾーイ武器装備時、物理ダメージ+65%。`,
   },
-  reina: {
-    id: "reina",
+  wrenna: {
+    id: "wrenna",
     name: "レイナ",
-    subName: "Reina",
+    subName: "Wrenna",
     rarity: "SSR",
     resonance: "強攻",
     trait: "雷・氷",
