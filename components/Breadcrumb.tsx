@@ -72,6 +72,8 @@ const excludePaths = [
   "ver6-2",
   "ver6-3",
   "ver6-4",
+  "ver6-5",
+  "ver6-6",
   "newbie",
 ];
 
@@ -335,7 +337,7 @@ const weaponNameMap: Record<string, string> = {
   "r_32": "MarkⅡ戦闘眼",
   "r_33": "遮断装置",
   "r_34": "神経パルスチューニング装置",
-  "r_35":"脱出専門家",
+  "r_35": "脱出専門家",
 };
 
 // ルート配列を受け取り、ラベルを返す関数
