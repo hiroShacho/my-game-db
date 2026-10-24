@@ -17,6 +17,7 @@ const cnCharacters = [
   { id: "gefion", name: "ゲルフィン", subName: "Gefion" },
   { id: "zoye", name: "ゾーイ", subName: "Zoye" },
   { id: "wrenna", name: "レイナ", subName: "Wrenna" },
+  { id: "painter", name: "ペインター", subName: "Painter" },
 
   // 今後追加キャラもここに
 ];

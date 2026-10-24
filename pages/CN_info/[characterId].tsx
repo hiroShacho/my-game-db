@@ -39,11 +39,11 @@ export default function CNCharacterPage() {
           ) : (
             <>
               {/* キャラ基本情報 */}
-              <div className="flex flex-col sm:flex-row items-center gap-4">
+              <div className="flex flex-col items-center gap-4">
                 <img
                   src={`/CN_info/${chara.id}_img.PNG`}
                   alt={chara.name}
-                  className="w-24 h-24 sm:w-32 sm:h-32 object-contain"
+                  className="w-112 h-112 sm:w-112 sm:h-112 object-contain"
                 />
                 <div className="space-y-2 mt-2 w-full">
                   <h1 className="text-2xl sm:text-3xl font-bold">
