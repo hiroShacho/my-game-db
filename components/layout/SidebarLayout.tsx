@@ -1,11 +1,11 @@
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Breadcrumb from "@/components/Breadcrumb";
 import { AdSenseSidebarUnit } from "@/components/AdSenseSidebarUnit";
-import { Menu } from "lucide-react";
+import { ArrowUp, Menu } from "lucide-react";
 import Link from "next/link";
 
 // NEWSデータ
@@ -54,7 +54,7 @@ const latestContentsLinks = [
   { href: "/event/ver6-4/New_ver_info", label: "アップデート情報まとめ" },
   { href: "/weapons/Skybreaker", label: "レイナ武器：フェイズピアサー" },
   { href: "/event/ver6-4/AutumnJournal", label: "イベントミニゲーム：秋のメモリー" },
-  { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート：ベルナ島" },
+  { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート" },
 ];
 
 // 追加: 新規・初心者向け項目
@@ -177,11 +177,29 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const [latestOpen, setLatestOpen] = useState(true);
   const [basicOpen, setBasicOpen] = useState(true);
   const [soloMultiOpen, setSoloMultiOpen] = useState(true);
   const [newbieOpen, setNewbieOpen] = useState(true);
+
+  useEffect(() => {
+    const updateVisibility = () => {
+      setShowScrollTop(window.scrollY > 200);
+    };
+
+    updateVisibility();
+    window.addEventListener("scroll", updateVisibility, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", updateVisibility);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const sectionBtnBase =
     "w-full flex items-center justify-between font-semibold py-2 px-4 bg-black text-white transition-colors";
@@ -470,6 +488,16 @@ export default function SidebarLayout({ children }: SidebarLayoutProps) {
         </aside>
       </div>
       <Footer />
+      {showScrollTop && (
+        <button
+          type="button"
+          onClick={scrollToTop}
+          aria-label="ページの先頭へ戻る"
+          className="fixed bottom-5 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-gray-800 text-white shadow-lg transition-colors hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+        >
+          <ArrowUp size={22} aria-hidden="true" />
+        </button>
+      )}
     </div>
   );
 }

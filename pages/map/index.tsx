@@ -195,7 +195,7 @@ function MapIndexPage() {
           </li>
           <li>
             <Link href="/map/Lockhart_EverspringIsland" className="text-blue-700 hover:underline font-semibold">
-              ロックハート：ベルナ島
+              ロックハート
             </Link>
           </li>
         </ul>

@@ -281,7 +281,7 @@ export default function Home() {
               </div>
 {/*            </Link>*/}
 
-{/* --- replace the "探索攻略　ロックハート：ベルナ島" Link block with a non-clickable placeholder --- */}
+{/* --- replace the "探索攻略　ロックハート" Link block with a non-clickable placeholder --- */}
             <Link href="/map/Lockhart_EverspringIsland" className="block">
               <div
                 className="
@@ -299,7 +299,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    ロックハート：ベルナ島
+                    ロックハート
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
                     探索攻略の詳細をチェック！

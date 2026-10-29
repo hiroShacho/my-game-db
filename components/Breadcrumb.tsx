@@ -9,7 +9,7 @@ const labelMap: Record<string, string> = {
   "map": "探索攻略",
   "kailo_OreZero_EXpoint": "キルオ：ゼロ鉱山区マップ",
   "kailo_BrightonZone_EXpoint":"キルオ：ブライトン区",
-  "Lockhart_EverspringIsland":"ロックハート：ベルナ島",
+  "Lockhart_EverspringIsland":"ロックハート",
   "weapons": "武器一覧",
   "matrices": "ボリション一覧",
   "trait": "アバター特性一覧",
