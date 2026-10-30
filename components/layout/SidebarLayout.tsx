@@ -12,17 +12,17 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
-      "「大陸版情報」にVer6.5新キャラクターの情報を掲載しました。ネタバレなので閲覧は自己責任でお願いします。",
+      "限定討伐「",
+      { label: "神恩天象", href: "/raid/AstralFavor" },
+      "」のページを作成。\n",
     ],
-    date: "2026/10/24",
+    date: "2026/10/30",
   },
   {
     text: [
-      "「",
-      { label: "Ver6.4アップデート情報まとめ", href: "/event/ver6-4/New_ver_info" },
-      "」のページを作成。\n",
+      "「大陸版情報」にVer6.5新キャラクターの情報を掲載しました。ネタバレなので閲覧は自己責任でお願いします。",
     ],
-    date: "2026/10/20",
+    date: "2026/10/24",
   },
   {
     text: [

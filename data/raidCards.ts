@@ -23,11 +23,11 @@ export const raidCards: RaidCard[] = [
     category: "週討伐", // ★
   },
   {
-    key: "ManicGodFavored",
-    title: "暴走する神眷",
-    href: "/raid/ManicGodFavored",
-    status: "未開催",
-    img: "/raid/ManicGodFavored.PNG",
+    key: "AstralFavor",
+    title: "神恩天象",
+    href: "/raid/AstralFavor",
+    status: "開催中",
+    img: "/raid/AstralFavor.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",
     badgeTextColor: "text-yellow-900",
@@ -70,5 +70,7 @@ export const raidCards: RaidCard[] = [
 //EvolutionBeyond
 //暴走する神眷
 //ManicGodFavored
+//神恩天象
+//AstralFavor
 // ------------------------------------------------------------
 // 必要に応じてここに追加・編集してコピペで使ってください

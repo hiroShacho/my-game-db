@@ -51,6 +51,7 @@ const labelMap: Record<string, string> = {
   "OperationCodenameAnchorLift":"作戦コード：「抜錨」",
   "EvolutionBeyond":"超越進化",
   "ManicGodFavored":"暴走する神眷",
+  "AstralFavor":"神恩天象",
   // 必要に応じて追加
 };
 

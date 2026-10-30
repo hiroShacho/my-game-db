@@ -27,6 +27,7 @@ export default function RaidIndexPage() {
     { key: "OperationCodenameAnchorLift", title: "作戦コード：「抜錨」", href: "/raid/OperationCodenameAnchorLift", img: "/raid/OperationCodenameAnchorLift.PNG" },
     { key: "EvolutionBeyond", title: "超越進化", href: "/raid/EvolutionBeyond", img: "/raid/EvolutionBeyond.PNG" },
     { key: "ManicGodFavored", title: "暴走する神眷", href: "/raid/ManicGodFavored", img: "/raid/ManicGodFavored.PNG" },
+    { key: "AstralFavor", title: "神恩天象", href: "/raid/AstralFavor", img: "/raid/AstralFavor.PNG" },
   ];
 
   return (
