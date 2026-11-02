@@ -12,11 +12,11 @@ export type RaidCard = {
 
 export const raidCards: RaidCard[] = [
   {
-    key: "ElementAlart",
-    title: "元素警戒",
-    href: "/raid/ElementAlart",
+    key: "RealmofPhantasm",
+    title: "イリュージョンシフト",
+    href: "/raid/RealmofPhantasm",
     status: "開催中",
-    img: "/raid/ElementAlart.PNG",
+    img: "/raid/RealmofPhantasm.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",

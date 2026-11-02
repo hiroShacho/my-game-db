@@ -997,5 +997,32 @@
         "danger": true
       }
     ]
+  },
+  {
+    "bossName": "グラトニー",
+    "bossSlug": "Devourer",
+    "bossLevel": "100",
+    "steps": [
+      {
+        "step": "2",
+        "gimmick": "グラトニーは、ダメージを10回防ぐシールドを20秒ごとに1つ獲得する。10秒間持続",
+        "danger": false
+      },
+      {
+        "step": "3",
+        "gimmick": "グラトニーの踏みつけ攻撃は、一定確率で周囲のターゲットの行動を2秒間阻害する。",
+        "danger": false
+      },
+      {
+        "step": "4",
+        "gimmick": "グラトニーの攻撃が命中するとターゲットの耐性-30%、最大HP-30%。20秒間持続。",
+        "danger": true
+      },
+      {
+        "step": "5",
+        "gimmick": "グラトニーは選択したターゲットの与ダメージと移動速度を低下させる。",
+        "danger": true
+      }
+    ]
   }
 ]
