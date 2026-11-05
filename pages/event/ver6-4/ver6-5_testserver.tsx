@@ -89,15 +89,15 @@ function MediaRow({
 }
 
 export default function Ver535TestServer() {
-  const [showDetail, setShowDetail] = useState(false);
+  const [showDetail, setShowDetail] = useState(true);
 
   return (
     <>
       <Head>
-        <title>【幻塔攻略】Ver6.4先行テストサーバー | 幻塔攻略データベース</title>
+        <title>【幻塔攻略】Ver6.5先行テストサーバー | 幻塔攻略データベース</title>
         <meta
           name="description"
-          content="幻塔（Tower of Fantasy）のVer6.4先行テストサーバーの情報まとめページ。"
+          content="幻塔（Tower of Fantasy）のVer6.5先行テストサーバーの情報まとめページ。"
         />
       </Head>
 
@@ -149,9 +149,9 @@ export default function Ver535TestServer() {
                 />
 
                 <p className="mb-3">
-                  応募期間は28日(月)11時までなので、早めに応募しておきましょう！
+                  応募期間は9日(月)11時までなので、早めに応募しておきましょう！
                   <br />
-                  応募フォームに書いてある情報によると、テストの開始は10月9日(金)からとなっています。
+                  応募フォームに書いてある情報によると、テストの開始は11月11日(水)からとなっています。
                 </p>
 
                 <div className="mb-4 text-red-800 font-bold">
@@ -174,7 +174,7 @@ export default function Ver535TestServer() {
           </h2>
         </section>
 
-        {true && (
+        {false && (
           <section className="space-y-8">
             <div>
               <div className="flex items-center gap-3 mb-2">

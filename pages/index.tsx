@@ -31,19 +31,19 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "月輝のプレリュード", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 20, end: 31, },
-  { label: "復刻：ハロウィンセット", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 20, end: 31, },
-  { label: "コスチューム復刻セット（11/7～11/24）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "乗り物ガチャ（11/7～11/24）", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 31, },
-  { label: "プレアバ：レイナ", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 20, end: 31, },
-  { label: "復刻プレアバ：ハロウィン", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 20, end: 31, },
-  { label: "復刻プレアバ：雷（11/7～11/24）", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 31, },
+  { label: "月輝のプレリュード", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 24, },
+  { label: "復刻：ハロウィンセット", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 7, },
+  { label: "コスチューム復刻セット", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 7, end: 24, },
+  { label: "乗り物ガチャ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 7, end: 24, },
+  { label: "プレアバ：レイナ", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 24, },
+  { label: "復刻プレアバ：ハロウィン", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 7, },
+  { label: "復刻プレアバ：雷", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 7, end: 24, },
 
 ];
 
-const GANTT_MONTH = 10;
+const GANTT_MONTH = 11;
 const GANTT_YEAR = 2026;
-const GANTT_DAYS = 31;
+const GANTT_DAYS = 30;
 
 const eventImages: (string | null)[] = [
   "/ver_event/Outfit_MoonlitPrelude.PNG",
@@ -252,8 +252,8 @@ export default function Home() {
               </div>
             </Link>
 
-{/* --- replace the "Ver6.4テストサーバー" Link block with a non-clickable placeholder --- */}
-{/*            <Link href="/event/ver6-4/ver6-5_testserver" className="block">*/}
+{/* --- replace the "Ver6.5テストサーバー" Link block with a non-clickable placeholder --- */}
+            <Link href="/event/ver6-4/ver6-5_testserver" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -261,10 +261,10 @@ export default function Home() {
                   hover:scale-105
                   hover:shadow-2xl
                   hover:ring-2 hover:ring-sky-400
-                  cursor-default
+                  cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
+                  backgroundImage: "url('/ver_event/New_Event_6.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
@@ -272,14 +272,14 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    Ver6.5テストサーバー(未開催)
+                    Ver6.5テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
                     テストサーバーの詳細をチェック！
                   </p>
                 </div>
               </div>
-{/*            </Link>*/}
+            </Link>
 
 {/* --- replace the "探索攻略　ロックハート" Link block with a non-clickable placeholder --- */}
             <Link href="/map/Lockhart_EverspringIsland" className="block">
@@ -302,7 +302,7 @@ export default function Home() {
                     ロックハート
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    探索攻略の詳細をチェック！
+                    ロックハート-リヴィタ探索攻略の詳細をチェック！
                   </p>
                 </div>
               </div>
@@ -315,7 +315,7 @@ export default function Home() {
           </div>
           <div className="mt-8 space-y-6">
             <div>
-              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年10月 衣装・プレアバ ガチャスケジュール</h3>
+              <h3 className="text-md sm:text-lg font-semibold mb-2">2026年11月 衣装・プレアバ ガチャスケジュール</h3>
               <GanttCalendar
                 events={GANTT_EVENTS}
                 images={eventImages}
