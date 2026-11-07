@@ -48,11 +48,11 @@ const GANTT_DAYS = 30;
 const eventImages: (string | null)[] = [
   "/ver_event/Outfit_MoonlitPrelude.PNG",
   "/ver_event/Outfit_VelvetSiren.PNG",
-  "/ver_event/Event_pre_img.png",
-  "/ver_event/Event_pre_img.png",
+  "/ver_event/Outfit_IvoryWing.PNG",
+  "/ver_event/Outfit_RideGcha.PNG",
   "/ver_event/Simulacrum_Wrenna.PNG",
   "/ver_event/Simulacrum_ALL.PNG",
-  "/ver_event/Event_pre_img.png",
+  "/ver_event/Simulacrum_Volt.PNG",
 ];
 
 const GIFT_CODES = [

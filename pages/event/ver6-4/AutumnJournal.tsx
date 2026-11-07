@@ -132,6 +132,15 @@ export default function BrightonsSalvationPage() {
         </div>
 
         <SectionTitle icon="">床ドンバトル（2人マッチ）【10/27～11/24】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_2.PNG"
+            alt="床ドンバトル"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           2人マッチのアクションサバイバル。<br />
           光った床を踏むと相手の陣地にレーザー攻撃が飛ぶのでやられる前にやろう。<br />
@@ -139,12 +148,30 @@ export default function BrightonsSalvationPage() {
         </div>
 
         <SectionTitle icon="">氷と火の戦舞（戦闘、8人マッチ）【11/3～11/24】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_3.PNG"
+            alt="氷と火の戦舞"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           4対4のタワーディフェンス。<br />
           出て来る雑魚敵やボスを倒すと相手の陣地に敵を送り込めるのでチームの火力差がそのまま勝敗を決する。<br />
         </div>
 
         <SectionTitle icon="">神算鬼謀（召喚タワーディフェンス、2人マッチ）【11/7～11/24】</SectionTitle>
+        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
+          <Image
+            src="/ver_event/New_Event_4.PNG"
+            alt="神算鬼謀"
+            width={640}
+            height={320}
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <div>
           2人マッチの召喚カードを使ったタワーディフェンス。<br />
           こちらはプレイヤーではなくカードから召喚したモンスターに戦わせるので条件は公平。<br />
