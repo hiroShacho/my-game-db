@@ -343,10 +343,19 @@ export default function AstralFavorPage() {
         </pre>
 
         <SectionTitle icon="ondemand_video">解説動画</SectionTitle>
-        <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
-
-準備中
-        </pre>
+        <div className="w-full flex justify-center my-4">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/iotOr9R0yAw"
+            title="神恩天象 解説動画"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="rounded shadow border border-emerald-200"
+            style={{ maxWidth: "100%", aspectRatio: "16/9" }}
+          />
+        </div>
       </div>
     </>
   );
