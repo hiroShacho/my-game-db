@@ -12,17 +12,19 @@ import Link from "next/link";
 const sidebarNewsItems = [
   {
     text: [
+      "「",
+      { label: "Ver6.5テストサーバー", href: "/event/ver6-4/ver6-5_testserver" },
+      "」の内容を更新。\n",
+    ],
+    date: "2026/11/13",
+  },
+  {
+    text: [
       "限定討伐「",
       { label: "神恩天象", href: "/raid/AstralFavor" },
       "」のページを作成。\n",
     ],
     date: "2026/10/30",
-  },
-  {
-    text: [
-      "「大陸版情報」にVer6.5新キャラクターの情報を掲載しました。ネタバレなので閲覧は自己責任でお願いします。",
-    ],
-    date: "2026/10/24",
   },
   {
     text: [
@@ -152,15 +154,15 @@ function SidebarLinksAndAdBlock({ isMobile = false }: { isMobile?: boolean }) {
         />
       </div>
       {/* Skebリンクをここに移動 */}
-      <div className="flex flex-col items-center m-0 p-0">
-        <a
-          href="/skeb"
-          className="block text-base font-semibold text-sky-700 underline hover:text-pink-600 transition m-0 p-0"
-          style={{ marginTop: 0, paddingTop: 0 }}
-        >
-          Skebで制作リクエストをしたい方へ
-        </a>
-      </div>
+{/*      <div className="flex flex-col items-center m-0 p-0">*/}
+{/*        <a*/}
+{/*          href="/skeb"*/}
+{/*          className="block text-base font-semibold text-sky-700 underline hover:text-pink-600 transition m-0 p-0"*/}
+{/*          style={{ marginTop: 0, paddingTop: 0 }}*/}
+{/*        >*/}
+{/*          Skebで制作リクエストをしたい方へ*/}
+{/*        </a>*/}
+{/*      </div>*/}
       {/* AdSense広告ユニットをSkebリンクの下に移動 */}
       <div style={{ width: 320, minWidth: 200, maxWidth: '100%' }}>
         <AdSenseSidebarUnit />
