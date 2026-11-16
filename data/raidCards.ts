@@ -12,11 +12,11 @@ export type RaidCard = {
 
 export const raidCards: RaidCard[] = [
   {
-    key: "MatrixHacking",
-    title: "マトリックスハッキング",
-    href: "/raid/MatrixHacking",
+    key: "CalamityNo5",
+    title: "厄災5号",
+    href: "/raid/CalamityNo5",
     status: "開催中",
-    img: "/raid/MatrixHacking.PNG",
+    img: "/raid/CalamityNo5.PNG",
     borderColor: "border-emerald-400",
     badgeColor: "bg-emerald-100",
     badgeTextColor: "text-emerald-700",
