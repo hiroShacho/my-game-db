@@ -193,7 +193,7 @@ export default function Home() {
             <FeaturedCarousel slides={FEATURED_SLIDES} autoPlayMs={5000} />
 
             {/* ペインターの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
-            <Link href="/weapons/Skybreaker" className="block">
+            <Link href="/weapons/ImperialStaff" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
