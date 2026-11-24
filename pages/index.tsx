@@ -11,7 +11,7 @@ import weapons from "../data/weapons.json";
 import { FeaturedCarousel, FeaturedCarouselSlide } from "@/components/FeaturedCarousel";
 
 const pickupWeaponIds = [
-  "w_76","w_72", "w_67", "w_63", "w_59", "w_74", "w_73", "w_71", "w_68",
+  "w_77","w_73", "w_69", "w_64", "w_60",
 ];
 
 function getWeaponDataById(id: string) {
@@ -31,13 +31,12 @@ const raidframeMinHeightPx = 150;
 const weaponsframeMinHeightPx = 150;
 
 const GANTT_EVENTS: GanttEvent[] = [
-  { label: "月輝のプレリュード", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 24, },
-  { label: "復刻：ハロウィンセット", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 7, },
-  { label: "コスチューム復刻セット", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 7, end: 24, },
-  { label: "乗り物ガチャ", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 7, end: 24, },
-  { label: "プレアバ：レイナ", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 24, },
-  { label: "復刻プレアバ：ハロウィン", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 1, end: 7, },
-  { label: "復刻プレアバ：雷", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 7, end: 24, },
+  { label: "夜願のファントム", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 24, end: 30, },
+  { label: "【復刻】コスチュームセット・感謝祭", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 24, end: 30, },
+  { label: "【復刻】コスチュームセット・クリスマス(12/15～1/5開催)", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 30, },
+  { label: "【復刻】プレミアムガチャ(12/15～1/5開催)", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 24, end: 30, },
+  { label: "プレアバ：ペインター", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 24, end: 30, },
+  { label: "復刻プレアバ：炎", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 24, end: 30, },
 
 ];
 
@@ -46,31 +45,30 @@ const GANTT_YEAR = 2026;
 const GANTT_DAYS = 30;
 
 const eventImages: (string | null)[] = [
-  "/ver_event/Outfit_MoonlitPrelude.PNG",
-  "/ver_event/Outfit_VelvetSiren.PNG",
-  "/ver_event/Outfit_IvoryWing.PNG",
-  "/ver_event/Outfit_RideGcha.PNG",
-  "/ver_event/Simulacrum_Wrenna.PNG",
-  "/ver_event/Simulacrum_ALL.PNG",
-  "/ver_event/Simulacrum_Volt.PNG",
+  "/ver_event/Event_pre_img.png",
+  "/ver_event/Event_pre_img.png",
+  "/ver_event/Event_pre_img.png",
+  "/ver_event/Event_pre_img.png",
+  "/ver_event/Simulacrum_Painter.PNG",
+  "/ver_event/Simulacrum_Flame.PNG",
 ];
 
 const GIFT_CODES = [
-  { code: "1020wrenna", desc: "（正式サーバー）Ver6.4バージョン引き換えコード", expire: "2026/11/24", },
-  { code: "1020mmo", desc: "（Warpサーバー）Ver6.4バージョン引き換えコード", expire: "2026/11/24", },
+  { code: "", desc: "（正式サーバー）Ver6.5バージョン引き換えコード", expire: "2027/1/5", },
+  { code: "", desc: "（Warpサーバー）Ver6.5バージョン引き換えコード", expire: "2027/1/5", },
 ];
 
 const FEATURED_SLIDES: FeaturedCarouselSlide[] = [
   {
-    href: "/event/ver6-4/New_ver_info",
+    href: "/event/ver6-5/New_ver_info",
     image: "/ver_event/New_ver_top.png",
-    title: "ver6.4アップデート情報まとめ",
+    title: "アップデート情報まとめ",
     description: "新要素・イベント・追加内容をまとめてチェック！",
   },
   {
-    href: "/event/ver6-4/AutumnJournal",
+    href: "/event/ver6-5/WondrousNight",
     image: "/ver_event/New_Event_TOP.PNG",
-    title: "秋のメモリー",
+    title: "ミステリー・オ－ルナイト",
     description: "イベントミニゲームの詳細をチェック！",
   },
 ];
@@ -189,12 +187,12 @@ export default function Home() {
 
         {/* 注目コンテンツ */}
         <section>
-          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver6.4の注目コンテンツ</h2>
+          <h2 className="text-lg sm:text-xl font-semibold mb-2">ver6.5の注目コンテンツ</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* ver6.4アップデート情報まとめバナー */}
             <FeaturedCarousel slides={FEATURED_SLIDES} autoPlayMs={5000} />
 
-            {/* レイナの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
+            {/* ペインターの武器詳細（元のカード形式・CSSで横スクロール防止済み） */}
             <Link href="/weapons/Skybreaker" className="block">
               <div
                 className="
@@ -206,7 +204,7 @@ export default function Home() {
                   cursor-pointer
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/Simulacrum_Wrenna.PNG')",
+                  backgroundImage: "url('/ver_event/Simulacrum_Painter.PNG')",
                   backgroundSize: "cover",
                   backgroundPosition: "left"
                 }}
@@ -214,17 +212,17 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    レイナ武器：フェイズピアサー
+                    ペインター武器：オラクルセプター
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    レイナの武器詳細をチェック！
+                    ペインターの武器詳細をチェック！
                   </p>
                 </div>
               </div>
             </Link>
 
-{/* --- replace the "秋のメモリー" Link block with a non-clickable placeholder --- */}
-            <Link href="/event/ver6-4/AutumnJournal" className="block">
+{/* --- replace the "ミステリー・オールナイト" Link block with a non-clickable placeholder --- */}
+            <Link href="/event/ver6-5/WondrousNight" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -243,7 +241,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    秋のメモリー
+                    ミステリー・オールナイト
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
                     イベントミニゲームの詳細をチェック！
@@ -253,7 +251,6 @@ export default function Home() {
             </Link>
 
 {/* --- replace the "Ver6.5テストサーバー" Link block with a non-clickable placeholder --- */}
-            <Link href="/event/ver6-4/ver6-5_testserver" className="block">
               <div
                 className="
                   relative rounded shadow h-40 flex flex-col justify-end overflow-hidden group
@@ -261,10 +258,10 @@ export default function Home() {
                   hover:scale-105
                   hover:shadow-2xl
                   hover:ring-2 hover:ring-sky-400
-                  cursor-pointer
+                  cursor-default
                 "
                 style={{
-                  backgroundImage: "url('/ver_event/New_Event_6.PNG')",
+                  backgroundImage: "url('/ver_event/Event_pre_img.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center top"
                 }}
@@ -272,14 +269,13 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/50 transition-all duration-200" />
                 <div className="relative z-10 p-4">
                   <h3 className="font-semibold text-base sm:text-lg text-white drop-shadow">
-                    Ver6.5テストサーバー
+                    Ver6.6テストサーバー
                   </h3>
                   <p className="text-sm sm:text-base text-white drop-shadow">
-                    テストサーバーの詳細をチェック！
+                    テストサーバーの詳細をチェック！（未開催）
                   </p>
                 </div>
               </div>
-            </Link>
 
 {/* --- replace the "探索攻略　ロックハート" Link block with a non-clickable placeholder --- */}
             <Link href="/map/Lockhart_EverspringIsland" className="block">

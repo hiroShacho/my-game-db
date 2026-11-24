@@ -162,7 +162,7 @@ export default function OperationCodenameAnchorLiftPage() {
 
         <pre className="whitespace-pre-wrap bg-emerald-50 border border-emerald-100 rounded px-4 py-3 text-sm text-emerald-800">
 
-柱が燃える順は固定なので、<span className="font-bold text-orange-600"></span>剛毅は最後に炎上する柱の周辺で戦うようにしよう。（最初の画像の④の柱）
+柱が燃える順は固定なので、<span className="font-bold text-orange-600"></span>剛毅は最後に炎上する柱の周辺で戦うようにしよう。（最初の画像の4の柱）
 
         </pre>
 

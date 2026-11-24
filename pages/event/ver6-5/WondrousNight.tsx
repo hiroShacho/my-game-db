@@ -94,111 +94,64 @@ export default function BrightonsSalvationPage() {
   return (
     <>
       <Head>
-        <title>イベント「春の駆け馬」 | 幻塔攻略データベース</title>
-        <meta name="description" content="イベント「春の駆け馬」の紹介ページ" />
+        <title>イベント「ミステリー・オールナイト」 | 幻塔攻略データベース</title>
+        <meta name="description" content="イベント「ミステリー・オールナイト」の紹介ページ" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
       </Head>
       <div className="mx-auto max-w-3xl px-2 sm:px-4 py-6">
 
         <h1 className="text-3xl font-extrabold mb-4 text-pink-600 flex items-center gap-2">
           <span className="material-symbols-outlined text-pink-500">celebration</span>
-          イベント「春の駆け馬」
+          イベント「ミステリー・オールナイト」
         </h1>
 
         {/* トップ画像 */}
         <div className="rounded-lg shadow mb-4 mx-auto w-fit flex justify-center" style={{ maxWidth: "100%" }}>
           <Image
             src="/ver_event/New_Event_TOP.PNG"
-            alt="春の駆け馬 トップ"
+            alt="ミステリー・オールナイト トップ"
             width={560}
             height={320}
             style={{ maxWidth: "100%", height: "auto", display: "block", marginLeft: "auto", marginRight: "auto" }}
           />
         </div>
 
-        <SectionTitle icon="💽">追憶の連なり（4人マッチ）【4/14～5/19】</SectionTitle>
+        <SectionTitle icon="🛶">波間のレーサー（定期開催・複数人プレイ）【11/24～1/5】</SectionTitle>
         <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
           <Image
             src="/ver_event/New_Event_1.PNG"
-            alt="追憶の連なり"
+            alt="波間のレーサー"
             width={640}
             height={320}
             style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
         <div>
-          メモリーチップを装備して駐屯スフィアと戦うイベント。<br />
-          前提クエストとしてゴゾトスで受けられるサブクエが出現しているのでまずはそれを終わらせよう。（前回開催時にやっていれば最初からマッチング可能）<br />
-          メモリーチップを全種類集めれば称号も貰えるので頑張ってスフィアを周回しよう。<br />
-        </div>
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_1_1.PNG",
-              alt: "ボスは非常に弱い",
-              caption: "ボスは非常に弱い",
-            },
-          ]}
-        />
-
-        <SectionTitle icon="🃏">神算鬼謀（2人マッチ）【4/21～5/19】</SectionTitle>
-        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
-          <Image
-            src="/ver_event/New_Event_2.PNG"
-            alt="神算鬼謀"
-            width={640}
-            height={320}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        </div>
-        <div>
-          ランダムに選んだ5体のモンスターを戦わせる1対1のバトル。<br />
-          ランダム性が強く、強いカードを多く引けた方が勝ちやすいので運ゲーではある。<br />
-          強いカードを引けても弱いカードをぶつけられると無駄になるので相手の動きを予想する戦略は必要だぞ！<br />
+          アエテルナ島にあった悪夢のミニゲームがイベントにもやってきた！<br />
+          何とも言えない操作性に四苦八苦しながらゴールを目指そう！<br />
         </div>
 
-        <SectionTitle icon="🔫">弾雨激闘（8人マッチ）【4/28～5/19】</SectionTitle>
-        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
-          <Image
-            src="/ver_event/New_Event_3.PNG"
-            alt="弾雨激闘"
-            width={640}
-            height={320}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        </div>
+        <SectionTitle icon="">ゴーストツアー（8人マッチ）【12/1～1/5】</SectionTitle>
         <div>
-          4体4の銃撃オンリーのPVP。<br />
-          アナベラの狙撃やフレイムリボルバーの空中狙撃連打が非常に強く、金武器を拾えたら相手によっては無双できる。<br />
-          基本的には数が多い方が勝つので集団行動を心掛けるようにしよう。<br />
-          前回と同じなら強力な金武器の出現位置は固定になっている。<br />
-          プレイヤースキルと事前情報による差が出やすいので始まってすぐの情報把握を忘れずに。<br />
+          8人マッチの追跡サバイバル。<br />
+          ゴースト役が踏んだマスを踏むと加点、逆にゴーストが踏んでないマスを踏むと減点されてポイントが0になると脱落となる。<br />
+          落ちてるカボチャを拾うと敵に減速や凍結のデバフを付与できるﾎﾊﾞｷﾞﾁｮﾜﾖ～<br />
         </div>
 
-        <SectionTitle icon="🔽">床ドンバトル（2人マッチ）【5/5～5/19】</SectionTitle>
-        <div className="rounded-lg shadow my-3 mx-auto w-full" style={{ maxWidth: 640 }}>
-          <Image
-            src="/ver_event/New_Event_4.PNG"
-            alt="床ドンバトル"
-            width={640}
-            height={320}
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-        </div>
+        <SectionTitle icon="">カボチャ頭を探せ（ワールドマップ・箱開け）【12/8～1/5】</SectionTitle>
         <div>
-          Mi-aになって光ったスイッチを踏みまくるゲーム。<br />
-          スイッチを踏むと対戦相手のエリアにレーザーが発生するので連続してスイッチを踏んで相手を倒そう。<br />
-          相手から飛んできたレーザーはジャンプで避けられるので、どちらが先にライフを失うかのデスマッチになる。
+          期間中は毎日12時～22時の間、2時間ごとにミラポリスのマップ上にカボチャボックスが出現する。<br />
+          カボチャボックスを毎日上限まで開ければそれだけでイベントポイントが溜まるので可能な限り参加しておきたい。<br />
         </div>
-        <RowMedia
-          items={[
-            {
-              src: "/ver_event/New_Event_4_1.PNG",
-              alt: "可愛いMi-aによる容赦ないデスマッチ",
-              caption: "可愛いMi-aによる容赦ないデスマッチ",
-            },
-          ]}
-        />
+
+        <SectionTitle icon="">魔物狩りの冒険隊（運命の包囲網PVE、8人マッチ）【12/15～1/5】</SectionTitle>
+        <div>
+          8人マッチのPVE（運命の包囲網形式）。<br />
+          完全なPVEなので普段は包囲網をやらない人でも気楽に参加できるぞ！<br />
+          大体は新武器を使うと滅茶苦茶火力を出せる。<br />
+        </div>
+
+
       </div>
     </>
   );

@@ -13,18 +13,10 @@ const sidebarNewsItems = [
   {
     text: [
       "「",
-      { label: "Ver6.5テストサーバー", href: "/event/ver6-4/ver6-5_testserver" },
-      "」の内容を更新。\n",
+      { label: "アップデート情報まとめ", href: "/event/ver6-5/New_ver_info" },
+      "」のページを更新。\n",
     ],
-    date: "2026/11/13",
-  },
-  {
-    text: [
-      "限定討伐「",
-      { label: "神恩天象", href: "/raid/AstralFavor" },
-      "」のページを作成。\n",
-    ],
-    date: "2026/10/30",
+    date: "2026/11/24",
   },
   {
     text: [
@@ -53,9 +45,9 @@ const soloMultiPveLinks = [
 ];
 
 const latestContentsLinks = [
-  { href: "/event/ver6-4/New_ver_info", label: "アップデート情報まとめ" },
-  { href: "/weapons/Skybreaker", label: "レイナ武器：フェイズピアサー" },
-  { href: "/event/ver6-4/AutumnJournal", label: "イベントミニゲーム：秋のメモリー" },
+  { href: "/event/ver6-5/New_ver_info", label: "アップデート情報まとめ" },
+  { href: "/weapons/ImperialStaff", label: "ペインター武器：オラクルセプター" },
+  { href: "/event/ver6-5/WondrousNight", label: "イベントミニゲーム：ミステリー・オールナイト" },
   { href: "/map/Lockhart_EverspringIsland", label: "探索攻略 ロックハート" },
 ];
 

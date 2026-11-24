@@ -159,6 +159,7 @@ const weaponNameMap: Record<string, string> = {
   "FairyWreath":"フェアリーリング",
   "Rosebud":"ジェンマローザ",
   "Skybreaker":"フェイズピアサー",
+  "ImperialStaff":"オラクルセプター",
   //仮でボリションと特性はパンくずだけ変える
   "m_1": "エコー",
   "t_1": "エコー",

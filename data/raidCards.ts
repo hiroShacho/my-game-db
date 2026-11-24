@@ -26,7 +26,7 @@ export const raidCards: RaidCard[] = [
     key: "AstralFavor",
     title: "神恩天象",
     href: "/raid/AstralFavor",
-    status: "開催中",
+    status: "未開催",
     img: "/raid/AstralFavor.PNG",
     borderColor: "border-yellow-400",
     badgeColor: "bg-yellow-200",

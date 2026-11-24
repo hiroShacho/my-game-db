@@ -9,59 +9,51 @@ import weaponsData from "@/data/weapons.json";
 
 // 武器IDリスト（復刻ガチャ対象）
 const rerunWeaponIds = [
-  "w_67", "w_63", "w_59", "w_54", "w_68", "w_58", "w_70", "w_65", "w_69", "w_64", "w_66", "w_62",
+  "w_73", "w_69", "w_64", "w_60",
 ];
 // 対象武器データ取得
 const rerunWeapons = weaponsData.filter(w => rerunWeaponIds.includes(w.id));
 
 const costumeImages = [
   {
-    src: "/ver_event/Simulacrum_Harmopheus.PNG",
-    alt: "プレアバ：ハルモフェウス「スウィート・フォーカス」",
-    label: "プレアバ：ハルモフェウス「スウィート・フォーカス」",
-    date: "05/19(火)メンテナンス後 -  06/30(火)06:00（JST）",
+    src: "/ver_event/Outfit_MoonlitPrelude.PNG",
+    alt: "夜願のファントム",
+    label: "",
+    date: "11/24(火)メンテナンス後 -  1/5(火)06:00（JST）",
   },
   {
-    src: "/ver_event/Simulacrum_ALL.PNG",
-    alt: "【復刻】プレアバセット",
-    label: "【復刻】プレアバセット",
-    date: "05/19(火)メンテナンス後 -  06/09(火)06:00（JST）",
+    src: "/ver_event/Simulacrum_Painter.PNG",
+    alt: "プレアバ：ペインター",
+    label: "プレアバ：ペインター",
+    date: "11/24(火)メンテナンス後 -  1/5(火)06:00（JST）",
   }
 ];
 
 // ガチャ日程（内容はそのまま編集可）
 const gachaDates = [
   {
-    label: "完全網羅データ：「氷結の秩序」",
-    date: "05/19(火)メンテナンス後 -  06/09(火)06:00（JST）",
+    label: "夜願のファントム",
+    date: "11/24(火)メンテナンス後 -  1/5(火)06:00（JST）",
   },
   {
-    label: "【復刻】ガチャマシン：「ナビゲーター」",
-    date: "05/19(火)メンテナンス後 -  06/09(火)06:00（JST）",
+    label: "【復刻】コスチュームセット・感謝祭",
+    date: "11/24(火)メンテナンス後 -  12/15(火)06:00（JST）",
   },
   {
-    label: "【復刻】ガチャマシン：「ドリームキャッチャー」",
-    date: "05/19(火)メンテナンス後 -  06/09(火)06:00（JST）",
+    label: "【復刻】コスチュームセット・クリスマス",
+    date: "12/15(火)13:00（JST） -  1/5(火)06:00（JST）",
   },
   {
-    label: "【復刻】ガチャマシン：「きらめきインニス」",
-    date: "06/09(火)13:00 -  06/30(火)06:00（JST）",
+    label: "【復刻】プレミアムガチャ",
+    date: "12/15(火)13:00（JST） -  1/5(火)06:00（JST）",
   },
   {
-    label: "【復刻】コスチュームガチャ",
-    date: "06/09(火)13:00 -  06/30(火)06:00（JST）",
+    label: "プレミアムアバター：ペインター",
+    date: "11/24(火)メンテナンス後 -  1/5(火)06:00（JST）",
   },
   {
-    label: "プレミアムアバター：ハルモフェウス「スウィート・フォーカス」",
-    date: "05/19(火)メンテナンス後 -  06/30(火)06:00（JST）",
-  },
-  {
-    label: "【復刻】プレミアムアバターセット：雷属性",
-    date: "06/09(火)13:00 -  06/30(火)06:00（JST）",
-  },
-  {
-    label: "【復刻】プレミアムアバターセット：他属性",
-    date: "05/19(火)メンテナンス後 -  06/09(火)06:00（JST）",
+    label: "【復刻】プレミアムアバター：炎",
+    date: "11/24(火)メンテナンス後 -  1/5(火)06:00（JST）",
   },
 ];
 
@@ -165,24 +157,24 @@ export default function NewVerInfo() {
   return (
     <>
       <Head>
-        <title>ver6.0アップデート情報まとめ | 幻塔攻略データベース</title>
+        <title>ver6.5アップデート情報まとめ | 幻塔攻略データベース</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="幻塔 ver6.0 新アップデート内容まとめページ" />
+        <meta name="description" content="幻塔 ver6.5 新アップデート内容まとめページ" />
       </Head>
       <div className="w-full max-w-full min-h-screen space-y-8 px-2 sm:px-6 py-4">
         <h1 className="text-2xl sm:text-4xl font-bold mb-4 text-sky-700 drop-shadow flex items-center gap-2">
-          🆕 ver6.0アップデート情報まとめ
+          🆕 ver6.5アップデート情報まとめ
         </h1>
 
-        {/* 新キャラクター・ハルモフェウス実装！ */}
+        {/* 新キャラクター・ペインター実装！ */}
         <section>
-          <SectionTitle icon={<><span title="雷">⚡</span><span title="ハルモフェウス">🎻</span></>}>
-            新キャラクター・ハルモフェウス実装！
+          <SectionTitle icon={<><span title="炎">🔥</span><span title="杖">🪄</span></>}>
+            新キャラクター・ペインター実装！
           </SectionTitle>
           <div className="relative w-full h-40 sm:h-56 rounded-lg overflow-hidden shadow mb-4">
             <Image
               src="/ver_event/New_Character.png"
-              alt="新キャラクター・ハルモフェウス"
+              alt="新キャラクター・ペインター"
               fill
               className="object-cover w-full h-full"
               sizes="100vw"
@@ -192,22 +184,22 @@ export default function NewVerInfo() {
           </div>
           <div className="flex gap-4 flex-wrap mb-4">
             <Link
-              href="/weapons/Neverrest"
+              href="/weapons/ImperialStaff"
               className="block bg-white rounded shadow hover:shadow-lg hover:ring-2 hover:ring-sky-400 transition-all px-4 py-3 w-64 text-center"
             >
               <div className="flex flex-col items-center gap-2">
-                <Image src="/images/w_72_img.PNG" alt="ハルモフェウス武器" width={48} height={48} className="rounded border" />
-                <span className="font-semibold text-sky-600">武器：絶えざる調べ</span>
+                <Image src="/images/w_77_img.PNG" alt="ペインター武器" width={48} height={48} className="rounded border" />
+                <span className="font-semibold text-sky-600">武器：オラクルセプター</span>
                 <div className="text-xs mt-1 text-gray-600">詳細ページへ</div>
               </div>
             </Link>
             <Link
-              href="/matrices/m_68"
+              href="/matrices/m_73"
               className="block bg-white rounded shadow hover:shadow-lg hover:ring-2 hover:ring-sky-400 transition-all px-4 py-3 w-64 text-center"
             >
               <div className="flex flex-col items-center gap-2">
-                <Image src="/images/m_68_img.PNG" alt="ハルモフェウスボリション" width={48} height={48} className="rounded border" />
-                <span className="font-semibold text-sky-600">ボリション：フェルハーモニー・ロマンス</span>
+                <Image src="/images/m_73_img.PNG" alt="ペインターボリション" width={48} height={48} className="rounded border" />
+                <span className="font-semibold text-sky-600">ボリション：万世の慈悲</span>
                 <div className="text-xs mt-1 text-gray-600">詳細ページへ</div>
               </div>
             </Link>
@@ -217,12 +209,12 @@ export default function NewVerInfo() {
         {/* 復刻ガチャ */}
         <section>
           <SectionTitle icon={<span title="ガチャ">🎲</span>}>
-            雷+全属性キャラ復刻ガチャ
+            炎属性キャラ復刻ガチャ
           </SectionTitle>
           <div className="relative w-full h-32 sm:h-48 rounded-lg overflow-hidden shadow mb-2">
             <Image
               src="/ver_event/Rerun.png"
-              alt="雷+全属性復刻ガチャ"
+              alt="炎属性復刻ガチャ"
               fill
               className="object-cover w-full h-full"
               sizes="100vw"
@@ -294,7 +286,7 @@ export default function NewVerInfo() {
         {/* バージョンカレンダー */}
         <section>
           <SectionTitle icon={<span title="バージョンカレンダー">📅</span>}>
-            Ver6.0_バージョンカレンダー
+            Ver6.5_バージョンカレンダー
           </SectionTitle>
           <div className="bg-gradient-to-br from-pink-50 to-amber-50 border-l-4 border-pink-400 p-4 rounded mb-4 flex flex-col items-center">
             <div
@@ -305,7 +297,7 @@ export default function NewVerInfo() {
             >
               <Image
                 src="/official-calendar.png"
-                alt="Ver6.0_バージョンカレンダー"
+                alt="Ver6.5_バージョンカレンダー"
                 fill
                 className="object-contain w-full h-full"
                 sizes="(max-width: 1024px) 100vw, 900px"
@@ -330,7 +322,7 @@ export default function NewVerInfo() {
             詳しくは公式のお知らせをチェック！
           </div>
           <a
-            href="https://tof.perfectworld.com/jp/news/notice/20260514/262206.shtml"
+            href="https://tof.perfectworld.com/jp/news/notice/20261120/265155.shtml"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-sky-700 underline font-bold"
