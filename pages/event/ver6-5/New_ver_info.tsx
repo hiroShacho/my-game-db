@@ -16,7 +16,7 @@ const rerunWeapons = weaponsData.filter(w => rerunWeaponIds.includes(w.id));
 
 const costumeImages = [
   {
-    src: "/ver_event/Outfit_MoonlitPrelude.PNG",
+    src: "/ver_event/Outfit_NightwishPhantom.PNG",
     alt: "夜願のファントム",
     label: "",
     date: "11/24(火)メンテナンス後 -  1/5(火)06:00（JST）",

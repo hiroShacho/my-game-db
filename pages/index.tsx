@@ -34,7 +34,7 @@ const GANTT_EVENTS: GanttEvent[] = [
   { label: "夜願のファントム", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 24, end: 30, },
   { label: "【復刻】コスチュームセット・感謝祭", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 24, end: 30, },
   { label: "【復刻】コスチュームセット・クリスマス(12/15～1/5開催)", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 30, },
-  { label: "【復刻】プレミアムガチャ(12/15～1/5開催)", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 24, end: 30, },
+  { label: "【復刻】プレミアムガチャ(12/15～1/5開催)", color: "#8eceed", labelColor: "#8ee2f8", labelFontColor: "#200", start: 1, end: 30, },
   { label: "プレアバ：ペインター", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 24, end: 30, },
   { label: "復刻プレアバ：炎", color: "#4fed2f", labelColor: "#e3a3f8", labelFontColor: "#200", start: 24, end: 30, },
 
