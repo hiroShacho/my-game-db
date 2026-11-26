@@ -54,8 +54,8 @@ const eventImages: (string | null)[] = [
 ];
 
 const GIFT_CODES = [
-  { code: "", desc: "（正式サーバー）Ver6.5バージョン引き換えコード", expire: "2027/1/5", },
-  { code: "", desc: "（Warpサーバー）Ver6.5バージョン引き換えコード", expire: "2027/1/5", },
+  { code: "1124painter", desc: "（正式サーバー）Ver6.5バージョン引き換えコード", expire: "2027/1/5", },
+  { code: "1124mmo", desc: "（Warpサーバー）Ver6.5バージョン引き換えコード", expire: "2027/1/5", },
 ];
 
 const FEATURED_SLIDES: FeaturedCarouselSlide[] = [

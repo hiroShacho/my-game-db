@@ -177,7 +177,7 @@ export default function NewVerInfo() {
               alt="新キャラクター・ペインター"
               fill
               className="object-cover w-full h-full"
-              sizes="100vw"
+              sizes="(max-width: 896px) 100vw, 832px"
               priority
               style={{ objectPosition: "center 30%" }}
             />
@@ -188,7 +188,7 @@ export default function NewVerInfo() {
               className="block bg-white rounded shadow hover:shadow-lg hover:ring-2 hover:ring-sky-400 transition-all px-4 py-3 w-64 text-center"
             >
               <div className="flex flex-col items-center gap-2">
-                <Image src="/images/w_77_img.PNG" alt="ペインター武器" width={48} height={48} className="rounded border" />
+                <Image src="/images/w_77_img.PNG" alt="ペインター武器" width={48} height={48} className="rounded border" unoptimized />
                 <span className="font-semibold text-sky-600">武器：オラクルセプター</span>
                 <div className="text-xs mt-1 text-gray-600">詳細ページへ</div>
               </div>
@@ -198,7 +198,7 @@ export default function NewVerInfo() {
               className="block bg-white rounded shadow hover:shadow-lg hover:ring-2 hover:ring-sky-400 transition-all px-4 py-3 w-64 text-center"
             >
               <div className="flex flex-col items-center gap-2">
-                <Image src="/images/m_73_img.PNG" alt="ペインターボリション" width={48} height={48} className="rounded border" />
+                <Image src="/images/m_73_img.PNG" alt="ペインターボリション" width={48} height={48} className="rounded border" unoptimized />
                 <span className="font-semibold text-sky-600">ボリション：万世の慈悲</span>
                 <div className="text-xs mt-1 text-gray-600">詳細ページへ</div>
               </div>
@@ -217,7 +217,7 @@ export default function NewVerInfo() {
               alt="炎属性復刻ガチャ"
               fill
               className="object-cover w-full h-full"
-              sizes="100vw"
+              sizes="(max-width: 896px) 100vw, 832px"
               priority
               style={{ objectPosition: "center 25%" }}
             />
@@ -237,6 +237,7 @@ export default function NewVerInfo() {
                     width={64}
                     height={64}
                     className="rounded border mb-2"
+                    unoptimized
                   />
                   <span className="font-semibold text-gray-800 mb-1">{w.name}</span>
                   <span className="px-2 py-1 bg-yellow-200 text-yellow-800 text-sm rounded font-bold">
@@ -300,7 +301,7 @@ export default function NewVerInfo() {
                 alt="Ver6.5_バージョンカレンダー"
                 fill
                 className="object-contain w-full h-full"
-                sizes="(max-width: 1024px) 100vw, 900px"
+                sizes="(max-width: 768px) 100vw, 768px"
                 priority
               />
             </div>
